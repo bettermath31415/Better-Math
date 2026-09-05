@@ -1,0 +1,355 @@
+/* =========================================
+   VARIABLES (Unified Colors & Themes)
+========================================= */
+:root {
+  --bg: #f6f5f2;
+  --panel: #ffffff;
+  --ink: #1e2430;
+  --sub: #5b6472;
+  --line: #e2e0da;
+  
+  --accent: #3a5a7a;
+  --accent-soft: #eaf0f5;
+  
+  --yr-accent: #8a5a2b;
+  --yr-soft: #f7efe4;
+  
+  --ans-bg: #f4f8f4;
+  --ans-line: #cfe3d0;
+  --ans-accent: #2f7d4f;
+}
+
+/* =========================================
+   GLOBAL RESET & BODY
+========================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Cleaned up font stack */
+  font-family: "Iowan Old Style", "Segoe UI", "Palatino Linotype", Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  /* REMOVED: max-width on body to fix the "shifting to the left" issue */
+}
+
+/* Unified wrapper for your main content area */
+.wrap, .container {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px 80px; 
+  /* Prevents long text/math from breaking mobile screens */
+  overflow-wrap: break-word; 
+}
+
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
+#header {
+  background-color: #0B2447; /* Navy Blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  width: 100%; /* Ensures header is always full width */
+}
+
+#header .brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#header .brand h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+
+#header .brand a {
+  color: white;
+  text-decoration: none;
+}
+
+#header nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#header nav a, .dropbtn {
+  color: #c6c8c8;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+#header nav a:hover, .dropbtn:hover {
+  color: #576CBC;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 10px 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #19376D;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  top: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: white !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1em !important;
+}
+
+.dropdown-content a:hover {
+  background-color: #576CBC;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+
+/* =========================================
+   TYPOGRAPHY & TOOLBARS
+========================================= */
+.page-header, header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.page-header h1, header h1, h1 {
+  font-size: 1.7rem;
+  margin: 0 0 8px;
+  letter-spacing: 0.01em;
+}
+
+.page-header p, header p, .subtitle {
+  color: var(--sub);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.toolbar, .controls {
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  margin: 0 auto 28px;
+  font-family: Arial, Helvetica, sans-serif; 
+  flex-wrap: wrap; /* Ensures buttons wrap nicely on mobile screens */
+}
+
+.toolbar button, .controls button {
+  background: var(--panel); 
+  border: 1px solid var(--line); 
+  color: var(--accent);
+  padding: 8px 16px; 
+  border-radius: 20px; 
+  font-size: 0.85rem; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
+}
+
+.toolbar button:hover, .controls button:hover { 
+  background: var(--accent-soft); 
+}
+
+/* =========================================
+   ACCORDIONS (Topics, Years, Questions)
+========================================= */
+
+/* Unified Top-Level Accordions (.topic, .year) */
+details.topic, details.year {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* Sub-Level Accordion (.yr) */
+details.yr {
+  background: var(--yr-soft);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+/* Summary styles for wrappers */
+details.topic > summary, 
+details.year > summary, 
+details.yr > summary {
+  list-style: none; 
+  cursor: pointer; 
+  padding: 16px 20px;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: 700; 
+  font-size: 1.2rem; 
+  color: var(--accent);
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+details.yr > summary {
+  font-size: 1rem;
+  color: var(--yr-accent);
+}
+
+details.topic > summary::-webkit-details-marker,
+details.year > summary::-webkit-details-marker,
+details.yr > summary::-webkit-details-marker { display: none; }
+
+/* Plus/Minus Icons */
+details.topic > summary::after, 
+details.year > summary::after, 
+details.yr > summary::after { 
+  content: "+"; 
+  font-size: 1.5rem; 
+  color: var(--sub); 
+  margin-left: auto; 
+}
+
+details.topic[open] > summary::after, 
+details.year[open] > summary::after, 
+details.yr[open] > summary::after { 
+  content: "–"; 
+}
+
+.topic-body, .year-body, .yr-body { 
+  padding: 10px 20px 20px; 
+  border-top: 1px solid var(--line); 
+  background: var(--panel);
+}
+
+/* =========================================
+   QUESTIONS & PROBLEMS
+========================================= */
+.q-item, details.question, .problem { 
+  margin-top: 16px; 
+}
+
+.q-item:first-child, .problem:first-child { 
+  margin-top: 12px; 
+}
+
+.q-item-label {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 0.85rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.06em; 
+  color: var(--ink); 
+  border-bottom: 2px solid var(--accent);
+  display: inline-block; 
+  padding-bottom: 3px; 
+  margin: 0 0 10px;
+}
+
+.sub { margin: 10px 0 12px 6px; }
+.sub .tag { font-family: Arial, Helvetica, sans-serif; font-weight: 700; color: var(--accent); margin-right: 6px; }
+.marks, .points { font-family: Arial, Helvetica, sans-serif; font-size: 0.78rem; color: var(--sub); float: right; }
+.part, .subpart { margin: 8px 0 8px 6px; }
+.subpart { margin-left: 20px; }
+.total { text-align: right; font-family: Arial, Helvetica, sans-serif; font-size: 0.8rem; color: var(--sub); margin-top: 6px; }
+
+/* =========================================
+   ANSWERS & SOLUTIONS
+========================================= */
+/* Unified answer styling */
+details.answers, details.answer, details.solution {
+  margin-top: 14px; 
+  background: var(--ans-bg); 
+  border: 1px dashed var(--ans-line); 
+  border-radius: 8px; 
+  border-left: 3px solid var(--ans-accent); /* Added colorful accent border */
+  overflow: hidden;
+}
+
+details.answers > summary, 
+details.answer > summary, 
+details.solution > summary {
+  list-style: none; 
+  cursor: pointer; 
+  padding: 10px 16px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700; 
+  font-size: 0.85rem; 
+  color: var(--ans-accent); 
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+}
+
+details.answers > summary::-webkit-details-marker,
+details.answer > summary::-webkit-details-marker,
+details.solution > summary::-webkit-details-marker { display: none; }
+
+details.answers > summary::before, details.answer > summary::before, details.solution > summary::before { content: ""; font-size: 0.95rem; }
+details.answers[open] > summary::before, details.answer[open] > summary::before, details.solution[open] > summary::before { content: ""; }
+
+.ans-body, .a-body, .soltext { 
+  padding: 8px 20px 18px; 
+  border-top: 1px solid var(--ans-line); 
+}
+
+hr.qsep, hr.sep { border: none; border-top: 1px solid var(--line); margin: 26px 0; }
+
+/* =========================================
+   RESPONSIVE QUERIES
+========================================= */
+@media (max-width: 900px) {
+  #header { padding: 0 20px; }
+  #header nav .nav-links { display: none; }
+  .hamburger { display: block; }
+}
+
+@media (max-width: 600px) {
+  /* Give containers less extreme padding on small mobile screens */
+  .wrap, .container {
+    padding: 20px 12px 60px;
+  }
+}

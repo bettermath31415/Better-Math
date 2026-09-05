@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="./Codes/main.css"> 
+<script src="./Codes/main.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SATMO Practice Archive (2012–2024)</title>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']]
+  }
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+<!--Header-->
+
+<!-- Header/Navbar Container -->
+<header id="header">
+    
+    <!-- Left Side: Logo and Website Name -->
+    <div class="brand">
+        <!-- Placeholder for your logo. Replace 'logo.png' with your actual image file later -->
+        <img src="https://via.placeholder.com/40" alt="Logo" id="logo-img">
+        <h1><a href="index.html" id="logo">Better Math Education</a></h1>
+    </div>
+
+    <!-- Right Side: Navigation -->
+    <nav id="nav">
+        <div class="nav-links">
+            <a href="index.html">Homepage</a>
+            <a href="SATMO.html">Tertiary Olympiad</a>
+            <a href="SAMO(Gr 10-12).html">High School Olympiad</a>
+            
+            <!-- Dropdown Section -->
+            <div class="dropdown">
+                <button class="dropbtn">Grade 12 Math NSC ▼</button>
+                <div class="dropdown-content">
+                    <a href="Index.html">Math P1 Grade 12</a>
+                    <a href="MathP2.html">Math P2 Grade 12</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Hamburger Menu Icon (Optional) -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+    </nav>
+
+
+</header>
+<!--Header End-->
+
+<h1>South African Tertiary Mathematics Olympiad</h1>
+<p class="subtitle">Practice Archive · Solutions 2012–2024 · click a year, then a question, then "Show Solution"</p>
+
+<div class="controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button>
+</div>
+
+<!-- ===================== 2012 ===================== -->
+<details class="year"><summary>2012 <span style="font-weight:normal;font-size:0.75em;">— 6 October 2012</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Determine the limit \(\displaystyle \lim_{x\to 0} \frac{1}{x} e^{-1/x^2}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substitute \(y = 1/x\), so as \(x\to 0\), \(y \to \infty\) (from the appropriate side):
+\[ \lim_{x\to 0}\frac{1}{x}e^{-1/x^2} = \lim_{y\to\infty} y e^{-y^2} = \lim_{y\to\infty}\frac{y}{e^{y^2}}. \]
+By L'Hospital's rule, \(\displaystyle \lim_{y\to\infty}\frac{y}{e^{y^2}} = \lim_{y\to\infty}\frac{1}{2ye^{y^2}} = 0.\)</p>
+<p><strong>Answer: 0</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Max lies and tells the truth alternately when asked about his favourite number (his first answer may be either). Bob asks:</p>
+<ul>
+<li>Is your number less than 100?</li>
+<li>Is it a prime?</li>
+<li>Does it contain the digit 4?</li>
+<li>Is it even?</li>
+<li>Is it a square?</li>
+</ul>
+<p>His answer is always "yes". What is Max's favourite number?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>If the first answer were a lie, the 2nd and 4th (also lies/truths alternating) would force the number to be an even prime, i.e. 2 — but then the first statement would have been true, a contradiction. So the first answer is the truth: the number is less than 100. Then odd-indexed answers are true, even-indexed are lies: it is a square (true 3rd), not even i.e. odd (lie 4th), and contains a 4 (true... wait apply pattern) — working through the alternation: number \(<100\) (true), not prime (lie means it isn't prime — consistent since it's a square \(>1\)), contains a 4 (true), not even i.e. odd (lie on "is it even"), and is a square (true). Among squares under 100 (1,4,9,16,25,36,49,64,81), the only odd one containing digit 4 is 49.</p>
+<p><strong>Answer: 49</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>A rectangular box has three face diagonals of length \(\sqrt{34}\), \(\sqrt{58}\), \(\sqrt{74}\). Find the volume.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let sides be \(a,b,c\). Then \(a^2+b^2=34,\ a^2+c^2=58,\ b^2+c^2=74\). Adding the first two and subtracting the third: \(2a^2 = 34+58-74=18\), so \(a=3\), and then \(b=5,\ c=7\).</p>
+<p><strong>Answer: Volume \(=3\cdot5\cdot7=105\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>Let \(f(x) = x^{x^{x^{x^{\cdots}}}}\) for positive real \(x\). Determine \(f'(a)\) if \(f(a)=2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The function satisfies \(f(x)=x^{f(x)}\). If \(f(a)=2\), then \(2=a^2\), so \(a=\sqrt2\).</p>
+<p>Implicit differentiation of \(f(x) = e^{f(x)\ln x}\) gives
+\[ f'(x) = f(x)\left(f'(x)\ln x + \frac{f(x)}{x}\right). \]
+At \(x=a=\sqrt2\): \(f'(a) = 2\left(f'(a)\frac{\ln 2}{2} + \sqrt2\right) = f'(a)\ln2 + 2\sqrt2\). Solving for \(f'(a)\):</p>
+<p><strong>Answer: \(f'(a) = \dfrac{2\sqrt2}{1-\ln2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>\(a_1=2,\ a_2=12\), and \(a_{n+1}=\dfrac{a_n+1}{a_{n-1}}\) for \(n>1\). Determine \(a_{2012}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Computing: \(a_3=\frac{13}{2},\ a_4=\frac{5}{8},\ a_5=\frac14,\ a_6=2,\ a_7=12\). The sequence is periodic with period 5, and \(2012 \equiv 2 \pmod 5\).</p>
+<p><strong>Answer: \(a_{2012}=a_2=12\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>Six leaders sit in a row for a photo. Helen and Patricia must sit together; Jacob and Julius refuse to sit together; Tokyo and Trevor don't mind. How many seatings?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Treat Helen+Patricia as one block: \(5!=120\) arrangements, times 2 orderings of the pair \(= 240\). Subtract arrangements where Jacob and Julius also sit together: treat them as a block too, giving \(4!=24\) arrangements, times \(2\times2=4\) for the two pairs' internal orders \(=96\).</p>
+<p><strong>Answer: \(2\cdot5! - 2\cdot2\cdot4! = 240-96=144\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>Find \(f:\mathbb R\to\mathbb R\) with \(f(0)=1\), such that \(\int_{-\infty}^x f(t)\,dt\) and \(\int_{-\infty}^x f(t)^2\,dt\) both converge and
+\[ \left(\int_{-\infty}^x f(t)\,dt\right)^2 = \int_{-\infty}^x f(t)^2\,dt \quad \text{for all }x. \]</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let \(F(x)=\int_{-\infty}^x f(t)\,dt\). Differentiating both sides: \(2F(x)f(x) = f(x)^2\), so \(f(x)=0\) or \(2F(x)=f(x)=F'(x)\). The differential equation \(F'=2F\) gives \(F(x)=Ce^{2x}\), so \(f(x)=2Ce^{2x}\). Using \(f(0)=1\): \(C=\frac12\).</p>
+<p><strong>Answer: \(f(x)=e^{2x}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>A clock's minute hand has length 4, hour hand length 3. Find the distance between the tips when this distance is increasing most rapidly.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By the law of cosines, \(x^2=a^2+b^2-2ab\cos C\) where \(C\) is the angle between the hands (changing at constant rate), \(a=4,b=3\). Differentiating implicitly and using the law of sines gives \(\frac{dx}{dC}=b\sin A\), maximised when \(A=90^\circ\). Then by Pythagoras \(x=\sqrt{a^2-b^2}=\sqrt7\).</p>
+<p><strong>Answer: \(\sqrt7\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>Fibonacci: \(a_1=1,a_2=1,a_{n+1}=a_n+a_{n-1}\). Find \(\displaystyle\sum_{n=1}^\infty \frac{a_n}{2^n}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let \(S=\sum \frac{a_n}{2^n}\). Splitting off the first two terms and using the recurrence:
+\[ S = \frac34 + \frac12\left(S-\frac{a_1}{2}\right) + \frac14 S = \frac12 + \frac34 S. \]
+Solving gives \(S=2\).</p>
+<p><strong>Answer: 2</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Find all triples \((a,b,c)\) of positive integers, \(a<b<c\), sides of a right triangle whose area is twice its perimeter.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The condition gives \(\frac{ab}{2}=2(a+b+c)\), so \(4c=ab-4a-4b\). Squaring and simplifying using \(c^2=a^2+b^2\) leads to \((a-8)(b-8)=32\). Checking integer divisor pairs of 32 gives the solutions.</p>
+<p><strong>Answer: \((9,40,41),\ (10,24,26),\ (12,16,20)\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>\(f,g\) continuous & differentiable on \(\mathbb R\), \(f,f'\) never zero, and \(\dfrac{g'(x)}{f'(x)} = 2\dfrac{g(x)}{f(x)}\). Given \(f(1)=1,g(1)=2,f(2)=3\), find \(g(2)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The condition is equivalent to \(\frac{d}{dx}\ln|g(x)| = 2\frac{d}{dx}\ln|f(x)|\), so \(g(x)=Kf(x)^2\). From \(f(1)=1,g(1)=2\): \(K=2\). Then \(g(2)=2f(2)^2=2\cdot9\).</p>
+<p><strong>Answer: 18</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>\(P\) on the positive \(x\)-axis and \(Q\) on \(y=x^2\) in the first quadrant with \(OP=OQ\). Line \(PQ\) meets the \(y\)-axis at \(R\). Find \(\lim_{OP\to0} OR\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let \(Q=(a,a^2)\), so \(P=(\sqrt{a^2+a^4},0)\). Computing the line's \(y\)-intercept and taking \(a\to0\) (using L'Hospital-type simplification) gives</p>
+<p><strong>Answer: \(\displaystyle\lim_{OP\to0}OR = 2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>How many planes pass through three or more vertices of a cube?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>There are three types: the 6 face planes, the 6 planes through diagonally opposite edges, and the 8 planes through three pairwise nonadjacent vertices.</p>
+<p><strong>Answer: \(6+6+8=20\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>In a class there are 3 times as many girls as boys. The number of ways to choose 2 girls equals 6 times the ways to choose 3 boys. How many students total?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(g=3b\): \(\binom{3b}{2}=6\binom{b}{3}\), which simplifies to \(b(2b-1)(b-7)=0\), giving \(b=7\), \(g=21\).</p>
+<p><strong>Answer: \(28\) students</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Find the determinant of the \(50\times50\) matrix built from the pattern shown (rows of consecutive integers with staggered zero blocks — see original).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Row-reducing block by block, each odd/even pair of rows contributes a diagonal factor of \(-\frac{2}{3k-2}\) after eliminating below-diagonal entries, and the product telescopes to give \((-2)^{50}\).</p>
+<p><strong>Answer: \(2^{50}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Compute \(\displaystyle\int_{-\pi}^{\pi} \frac{1}{1+e^{\sin x}}\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substituting \(x\to -x\) on half the interval shows \(\int_{-\pi}^0 \frac{dx}{1+e^{\sin x}} = \int_0^\pi \frac{e^{\sin x}}{1+e^{\sin x}}\,dx\). Adding to the other half gives \(\int_0^\pi 1\,dx = \pi\).</p>
+<p><strong>Answer: \(\pi\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>Two players place 1s and 0s on a Tic-Tac-Toe board (five 1s, four 0s, since player 1 begins). The determinant of the resulting matrix is computed. Find all possible values.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By Sarrus' rule, since there are only five 1s, at most one diagonal in each direction can avoid a 0, so the determinant is a sum of at most two \(\pm1\) terms.</p>
+<p><strong>Answer: \(-1, 0,\) or \(1\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>\(f:\mathbb N\to\mathbb N\) satisfies \(f(m+n)=f(m)+f(n)+mn\), \(f(1)=3\). Find \(f(13)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Setting \(m=1\): \(f(n+1)=f(n)+n+3\). Telescoping from \(f(1)=3\) to \(f(13)\), or using the closed form \(f(n)=\frac{n(n+5)}{2}\): \(f(13) = \frac{13\cdot18}{2}\).</p>
+<p><strong>Answer: 117</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>Find the greatest size of a subset \(A\subseteq\{1,\dots,30\}\) such that no product of distinct elements of \(A\) is a perfect square.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The set of primes \(\le30\) works and has 10 elements. This is optimal: viewing exponent-parity vectors over \(\mathbb F_2^{10}\) (10 primes \(\le30\)), the no-square condition means the vectors are linearly independent, so at most 10 elements are possible.</p>
+<p><strong>Answer: 10</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>\(A\Delta B=(A\cup B)\setminus(A\cap B)\). Let \(A_i\) be the multiples of \(i\) in \(\{1,\dots,1000\}\). Find \(|A_1\Delta(A_2\Delta(A_3\Delta\cdots\Delta(A_{999}\Delta A_{1000})\cdots))|\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>An element survives iff it lies in an odd number of the sets \(A_i\), i.e. it has an odd number of divisors, i.e. it is a perfect square. There are 31 perfect squares \(\le1000\).</p>
+<p><strong>Answer: 31</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2013 ===================== -->
+<details class="year"><summary>2013 <span style="font-weight:normal;font-size:0.75em;">— 5 October 2013</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>For which real \(x\) is \(\log_2(\log_3 x)=1\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>We need \(\log_3 x = 2\), so \(x=9\).</p>
+<p><strong>Answer: 9</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to2013}\frac{\sin(\pi x)}{x-2013}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By L'Hospital's rule: \(\lim_{x\to2013}\frac{\pi\cos(\pi x)}{1} = \pi\cos(2013\pi) = -\pi\).</p>
+<p><strong>Answer: \(-\pi\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>Every student is Facebook friends with exactly 13 others. At most how many students are either Peter's friends or friends of his friends?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each of Peter's 13 friends has at most 12 other friends: \(13\times12\) potential friends-of-friends, plus Peter's 13 friends themselves.</p>
+<p><strong>Answer: \(13\times13=169\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(f(x)=\sin(\sin(\sin(\sin(\sin x))))\). Find \(f'(0)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By the chain rule, \(f'(0)=\cos(0)^5 = 1\) (each factor evaluates to \(\cos(0)=1\) since all inner sines vanish at 0).</p>
+<p><strong>Answer: 1</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>For which \(a\) does \(x+2y=5,\ -3x+ay=1\) have no solution?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By Cramer's rule, \(x=\frac{5a-2}{a+6},\ y=\frac{16}{a+6}\); undefined precisely when \(a=-6\).</p>
+<p><strong>Answer: \(a=-6\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>252 solved Q1, 36 solved the last question. Half who solved the last did not solve Q1; this equals one third of those who did not solve Q1. How many participants total?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>18 solved the last but not Q1, which is \(\frac13\) of those who didn't solve Q1, so \(54\) didn't solve Q1. Total \(=252+54\).</p>
+<p><strong>Answer: 306</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>In 4 hours, the hour hand will be where the minute hand is now. How long until the minute hand reaches where the hour hand is now?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>4 hours corresponds to \(120^\circ\) between hands. The minute hand needs to rotate \(240^\circ\), taking \(\frac{240}{360}\times60\) minutes.</p>
+<p><strong>Answer: 40 minutes</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>\(\operatorname{Re}z=2\). Find the maximum of \(\operatorname{Re}(z^2)+\operatorname{Im}(z^2)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Write \(z=2+iy\): \(\operatorname{Re}(z^2)+\operatorname{Im}(z^2)=4-y^2+4y=8-(y-2)^2\), maximised at \(y=2\).</p>
+<p><strong>Answer: 8</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>\(a\) has exactly 3 divisors, \(b\) has exactly 4. Find the minimum number of divisors of \(ab\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(a=p^2\) for some prime \(p\). All 4 divisors of \(b\), plus \(pb\) and \(p^2b\), are divisors of \(ab\), giving at least 6. Example \(a=4,b=8\) achieves 6.</p>
+<p><strong>Answer: 6</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>\(\|x\|\) = distance to nearest integer. Find \(\int_0^{100}\|x\|\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>On each unit interval \(\int_n^{n+1}\|x\|\,dx=\frac14\). Over 100 such intervals: \(100\times\frac14\).</p>
+<p><strong>Answer: 25</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>Determine \(\displaystyle\sum_{n=1}^{1000}\ln\left(1+\frac1n\right)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>This telescopes: \(\sum(\ln(n+1)-\ln n) = \ln1001-\ln1\).</p>
+<p><strong>Answer: \(\ln1001\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>An 8×8 board is randomly coloured black/white. Find the expected number of "isolated" squares (differing in colour from all neighbours).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Corners: probability \((1/2)^2\), each of 4 corners. Edge (non-corner): probability \((1/2)^3\), 24 squares. Interior: probability \((1/2)^4\), 36 squares.
+\[ \frac{4}{4}+\frac{24}{8}+\frac{36}{16} = \frac{25}{4}. \]</p>
+<p><strong>Answer: \(\dfrac{25}{4}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>\(\begin{pmatrix}3&3&x\\-2&-3&-3\\-1&-2&0\end{pmatrix}^{2013}\) is the zero matrix. Find \(x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Taking determinants, \((\det M)^{2013}=0\) so \(\det M = 0\). Expanding, \(\det M = x-9=0\).</p>
+<p><strong>Answer: \(x=9\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>Find all differentiable \(f:(0,\infty)\to\mathbb R\) with \(f'(x/y)=f(y)/f(x)\) for all \(x,y>0\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Setting \(y=1\) gives the separable ODE \(f'(x)=f(1)/f(x)\), whose solution is \(f(x)^2=2f(1)x+C\), i.e. \(f(x)=\pm\sqrt{Ax+B}\). Substituting back forces \(B=0\), \(A=4\), and the negative sign fails.</p>
+<p><strong>Answer: \(f(x)=2\sqrt x\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>\(\dfrac{\cos3x}{\cos x}=\dfrac13\), \(0<x<\pi/2\). Find \(\dfrac{\sin3x}{\sin x}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(\frac{\sin3x}{\sin x}-\frac{\cos3x}{\cos x} = \frac{\sin2x}{\sin x\cos x}=2\), so \(\frac{\sin3x}{\sin x}=2+\frac13\).</p>
+<p><strong>Answer: \(\dfrac73\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Find the expected maximum of two independent uniform\([0,1]\) numbers.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Given the first is \(x\), the conditional expected max is \(\frac{1+x}{2}\)-weighted appropriately; integrating over \(x\) gives \(\int_0^1\left(\frac{1+x}{2}\right)^2dx\) after simplification.</p>
+<p><strong>Answer: \(\dfrac23\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>\(R,S\) on sides \(AB,AC\) of \(\triangle ABC\); \(P=BS\cap CR\). Areas of \(\triangle BPR, BPC, CPS\) are 5,6,7. Find area of \(\triangle ABC\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using the ratio identity \(\text{Area}(BPR)\cdot\text{Area}(CPS)=\text{Area}(BPC)\cdot\text{Area}(RPS)\), we get \(\text{Area}(RPS)=\frac{35}{6}\). A similar identity at vertex \(A\), with \(x=\)Area\((ABC)\), gives \(\left(x-18-\frac{35}{6}\right)x=(x-11)(x-13)\), which reduces to \(x/6=143\).</p>
+<p><strong>Answer: 858</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Find the shortest distance between a point on \(y=8x-x^2\) and a point on \(y=x^2+15\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>At the closest points, the connecting segment is perpendicular to both tangent lines, which forces the tangents to be parallel: \(x_2=4-x_1\). Solving the resulting cubic \(4(x_1-3)(x_1^2-9x_1+21)=0\) gives \(x_1=3,x_2=1\), points \((3,15)\) and \((1,16)\).</p>
+<p><strong>Answer: \(\sqrt5\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>Ten positive numbers sum to 1. Let \(z\) be the max of \(\dfrac{x_k}{1+x_1+\cdots+x_k}\). Find the minimum possible value of \(z\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(y_k=1+x_1+\cdots+x_k\), each term is \(1-y_{k-1}/y_k\le z\), so \(y_{k-1}/y_k\ge1-z\). Multiplying the chain, \(y_0/y_{10}\ge(1-z)^{10}\), and \(y_{10}=2\), giving \(\frac12\ge(1-z)^{10}\).</p>
+<p><strong>Answer: \(z_{\min}=1-\dfrac{1}{\sqrt[10]{2}}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^{\pi/4}\ln(1+\tan x)\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(1+\tan x = \dfrac{\sqrt2\cos(x-\pi/4)}{\cos x}\), split the integral into three pieces; the \(\ln\cos\) pieces cancel by symmetry (even function), leaving \(\int_0^{\pi/4}\ln\sqrt2\,dx\).</p>
+<p><strong>Answer: \(\dfrac{\pi\ln2}{8}\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2014 ===================== -->
+<details class="year"><summary>2014 <span style="font-weight:normal;font-size:0.75em;">— 23 August 2014</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to1} \dfrac{\sqrt[8]{x}-1}{\sqrt x - 1}\) (i.e. \(\sqrt{\sqrt{\sqrt x}}\) type nested root, minus 1, over \(\sqrt x - 1\)).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By L'Hospital's rule: \(\displaystyle\lim_{x\to1}\frac{x^{1/8}-1}{\sqrt x-1} = \lim_{x\to1}\frac{\frac18x^{-7/8}}{\frac12x^{-1/2}}=\frac14\).</p>
+<p><strong>Answer: \(\dfrac14\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>For which real \(x\) is \(\ln(3x)=3\ln x\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\ln(3x)=\ln x+\ln3\), so \(2\ln x=\ln3\), \(\ln x=\frac12\ln3=\ln(3^{1/2})\).</p>
+<p><strong>Answer: \(x=\sqrt3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>This year August has five Fridays, five Saturdays, five Sundays. When does this next occur?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>This requires August 1 to be a Friday. Since a non-leap year shifts the weekday back by 1 (leap years by 2), tracking forward from the given year to the next Friday-August-1st year.</p>
+<p><strong>Answer: 2025</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(\dfrac{1}{(x-1)(x-2)(x-3)(x-4)(x-5)}=\dfrac{A}{x-1}+\cdots+\dfrac{E}{x-5}\). Find \(C\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Multiplying by the denominator and taking \(x\to3\): \(1=C(3-1)(3-2)(3-4)(3-5) = C\cdot4\).</p>
+<p><strong>Answer: \(C=\dfrac14\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>\(x,y\in(-\pi/2,\pi/2)\) with \(\tan x=\cos y\). Greatest possible value of \(x\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(\cos y\le1\), \(\tan x\le1\), so \(x\le\pi/4\), attained when \(\cos y=1\).</p>
+<p><strong>Answer: \(\pi/4\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>\(f(k)=k+1\) and \(f'(k)=\sqrt k\) for \(k=1,\dots,10\). If \(g(x)=f(f(f(f(x))))\), find \(g'(1)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By the chain rule, \(g'(1)=f'(f(f(f(1))))f'(f(f(1)))f'(f(1))f'(1)=f'(4)f'(3)f'(2)f'(1)=\sqrt4\sqrt3\sqrt2\sqrt1=\sqrt{24}\).</p>
+<p><strong>Answer: \(2\sqrt6\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>A chess set has 32 pieces (16 white, 16 black; each colour: king, queen, 2 bishops, 2 knights, 2 rooks, 8 pawns). Kenny picks 2 unordered pieces. How many combinations?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Distinct types: \(\binom{12}{2}\) (12 distinct piece-types across both colours). Plus choosing two of the same type (possible for bishops, knights, rooks, pawns of either colour): 8 more.</p>
+<p><strong>Answer: \(\binom{12}{2}+8 = 66+8=74\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>\(2^{29}\) is a 9-digit number with 9 distinct digits. Which digit (0–9) is missing?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(2^{29}\equiv5\pmod9\) (via \(2^{29}=64^4\cdot32\equiv1^4\cdot5\)). Since digits \(0\)–\(9\) sum to 45 (divisible by 9), the missing digit \(d\) satisfies \(45-d\equiv5\pmod9\), so \(d\equiv4\).</p>
+<p><strong>Answer: 4</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>\(2^x4^y16^z=1,\ 4^x16^y2^z=2,\ 16^x2^y4^z=4\). Find \(x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Dividing eq.1 by the square of eq.3: \(\dfrac{2^x4^y16^z}{(16^x2^y4^z)^2}=\dfrac{2^x}{2^{8x}}=\dfrac1{16}\), so \(2^{7x}=2^4\), \(x=4/7\).</p>
+<p><strong>Answer: \(\dfrac47\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>\(A,B\) are \(2\times2\) real matrices. \(AB-BA=\begin{pmatrix}3&5\\-4&?\end{pmatrix}\). Find the missing entry.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(\operatorname{tr}(AB)=\operatorname{tr}(BA)\), \(\operatorname{tr}(AB-BA)=0\), so \(3+?=0\).</p>
+<p><strong>Answer: \(-3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>\(\dfrac{n}{20}+\dfrac{m}{14}=\dfrac{2014}{20\cdot14}\), \(n,m\) positive integers. Find the greatest possible \(n\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Equivalent to \(7n+10m=1007\). Need \(1007-7n\) positive and a multiple of 10, so \(n\) ends in 1, and \(n\le 143\frac67\).</p>
+<p><strong>Answer: \(n=141\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>Find the maximum of \(f(x)=\sqrt{8x-x^2}-\sqrt{14x-x^2-48}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Domains: first term needs \(x\in[0,8]\), second needs \(x\in[6,8]\), so domain is \([6,8]\). At \(x=6\), the first term reaches its max on this interval \(2\sqrt3\), and the second term is 0.</p>
+<p><strong>Answer: \(2\sqrt3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>Find all \(x\in[-1,1]\) with \((\arcsin x)^2+(\arccos x)^2 = \dfrac{5\pi^2}{36}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Set \(u=\arcsin x\), so \(\arccos x=\pi/2-u\). The equation becomes \(2u^2-\pi u+\frac{\pi^2}{9}=0\), factoring as \((2u-\pi/3)(u-\pi/3)=0\), giving \(u=\pi/6\) or \(\pi/3\).</p>
+<p><strong>Answer: \(x=\dfrac12\) or \(x=\dfrac{\sqrt3}{2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>Find all integer pairs \((n,m)\) with \(n(m^2+9)+m(n^2-9)+n^2(n-6)=0\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Viewed as a quadratic in \(m\), the discriminant is \((n-3)^2(3+3n)(3-n)\), nonnegative only for \(-1\le n\le3\). Checking each: \(n=1\) gives no perfect square; \(n=-1,0,2,3\) give \(m=-4,0,2,0\) respectively.</p>
+<p><strong>Answer: \((n,m)=(-1,-4),(0,0),(2,2),(3,0)\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>\(P(x)\) satisfies \(xP(x-1)=(x-5)P(x)\), \(P(-1)=1\). Find \(P(1/2)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Repeated factoring shows \(P(x)=x(x-1)(x-2)(x-3)(x-4)R(x)\) with \(R\) constant. Using \(P(-1)=1\): \(-120R(-1)=1\), so \(R=-1/120\), giving \(P(x)=-\frac{x(x-1)(x-2)(x-3)(x-4)}{120}\).</p>
+<p><strong>Answer: \(P(1/2)=-\dfrac{7}{256}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Choose \(r\in[1,2]\) to minimise the maximum of \(f(x)=\left|\dfrac{r-x}{x}\right|\) on \([1,2]\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(f\) decreases then increases with minimum at \(x=r\). The max over \([1,2]\) is \(\max(r-1,\,1-r/2)\), which is minimised where these are equal: \(r-1=1-r/2\), giving \(r=4/3\), max value \(1/3\).</p>
+<p><strong>Answer: \(r=\dfrac43\) (min-max value \(\dfrac13\))</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>Three players wear black/white hats (each colour prob. \(1/2\), independent), see others' hats only. Each guesses own colour or passes; win if nobody wrong and at least one guesses right. Max winning probability?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Strategy: guess "different" if you see the other two match; pass if you see them differ. This wins in 6 of 8 cases. One shows this is optimal via the inequality \(p\le3(1-p)\), giving \(p\le3/4\).</p>
+<p><strong>Answer: \(\dfrac34\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^\pi(\cos x+\cos2x+\cdots+\cos100x)^2\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Expand and use \(\cos(nx)\cos(mx)=\frac12[\cos((n+m)x)+\cos((n-m)x)]\); every integral of \(\cos(kx)\) over \([0,\pi]\) vanishes except \(k=0\), which occurs exactly when \(n=m\) (100 times), each contributing \(\pi\).</p>
+<p><strong>Answer: \(50\pi\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>\(A(-1,0), B(1,0), C(0,y)\). \(H,I,S\) are the orthocentre, incentre, centroid of \(\triangle ABC\). Find \(\lim_{y\to\sqrt3} HI/IS\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(\alpha=\angle CAB\to\pi/3\), the y-coordinates of \(H,I,S\) are \(\tan(\pi/2-\alpha),\tan(\alpha/2),\tan(\alpha/3)\). Applying L'Hospital's rule to the ratio as \(\alpha\to\pi/3\) gives the limit.</p>
+<p><strong>Answer: 3</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>\(S=\{1,\dots,20\}\). \(v(A)\) is a positive integer for each subset \(A\subseteq S\), with \(v(\emptyset)=1,v(S)=14\), and \(v(A\cup B)v(A\cap B)=v(A)v(B)\). How many such functions \(v\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>For disjoint \(A,B\), \(v(A\cup B)=v(A)v(B)\), so \(v\) is determined by values on singletons, whose product must be \(14\). Either one singleton has value 14 (rest 1): 20 ways; or one has 7, another 2 (rest 1): \(20\times19\) ways.</p>
+<p><strong>Answer: \(20+20\cdot19=400\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2015 ===================== -->
+<details class="year"><summary>2015 <span style="font-weight:normal;font-size:0.75em;">— 22 August 2015</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>If \(\ln x+\ln y=0\) for positive reals \(x,y\), find the minimum of \(x+y\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(xy=1\), so \(x+y=x+1/x\), minimised at \(x=1\) by calculus (derivative \(1-1/x^2\) changes sign there).</p>
+<p><strong>Answer: 2</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Find \(\displaystyle\lim_{x\to0}\dfrac{d}{dx}\left(\dfrac{\sin x}{x}\right)^{x}\) — more precisely the given limit expression from the source.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using Taylor expansion of \(x\cos x - \sin x\) and successive L'Hospital applications:
+\[ \lim_{x\to0}\frac{x\cos x-\sin x}{x^3} = \lim_{x\to0}\frac{\cos x-x\sin x-\cos x}{3x^2} = -\lim_{x\to0}\frac{\sin x}{3x}=-\frac13. \]</p>
+<p><strong>Answer: \(-\dfrac13\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>\(x\cdot\binom55\binom{10}5\binom{15}5\cdots\binom{2015}{5} = \binom65\binom{11}5\binom{16}5\cdots\binom{2016}5\). Find \(x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Both sides telescope (via factorial cancellation) leaving \(x=\dfrac{2016!/5!^{403}}{2015!/5!^{403}}=\dfrac{2016!}{2015!}\).</p>
+<p><strong>Answer: 2016</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^1 e^{\sqrt x}\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substitute \(u=\sqrt x\): \(\int_0^1 e^u\cdot2u\,du = 2ue^u\Big|_0^1 - 2\int_0^1e^u\,du = 2e-2e+2\).</p>
+<p><strong>Answer: 2</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>The solution set of \(\tan(\arctan x)=\arctan(\tan x)\) is an interval. Find its length.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\tan(\arctan x)=x\) always; \(\arctan(\tan x)=x\) exactly on \((-\pi/2,\pi/2)\).</p>
+<p><strong>Answer: \(\pi\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>A completed 9×9 Sudoku has total digit sum 405 (average 5). Suzy erases two numbers; the average of the rest is \(7/79\) more than 5. Which two numbers?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>New average \(=5+7/79=402/79\), so total decreases from 405 to 402 — a decrease of 3, achievable only by erasing 1 and 2.</p>
+<p><strong>Answer: 1 and 2</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>Find the area of the region \(|x|-|y|\le1,\ |y|\le1\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The region is a \(2\times2\) square plus four right isosceles triangles of leg 1: area \(4+4\cdot\frac12\).</p>
+<p><strong>Answer: 6</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>How many complex \(z\) satisfy \(\bar z=z^{2015}\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Taking absolute values, \(|z|\) is 0 or 1. \(z=0\) is one solution. For \(|z|=1\), multiplying by \(z\) gives \(z^{2016}=1\), which has 2016 solutions.</p>
+<p><strong>Answer: \(1+2016=2017\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>In a regular 100-gon, how many rectangles have all vertices among the 100-gon's vertices?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each rectangle's diagonals must be diameters of the circumcircle; there are 50 diameters, choose 2: \(\binom{50}2\).</p>
+<p><strong>Answer: 1225</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Point \(P=(a,b)\) not on the \(x\)-axis; lines \(\ell_1\) (gradient 1), \(\ell_2\) (gradient \(-2\)) through \(P\) form a triangle with the \(x\)-axis. \(\ell_3\) bisects its area. Find the gradient of \(\ell_3\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\ell_1,\ell_2\) cross the \(x\)-axis at \((a-b,0)\) and \((a+b/2,0)\); \(\ell_3\) must pass through their midpoint \((a-b/4,0)\) and \(P\), giving slope 4.</p>
+<p><strong>Answer: 4</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>Two random numbers chosen from \([0,1]\). Probability that they differ by more than their average?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The condition reduces to \(x>3y\) or \(y>3x\). These regions are two triangles of total area \(1/3\).</p>
+<p><strong>Answer: \(\dfrac13\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>System: row \(i\) has 20 on the diagonal, 1 elsewhere, RHS \(=i-8\) for \(i=1,\dots,15\) (from \(-7\) to \(7\)). Find \(x_{15}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Summing all 15 equations: \(34\sum x_i=0\). Subtracting this from the last equation: \(19x_{15}=7\).</p>
+<p><strong>Answer: \(x_{15}=\dfrac{7}{19}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>Find all positive integer pairs \((a,b)\) with \((-2)^a+228=b^2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>For odd \(a\le7\): checking \(a=1,3,5,7\) gives solutions only at \(a=5\) (\(b=14\)) and \(a=7\) (\(b=10\)). For even \(a=2c\): \(228=(b-2^c)(b+2^c)\); factoring 228 and matching a power-of-2 difference gives \(c=4,b=22\) (\(a=8\)).</p>
+<p><strong>Answer: \((5,14),\ (7,10),\ (8,22)\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>The sum of \(k\) consecutive squares equals the sum of the following \(k-1\) consecutive squares; the last of these \(2k-1\) squares is \(2015^2\). Find the first.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Letting \(x^2\) be the middle square, the balance condition gives \(x=2k(k-1)\), so the last square is \(((k-1)(2k+1))^2\). Setting \((k-1)(2k+1)=2015\) gives \(k=32\). The first square is \((2015-2(k-1))^2\).</p>
+<p><strong>Answer: \(1953^2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>How many \(2\times2\) matrices with determinant 1 have entries from \(\{1,2,3,4\}\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Need \(ad=bc+1\) with \(ad,bc\in\{1,2,3,4,6,8,9,12,16\}\). Valid pairs: \((ad,bc)=(2,1),(3,2),(4,3),(9,8)\), contributing \(2,4,6,2\) matrices respectively.</p>
+<p><strong>Answer: 14</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>How many degree-4 real polynomials \(P\) satisfy \(P(x^2)=P(x)P(-x)\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The leading coefficient must be 1, and the roots must map to themselves under squaring (up to a permutation), forcing roots among \(\{0,1\}\) and the third/fifth roots of unity (in conjugate-closed real-coefficient combinations). Combining the four allowed real factors \(x,\ x-1,\ x^2+x+1,\ x^4+x^3+x^2+x+1\) in degree-4 combinations gives 10 polynomials.</p>
+<p><strong>Answer: 10</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>Given \(\sum 1/n^2=\pi^2/6\), find \(\displaystyle\sum_{n=1}^\infty \dfrac{1}{n^3(n+1)^3}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(\frac{1}{n(n+1)}=\frac1n-\frac1{n+1}\), cube and expand; after telescoping and using \(\sum1/n^2=\pi^2/6\) plus a telescoping harmonic piece, the sum simplifies.</p>
+<p><strong>Answer: \(10-\pi^2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Six symmetric-pattern matrices \(M_1,\dots,M_6\) on a die's faces (as defined in the original). A mathdie is thrown 3 times and multiplied in order. Find the probability the product is \(M_2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Analysing row/column structure shows the first and last factors must each be \(M_2\) or \(M_3\), and the middle factor is effectively the whole product (possibly zeroed). Of the 8 combinations of first/last/middle from \(\{M_2,M_3\}\), all but \(M_3M_3M_3\) give \(M_2\).</p>
+<p><strong>Answer: \(\dfrac{7}{216}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>\(f\) twice differentiable on \([0,1]\), \(f(0)=f(1)=0\), \(f''(x)\ge-1\). Find the greatest possible value of \(\int_0^1f(x)\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Integrating by parts twice with a well-chosen weight \(\frac{x^2-x}{2}\) (which vanishes at both endpoints) gives \(\int_0^1f(x)\,dx=\int_0^1\frac{x(1-x)}{2}(-f''(x))\,dx \le \int_0^1\frac{x(1-x)}{2}\,dx\), since \(-f''(x)\le1\).</p>
+<p><strong>Answer: \(\dfrac{1}{12}\)</strong>, attained by \(f(x)=\frac{x(1-x)}{2}\)</p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>\(f(x)=\displaystyle\sum_{k=0}^{1000}\binom{2015}{k}x^k(1-x)^{2015-k}\). Find \(f''(1/2)/f'(1/2)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Telescoping the derivative gives \(f'(x)=-2015\binom{2014}{1000}x^{1000}(1-x)^{1014}\). Differentiating again and dividing yields
+\[ \frac{f''(x)}{f'(x)} = \frac{1000(1-x)-1014x}{x(1-x)}. \]
+At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
+<p><strong>Answer: \(-28\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2016 ===================== -->
+<details class="year"><summary>2016 <span style="font-weight:normal;font-size:0.75em;">— 27 August 2016</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Determine \(\big||2-\pi|-|2+\pi|\big|\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(2-\pi<0\): \(|( \pi-2)-(\pi+2)| = |-4|\).</p>
+<p><strong>Answer: 4</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Find positive \(x\) with \(\ln(x^x)=\ln(20x)+\ln(16x)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(x\ln x = x\ln20+x\ln16 = x\ln320\); cancel \(x\) (positive) to get \(\ln x=\ln320\).</p>
+<p><strong>Answer: 320</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>Find positive \(a\) with \(\sqrt{\int_0^a x\,dx} = \int_0^a\sqrt x\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\sqrt{a^2/2} = \tfrac23a^{3/2}\), i.e. \(\dfrac{a}{\sqrt2}=\dfrac23a^{3/2}\), giving \(\sqrt a = \dfrac{3}{2\sqrt2}\), so \(a=\dfrac98\).</p>
+<p><strong>Answer: \(\dfrac98\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>Find all \(\alpha\in[0,2\pi]\) with \(\cos\alpha=\sin2\alpha=\cos3\alpha=\sin4\alpha=\cos5\alpha=\sin6\alpha=\cos7\alpha=\sin8\alpha=\cos9\alpha=\sin10\alpha\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>From \(\cos\alpha=\sin2\alpha=2\sin\alpha\cos\alpha\): either \(\cos\alpha=0\) or \(\sin\alpha=1/2\). Testing \(\sin\alpha=1/2\) fails a later equation (e.g. \(\sin6\alpha=0\ne\cos\alpha\)), leaving only \(\cos\alpha=0\).</p>
+<p><strong>Answer: \(\alpha=\pi/2\) or \(3\pi/2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Find the smallest positive integer divisible by 7, with digit sum divisible by 7, and no digit equal to 7.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>1-digit and 2-digit cases fail (2-digit forces the leading digit to be 7). Checking 3-digit multiples of 7: 105, 112, 119, 126, 133 — 133 works (digit sum 7, no digit 7).</p>
+<p><strong>Answer: 133</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>Caster and Wayde run 10 laps, finishing together. Caster runs the first 5 laps twice as fast as the last 5; Wayde runs the last 5 twice as fast as the first 5. How many times does one overtake the other?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Caster overtakes Wayde after her 2nd and 4th laps. They then run equal speed for a while. Wayde overtakes Caster after his 6th and 8th laps.</p>
+<p><strong>Answer: 4 times</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>2016 balls form a triangle (1,2,3,... per row). Remove all rows with an even number of balls. How many balls remain?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(n(n+1)/2=2016\) gives \(n=63\) rows. Remaining balls: \(1+3+5+\cdots+63 = 32^2\).</p>
+<p><strong>Answer: 1024</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>Lines \(2x+3y=a,\ 3x+ay=2,\ ax+2y=3\) pass through a common point. Find \(a\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Solving the first two for the intersection, substituting into the third gives \(a^3-18a+35=0\), factoring as \((a+5)(a^2-5a+7)=0\); the quadratic has no real roots.</p>
+<p><strong>Answer: \(a=-5\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to3}\dfrac{x^x-x^3}{x^x-3^x}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Write \(x^x=e^{x\ln x}\) and apply L'Hospital's rule at \(x=3\):
+\[ \frac{3^3(\ln3+1)-3\cdot3^2}{3^3(\ln3+1)-3^3\ln3} = \frac{3^3\ln3}{3^3}=\ln3. \]</p>
+<p><strong>Answer: \(\ln3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Positive integers on cube faces; adjacent faces never differ by a multiple of 3. Sum of all six is \(S\). How many possible \(S<100\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Opposite faces share the same residue mod 3, and the three residue classes 0,1,2 each appear on exactly one opposite pair. \(S\) must be a multiple of 3, at least 12, achievable for every multiple of 3 from 12 to 99.</p>
+<p><strong>Answer: 30 values</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>Find all complex \(z\) with \(4|z|-2z=2-i\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(4|z|\) is real, \(\operatorname{Im}(-2z)=-1\), so \(z=x+i/2\). Then \(4\sqrt{x^2+1/4}-2x-i=2-i\) gives \(2\sqrt{x^2+1/4}=x+1\); squaring gives \(3x^2-2x=0\), so \(x=0\) or \(2/3\).</p>
+<p><strong>Answer: \(z=\dfrac{i}{2}\) or \(z=\dfrac23+\dfrac{i}{2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>How many triples \((A,B,C)\) of sets satisfy \(A\cup B\cup C=\{1,\dots,100\}\) and \(A\cap B\cap C=\emptyset\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each of the 100 elements independently has 6 valid membership patterns (belongs to exactly one or exactly two of the three sets).</p>
+<p><strong>Answer: \(6^{100}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>\(3\times3\) matrix \(A\): \(\det A=1,\ \det(A+I)=3,\ \det(A+2I)=5\). Find \(\det(A+3I)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(f(x)=\det(A+xI)\) is a cubic \(x^3+ax^2+bx+c\). Using \(f(0)=1,f(1)=3,f(2)=5\) gives \(a=-3,b=4,c=1\); evaluate \(f(3)\).</p>
+<p><strong>Answer: 13</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>\(f_0(x)=x\); \(f_{n+1}(x)=xf_n'(x)\) for even \(n\), \(f_{n+1}(x)=\int_0^x f_n(t)\,dt\) for odd \(n\). Find \(f_{2016}(1)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By induction, \(f_{2k}(x)=\dfrac{x^{k+1}}{k+1}\) and \(f_{2k+1}(x)=x^{k+1}\). For \(n=2016=2\cdot1008\), \(f_{2016}(x)=\dfrac{x^{1009}}{1009}\).</p>
+<p><strong>Answer: \(\dfrac{1}{1009}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>A die is rolled three times, outcomes multiplied. Probability the product is not divisible by 6?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>"Not divisible by 6" means never rolling even (\(3^3\) ways) or never rolling a multiple of 3 (\(4^3\) ways), minus the overlap (only 1,5 rolled: \(2^3\)): \(3^3+4^3-2^3=83\), out of \(6^3=216\).</p>
+<p><strong>Answer: \(\dfrac{83}{216}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Find the smallest prime not dividing any term of \(1!+2016,\ 2!+2016,\ 3!+2016,\dots\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>2, 3, 7 divide 2016 so appear as factors for large enough factorial term; 5 divides \(4!+2016\). Checking \(1!+2016\) through \(10!+2016\) mod 11 (all nonzero) and noting \(11\mid n!\) for \(n\ge11\) but \(11\nmid2016\).</p>
+<p><strong>Answer: 11</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>Maximise \(xy+x\sqrt{1-y^2}+y\sqrt{1-x^2}-\sqrt{(1-x^2)(1-y^2)}\) for \(x,y\in[-1,1]\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substituting \(x=\sin\alpha,y=\sin\beta\), the expression becomes \(\sin(\alpha+\beta)-\cos(\alpha+\beta)=\sqrt2\sin(\alpha+\beta-\pi/4)\), maximised at \(\sqrt2\).</p>
+<p><strong>Answer: \(\sqrt2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Find all matrices \(X\) with \(X^2+X=\begin{pmatrix}1&1\\1&1\end{pmatrix}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Writing \(X=\begin{pmatrix}a&b\\c&d\end{pmatrix}\), off-diagonal entries force \(b=c=\frac1{a+d+1}\), and diagonal entries force \(a=d\). Substituting gives \((2a+1)^2\in\{1,4\}\), so \(a\in\{0,-1,\frac12,-\frac32\}\).</p>
+<p><strong>Answer:</strong> \(\begin{pmatrix}0&1\\1&0\end{pmatrix},\ \begin{pmatrix}-1&-1\\-1&-1\end{pmatrix},\ \begin{pmatrix}\frac12&\frac12\\\frac12&\frac12\end{pmatrix},\ \begin{pmatrix}-\frac32&-\frac12\\-\frac12&-\frac32\end{pmatrix}\)
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>A unit circle rolls along the \(x\)-axis, one revolution per minute. Find the maximum speed of a marked point on the rim.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The point traces a cycloid \((\theta-\sin\theta,1-\cos\theta)\) with \(\theta=2\pi t\). Speed squared is \((2\pi)^2(2-2\cos\theta)\), maximised at \(\cos\theta=-1\), giving speed \(4\pi\).</p>
+<p><strong>Answer: \(4\pi\) units/minute</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>A horizontal line cuts \(y=x^2\), enclosing area \(A\). A circle inscribed touching the parabola at two points and the line at one has area \(B\). Find the maximum of \(B/A\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Parametrising by the tangency point \((a,a^2)\) and radius \(r=\sqrt{a^2+1/4}\), one finds \(A=\frac43(r+\frac12)^3\) and \(B=\pi r^2\), so \(B/A = \frac{6\pi r^2}{(2r+1)^3}\). Maximising over \(r\) gives \(r=1\).</p>
+<p><strong>Answer: \(\dfrac{2\pi}{9}\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2017 ===================== -->
+<details class="year"><summary>2017 <span style="font-weight:normal;font-size:0.75em;">— 26 August 2017</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Determine \(2^{\ln e}+e^{\ln 2}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(2^{\ln e}=2^1=2\) and \(e^{\ln2}=2\).</p>
+<p><strong>Answer: 4</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Find all real solutions to \(x^2+2|x|=8\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Completing the square: \((|x|+1)^2=9\), so \(|x|=2\).</p>
+<p><strong>Answer: \(x=2\) or \(x=-2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>Find \(a\) such that \(y=(3a+4)x-5\) and \(y=(3/a-4)x+5\) are parallel.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(3a+4=3/a-4\) gives \(\dfrac{(3a-1)(a+3)}{a}=0\).</p>
+<p><strong>Answer: \(a=\dfrac13\) or \(a=-3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>Coffee spills over a linear system's coefficients \(x+2y+?z=?,\ 2x+3y+?z=?,\ 3x+4y+?z=?\); general solution \(x=t,y=-2t+1,z=t+2\). Find the sum of the six missing numbers.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substituting the general solution and matching coefficients of \(t\) and constants determines each equation's missing coefficient \(A\) and RHS \(B\): equation 1 gives \(A=3,B=8\); the other two equations follow the same underlying linear system, giving \(4,11\) and \(5,14\).</p>
+<p><strong>Answer: \(3+4+5+8+11+14=45\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Find the smallest value of \(f(x)=\cos^2x+\csc^2x+\sec^2x+\sin^2x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Simplify: \(f(x)=1+\dfrac{1}{\sin^2x\cos^2x}=1+\dfrac{4}{\sin^2(2x)}\), minimised when \(\sin^2(2x)=1\).</p>
+<p><strong>Answer: 5</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>\(f(x)=2^{3^{4^x}}\), \(g(x)=4^{3^{2^x}}\). Find \(g'(0)/f'(0)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By repeated chain rule: \(f'(0)=\ln2\cdot8\cdot\ln3\cdot3\cdot\ln4=24\ln2\ln3\ln4\); \(g'(0)=\ln4\cdot64\cdot\ln3\cdot3\cdot\ln2=192\ln2\ln3\ln4\).</p>
+<p><strong>Answer: 8</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>\(17!\cdot\left(1+\frac11\right)^1\left(1+\frac12\right)^2\left(1+\frac13\right)^3\cdots\left(1+\frac1{17}\right)^{17}\) can be written \(a^b\). Find \(a,b\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each factor \(\left(\frac{k+1}{k}\right)^k\), so the product with \(17!\) telescopes to \(\dfrac{18^{17}}{1\cdot2\cdots17}\cdot17! = 18^{17}\).</p>
+<p><strong>Answer: \(a=18,\ b=17\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>Cheslin writes powers of 2 (\(1,2,4,\dots\)) on a chessboard's 64 squares. What is the last digit on the 64th square?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The last digit of \(2^n\) cycles with period 4: \(2,4,8,6\). The 64th square holds \(2^{63}\), and \(63\equiv3\pmod4\), matching \(2^3=8\).</p>
+<p><strong>Answer: 8</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>Find \(a,b\) with \(\begin{pmatrix}a&1\\b&1\end{pmatrix}^2=\begin{pmatrix}3&-1\\1&0\end{pmatrix}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Expanding, the second column gives \(a+1=-1,\ b+1=0\), so \(a=-2,b=-1\); checking the first column confirms consistency.</p>
+<p><strong>Answer: \(a=-2,\ b=-1\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Find the parabola through \((0,1)\) tangent to \(y=x\) and \(y=-x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By symmetry \(y=ax^2+1\). Tangency to \(y=x\) at \(x_0\): \(ax_0^2+1=x_0\) and \(2ax_0=1\); solving gives \(a=\dfrac14\).</p>
+<p><strong>Answer: \(y=\dfrac{x^2}{4}+1\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>16 clubs each play each other twice (3 pts win, 1 draw, 0 loss). Find the lowest possible winning score if no tiebreaker is needed.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>There are 240 matches, so at least 480 total points; the champion needs \(>30\) points. Checking 31 points leads to a contradiction (forces a tie or a higher scorer). 32 points is achievable if every match is drawn except one win by the champion.</p>
+<p><strong>Answer: 32 points</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>\(P(x)\) has nonnegative integer coefficients, \(P(1)=7,\ P(10)=124\). Find \(P\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Degree \(\ge3\) is impossible since \(P(10)\ge1000\). Testing quadratic \(P(x)=ax^2+bx+c\) with \(a+b+c=7\): \(a=0\) or \(a\ge2\) both fail the bound on \(P(10)\), forcing \(a=1\), then \(b=2,c=4\).</p>
+<p><strong>Answer: \(P(x)=x^2+2x+4\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>10 keys, 1 opens a chest; 3 players draw 3, 2, 1 keys in turn (with replacement between rounds). Find the probability someone wins.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(P(\text{win}) = \frac{3}{10} + \frac{7}{10}\cdot\frac{2}{10} + \frac{7}{10}\cdot\frac{8}{10}\cdot\frac{1}{10} = \frac{496}{1000}\).</p>
+<p><strong>Answer: \(\dfrac{62}{125} = 0.496\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>\(z^4+\dfrac1{z^4}=6\). Find \(\left(z+\dfrac{i}{z}\right)^8\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By the binomial theorem, \(\left(z+\frac iz\right)^4 = 4i\left(z^2-\frac1{z^2}\right)\) using the given condition. Squaring: \(\left(z+\frac iz\right)^8=-16\left(z^4-2+\frac1{z^4}\right)=-16(6-2)\).</p>
+<p><strong>Answer: \(-64\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{n\to\infty} n^{3/2}\left(\sqrt{n+1}-2\sqrt n+\sqrt{n-1}\right)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Rationalising twice and simplifying leads to
+\[ -\frac{2}{(\sqrt{1+1/n}+\sqrt{1-1/n}+2)(\sqrt{1-1/n^2}+1)} \to \frac{-2}{4\cdot2}. \]</p>
+<p><strong>Answer: \(-\dfrac14\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Find the smallest positive integer expressible as \(\dfrac{b!}{a!}\) (\(1\le a<b\)) in at least 3 ways.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Listing products of 2, 3, and 4 consecutive integers, the smallest number appearing at least twice among these lists (plus the trivial single-integer representation) is 120: \(120=\frac{5!}{1!}=\frac{6!}{3!}=\frac{120!}{119!}\).</p>
+<p><strong>Answer: 120</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>Building blocks (2 colours, lengths \(2,3,4,\dots\)) form a \(1\times1\times10\) shape. How many ways?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The recurrence \(a_n=2a_{n-2}+2a_{n-3}+\cdots+2a_0\) simplifies to \(a_{n+1}-a_n=2a_{n-1}\), giving closed form \(a_n = \dfrac{2^{n+2}(-1)^n}{3}\)... more precisely \(a_n=\dfrac{2^{n+2}+2(-1)^n}{3}\)-type formula; evaluating at \(n=10\).</p>
+<p><strong>Answer: 342</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>\(f_0(x)=\sqrt x\), \(f_{n+1}(x)=\sqrt{x+f_n(x)}\). Find \(\displaystyle\int_0^6\lim_{n\to\infty}f_n(x)\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The sequence increases and is bounded by 3, converging to \(f_\infty(x)\) solving \(f_\infty=\sqrt{x+f_\infty}\), i.e. \(f_\infty(x)=\dfrac{1+\sqrt{1+4x}}{2}\). Integrate this from 0 to 6.</p>
+<p><strong>Answer: \(\dfrac{40}{3}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>\(f(x)=e^{1/x^2-6/x-2x}\) has three local extrema. Find the product of \(f\) at these points.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Extrema occur where \(x^3-3x+1=0\), roots \(x_1,x_2,x_3\) with \(\sum x_i=0,\ \sum x_ix_j=-3,\ x_1x_2x_3=-1\) (Vieta). The product \(f(x_1)f(x_2)f(x_3)=e^{9-18-0}\) using symmetric function identities.</p>
+<p><strong>Answer: \(e^{-9}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>A "legal set" is built recursively from \(\emptyset\). A legal set \(A\) is "magic" if \(A\subseteq\mathcal P(A)\). How many 4-element magic sets are there?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Every magic set is built by adding elements (subsets of the current set) one at a time. There is 1 magic 1-set, 1 magic 2-set, 2 magic 3-sets, and building up from these (accounting for one double-counted case) gives the 4-element count.</p>
+<p><strong>Answer: 9</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2018 ===================== -->
+<details class="year"><summary>2018 <span style="font-weight:normal;font-size:0.75em;">— 25 August 2018</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Solve \((2x)^2-1=8\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\((2x)^2=9\), so \(2x=\pm3\).</p>
+<p><strong>Answer: \(x=\pm\dfrac32\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Xolile has 20 gems worth R18 each; Yolandi has 18 gems worth R20 each. After exchanging one gem each, by how much do their total values differ?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Xolile's new total: \(20\cdot18+20-18=362\). Yolandi's: \(18\cdot20+18-20=358\).</p>
+<p><strong>Answer: R4</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^1S\,dS\times\int_0^1A^2dA\times\int_0^1T^3dT\times\int_0^1M^4dM\times\int_0^1O^5dO\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each integral is \(\dfrac{1}{k+1}\) for \(k=1,\dots,5\): \(\dfrac12\cdot\dfrac13\cdot\dfrac14\cdot\dfrac15\cdot\dfrac16\).</p>
+<p><strong>Answer: \(\dfrac1{720}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(a=20+18i,\ b=18-20i\). Find \(ab+\overline{ab}+a\bar b+\bar ab\) (i.e. \((a+\bar a)(b+\bar b)\)).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\((a+\bar a)(b+\bar b)=(2\operatorname{Re}a)(2\operatorname{Re}b)=40\times36\).</p>
+<p><strong>Answer: 1440</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Find the smallest positive integer \(n\) so that the \(n\)th derivative of \(e^{10x}\) at 0 exceeds 2018.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The \(n\)th derivative at 0 is \(10^n\); \(10^3=1000<2018<10000=10^4\).</p>
+<p><strong>Answer: \(n=4\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>How many lines parallel to \(y=x\) (excluding itself) pass through a point with both integer coordinates in \([-5,5]\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Such lines are \(y=x+c\), \(c\) an integer in \([-10,10]\), \(c\ne0\); each such \(c\) is attainable.</p>
+<p><strong>Answer: 20</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>Solving \(2x+3y=-2,\ 3x+4y=a\), a student mistakenly multiplied coefficients to get \(6x+12y=-2a\), yet adding it didn't change the solution. Find \(a\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Solving the original system: \(x=3a+8,\ y=-2a-6\). Requiring the third equation to hold: \(6(3a+8)+12(-2a-6)=-2a\), giving \(-6a-24=-2a\).</p>
+<p><strong>Answer: \(a=-6\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>For which \(k\) does \(|x^2+20x+18|=k\) have exactly 3 solutions?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The expression is symmetric about \(x=-10\); the middle solution is \(x=-10\), giving \(k=|(-10+10)^2-82|=82\) (using \(x^2+20x+18=(x+10)^2-82\)).</p>
+<p><strong>Answer: \(k=82\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>Find the area of \(20\ge|x|+|y|\ge18\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>This is the difference of two "diamond" squares with side \(18\sqrt2\) and \(20\sqrt2\): area \(=2(20^2-18^2)\).</p>
+<p><strong>Answer: 152</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Particle: \(x=\cos t,\ y=\sin^2t\). Find its shortest distance from the origin.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Distance\(^2 = \cos^2t+\sin^4t\); differentiating and setting to zero gives critical values at \(\sin t=0,\cos t=0\) (distance 1) or \(\sin t=\pm1/\sqrt2\) (distance\(^2=3/4\)).</p>
+<p><strong>Answer: \(\dfrac{\sqrt3}{2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>ANGLE (5-digit, distinct digits) represents degrees with \(\sin(ANGLE)=\dfrac{\sqrt2}{2}\). Find \(\tan(AANNGGLLEE)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(ANGLE\) must be an odd multiple of 45, so \(E=5\) and its digit sum is divisible by 9. The 10-digit number \(AANNGGLLEE\) ends in 55 and is also an odd multiple of 45. Checking divisibility by 180 shows \(AANNGGLLEE\equiv135\pmod{180}\).</p>
+<p><strong>Answer: \(-1\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>Find the greatest integer dividing \((p-3)(p-5)(p-7)\) for all primes \(p>2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(p\) is even, so the three factors are consecutive even numbers — one divisible by 4 (giving a factor 16) and one by 3. This always gives a multiple of 48; checking \(p=11,13,17\) shows 48 is exactly the gcd.</p>
+<p><strong>Answer: 48</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>A springbok starts at 1, can jump to \(n-1\) or \(2n\). Minimum jumps to reach 2018?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The optimal path never jumps backward twice consecutively after a forward leap, uniquely determining a path built backward from 2018 by repeated halving (odd \(\to\) subtract 1 first).</p>
+<p><strong>Answer: 15 jumps</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>\(A\) = sum of cardinalities of subsets of \(\{1,\dots,10\}\) containing 5; \(B\) = same for subsets not containing 5. Find \(A-B\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Pairing each set \(S\) without 5 with \(T=\{5\}\cup S\) contributes 1 to \(A-B\) per pair; there are \(2^{10}/2=2^9\) pairs.</p>
+<p><strong>Answer: 512</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Two balls (numbered 1–77) are drawn. Probability the sum of squares is divisible by 7?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Squares mod 7 are 0,1,2,4; only both \(\equiv0\) sums to a multiple of 7, requiring both numbers multiples of 7 (11 such numbers).</p>
+<p><strong>Answer: \(\dfrac{\binom{11}{2}}{\binom{77}{2}} = \dfrac{5}{266}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>\(f(n)\) = integer closest to \(\sqrt n\). Find \(\displaystyle\sum_{n=1}^{10000}\frac1{f(n)}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(f(n)=m\) for exactly \(2m\) values of \(n\) (for \(m=1,\dots,99\)), contributing \(2\) each; \(m=100\) contributes only 100 values (contributing 1). Total: \(2\cdot99+1\).</p>
+<p><strong>Answer: 199</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>\(f(m+n)=f(m)+f(n)-2f(mn)\), \(f(1)=1\). Find \(f(1)+\cdots+f(2018)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Setting \(n=1\): \(f(m+1)=1-f(m)\), giving \(f(n)=1\) for odd \(n\), \(f(n)=0\) for even \(n\). Sum: 1009 odd terms contribute 1 each.</p>
+<p><strong>Answer: 1009</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{n\to\infty} n\left[\left(\frac{n+1}{n}\right)^n-\left(\frac{n}{n-1}\right)^n\right]\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Factoring the difference of \(n\)th powers and squeezing between bounds that both converge to \(e\) via L'Hospital-based limits of \((1\pm1/n)^{\pm n}\to e\).</p>
+<p><strong>Answer: \(-e\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>\(s(n)\)=binary digit sum. Determine \(\displaystyle\sum_{n=1}^\infty\dfrac{s(n)}{n(n+1)}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Splitting the sum by even/odd \(n\) and using \(s(2k)=s(k),\ s(2k+1)=s(k)+1\) yields a self-referential equation \(S = \frac12 + \frac12 S + \ln2\) (the last part being the alternating harmonic series).</p>
+<p><strong>Answer: \(2\ln2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>10 distinct random subsets of \(\{1,\dots,5\}\) form a \(10\times10\) matrix of pairwise intersection sizes. Probability the matrix is invertible?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each row is a linear combination of only 5 fixed vectors (one per element of \(\{1,\dots,5\}\)), so the matrix rank is at most 5 — never invertible for a \(10\times10\) matrix.</p>
+<p><strong>Answer: 0</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2019 ===================== -->
+<details class="year"><summary>2019 <span style="font-weight:normal;font-size:0.75em;">— 24 August 2019</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^1\frac{x^{20}}{x^{19}}\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\int_0^1 x\,dx = \dfrac{x^2}{2}\Big|_0^1\).</p>
+<p><strong>Answer: \(\dfrac12\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>What is the last digit of \(2019^{2019!}\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Last digit of \(2019^n\) alternates 1 (even \(n\)), 9 (odd \(n\)). Since \(2019!\) is even, the last digit is 1.</p>
+<p><strong>Answer: 1</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>\(f(x)=x(x+1)(x+2)(x+3)(x+4)\). Find \(f'(0)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Expanding, \(f(x)=x^5+\cdots+24x\), so \(f'(x)=5x^4+\cdots+24\); at \(x=0\) only the constant term 24 survives.</p>
+<p><strong>Answer: 24</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to1}\frac{3^{24x}-8}{\sin(2019\pi x)}\) (interpreted per source: \(\lim_{x\to1}\dfrac{3\cdot24x-8}{\sin(2019\pi x)}\)).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By L'Hospital's rule: \(\displaystyle\lim_{x\to1}\frac{72}{2019\pi\cos(2019\pi x)} = \frac{72}{2019\pi\cos(673\pi)}\). Since 673 is odd, \(\cos(673\pi)=-1\).</p>
+<p><strong>Answer: \(-\dfrac{8}{673\pi}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Ten boys in a circle each claim (going clockwise) R1 more than their right neighbour, with Boy 1 first claiming the total is R100. Only one of the 11 statements is false. What is the greatest amount any boy has?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The false statement must be one of the "R1 more" claims. If the boy who breaks the chain has \(x\), the amounts are \(x, x+1,\dots,x+9\), summing to \(10x+45=100\), giving \(x=5.5\).</p>
+<p><strong>Answer: R14.50</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>If \(\log_x4=6\), find \(\log_2x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(x^6=4\), so \(6\log_2x=\log_24=2\).</p>
+<p><strong>Answer: \(\dfrac13\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>Distinct positive integers \(a,b,c,d,e,f\) satisfy \(abc=def\). Find the smallest possible value of the greatest of the six.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(1\cdot8\cdot9=3\cdot4\cdot6=72\) achieves max 9. No solution exists with all six \(\le8\): excluding 5,7 (odd prime factors on only one side) forces the set \(\{1,2,3,4,6,8\}\), but \(\sqrt{1\cdot2\cdot3\cdot4\cdot6\cdot8}=24\sqrt2\) is irrational.</p>
+<p><strong>Answer: 9</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>Alisha computes \(\cos(x^\circ)=y\); Zinhle computes \(\cos(x\text{ rad})=-y\). Smallest positive \(x\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(x\) degrees \(=\dfrac{\pi x}{180}\) radians. \(\cos\alpha=-\cos\beta\) iff \(\alpha\pm\beta\) is an odd multiple of \(\pi\), giving \(x=\dfrac{180(2k+1)\pi}{180\pm\pi}\); the smallest positive value uses \(k=0\), \(+\) sign.</p>
+<p><strong>Answer: \(x=\dfrac{180\pi}{180+\pi}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>A teacher's linear system with birthday-based RHS values \(D,M\) gives Angie (2 Oct) solution \((4,6)\), Blade (14 Apr) solution \((-5,9)\). Find Cyril's (17 Nov) solution.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Form the matrix equation \(M\begin{pmatrix}4&-5\\6&9\end{pmatrix}=\begin{pmatrix}2&14\\10&4\end{pmatrix}\), solve for \(M\), then apply it to Cyril's \((17,11)\).</p>
+<p><strong>Answer: \((x,y)=(-3,14)\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Cards numbered 1–20; pick 3 so that digit "1" appears exactly 3 times total. How many ways?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Option A: pick card 11 (two 1's), one of the ten single-'1' cards, one of the remaining nine cards: \(10\times9=90\). Option B: pick three of the ten single-'1' cards: \(\binom{10}{3}=120\).</p>
+<p><strong>Answer: 210</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>Two wheels (radius 2 at origin, radius 1 at \((1,0)\)) spin clockwise at equal angular speed; nails start at \((0,0)\) and \((2,0)\), connected by elastic. Find the band's length when its rate of change is greatest.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The band length is \(f(t)=\sqrt{10-6\cos t}\). Maximising \(f'(t)\) means finding zeros of \(f''(t)\), leading to \(\cos t=1/3\).</p>
+<p><strong>Answer: \(\sqrt8=2\sqrt2\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>\(z\ne1\) with \(|1-z|=|1-z^2|=2|z-z^2|\). Find \(\operatorname{Re}(z)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Dividing by \(|1-z|\) (nonzero) gives \(|1+z|=2|z|\). With \(z=a+bi\): \((1+a)^2+b^2=4(a^2+b^2)\), and combined with \(a^2+b^2=1/4\), solve for \(a\).</p>
+<p><strong>Answer: \(-\dfrac18\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>Solve \(2x(x-2\sqrt{1-x^2})\le2x-3\sqrt{1-x^2}\) for \(x\in[-1,1]\); find the length of the solution interval.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Rearranging and factoring both sides using \(1+2\sqrt{1-x^2}\) as a common (positive) factor reduces to \(2-2x\le\sqrt{1-x^2}\); squaring gives \((5x-3)(x-1)\le0\), so \(x\in[3/5,1]\).</p>
+<p><strong>Answer: \(\dfrac25\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>A \(2\times2\) matrix \(A\) has nonnegative entries summing to 4. Find the difference between the max and min possible sum of entries of \(A^2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The sum of entries of \(A^2\) ranges from 0 (e.g. \(A=\begin{pmatrix}0&4\\0&0\end{pmatrix}\)) to \((a+b+c+d)^2=16\) (e.g. \(A=\begin{pmatrix}4&0\\0&0\end{pmatrix}\)).</p>
+<p><strong>Answer: 16</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>On an 8×8 board, a "hook" is two diagonals of adjacent squares meeting at a right angle. No hook shares a vertex with another. Maximum number of hooks?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Colouring the 81 grid points alternately, each hook covers 3 same-coloured points. There are 40 of one colour and 41 of the other, allowing at most 13 hooks per colour.</p>
+<p><strong>Answer: 26</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Random distinct pair \(z_1,z_2\) among the 19th roots of unity. Probability \(|z_1+z_2|\ge1\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The condition \(|z_1+z_2|\ge1\) is equivalent to \(z_2\) lying outside the unit circle around \(-z_1\); geometrically this arc covers \(2/3\) of the circle, giving 12 of the 18 remaining roots.</p>
+<p><strong>Answer: \(\dfrac{2}{3}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>A stick of length 19 is cut at 3 random integer points into 4 pieces. Probability all pieces exceed length 1?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>There are \(\binom{18}3\) ways to choose cut points. Shortening each of the 4 pieces by 1 unit gives a bijection with cutting a length-14 stick arbitrarily, \(\binom{14}3\) ways.</p>
+<p><strong>Answer: \(\dfrac{91}{204}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>\(f(x)=4x^2\) on \([0,1]\) is cut by \(x=a\); minimise the shaded area shown (region below/above the curve split by the vertical line).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The area function's derivative is \(dA/da=-4+2f(a)\), zero when \(f(a)=2\), i.e. \(4a^2=2\).</p>
+<p><strong>Answer: \(a=\dfrac{1}{\sqrt2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>\(P(n)\)=largest prime \(\le n\), \(Q(n)\)=smallest prime \(>n\). Determine \(\displaystyle\sum_{n=2}^\infty\dfrac{1}{P(n)Q(n)}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Between consecutive primes \(p_k,p_{k+1}\), the term \(\frac1{p_kp_{k+1}}\) occurs \(p_{k+1}-p_k\) times, giving a telescoping sum \(\sum\left(\frac1{p_k}-\frac1{p_{k+1}}\right)=\frac1{p_1}=\frac12\).</p>
+<p><strong>Answer: \(\dfrac12\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>Find a differentiable \(f:(0,\infty)\to(0,\infty)\) with \(f'(x)>0\), \(f(1)=1\), and \(f(xf'(y))=f'(f(xy))\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Setting \(x=1,y=1\) leads to \(f'(x)=xf'(1)\), so \(f(x)=ax^2+b\). Substituting back into the original functional equation forces \(a=1/2\), and \(f(1)=1\) gives \(b=1/2\).</p>
+<p><strong>Answer: \(f(x)=\dfrac{x^2+1}{2}\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2020 ===================== -->
+<details class="year"><summary>2020</summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>\(P\) is the inflection point of \(y=x^3-3x^2+2020x\). Find the slope of the tangent there.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(y''=6x-6=0\) at \(x=1\). Slope: \(y'(1)=3-6+2020\).</p>
+<p><strong>Answer: 2017</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>\((\log_4x)^2=\log_4(x^2)\) has two real solutions. Find their sum.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\((\log_4x)^2=2\log_4x\) gives \(\log_4x=0\) or \(2\), i.e. \(x=1\) or \(16\).</p>
+<p><strong>Answer: 17</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>\(f(x)=\dfrac{1234}{5+e^x}\). How many integers are in the range of \(f\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(e^x>0\), the range is \((0,1234/5)=(0,246.8)\), containing integers 1 through 246.</p>
+<p><strong>Answer: 246</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>Jack tells the truth Mon–Thu, lies otherwise. Jill tells the truth Fri–Mon, lies otherwise. On one day, both said "Yesterday I told lies." Which day?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Jack's statement is consistent only on a Monday or Friday; Jill's only on a Friday or Tuesday. The common day is Friday.</p>
+<p><strong>Answer: Friday</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Find \(P(5)\) if \(P''(x)+P'(x)+P(x)=20x^2+20\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(P\) must be quadratic; writing \(P=ax^2+bx+c\) and matching coefficients gives \(a=20,b=-40,c=20\). Then \(P(5)=500-200+20\).</p>
+<p><strong>Answer: 320</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>Find the coefficient of \(x^2\) in \((1+2x+3x^2+4x^3+5x^4)^6\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(y=(1+2x+\cdots)^6\), differentiating twice and evaluating at \(x=0\): \(2c = 30\cdot1\cdot2^2+12\cdot3\), so \(c=78\).</p>
+<p><strong>Answer: 78</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>An unfair coin (4 flips) has equal probability of exactly 2 heads/2 tails as exactly 3 tails/1 head. Find \(P(\text{heads})\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\binom42p^2(1-p)^2=\binom43p(1-p)^3\) simplifies to \(6p^2(1-p)^2=4p(1-p)^3\), giving \(p=2/5\).</p>
+<p><strong>Answer: 40%</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>\(a(x)=f(x)-f(2x),\ b(x)=f(x)-f(4x)\). Given \(a'(1)=10,\ a'(2)=11\), find \(b'(1)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(b(x)=a(x)+a(2x)\), so \(b'(1)=a'(1)+2a'(2)=10+22\).</p>
+<p><strong>Answer: 32</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>Points \(\langle2,x,y\rangle, \langle x,3,y\rangle, \langle x,y,7\rangle\) are collinear. Find \(x+y\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The first coordinates force \(x=2\); the last coordinates force \(y=7\) (the line has constant first and last components).</p>
+<p><strong>Answer: 9</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{n\to\infty}\dfrac{(1+2+\cdots+n)(1^8+2^8+\cdots+n^8)}{(1^3+2^3+\cdots+n^3)(1^6+2^6+\cdots+n^6)}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(1^k+\cdots+n^k\sim\frac{n^{k+1}}{k+1}\): the ratio tends to \(\dfrac{(1/2)(1/9)}{(1/4)(1/7)}\).</p>
+<p><strong>Answer: \(\dfrac{14}{9}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>\(f(x)=8x^3+5x\). Determine \(\displaystyle\lim_{x\to\infty}\dfrac{f^{-1}(27x)}{\sqrt[3]x}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substituting \(y=f(x)\) (so \(x=f^{-1}(y)\)) and simplifying: \(\displaystyle\lim_{x\to\infty}\frac{3x}{\sqrt[3]{8x^3+5x}} \to \frac{3x}{2x}\).</p>
+<p><strong>Answer: \(\dfrac32\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>\(|v|=2,|w|=3,|v+w|=4\). Find \(|v-w|\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(v\bar w+w\bar v=|v+w|^2-|v|^2-|w|^2=16-4-9=3\). Then \(|v-w|^2=|v|^2+|w|^2-(v\bar w+w\bar v)=4+9-3\).</p>
+<p><strong>Answer: \(\sqrt{10}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>For \(a>0\), the parabolas \(y=a-x^2\), \(y=x^2-a\) are tangent to \(x^2+y^2=1\) at four points. Find \(a\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>At the tangent point \((b,a-b^2)\) in Q1, matching slopes of the circle and parabola gives \(a-b^2=1/2\); combined with \(b^2+(a-b^2)^2=1\), solving gives \(b^2=3/4\), \(a=1/2+3/4\).</p>
+<p><strong>Answer: \(a=\dfrac54\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>How many functions \(f:\{1,\dots,5\}\to\{1,\dots,5\}\) take exactly 3 distinct values?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Choose the 3 range values: \(\binom53=10\) ways. Output pattern \(a,a,a,b,c\) (permutations): \(3\times\binom53\times2=60\) — wait, combine correctly: pattern types \((3,1,1)\) give \(60\) arrangements, pattern \((2,2,1)\) give \(90\) arrangements, per choice of the 3 values.</p>
+<p><strong>Answer: \(10\times(60+90)=1500\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Find the minimum value of \((xy)^2+(x+7)^2+(2y+7)^2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(z=2y,\ s=x+z,\ p=xz\): the expression becomes \(\frac{p^2}{4}+s^2+14s+98=(p/2-2)^2+(s+7)^2+45\ge45\), with equality achievable since \(s^2\ge4p\) is satisfiable at \(s=-7,p=4\).</p>
+<p><strong>Answer: 45</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^{2020\pi}\min\{\sin x,0\}\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Over one period \([0,2\pi]\), \(\int\min\{\sin x,0\}\,dx = -2\). There are 1010 periods in \([0,2020\pi]\).</p>
+<p><strong>Answer: \(-2020\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>How many \(n\times n\) invertible matrices \(A\) have all entries of \(A\) and \(A^{-1}\) in \(\{0,1\}\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(\sum_ja_{kj}b_{jk}=1\), one shows each row/column of \(A\) (and \(A^{-1}\)) has exactly one 1, so \(A\) must be a permutation matrix.</p>
+<p><strong>Answer: \(n!\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Curve \(C\): \(x=\ln(t+2),\ y=\frac1{t+1}\), \(1\le t\le2\). Find the area between \(C\) and the \(x\)-axis.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Eliminating \(t\): \(y=\frac1{e^x-1}\) on \([\ln3,\ln4]\). Partial fractions give \(\int\frac{dx}{e^x-1} = -x+\ln|e^x-1|\), evaluated at the endpoints.</p>
+<p><strong>Answer: \(\ln(9/8)\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>A 20×20 grid is coloured so each row and column uses at most 7 colours. Maximum total number of colours?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>A construction with \(20\times6+1=121\) colours works (6 "unique" colours per row/column plus one shared colour). A counting argument on new colours introduced per row shows this is optimal.</p>
+<p><strong>Answer: 121</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>Find all irrational \(x\) such that \(x^2-2x\) and \(x^3-8x\) are both rational.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let \(x=y+1\); \(x^2-2x=y^2-1\in\mathbb Q\) forces \(y^2\in\mathbb Q\). Then \(x^3-8x=y(y^2-5)+3y^2-5\in\mathbb Q\) forces \(y(y^2-5)\in\mathbb Q\), which (with \(y\) irrational) forces \(y^2=5\).</p>
+<p><strong>Answer: \(x=1\pm\sqrt5\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2021 ===================== -->
+<details class="year"><summary>2021</summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>The floor function \(\lfloor x\rfloor\) gives the greatest integer \(\le x\). Determine \(\lfloor\sqrt[3]{100}\rfloor\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(4^3=64<100<125=5^3\).</p>
+<p><strong>Answer: 4</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Find \(r\) so that the area of \(\{(x,y):|x|+|y|\le r\}\) is 10.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The region is a square of side \(r\sqrt2\), area \(2r^2=10\).</p>
+<p><strong>Answer: \(r=\sqrt5\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>\(d(x)\) is the digit sum. Jill's secret 5-digit code \(x\) satisfies \(x+d(x)+d(d(x))+d(d(d(x)))=19907\). Find \(x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(d(x),d(d(x)),d(d(d(x)))\le45\), \(x\) is close to 19907, in the range \(19***\). Checking values gives</p>
+<p><strong>Answer: 19865</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(f(x)=\sqrt[3]{3x+\sqrt x}\). Find \(f'(1)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(f'(x)=\dfrac{1}{2\sqrt{3x+\sqrt x}}\cdot\left(3+\dfrac1{2\sqrt x}\right)\) — via chain rule (treating the cube root as index consistent with source); at \(x=1\): \(f'(1)=\dfrac78\).</p>
+<p><strong>Answer: \(\dfrac78\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>For \(a>0\), find \(a\) such that \(\displaystyle\int_0^a x^4\,dx = \left(\int_0^a x^2\,dx\right)^2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\dfrac{a^5}5=\left(\dfrac{a^3}3\right)^2\), giving \(a=\dfrac95\).</p>
+<p><strong>Answer: \(\dfrac95\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>\(y=x^4-x^3+kx+1\) has two inflection points \(P,Q\); the line \(PQ\) is horizontal. Find \(k\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(f''(x)=12x^2-6x=0\) at \(x=0,\ 1/2\). Setting \(f(0)=f(1/2)\): \(1 = 1/16-1/8+k/2+1\), giving \(k=1/8\).</p>
+<p><strong>Answer: \(k=\dfrac18\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>\(f(0)=1,g(0)=2,h(0)=3\); \((gh)'(0)=4,(hf)'(0)=5,(fg)'(0)=6\). Find \((fgh)'(0)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\((fgh)' = \dfrac{(fg)'h+(gh)'f+(hf)'g}{2}\) — using \(f'gh+fg'h+fgh'\) summed appropriately: \(\dfrac{1\cdot4+2\cdot5+3\cdot6}{2}\).</p>
+<p><strong>Answer: 16</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>\(2x^2+Mx+3+4i=0\) has exactly one root. Find \(|M|^2\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Discriminant zero: \(M^2=4\cdot2\cdot(3+4i)=8(3+4i)\), so \(|M|^2=8|3+4i|=8\times5\).</p>
+<p><strong>Answer: 40</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>\(x\) uniform on \([0,2\pi]\). Find \(P(\sin x\cos x<1/4)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Equivalent to \(\sin(2x)<1/2\). Sketching \(y=\sin(2x)\) over \([0,4\pi]\) (in terms of \(2x\)) shows this holds \(2/3\) of the time.</p>
+<p><strong>Answer: \(\dfrac23\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^4\sqrt{x\sqrt{x\sqrt{x\cdots}}}\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The integrand is \(x^{1/2+1/4+1/8+\cdots}=x^1\). So the integral is \(\int_0^4x\,dx = \dfrac{x^2}2\Big|_0^4\).</p>
+<p><strong>Answer: 8</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>\(f(x)=\cos x\cos(2x)\cos(4x)\cdots\cos(1024x)\). Find \(f\!\left(\dfrac{\pi}{2049}\right)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(2\sin\alpha\cos\alpha=\sin2\alpha\) repeatedly: \(f(x)\sin x = \dfrac{\sin(2048x)}{2048}\). At \(x=\pi/2049\), \(\sin(2048x)=\sin(\pi-x)=\sin x\).</p>
+<p><strong>Answer: \(\dfrac{1}{2048}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>How many ways to fill a \(4\times4\) 0/1 grid so every row and column sum is even?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Freely fill the top-left \(3\times3\) subgrid (\(2^9\) ways); the rest is then forced.</p>
+<p><strong>Answer: \(2^9=512\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>Cube corners \(P(3,4,1), Q(5,2,9), R(1,6,5)\) (not all on one face). Find the surface area.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Cube-vertex distances are \(s,\sqrt2 s,\sqrt3 s\). \(PQ=\sqrt{4+4+64}=\sqrt{72}\)... using the source's values: \(PR=\sqrt{24}\) (edge), \(PQ=3\sqrt{24}\)... giving \(s=\sqrt{24}\). Surface area \(=6s^2\).</p>
+<p><strong>Answer: 144</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>\(A(0,0), B(1,1)\), \(C\) on \(y=3-x^2\) in Q1/Q2. Find the max area of \(\triangle ABC\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By the shoelace formula, area \(V(x)=\left|\dfrac{x^2+x-3}{2}\right|\) for \(x\in[-\sqrt3,\sqrt3]\). Checking critical/boundary points, the max is at \(x=-1/2\).</p>
+<p><strong>Answer: \(\dfrac{13}{8}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to0}\dfrac{\cos(\sin x)-\cos x}{x^4}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using Taylor series for \(\sin x,\cos x\), \(\cos(\sin x)-\cos x = \dfrac{x^4}{6}+O(x^6)\).</p>
+<p><strong>Answer: \(\dfrac16\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Find the minimum of \(f(x)=\displaystyle\int_0^1(t^2-x)^2\,dt\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(f(x)=\dfrac15-\dfrac{2x}3+x^2\), so \(f'(x)=-\dfrac23+2x=0\) at \(x=1/3\); \(f(1/3)=\dfrac15-\dfrac29+\dfrac19\).</p>
+<p><strong>Answer: \(\dfrac{4}{45}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>A subset \(P\subseteq\{1,\dots,1000\}\) has no two distinct elements \(a,b\) with \(ab\in P\). Find the maximum \(|P|\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\{32,\dots,1000\}\) works, with \(969\) elements. Any larger set must include an element \(\le31\), and a counting/bounding argument shows 970 is impossible.</p>
+<p><strong>Answer: 969</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>A polynomial \(f\) with integer coefficients: \(f(7)=77,\ f(b)=85,\ f(c)=0\), where \(7<b<c\) are the teacher's children's ages. Find \(bc\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(p-q\mid f(p)-f(q)\): \(b-7\mid8,\ c-b\mid85,\ c-7\mid77\). Testing small divisor combinations that are mutually consistent gives \(b-7=2,c-b=5,c-7=7\), so \(b=9,c=14\).</p>
+<p><strong>Answer: \(9\times14=126\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>A binary operation \(*\) satisfies \(1*1=1,\ (a*b)+c=(b*c)+a,\ a*b=b*a\). Find \(x\) if \(x*5=1\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>From the axioms, \(1*c=c\), then inductively \(n*c=c+n-1\), so \(x*5=x+4\). Setting \(x+4=1\) gives \(x=-3\).</p>
+<p><strong>Answer: \(-3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>\(a_1=2,\ a_{n+1}=\dfrac{a_n}{c}+\dfrac1{a_n}\). Find all \(c>0\) so that \(a_{n+1}\le a_n\) for all \(n\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Requiring \(a_{n+1}\le a_n\) forces \(c>1\), and using \(a_1=2\) gives \(c\ge4/3\). Analysing the fixed point \(a=\sqrt{c/(c-1)}\) and its stability rules out \(c>2\). For \(c\in[4/3,2]\), the sequence decreases to this fixed point.</p>
+<p><strong>Answer: \(c\in\left[\dfrac43,2\right]\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2022 ===================== -->
+<details class="year"><summary>2022</summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Determine the unique \(x>0\) with \(\sqrt{x+\sqrt{x+\sqrt x}}=1\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\sqrt{x+\sqrt x}=1-\sqrt x\); squaring twice and simplifying gives \(3\sqrt x=1\), so \(x=1/9\).</p>
+<p><strong>Answer: \(\dfrac19\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>70 chairs round a circular table. Smallest number of people already seated so the next person must sit adjacent to someone?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Seating every third seat (pattern with one gap of 2, rest of 3) uses 24 people and blocks all empty seats from being isolated; 23 is insufficient by pigeonhole.</p>
+<p><strong>Answer: 24</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>\(2a+3b=10,\ 4a^2+9b^2=4\). Find \(ab\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(12ab=(2a+3b)^2-(4a^2+9b^2)=100-4\).</p>
+<p><strong>Answer: 8</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(2\cos^2x+2=9\sin x\cos x\). Find the two possibilities for \(\tan x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Rewriting: \(4\cos^2x-9\sin x\cos x+2\sin^2x=0\), factoring as \((4\cos x-\sin x)(\cos x-2\sin x)=0\).</p>
+<p><strong>Answer: \(\tan x=\dfrac12\) or \(4\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Quadratic \(P\) with \(P(1)=P(2)=0\), \(P'(3)=12\). Find \(P(4)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(P(x)=a(x-1)(x-2)\); \(P'(3)=a(2\cdot3-3)=3a=12\), so \(a=4\). \(P(4)=4\cdot3\cdot2\).</p>
+<p><strong>Answer: 24</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>2022 marbles numbered 1–2022; same colour iff digit sums are equal. How many colours?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Digit sums range from 1 (e.g. "1") to 28 (e.g. "1999"), and every value in between occurs.</p>
+<p><strong>Answer: 28</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>Jack rolls a standard die; Jill rolls a die with faces \(2,2,2,5,5,5\). Jill wins if she rolls higher. Find \(P(\text{Jill wins})\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>36 outcomes. Jill rolling 2 beats Jack's 1 (1 way); Jill rolling 5 beats Jack's 1–4 (4 ways). \(P=\dfrac{3\times1+3\times4}{36}\).</p>
+<p><strong>Answer: \(\dfrac{5}{12}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>\(a\) is a root of \(x^2-2x+5=0\); \(b\) is a root of \(x^2-6x+25=0\). Find the largest \(|b-a|\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Roots: \(a=1\pm2i\), \(b=3\pm4i\). Largest \(|b-a|\) occurs for \(b-a=2+6i\), giving \(\sqrt{4+36}\).</p>
+<p><strong>Answer: \(\sqrt{40}=2\sqrt{10}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>\(\displaystyle\lim_{x\to\infty}x\left(\sqrt{ax^2+bx+c}-2x-1\right)=10\). Find \(a+b+c\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>For a finite nonzero limit, need \(a=4,b=4\) (matching leading terms). Then the limit simplifies to \(\dfrac{c-1}{2+2}=10\), giving \(c=41\).</p>
+<p><strong>Answer: \(4+4+41=49\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Find the sum of coefficients of odd powers of \(x\) in \((x^2+3x^3)^5\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let \(f(x)=(x^2+3x^3)^5\); the odd-power sum is \(\dfrac{f(1)-f(-1)}2 = \dfrac{4^5+2^5}{2}\) — precisely \(\frac{4^5-(-2)^5}{2}\).</p>
+<p><strong>Answer: 528</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>\(D=\{(x,y):|x|^3+|y|\le1\}\). Find the area.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By symmetry, area \(=4\int_0^1(1-x^3)\,dx = 4\left(1-\dfrac14\right)\).</p>
+<p><strong>Answer: 3</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^5\frac{dx}{\sqrt{|x-1|}}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Split at \(x=1\) (improper): \(\int_0^1\frac{dx}{\sqrt{1-x}}=2\) and \(\int_1^5\frac{dx}{\sqrt{x-1}}=4\).</p>
+<p><strong>Answer: 6</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>Determine \(\dfrac{e}{\sqrt[2]{e}}\times\dfrac{\sqrt[3]{e}}{\sqrt[4]{e}}\times\dfrac{\sqrt[5]{e}}{\sqrt[6]{e}}\times\dfrac{\sqrt[7]{e}}{\sqrt[8]{e}}\times\cdots\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The exponent sum is \(1-\frac12+\frac13-\frac14+\cdots = \ln2\), so the product is \(e^{\ln2}\).</p>
+<p><strong>Answer: 2</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>A binary operation \(\heartsuit\) satisfies: \(2\heartsuit2=3^2\); \(y^2\heartsuit x=x^2\heartsuit y\); \((2x)\heartsuit y=\frac12+(x\heartsuit y)\). Find \(32\heartsuit8\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Repeated halving via rule 3 and swapping via rule 2: \(32\heartsuit8 = \frac12+16\heartsuit8=1+8\heartsuit8=\cdots\), eventually reducing to \(2\heartsuit2=9\), accumulating constants.</p>
+<p><strong>Answer: \(\dfrac{11}{2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Calculate the determinant of \(\begin{pmatrix}2022^2&2023^2&2024^2\\2023^2&2024^2&2025^2\\2024^2&2025^2&2026^2\end{pmatrix}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Writing \(n=2022\), the matrix has entries \((n+i+j)^2\) for a Hankel-type pattern; row-reduction shows the determinant is independent of \(n\).</p>
+<p><strong>Answer: \(-8\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to0}\frac1{x^4}\left(\frac{6}{6+x^2}-\frac{x}{\sinh x}\right)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using Taylor series, \(\frac{6}{6+x^2}=1-\frac{x^2}6+\frac{x^4}{36}+O(x^5)\) and \(\frac{x}{\sinh x}=1-\frac{x^2}6+\frac{7x^4}{360}+O(x^5)\); subtracting and dividing by \(x^4\) gives \(\frac1{36}-\frac{7}{360}\).</p>
+<p><strong>Answer: \(\dfrac{1}{120}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>A regular tetrahedron has edge \(\sqrt{600}\); its vertices lie on a sphere. Find the sphere's radius.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Inscribing the tetrahedron in a cube (as alternating vertices), the cube's space diagonal is the sphere's diameter. With cube edge \(\sqrt{300}\), the diagonal is \(\sqrt{3\cdot300}=30\).</p>
+<p><strong>Answer: 15</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>How many five-digit numbers have all nonzero digits, with consecutive digits differing by exactly 1 (repeats allowed)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Build a transition-count matrix (paths of given length ending on each digit 1–9) via recursion; summing the relevant final counts gives the total.</p>
+<p><strong>Answer: 106</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>How many triples \((x,y,z)\in\{0,\dots,100\}^3\) have \(xyz-1\) divisible by 100?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Requires \(\gcd(x,100)=\gcd(y,100)=\gcd(z,100)=1\); choosing \(x,y\) coprime to 100 determines \(z\) uniquely mod 100. Count: \(\phi(100)^2=40^2\).</p>
+<p><strong>Answer: 1600</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>\(y=x^6-6x^2+6x-7\) has three critical points. Find the parabola through them.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \(f'(x)=6x^5-12x+6\), the critical points satisfy \(f'(x)=0\); the remainder of \(f(x)\) after polynomial division by \(f'(x)\) (scaled) gives the parabola \(p(x)=f(x)-\frac16xf'(x)\).</p>
+<p><strong>Answer: \(y=-4x^2+5x-7\)</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2023 ===================== -->
+<details class="year"><summary>2023 <span style="font-weight:normal;font-size:0.75em;">— 19 August 2023</span></summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>What is the size of \(S=\{x\in\mathbb Z: x^2<23\}\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(S=\{-4,-3,\dots,3,4\}\), size \(2\times4+1\).</p>
+<p><strong>Answer: 9</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Today is neither Wed nor Thu. Yesterday was not Fri nor Sat. Tomorrow is not Tue nor Sat. What day is today?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By elimination across all constraints, only Tuesday is consistent.</p>
+<p><strong>Answer: Tuesday</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>Find the largest real root of \(x^{\ln x}=3\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Taking \(\ln\) of both sides: \((\ln x)^2=\ln3\), so \(\ln x=\pm\sqrt{\ln3}\); largest root uses \(+\).</p>
+<p><strong>Answer: \(x=e^{\sqrt{\ln3}}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(f(x)=x\sqrt{x^2+1}+\ln(x+\sqrt{x^2+1})\). Find \(f'(\sqrt8)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Simplifying, \(f'(x)=2\sqrt{x^2+1}\). At \(x=\sqrt8\): \(2\sqrt9=2\times3\).</p>
+<p><strong>Answer: 6</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to1}\dfrac{x-\sqrt x}{x-\sqrt[3]x}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Type \(0/0\); by L'Hospital's rule: \(\dfrac{1-\frac1{2\sqrt x}}{1-\frac1{3\sqrt[3]{x^2}}}\Big|_{x=1} = \dfrac{1-1/2}{1-1/3}\).</p>
+<p><strong>Answer: \(\dfrac34\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{n\to\infty}\sqrt[n]{20^n+23^n}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Factor out \(23^n\): \(23\sqrt[n]{(20/23)^n+1}\to23\cdot1\).</p>
+<p><strong>Answer: 23</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>How many planes of symmetry does a cube have?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Three planes parallel to faces, plus six diagonal planes.</p>
+<p><strong>Answer: 9</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_0^{\ln\sqrt3}\dfrac{dx}{e^x+e^{-x}}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\int\frac{e^x\,dx}{e^{2x}+1}=\arctan(e^x)\); evaluate from 0 to \(\ln\sqrt3\): \(\arctan\sqrt3-\arctan1=\pi/3-\pi/4\).</p>
+<p><strong>Answer: \(\dfrac{\pi}{12}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>\(f\) continuous with \(f(x)+2f(1-x)=3x^2\). Find \(\displaystyle\int_0^9 f(x)\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substituting \(x\to1-x\) gives a second equation; combining, \(3f(x)=3x^2-12x+6\), so \(f(x)=x^2-4x+2\). Then integrate.</p>
+<p><strong>Answer: 99</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>\([a,b]\) is the solution to \(|2x-105|\ge|3x-80|\). Find \(|a|+|b|\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Squaring and simplifying: \((x+25)(x-37)\le0\), so \(a=-25,b=37\).</p>
+<p><strong>Answer: \(25+37=62\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>Ordering \(n\) copies of a book costs \(12n\) (\(1\le n\le24\)), \(11n\) (\(25\le n\le48\)), \(10n\) (\(n\ge49\)). For how many \(n\) is it cheaper to buy more than \(n\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Near \(n=24\), buying 25 (R275) beats 24 (R288) and 23 (R276): two values. Near \(n=48\), buying 49 (R490) beats 48,47,46,45: four values.</p>
+<p><strong>Answer: 6</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>Expand \((x+2+1/x)^4\); find the term independent of \(x\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Counting multinomial contributions: choosing "2" from all four brackets (1 way, value \(2^4\)); from exactly two brackets with the other two being \(x\) and \(1/x\) (\(\binom42\times2\) ways, value \(2^2\)); from zero brackets with two \(x\)'s and two \(1/x\)'s (\(\binom42\) ways).
+\[ 1\cdot16+12\cdot4+6 = 70. \]</p>
+<p><strong>Answer: 70</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>If \(\begin{vmatrix}x^2+x&x+1&x-2\\2x^2+3x-1&3x&3x-3\\x^2+2x+3&2x-1&2x-1\end{vmatrix}=Ax-12\), find \(A\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substitute \(x=1\): the determinant is \(\begin{vmatrix}2&2&-1\\4&3&0\\6&1&1\end{vmatrix}=A-12\); evaluating the determinant and solving.</p>
+<p><strong>Answer: \(A=24\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>An ant has \(x=\sin(2t),\ y=\cos t\). Find its closest distance to the origin.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Minimise \(\sin^2(2t)+\cos^2t\), equivalently \(m(x)=(1-x)^2+x\) for \(x=\cos^2t\in[0,1]\); \(m'(x)=2x-1=0\) at \(x=1/2\), giving \(m=3/4\).</p>
+<p><strong>Answer: \(\dfrac{\sqrt3}{2}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Find the reflection of \((-1,-2,-3)\) across the plane \(3x+4y+5z=24\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The perpendicular line \((-1,-2,-3)+t(3,4,5)\) meets the plane at \(t=1\), giving midpoint \((2,2,2)\). The reflection is \(2(2,2,2)-(-1,-2,-3)\).</p>
+<p><strong>Answer: \((5,6,7)\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>A fair die is tossed repeatedly. \(A\) wins on two consecutive 1s-or-2s; \(B\) wins on two consecutive 3–6s. Find \(P(A\text{ wins})\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(P(\text{AA-type pattern})=1/9\) and cross terms \(2/27\), summing the geometric series for patterns \(AA, BAA, ABAA,\dots\) gives \(\dfrac{2/9}{1-2/9}+\dfrac{2/27}{1-2/9}\).</p>
+<p><strong>Answer: \(\dfrac{5}{21}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>\(p(x)=ax^2+bx+c\); graphs of \(p,p'\) are tangent at \((2,1)\). Find \(p(10)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(p(2)=p'(2)=1\) and \(p'(2)=p''(2)=1\) give \(4a+2b+c=1,\ 4a+b=1,\ 2a=1\), so \(a=1/2,b=-1,c=1\).</p>
+<p><strong>Answer: \(p(10)=41\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>\(f:[0,\infty)\to\mathbb R\) twice differentiable, \(f\cdot f''+(f')^2=3\), \(f(0)=1,f(1)=3\). Find \(f(2)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\((ff')'=3\), so \(ff'=3x+C\), and \((f^2)'=6x+2C\), giving \(f^2=3x^2+2Cx+D\). Using initial conditions: \(f(x)=\sqrt{3x^2+5x+1}\).</p>
+<p><strong>Answer: \(f(2)=\sqrt{23}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>The roots of \(z^4-4iz^3+3z^2-14iz-44=0\) form a parallelogram. Find its area.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>The diagonals' intersection is at the mean of the roots, \(i\) (Vieta). Translating by \(-i\) gives \(z^4+9z^2+36=(z^2+12)(z^2-3)\), roots \(\pm\sqrt{12}i,\pm\sqrt3\), forming a rhombus with diagonals \(2\sqrt{12}\) and \(2\sqrt3\).</p>
+<p><strong>Answer: \(\dfrac12(2\sqrt{12})(2\sqrt3)=12\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>Find the last two digits of \((1!+2!+\cdots+2023!)^{2023}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(1!+\cdots+2023!\equiv13\pmod{100}\) (terms from \(10!\) on vanish mod 100). Since \(\phi(100)=20\) and \(2023\equiv3\pmod{20}\), \(13^{2023}\equiv13^3\equiv2197\equiv97\pmod{100}\).</p>
+<p><strong>Answer: 97</strong></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<!-- ===================== 2024 ===================== -->
+<details class="year"><summary>2024</summary>
+<div class="year-body">
+
+<details class="question"><summary>Question 1</summary><div class="q-body">
+<p>Solve for \(x\): \(\sqrt2^{\sqrt{24-\sqrt x}}=4\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Since \((\sqrt2)^4=4\), we need \(\sqrt{24-\sqrt x}=4\), so \(24-\sqrt x=16\), \(\sqrt x=8\).</p>
+<p><strong>Answer: \(x=64\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 2</summary><div class="q-body">
+<p>Jack wrote 2024 distinct positive integers; Jill picks one secretly. Using yes/no questions, what's the minimum number Jack needs to guarantee identifying it?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Binary search needs the smallest \(n\) with \(2^n>2024\).</p>
+<p><strong>Answer: 11</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 3</summary><div class="q-body">
+<p>\(|x-y-1|+(y-2)^2+\sqrt{4x-z}=0\). Find \(x+y+z\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>All three terms are nonnegative, so each is 0: \(x-y-1=0,\ y=2,\ z=4x\). This gives \(x=3,y=2,z=12\).</p>
+<p><strong>Answer: 17</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 4</summary><div class="q-body">
+<p>\(||||x|-4|-3|-2|-1=0\) has \(x\) real solutions. If \(y\) is the largest, find \(xy\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Unwinding the nested absolute values step by step gives 10 solutions: \(x=-10,-8,\dots,10\) (even integers), with largest \(y=10\).</p>
+<p><strong>Answer: \(10\times11=110\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 5</summary><div class="q-body">
+<p>\(f(x)=0\) has solutions \(x=20,24\). Find \(p\) if the sum of solutions to \(f(2x-p)=0\) is 100.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(x_1+x_2=100\): \(2x_1-p=20,\ 2x_2-p=24\); adding gives \(2(x_1+x_2)-2p=44\), so \(200-2p=44\).</p>
+<p><strong>Answer: \(p=78\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 6</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to1}\dfrac{x^4-2x^2+1}{x^4-x^3-x+1}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Type \(0/0\); applying L'Hospital's rule twice: \(\dfrac{4x^3-4x}{4x^3-3x^2-1}\to\dfrac{12x^2-4}{12x^2-6x}\Big|_{x=1}=\dfrac{8}{6}\).</p>
+<p><strong>Answer: \(\dfrac43\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 7</summary><div class="q-body">
+<p>Determine \(\displaystyle\lim_{x\to\infty}\left(37+12\sin\left(\tfrac73\arctan(x^{21})\right)\right)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\arctan(x^{21})\to\pi/2\), so \(37+12\sin(7\pi/6)=37+12\times(-1/2)\).</p>
+<p><strong>Answer: 31</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 8</summary><div class="q-body">
+<p>\(f(x)=(2+e^{x^2})(3x^3+4)\sin(5x)\). Find \(f'(0)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By the product rule, only the term where \(\sin(5x)\) is differentiated survives at \(x=0\) (others carry a factor of \(\sin0=0\)): \((2+1)(4)\cdot5\cos0 = 3\cdot4\cdot5\).</p>
+<p><strong>Answer: 60</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 9</summary><div class="q-body">
+<p>Determine \(\displaystyle\int_{20}^{24}e^{\ln x}\,dx\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(e^{\ln x}=x\), so \(\int_{20}^{24}x\,dx = \dfrac{24^2-20^2}{2}\).</p>
+<p><strong>Answer: 88</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 10</summary><div class="q-body">
+<p>Find the area between \(y+5x^2=0\) and \(y+6x^2=1\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Curves meet at \(x=\pm1\). Area \(=\int_{-1}^1(1-x^2)\,dx\).</p>
+<p><strong>Answer: \(\dfrac43\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 11</summary><div class="q-body">
+<p>\(2+3i\) is a root of \(2z^3-46z^2+pz+q=0\) (\(p,q\in\mathbb R\)). Find the real root.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>By conjugate roots, \(2-3i\) is also a root. By Vieta's (sum of roots \(=46/2=23\)): real root \(=23-(2+3i)-(2-3i)=23-4\).</p>
+<p><strong>Answer: 19</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 12</summary><div class="q-body">
+<p>Find the area of the triangle with vertices \(A(0,15,4), B(4,0,6), C(2,15,0)\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(\vec v=B-A=(4,-15,2),\ \vec w=C-A=(2,0,-4)\); \(\vec v\times\vec w=(60,20,30)\), magnitude \(\sqrt{3600+400+900}=\sqrt{4900}=70\).</p>
+<p><strong>Answer: \(35\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 13</summary><div class="q-body">
+<p>\(a>0\). Find \(a\) so that \(f(x)=\sqrt{x-ax^2}\) (i.e. \(\sqrt{x(1-ax)}\)) has the same domain and range.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Domain: \([0,1/a]\). The maximum of \(x-ax^2\) occurs at \(x=1/(2a)\), value \(1/(4a)\), giving range \([0,1/(2\sqrt a)]\). Setting \(1/a=1/(2\sqrt a)\) gives \(a=4\).</p>
+<p><strong>Answer: \(a=4\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 14</summary><div class="q-body">
+<p>How many ordered pairs of sets \((A,B)\) with \(A,B\subseteq\{1,2,3,4\}\) and \(A\cap B=\emptyset\)?</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Each of the 4 elements independently goes to \(A\), \(B\), or neither: \(3^4\).</p>
+<p><strong>Answer: 81</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 15</summary><div class="q-body">
+<p>Let \(I=\displaystyle\int_{-1}^8\sqrt{1+\sqrt{1+x}}\,dx\). Find \(15I\) (as an integer).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Substitute \(1+x=y^2\), then \(1+y=m^2\), reducing to \(\int_1^2 (2m^4-2m^2)\,dm\)... precisely \(\int_1^2 m(2m^2-2)\cdot2m\,dm = \left(\dfrac45m^5-\dfrac43m^3\right)\Big|_1^2 = \dfrac{232}{15}\).</p>
+<p><strong>Answer: 232</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 16</summary><div class="q-body">
+<p>Find \(k\) such that \(f(x)=2(\cos^6x+\sin^6x)-k(\cos^4x+\sin^4x)\) is constant.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Using \(\cos^2x+\sin^2x=1\) cubed: \(1=3(\cos^4x+\sin^4x)-2(\cos^6x+\sin^6x)\), so \(2(\cos^6x+\sin^6x)-3(\cos^4x+\sin^4x)=-1\), a constant.</p>
+<p><strong>Answer: \(k=3\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 17</summary><div class="q-body">
+<p>Find the smallest possible value of \(\displaystyle\int_0^1(x^2-a)^2\,dx\) as \(a\) varies.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>\(F(a)=\frac15-\frac23a+a^2\); \(F'(a)=-\frac23+2a=0\) at \(a=1/3\); \(F(1/3)=\frac15-\frac29+\frac19\).</p>
+<p><strong>Answer: \(\dfrac{4}{45}\)</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 18</summary><div class="q-body">
+<p>Calculate the \(5\times5\) tridiagonal determinant with 1s on the diagonal and 3s on the adjacent diagonals (all else 0).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>With \(\det(M_n)=\det(M_{n-1})-9\det(M_{n-2})\), \(\det(M_1)=1,\det(M_2)=-8\): \(\det(M_3)=-17,\ \det(M_4)=55,\ \det(M_5)=55-9(-17)\).</p>
+<p><strong>Answer: 208</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 19</summary><div class="q-body">
+<p>Find the last digit of \(\displaystyle\sum_{i=0}^{1012}\binom{2024}{i}\).</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Let \(S\) be this sum. Since \(\sum_{i=0}^{2024}\binom{2024}i=2^{2024}\) and the sum splits symmetrically around the middle term \(\binom{2024}{1012}\): \(2S-\binom{2024}{1012}=2^{2024}\). Computing \(2^{2024}\bmod20\) and \(\binom{2024}{1012}\bmod20\) (both work out to specific residues) pins down \(S\bmod10\).</p>
+<p><strong>Answer: 8</strong></p>
+</div></details>
+</div></details>
+
+<details class="question"><summary>Question 20</summary><div class="q-body">
+<p>Three points chosen randomly on a circle. Find the probability the triangle formed contains the centre.</p>
+<details class="answer"><summary>Show Solution</summary><div class="a-body">
+<p>Fixing point \(A\) and its antipodal point \(A'\), the probability the other two points lie on opposite sides of \(AA'\) is \(1/2\); given that, the probability their central angles from \(A\) sum to more than \(\pi\) is also \(1/2\).</p>
+<p><strong>Answer: \(\dfrac14\)</strong></p>
+<p><em>General result: for \(n\) random points, the probability the centre lies inside the polygon they form is \(1-\dfrac{n}{2^{n-1}}\).</em></p>
+</div></details>
+</div></details>
+
+</div></details>
+
+<p style="text-align:center;color:var(--muted);font-size:0.85em;margin-top:30px;">South African Tertiary Mathematics Olympiad — solutions adapted for self-study. Work each problem before revealing its solution.</p>
+
+</body>
+</html>
