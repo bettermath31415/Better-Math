@@ -5,20 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mathematics P2 — Grade 12 Practice by Topic</title>
 <link rel="stylesheet" href="./Codes/main.css">
-<script src="./Codes/main.js"></script>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(', '\\)'], ['$', '$']],
-    displayMath: [['\\[', '\\]'], ['$$', '$$']]
-  },
-  svg: { fontCache: 'global' }
-};
-</script>
+<script src="./Codes/mathjax-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
-
+<script src="./Codes/main.js" defer></script>
 </head>
-<body>
+<body class="theme-p2">
 
 <!-- Site Header/Navbar -->
 <header id="header">
@@ -42,7 +33,7 @@ window.MathJax = {
             <a href="SATMO.html">Tertiary Olympiad</a>
             <a href="SAMO(Gr 10-12).html">High School Olympiad</a>
         </div>
-        <div class="hamburger" id="hamburger">☰</div>
+        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">☰</div>
     </nav>
 </header>
 <!--Header End-->
@@ -60,19 +51,20 @@ window.MathJax = {
     <button onclick="toggleAll('details.topic', false)">Collapse all topics</button>
     <button onclick="toggleAll('details.year', true)">Expand all years</button>
     <button onclick="toggleAll('details.year', false)">Collapse all years</button>
+    <button onclick="showAllAnswers()">Show all answers</button>
     <button onclick="hideAllAnswers()">Hide all answers</button>
   </div>
 
   <div class="container">
 
     <details class="topic">
-      <summary>1. Statistics and Regression</summary>
+      <summary><span class="topic-name">1. Statistics and Regression</span><span class="badge">[20 Marks]</span></summary>
       <div class="topic-body">
         <p class="topic-note">Question 1 &amp; 2 — Regression, correlation, ogives, histograms and standard deviation. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Regression &amp; Correlation (Cars) [8]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[8]</span></div><div class="qplain-body"><div class="q-body">
 <p>There were 11 cars of the same model for sale at a car dealership. The age (in years) of each car and its corresponding selling price (in rands) is provided in the table below.</p>
 <table class="data-table">
 <tr><th>AGE OF CAR (years)</th><th>SELLING PRICE (rand)</th></tr>
@@ -89,25 +81,25 @@ window.MathJax = {
 <tr><td>8</td><td>148 000</td></tr>
 </table>
 <ol class="subquestions">
-<li>Determine the equation of the least squares regression line. <span class="marks">(3)</span></li>
-<li>Predict the selling price of a similar car at this car dealership that is 5 years old. <span class="marks">(2)</span></li>
-<li>Use the correlation coefficient to show whether the prediction made in 1.2 is valid or not. <span class="marks">(2)</span></li>
-<li>Use the answer to 1.1 to write down the estimated average yearly decrease in the selling price of these 11 cars. <span class="marks">(1)</span></li>
+<li>1.1 Determine the equation of the least squares regression line. <span class="marks">(3)</span></li>
+<li>1.2 Predict the selling price of a similar car at this car dealership that is 5 years old. <span class="marks">(2)</span></li>
+<li>1.3 Use the correlation coefficient to show whether the prediction made in 1.2 is valid or not. <span class="marks">(2)</span></li>
+<li>1.4 Use the answer to 1.1 to write down the estimated average yearly decrease in the selling price of these 11 cars. <span class="marks">(1)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>$a = 331\,397{,}20$, $b = -22\,988{,}32$  $\Rightarrow$  $\hat{y} = 331\,397{,}20 - 22\,988{,}32x$</li>
-<li>$\hat{y} = 331\,397{,}20 - 22\,988{,}32(5) = R216\,455{,}60$  (calculator: $R216\,455{,}61$)</li>
-<li>The strong correlation ($r=-0{,}95$) suggests the data points lie close to the regression line, therefore the prediction is valid.</li>
-<li>The average decrease per year is $R22\,988{,}32$.</li>
+<li>1.1 $a = 331\,397{,}20$, $b = -22\,988{,}32$  $\Rightarrow$  $\hat{y} = 331\,397{,}20 - 22\,988{,}32x$</li>
+<li>1.2 $\hat{y} = 331\,397{,}20 - 22\,988{,}32(5) = R216\,455{,}60$  (calculator: $R216\,455{,}61$)</li>
+<li>1.3 The strong correlation ($r=-0{,}95$) suggests the data points lie close to the regression line, therefore the prediction is valid.</li>
+<li>1.4 The average decrease per year is $R22\,988{,}32$.</li>
 </ol>
 <div class="total">Total: [8]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Histogram &amp; Standard Deviation [12]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[12]</span></div><div class="qplain-body"><div class="q-body">
 <p><strong>2.1</strong> The cumulative frequency table below shows the amount of time that people spent on a particular website on a certain day.</p>
 <table class="data-table">
 <tr><th>TIME, $t$ (minutes)</th><th>CUMULATIVE FREQUENCY</th></tr>
@@ -118,10 +110,10 @@ window.MathJax = {
 <tr><td>$0 &lt; t \le 100$</td><td>70</td></tr>
 </table>
 <ol class="subquestions">
-<li>How many people visited this website on that day? <span class="marks">(1)</span></li>
-<li>How many people spent more than 40 and up to 80 minutes on the website? <span class="marks">(2)</span></li>
-<li>Draw a histogram to represent the information provided in the cumulative frequency table (draw this yourself on paper/graph). <span class="marks">(3)</span></li>
-<li>Comment on the skewness of the data. <span class="marks">(1)</span></li>
+<li>2.1 How many people visited this website on that day? <span class="marks">(1)</span></li>
+<li>2.2 How many people spent more than 40 and up to 80 minutes on the website? <span class="marks">(2)</span></li>
+<li>2.3 Draw a histogram to represent the information provided in the cumulative frequency table (draw this yourself on paper/graph). <span class="marks">(3)</span></li>
+<li>2.4 Comment on the skewness of the data. <span class="marks">(1)</span></li>
 </ol>
 <p><strong>2.2</strong> There are 9 players in a basketball team. The coach calculated that on average, each player scored 12 points during a game. The points scored by 8 of the 9 players are given below:</p>
 <table class="data-table">
@@ -132,10 +124,10 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>70 people</li>
-<li>Number of people $= 67 - 40 = 27$</li>
-<li>Histogram bars (no gaps): frequencies 16, 24, 19, 8, 3 for intervals 0–20, 20–40, 40–60, 60–80, 80–100.</li>
-<li>Skewed to the right (positively skewed)</li>
+<li>2.1 70 people</li>
+<li>2.2 Number of people $= 67 - 40 = 27$</li>
+<li>2.3 Histogram bars (no gaps): frequencies 16, 24, 19, 8, 3 for intervals 0–20, 20–40, 40–60, 60–80, 80–100.<br/><img src="./Diagrams/Grade12P2/Answers/2025_A2.1.3.png" style="width:70%"></li>
+<li>2.4 Skewed to the right (positively skewed)</li>
 </ol>
 <p><strong>2.2</strong></p>
 <p>$\dfrac{11+14+19+20+8+10+2+14+x}{9} = 12 \Rightarrow x + 98 = 108 \Rightarrow x = 10$ (9th player scored 10 points)</p>
@@ -151,55 +143,55 @@ window.MathJax = {
 <details class="year">
 <summary>2024</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Regression, Correlation &amp; Scatter Plot (Push-ups) [10]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[10]</span></div><div class="qplain-body"><div class="q-body">
 <p>At the beginning of a season, the coach of a junior boys' rugby team recorded the weight (in kg) of the 15 players in his team and the number of push-ups that each player was able to do in one minute.</p>
 <table class="data-table">
 <tr><th>Weight (kg) $x$</th><td>34</td><td>32</td><td>40</td><td>27</td><td>33</td><td>28</td><td>27</td><td>55</td><td>39</td><td>44</td><td>30</td><td>57</td><td>28</td><td>32</td><td>31</td></tr>
 <tr><th>Push-ups/min $y$</th><td>26</td><td>21</td><td>6</td><td>20</td><td>16</td><td>26</td><td>23</td><td>7</td><td>18</td><td>14</td><td>17</td><td>8</td><td>28</td><td>25</td><td>20</td></tr>
 </table>
 <img src="./Diagrams/Grade12P2/2024_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
-<li>Write down the correlation coefficient. <span class="marks">(1)</span></li>
-<li>The coach uses the least squares regression line to set the target for the minimum number of push-ups by each team member according to their weight. Predict the number of push-ups that a member of the team, who weighs 29 kg, should do to meet the target. <span class="marks">(2)</span></li>
-<li>Write down the mean number of push-ups for the given data. <span class="marks">(1)</span></li>
-<li>The players trained hard during the season. At the end of the season each player did 5 more push-ups per minute than at the beginning. How does this influence the standard deviation of the data? <span class="marks">(1)</span></li>
-<li>Determine the maximum possible increase in the number of push-ups that a team member must obtain to reach the minimum target. <span class="marks">(2)</span></li>
+<li>1.1 Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
+<li>1.2 Write down the correlation coefficient. <span class="marks">(1)</span></li>
+<li>1.3 The coach uses the least squares regression line to set the target for the minimum number of push-ups by each team member according to their weight. Predict the number of push-ups that a member of the team, who weighs 29 kg, should do to meet the target. <span class="marks">(2)</span></li>
+<li>1.4 Write down the mean number of push-ups for the given data. <span class="marks">(1)</span></li>
+<li>1.5 The players trained hard during the season. At the end of the season each player did 5 more push-ups per minute than at the beginning. How does this influence the standard deviation of the data? <span class="marks">(1)</span></li>
+<li>1.6 Determine the maximum possible increase in the number of push-ups that a team member must obtain to reach the minimum target. <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>$a = 39{,}46$, $b = -0{,}59$  $\Rightarrow$  $\hat{y} = 39{,}46 - 0{,}59x$</li>
-<li>$r = -0{,}8$</li>
-<li>$y = 39{,}46 - 0{,}59(29) = 22{,}35$ push-ups (calculator: $22{,}35$)</li>
-<li>$\bar{y} = 18{,}33$</li>
-<li>No influence — the standard deviation stays the same.</li>
-<li>6 is the furthest $y$-value below the regression line. An increase of 10 push-ups gets that team member to $(40\,;\,16)$, the minimum number of push-ups for a player weighing 40 kg. So the maximum possible increase needed is 10.</li>
+<li>1.1 $a = 39{,}46$, $b = -0{,}59$  $\Rightarrow$  $\hat{y} = 39{,}46 - 0{,}59x$</li>
+<li>1.2 $r = -0{,}8$</li>
+<li>1.3 $y = 39{,}46 - 0{,}59(29) = 22{,}35$ push-ups (calculator: $22{,}35$)</li>
+<li>1.4 $\bar{y} = 18{,}33$</li>
+<li>1.5 No influence — the standard deviation stays the same.</li>
+<li>1.6 6 is the furthest $y$-value below the regression line. An increase of 10 push-ups gets that team member to $(40\,;\,16)$, the minimum number of push-ups for a player weighing 40 kg. So the maximum possible increase needed is 10.</li>
 </ol>
 <div class="total">Total: [10]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Ogive, Quartiles &amp; Box-and-Whisker (Travel time) [10]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[10]</span></div><div class="qplain-body"><div class="q-body">
 <p>The cumulative frequency graph (ogive) shows the time taken (in minutes) for 60 employees to travel to work each morning. (Refer to your own copy of the ogive.)</p>
 <img src="./Diagrams/Grade12P2/2024_Q2.png" style="width:70%"><ol class="subquestions">
-<li>Estimate the median travel time. <span class="marks">(1)</span></li>
-<li>Estimate the lower quartile. <span class="marks">(1)</span></li>
-<li>Estimate the interquartile range. <span class="marks">(2)</span></li>
-<li>The minimum and maximum times are 5 and 120 minutes respectively. Draw a box-and-whisker diagram to indicate the distribution. <span class="marks">(2)</span></li>
-<li>Employees who travel for an hour or more are allowed to work from home for part of the day. What percentage of employees will be allowed to work from home? <span class="marks">(2)</span></li>
-<li>Employees work 8 hours in a normal day. An employee is allowed to work half an hour from home for each 20-minute interval (or part thereof) above an hour taken to travel to work. On a certain day an employee takes 110 minutes to travel to work. Calculate the number of minutes this employee will be allowed to work from home. <span class="marks">(2)</span></li>
+<li>2.1 Estimate the median travel time. <span class="marks">(1)</span></li>
+<li>2.2 Estimate the lower quartile. <span class="marks">(1)</span></li>
+<li>2.3 Estimate the interquartile range. <span class="marks">(2)</span></li>
+<li>2.4 The minimum and maximum times are 5 and 120 minutes respectively. Draw a box-and-whisker diagram to indicate the distribution. <span class="marks">(2)</span></li>
+<li>2.5 Employees who travel for an hour or more are allowed to work from home for part of the day. What percentage of employees will be allowed to work from home? <span class="marks">(2)</span></li>
+<li>2.6 Employees work 8 hours in a normal day. An employee is allowed to work half an hour from home for each 20-minute interval (or part thereof) above an hour taken to travel to work. On a certain day an employee takes 110 minutes to travel to work. Calculate the number of minutes this employee will be allowed to work from home. <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>Median $= 65$</li>
-<li>$Q_1 = 44$</li>
-<li>IQR $= 84 - 44 = 40$</li>
-<li>Box from $Q_1=44$ to $Q_3=84$, median line at 65, whiskers ending at 5 and 120.</li>
-<li>Number who qualify $= 34$ (or 35 depending on reading): $\dfrac{34}{60}\times 100 = 56{,}67\%$ (OR $\dfrac{35}{60}\times100 = 58{,}33\%$)</li>
-<li>Time above 1 hour $= 110 - 60 = 50$ minutes $\Rightarrow$ number of intervals $= 3$ (ceiling of $50/20$). Time allowed $= 3(30) = 90$ minutes (1,5 hours).</li>
+<li>2.1 Median $= 65$</li>
+<li>2.2 $Q_1 = 44$</li>
+<li>2.3 IQR $= 84 - 44 = 40$</li>
+<li>2.4 Box from $Q_1=44$ to $Q_3=84$, median line at 65, whiskers ending at 5 and 120.<br/><img src="./Diagrams/Grade12P2/Answers/2024_A2.4.png" style="width:70%"></li>
+<li>2.5 Number who qualify $= 34$ (or 35 depending on reading): $\dfrac{34}{60}\times 100 = 56{,}67\%$ (OR $\dfrac{35}{60}\times100 = 58{,}33\%$)</li>
+<li>2.6 Time above 1 hour $= 110 - 60 = 50$ minutes $\Rightarrow$ number of intervals $= 3$ (ceiling of $50/20$). Time allowed $= 3(30) = 90$ minutes (1,5 hours).</li>
 </ol>
 <div class="total">Total: [10]</div>
 </div>
@@ -211,22 +203,22 @@ window.MathJax = {
 <details class="year">
 <summary>2023</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Regression, Correlation, Mean &amp; SD (Truck rest times) [12]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[12]</span></div><div class="qplain-body"><div class="q-body">
 <p>Truck drivers travel a certain distance and have a rest before travelling further. A driver kept record of the distance travelled (km) on 8 trips and the rest time (minutes) before continuing.</p>
 <table class="data-table">
 <tr><th>Distance (km) $x$</th><td>180</td><td>200</td><td>400</td><td>600</td><td>170</td><td>350</td><td>270</td><td>300</td></tr>
 <tr><th>Rest time (min) $y$</th><td>20</td><td>25</td><td>55</td><td>120</td><td>15</td><td>50</td><td>40</td><td>45</td></tr>
 </table>
 <ol class="subquestions">
-<li>Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
-<li>If a truck driver travelled 550 km, predict the amount of rest time before continuing his journey. <span class="marks">(2)</span></li>
-<li>Write down the correlation coefficient for the data. <span class="marks">(1)</span></li>
-<li>Interpret your answer to Question 1.3. <span class="marks">(1)</span></li>
-<li>At each stop, the driver spent money on food/refreshments: 100, 150, 130, 200, 50, 180, 200, 190 (rand).
+<li>1.1 Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
+<li>1.2 If a truck driver travelled 550 km, predict the amount of rest time before continuing his journey. <span class="marks">(2)</span></li>
+<li>1.3 Write down the correlation coefficient for the data. <span class="marks">(1)</span></li>
+<li>1.4 Interpret your answer to Question 1.3. <span class="marks">(1)</span></li>
+<li>1.5 At each stop, the driver spent money on food/refreshments: 100, 150, 130, 200, 50, 180, 200, 190 (rand).
         <ol class="subquestions">
-<li>Calculate the mean amount spent at each stop. <span class="marks">(2)</span></li>
-<li>Calculate the standard deviation for the data. <span class="marks">(1)</span></li>
-<li>At how many stops did the driver spend an amount less than one standard deviation below the mean? <span class="marks">(2)</span></li>
+<li>1.5.1 Calculate the mean amount spent at each stop. <span class="marks">(2)</span></li>
+<li>1.5.2 Calculate the standard deviation for the data. <span class="marks">(1)</span></li>
+<li>1.5.3 At how many stops did the driver spend an amount less than one standard deviation below the mean? <span class="marks">(2)</span></li>
 </ol>
 </li>
 </ol>
@@ -234,15 +226,14 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>$a = -23{,}85$, $b = 0{,}23$  $\Rightarrow$  $\hat{y} = -23{,}85 + 0{,}23x$</li>
-<li>$\hat{y} = -23{,}85 + 0{,}23(550) = 102{,}65$ min (calculator: $101{,}02$)</li>
-<li>$r = 0{,}98$</li>
-<li>Very strong positive correlation between distance travelled and rest time.</li>
-<li>
-<ol class="subquestions">
-<li>$\bar{x} = \dfrac{1200}{8} = 150$</li>
-<li>$\sigma = 50{,}50$</li>
-<li>$\bar{x} - \sigma = 150 - 50{,}50 = 99{,}50$  $\therefore$ 1 stop (R50) is below this value.</li>
+<li>1.1 $a = -23{,}85$, $b = 0{,}23$  $\Rightarrow$  $\hat{y} = -23{,}85 + 0{,}23x$</li>
+<li>1.2 $\hat{y} = -23{,}85 + 0{,}23(550) = 102{,}65$ min (calculator: $101{,}02$)</li>
+<li>1.3 $r = 0{,}98$</li>
+<li>1.4 Very strong positive correlation between distance travelled and rest time.</li>
+<li>1.5 <ol class="subquestions">
+<li>1.5.1 $\bar{x} = \dfrac{1200}{8} = 150$</li>
+<li>1.5.2 $\sigma = 50{,}50$</li>
+<li>1.5.3 $\bar{x} - \sigma = 150 - 50{,}50 = 99{,}50$  $\therefore$ 1 stop (R50) is below this value.</li>
 </ol>
 </li>
 </ol>
@@ -250,7 +241,7 @@ window.MathJax = {
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Cumulative Frequency &amp; Mean with Unknowns (Water glasses) [8]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[8]</span></div><div class="qplain-body"><div class="q-body">
 <p>At a certain school, staff members were interviewed about how many glasses of water they drink during a school day.</p>
 <table class="data-table">
 <tr><th>Glasses of water/day</th><th>Number of staff</th></tr>
@@ -261,20 +252,19 @@ window.MathJax = {
 <tr><td>$8 \le x &lt; 10$</td><td>2</td></tr>
 </table>
 <ol class="subquestions">
-<li>Complete the cumulative frequency column. <span class="marks">(2)</span></li>
-<li>How many staff members were interviewed? <span class="marks">(1)</span></li>
-<li>How many staff members drank fewer than 6 glasses of water during a school day? <span class="marks">(1)</span></li>
-<li>$k$ teachers were absent on the day of interviews. Half of these $k$ teachers drank $0 \le x &lt; 2$ glasses, while the remainder drank $4 \le x &lt; 6$ glasses. Including these $k$ teachers, the estimated mean is 4 glasses per staff member per day. How many teachers were absent? <span class="marks">(4)</span></li>
+<li>2.1 Complete the cumulative frequency column. <span class="marks">(2)</span></li>
+<li>2.2 How many staff members were interviewed? <span class="marks">(1)</span></li>
+<li>2.3 How many staff members drank fewer than 6 glasses of water during a school day? <span class="marks">(1)</span></li>
+<li>2.4 $k$ teachers were absent on the day of interviews. Half of these $k$ teachers drank $0 \le x &lt; 2$ glasses, while the remainder drank $4 \le x &lt; 6$ glasses. Including these $k$ teachers, the estimated mean is 4 glasses per staff member per day. How many teachers were absent? <span class="marks">(4)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>Cumulative frequencies: 5; 20; 33; 38; 40</li>
-<li>40 staff members</li>
-<li>33 staff members</li>
-<li>
-          $\dfrac{\left(1\times\left(5+\frac{k}{2}\right)\right)+(3\times15)+\left(5\times\left(13+\frac{k}{2}\right)\right)+(7\times5)+(9\times2)}{40+k} = 4$
+<li>2.1 Cumulative frequencies: 5; 20; 33; 38; 40</li>
+<li>2.2 40 staff members</li>
+<li>2.3 33 staff members</li>
+<li>2.4 $\dfrac{\left(1\times\left(5+\frac{k}{2}\right)\right)+(3\times15)+\left(5\times\left(13+\frac{k}{2}\right)\right)+(7\times5)+(9\times2)}{40+k} = 4$
           <br/>
           $5+\frac{k}{2}+45+65+\frac{5k}{2}+35+18 = 160+4k$
           <br/>
@@ -291,26 +281,26 @@ window.MathJax = {
 <details class="year">
 <summary>2022</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Mean, SD, Regression &amp; Prediction (RCL votes) [12]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[12]</span></div><div class="qplain-body"><div class="q-body">
 <p>The matric class of a certain high school voted for the chairperson of the RCL. A scatter plot shows IQ vs number of votes for the top 10 learners (see your own copy). Popularity scores and votes for the same 10 learners:</p>
 <table class="data-table">
 <tr><th>Popularity score $x$</th><td>32</td><td>89</td><td>35</td><td>82</td><td>50</td><td>59</td><td>81</td><td>40</td><td>79</td><td>65</td></tr>
 <tr><th>Number of votes $y$</th><td>9</td><td>22</td><td>10</td><td>21</td><td>11</td><td>15</td><td>20</td><td>12</td><td>19</td><td>16</td></tr>
 </table>
 <img src="./Diagrams/Grade12P2/2022_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Calculate:
+<li>1.1 Calculate:
         <ol class="subquestions">
-<li>Mean number of votes that these 10 learners received <span class="marks">(2)</span></li>
-<li>Standard deviation of the number of votes <span class="marks">(1)</span></li>
+<li>1.1.1 Mean number of votes that these 10 learners received <span class="marks">(2)</span></li>
+<li>1.1.2 Standard deviation of the number of votes <span class="marks">(1)</span></li>
 </ol>
 </li>
-<li>Learners who received fewer votes than one standard deviation below the mean were not invited for an interview. How many learners were invited? <span class="marks">(2)</span></li>
-<li>Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
-<li>Predict the number of votes that a learner with a popularity score of 72 will receive. <span class="marks">(2)</span></li>
-<li>Using the scatter plot and table, give a reason why:
+<li>1.2 Learners who received fewer votes than one standard deviation below the mean were not invited for an interview. How many learners were invited? <span class="marks">(2)</span></li>
+<li>1.3 Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
+<li>1.4 Predict the number of votes that a learner with a popularity score of 72 will receive. <span class="marks">(2)</span></li>
+<li>1.5 Using the scatter plot and table, give a reason why:
         <ol class="subquestions">
-<li>IQ is not a good indicator of the number of votes a learner could receive <span class="marks">(1)</span></li>
-<li>The prediction in Question 1.4 is reliable <span class="marks">(1)</span></li>
+<li>1.5.1 IQ is not a good indicator of the number of votes a learner could receive <span class="marks">(1)</span></li>
+<li>1.5.2 The prediction in Question 1.4 is reliable <span class="marks">(1)</span></li>
 </ol>
 </li>
 </ol>
@@ -318,19 +308,17 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>
-<ol class="subquestions">
-<li>$\bar{y} = \dfrac{155}{10} = 15{,}5$</li>
-<li>$SD = 4{,}59$</li>
+<li>1.1 <ol class="subquestions">
+<li>1.1.1 $\bar{y} = \dfrac{155}{10} = 15{,}5$</li>
+<li>1.1.2 $SD = 4{,}59$</li>
 </ol>
 </li>
-<li>$\bar{y} - SD = 15{,}5 - 4{,}59 = 10{,}91$  $\therefore\ 10 - 2 = 8$ learners were invited.</li>
-<li>$a = 1{,}77$, $b = 0{,}22$  $\Rightarrow$  $\hat{y} = 1{,}77 + 0{,}22x$</li>
-<li>$\hat{y} = 1{,}77 + 0{,}22(72) = 17{,}61 \approx 18$ votes (calculator: $17{,}92\approx18$)</li>
-<li>
-<ol class="subquestions">
-<li>Points are all scattered (low correlation) therefore the prediction based on IQ would be unrealistic.</li>
-<li>$r = 0{,}98$ — correlation is very strong, therefore it is a reliable prediction.</li>
+<li>1.2 $\bar{y} - SD = 15{,}5 - 4{,}59 = 10{,}91$  $\therefore\ 10 - 2 = 8$ learners were invited.</li>
+<li>1.3 $a = 1{,}77$, $b = 0{,}22$  $\Rightarrow$  $\hat{y} = 1{,}77 + 0{,}22x$</li>
+<li>1.4 $\hat{y} = 1{,}77 + 0{,}22(72) = 17{,}61 \approx 18$ votes (calculator: $17{,}92\approx18$)</li>
+<li>1.5 <ol class="subquestions">
+<li>1.5.1 Points are all scattered (low correlation) therefore the prediction based on IQ would be unrealistic.</li>
+<li>1.5.2 $r = 0{,}98$ — correlation is very strong, therefore it is a reliable prediction.</li>
 </ol>
 </li>
 </ol>
@@ -338,24 +326,24 @@ window.MathJax = {
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Ogive Interpretation (Fuel spending) [8]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[8]</span></div><div class="qplain-body"><div class="q-body">
 <p>A company researched what percentage of monthly salary employees spent on fuel. Data represented in an ogive (refer to your own copy).</p>
 <img src="./Diagrams/Grade12P2/2022_Q2.png" style="width:70%"><ol class="subquestions">
-<li>How many people are employed at this company? <span class="marks">(1)</span></li>
-<li>Write down the modal class of the data. <span class="marks">(1)</span></li>
-<li>How many employees spent more than 22,5% of their monthly salary on fuel? <span class="marks">(2)</span></li>
-<li>An employee spent R2 400 of his salary on fuel. Determine his monthly salary if he spends 7% of his salary on fuel. <span class="marks">(2)</span></li>
-<li>Monthly salaries and litres used remain constant. If the fuel price increases from R21,43 to R22,79 per litre next month, how will the ogive change? <span class="marks">(2)</span></li>
+<li>2.1 How many people are employed at this company? <span class="marks">(1)</span></li>
+<li>2.2 Write down the modal class of the data. <span class="marks">(1)</span></li>
+<li>2.3 How many employees spent more than 22,5% of their monthly salary on fuel? <span class="marks">(2)</span></li>
+<li>2.4 An employee spent R2 400 of his salary on fuel. Determine his monthly salary if he spends 7% of his salary on fuel. <span class="marks">(2)</span></li>
+<li>2.5 Monthly salaries and litres used remain constant. If the fuel price increases from R21,43 to R22,79 per litre next month, how will the ogive change? <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>60 employees</li>
-<li>$20 &lt; x \le 25$</li>
-<li>$60 - 34 = 26$ employees</li>
-<li>Salary $= \dfrac{100}{7}\times 2400 = R34\,285{,}71$</li>
-<li>The ogive/cumulative frequency graph will shift to the right / become steeper.</li>
+<li>2.1 60 employees</li>
+<li>2.2 $20 &lt; x \le 25$</li>
+<li>2.3 $60 - 34 = 26$ employees</li>
+<li>2.4 Salary $= \dfrac{100}{7}\times 2400 = R34\,285{,}71$</li>
+<li>2.5 The ogive/cumulative frequency graph will shift to the right / become steeper.</li>
 </ol>
 <div class="total">Total: [8]</div>
 </div>
@@ -367,25 +355,25 @@ window.MathJax = {
 <details class="year">
 <summary>2021</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Mean, SD, Box-and-Whisker (Bread orders) [10]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[10]</span></div><div class="qplain-body"><div class="q-body">
 <p>A bakery kept a record of the number of loaves of bread a tuck-shop ordered daily over the last 18 days.</p>
 <table class="data-table">
 <tr><td>10</td><td>11</td><td>13</td><td>14</td><td>14</td><td>15</td><td>16</td><td>18</td><td>18</td></tr>
 <tr><td>19</td><td>19</td><td>20</td><td>21</td><td>35</td><td>35</td><td>37</td><td>40</td><td>41</td></tr>
 </table>
 <img src="./Diagrams/Grade12P2/2021_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Calculate:
+<li>1.1 Calculate:
         <ol class="subquestions">
-<li>Mean number of loaves ordered daily <span class="marks">(2)</span></li>
-<li>Standard deviation of the data <span class="marks">(1)</span></li>
-<li>Number of days on which the number of loaves ordered was more than one standard deviation above the mean <span class="marks">(2)</span></li>
+<li>1.1.1 Mean number of loaves ordered daily <span class="marks">(2)</span></li>
+<li>1.1.2 Standard deviation of the data <span class="marks">(1)</span></li>
+<li>1.1.3 Number of days on which the number of loaves ordered was more than one standard deviation above the mean <span class="marks">(2)</span></li>
 </ol>
 </li>
-<li>The tuck-shop owner calculated the mean number of loaves sold over the 18 days to be 20. Calculate the number of loaves NOT sold over the 18 days. <span class="marks">(2)</span></li>
-<li>Two box-and-whisker diagrams (Graph A and Graph B) are given.
+<li>1.2 The tuck-shop owner calculated the mean number of loaves sold over the 18 days to be 20. Calculate the number of loaves NOT sold over the 18 days. <span class="marks">(2)</span></li>
+<li>1.3 Two box-and-whisker diagrams (Graph A and Graph B) are given.
         <ol class="subquestions">
-<li>Which ONE correctly represents the data? Give a reason. <span class="marks">(2)</span></li>
-<li>Describe the skewness of the data. <span class="marks">(1)</span></li>
+<li>1.3.1 Which ONE correctly represents the data? Give a reason. <span class="marks">(2)</span></li>
+<li>1.3.2 Describe the skewness of the data. <span class="marks">(1)</span></li>
 </ol>
 </li>
 </ol>
@@ -393,18 +381,16 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>
-<ol class="subquestions">
-<li>$\bar{x} = \dfrac{396}{18} = 22$</li>
-<li>$\sigma = 10{,}1707 \approx 10{,}17$</li>
-<li>$\bar{x}+\sigma = 32{,}17$  $\therefore$ 5 days</li>
+<li>1.1 <ol class="subquestions">
+<li>1.1.1 $\bar{x} = \dfrac{396}{18} = 22$</li>
+<li>1.1.2 $\sigma = 10{,}1707 \approx 10{,}17$</li>
+<li>1.1.3 $\bar{x}+\sigma = 32{,}17$  $\therefore$ 5 days</li>
 </ol>
 </li>
-<li>Ordered $= 22\times18=396$; Sold $=20\times18=360$; Not sold $=396-360=36$ loaves. (OR: $(22-20)\times18=36$)</li>
-<li>
-<ol class="subquestions">
-<li>Option B — e.g. median $=18{,}5$, $Q_1=14$, IQR$=21$, or mean$&gt;$median showing data skewed right.</li>
-<li>Data is positively skewed (skewed to the right).</li>
+<li>1.2 Ordered $= 22\times18=396$; Sold $=20\times18=360$; Not sold $=396-360=36$ loaves. (OR: $(22-20)\times18=36$)</li>
+<li>1.3 <ol class="subquestions">
+<li>1.3.1 Option B — e.g. median $=18{,}5$, $Q_1=14$, IQR$=21$, or mean$&gt;$median showing data skewed right.</li>
+<li>1.3.2 Data is positively skewed (skewed to the right).</li>
 </ol>
 </li>
 </ol>
@@ -412,26 +398,26 @@ window.MathJax = {
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Scatter Plot &amp; Regression (Milk sales) [10]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[10]</span></div><div class="qplain-body"><div class="q-body">
 <p>A farm stall sells milk in 5-litre containers. Price varies with availability.</p>
 <table class="data-table">
 <tr><th>Price (R) $x$</th><td>26</td><td>32</td><td>36</td><td>28</td><td>40</td><td>33</td><td>29</td><td>34</td><td>27</td><td>30</td></tr>
 <tr><th>Containers sold $y$</th><td>48</td><td>30</td><td>26</td><td>44</td><td>23</td><td>32</td><td>39</td><td>29</td><td>42</td><td>33</td></tr>
 </table>
 <ol class="subquestions">
-<li>Draw the scatter plot to represent the data. <span class="marks">(3)</span></li>
-<li>Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
-<li>If the farmer sells a 5-litre container for R38, predict the number of containers he will sell. <span class="marks">(2)</span></li>
-<li>Refer to the correlation, and comment on the accuracy of your answer to Question 2.3. <span class="marks">(2)</span></li>
+<li>2.1 Draw the scatter plot to represent the data. <span class="marks">(3)</span></li>
+<li>2.2 Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
+<li>2.3 If the farmer sells a 5-litre container for R38, predict the number of containers he will sell. <span class="marks">(2)</span></li>
+<li>2.4 Refer to the correlation, and comment on the accuracy of your answer to Question 2.3. <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>(Plot all 10 points yourself.)</li>
-<li>$a = 90{,}48$, $b = -1{,}77$  $\Rightarrow$  $\hat{y} = 90{,}48 - 1{,}77x$</li>
-<li>$y = 90{,}48 - 1{,}77(38) = 23{,}22$ units (calculator: $23{,}07$ units)</li>
-<li>$r = -0{,}94$: a strong relationship exists between price and units sold, so there is a good chance the prediction is accurate.</li>
+<li>2.1 (Plot all 10 points yourself.)<br/><img src="./Diagrams/Grade12P2/Answers/2021_A2.1.png" style="width:70%"></li>
+<li>2.2 $a = 90{,}48$, $b = -1{,}77$  $\Rightarrow$  $\hat{y} = 90{,}48 - 1{,}77x$</li>
+<li>2.3 $y = 90{,}48 - 1{,}77(38) = 23{,}22$ units (calculator: $23{,}07$ units)</li>
+<li>2.4 $r = -0{,}94$: a strong relationship exists between price and units sold, so there is a good chance the prediction is accurate.</li>
 </ol>
 <div class="total">Total: [10]</div>
 </div>
@@ -443,53 +429,53 @@ window.MathJax = {
 <details class="year">
 <summary>2020</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Regression Line &amp; Correlation (Maths vs Science) [10]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[10]</span></div><div class="qplain-body"><div class="q-body">
 <p>A Mathematics teacher recorded Mathematics and Physical Sciences marks (%) of 15 learners.</p>
 <table class="data-table">
 <tr><th>Maths (%)</th><td>26</td><td>62</td><td>21</td><td>33</td><td>53</td><td>76</td><td>32</td><td>59</td><td>43</td><td>33</td><td>49</td><td>51</td><td>19</td><td>34</td><td>85</td></tr>
 <tr><th>Physical Sc. (%)</th><td>34</td><td>67</td><td>28</td><td>46</td><td>65</td><td>76</td><td>26</td><td>73</td><td>50</td><td>39</td><td>57</td><td>51</td><td>24</td><td>41</td><td>80</td></tr>
 </table>
 <img src="./Diagrams/Grade12P2/2020_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
-<li>Draw the least squares regression line on the scatter plot. <span class="marks">(2)</span></li>
-<li>Predict the Physical Sciences mark of a learner who achieved 69% for Mathematics. <span class="marks">(2)</span></li>
-<li>Write down the correlation coefficient. <span class="marks">(1)</span></li>
-<li>Comment on the strength of the correlation. <span class="marks">(1)</span></li>
-<li>What trend did the teacher observe between the results of the two subjects? <span class="marks">(1)</span></li>
+<li>1.1 Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
+<li>1.2 Draw the least squares regression line on the scatter plot. <span class="marks">(2)</span></li>
+<li>1.3 Predict the Physical Sciences mark of a learner who achieved 69% for Mathematics. <span class="marks">(2)</span></li>
+<li>1.4 Write down the correlation coefficient. <span class="marks">(1)</span></li>
+<li>1.5 Comment on the strength of the correlation. <span class="marks">(1)</span></li>
+<li>1.6 What trend did the teacher observe between the results of the two subjects? <span class="marks">(1)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>$a = 9{,}5$, $b = 0{,}91$  $\Rightarrow$  $\hat{y} = 9{,}5 + 0{,}91x$</li>
-<li>Draw the line through two computed points, e.g. $(50\,;\,55)$ and $(0\,;\,9{,}5)$.</li>
-<li>Final mark $\approx 72{,}22\%$ (calculator)  OR  $\hat{y}=9{,}5+0{,}91(69)\approx72{,}29\%$</li>
-<li>$r = 0{,}95$</li>
-<li>There is a very strong positive correlation between the Mathematics and Physical Sciences marks.</li>
-<li>The higher the learners' Mathematics marks, the higher their Physical Sciences marks.</li>
+<li>1.1 $a = 9{,}5$, $b = 0{,}91$  $\Rightarrow$  $\hat{y} = 9{,}5 + 0{,}91x$</li>
+<li>1.2 Draw the line through two computed points, e.g. $(50\,;\,55)$ and $(0\,;\,9{,}5)$.<br/><img src="./Diagrams/Grade12P2/Answers/2020_A1.2.png" style="width:70%"></li>
+<li>1.3 Final mark $\approx 72{,}22\%$ (calculator)  OR  $\hat{y}=9{,}5+0{,}91(69)\approx72{,}29\%$</li>
+<li>1.4 $r = 0{,}95$</li>
+<li>1.5 There is a very strong positive correlation between the Mathematics and Physical Sciences marks.</li>
+<li>1.6 The higher the learners' Mathematics marks, the higher their Physical Sciences marks.</li>
 </ol>
 <div class="total">Total: [10]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Mean, SD &amp; Comparison (Aircraft landings) [9]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[9]</span></div><div class="qplain-body"><div class="q-body">
 <p>The number of aircraft landing at King Shaka International Airport and Port Elizabeth Airport (April 2017 – March 2018) is shown in a double bar graph (refer to your own copy).</p>
 <img src="./Diagrams/Grade12P2/2020_Q2.png" style="width:70%"><ol class="subquestions">
-<li>During which month is the difference (PE exceeding King Shaka) the greatest? <span class="marks">(1)</span></li>
-<li>King Shaka landings for these months: 2182, 2323, 2267, 2334, 2346, 2175, 2293, 2263, 2215, 2271, 2018, 2254. Calculate the mean. <span class="marks">(2)</span></li>
-<li>Calculate the standard deviation for the number of King Shaka landings. <span class="marks">(2)</span></li>
-<li>Determine the number of months in which King Shaka landings were within one standard deviation of the mean. <span class="marks">(3)</span></li>
-<li>Which ONE of the given statements (A, B, C) is correct? <span class="marks">(1)</span></li>
+<li>2.1 During which month is the difference (PE exceeding King Shaka) the greatest? <span class="marks">(1)</span></li>
+<li>2.2 King Shaka landings for these months: 2182, 2323, 2267, 2334, 2346, 2175, 2293, 2263, 2215, 2271, 2018, 2254. Calculate the mean. <span class="marks">(2)</span></li>
+<li>2.3 Calculate the standard deviation for the number of King Shaka landings. <span class="marks">(2)</span></li>
+<li>2.4 Determine the number of months in which King Shaka landings were within one standard deviation of the mean. <span class="marks">(3)</span></li>
+<li>2.5 Which ONE of the given statements (A, B, C) is correct? <span class="marks">(1)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>July / Julie</li>
-<li>$\bar{x} = \dfrac{26\,941}{12} = 2\,245{,}083\ldots \approx 2\,245{,}08$ aircraft landings</li>
-<li>$\sigma = 86{,}30$</li>
-<li>$(\bar{x}-\sigma\,;\,\bar{x}+\sigma) = (2\,245{,}08-86{,}30\,;\,2\,245{,}08+86{,}30) = (2\,158{,}78\,;\,2\,331{,}38)$  $\therefore$ 9 months</li>
-<li>C — The standard deviation of the number of landings at Port Elizabeth Airport will be higher than that of King Shaka.</li>
+<li>2.1 July / Julie</li>
+<li>2.2 $\bar{x} = \dfrac{26\,941}{12} = 2\,245{,}083\ldots \approx 2\,245{,}08$ aircraft landings</li>
+<li>2.3 $\sigma = 86{,}30$</li>
+<li>2.4 $(\bar{x}-\sigma\,;\,\bar{x}+\sigma) = (2\,245{,}08-86{,}30\,;\,2\,245{,}08+86{,}30) = (2\,158{,}78\,;\,2\,331{,}38)$  $\therefore$ 9 months</li>
+<li>2.5 C — The standard deviation of the number of landings at Port Elizabeth Airport will be higher than that of King Shaka.</li>
 </ol>
 <div class="total">Total: [9]</div>
 </div>
@@ -501,31 +487,31 @@ window.MathJax = {
 <details class="year">
 <summary>2019</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Regression &amp; Decision Making (Income vs repayment) [8]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[8]</span></div><div class="qplain-body"><div class="q-body">
 <table class="data-table">
 <tr><th>Monthly income (R)</th><td>9 000</td><td>13 500</td><td>15 000</td><td>16 500</td><td>17 000</td><td>20 000</td></tr>
 <tr><th>Monthly repayment (R)</th><td>2 000</td><td>3 000</td><td>3 500</td><td>5 200</td><td>5 500</td><td>6 000</td></tr>
 </table>
 <ol class="subquestions">
-<li>Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
-<li>If a person earns R14 000 per month, predict the monthly repayment they could make towards a motor vehicle. <span class="marks">(2)</span></li>
-<li>Determine the correlation coefficient between monthly income and repayment. <span class="marks">(1)</span></li>
-<li>A person earning R18 000 per month must decide whether to spend R9 000/month on repayments. Which of options A–D would the person most likely decide on? <span class="marks">(2)</span></li>
+<li>1.1 Determine the equation of the least squares regression line for the data. <span class="marks">(3)</span></li>
+<li>1.2 If a person earns R14 000 per month, predict the monthly repayment they could make towards a motor vehicle. <span class="marks">(2)</span></li>
+<li>1.3 Determine the correlation coefficient between monthly income and repayment. <span class="marks">(1)</span></li>
+<li>1.4 A person earning R18 000 per month must decide whether to spend R9 000/month on repayments. Which of options A–D would the person most likely decide on? <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>$a = -1946{,}88$, $b = 0{,}41$  $\Rightarrow$  $\hat{y} = -1946{,}88 + 0{,}41x$</li>
-<li>$\approx R3\,727{,}16$ (calculator)  OR  $\hat{y} = -1946{,}88+0{,}41(14000) \approx R3\,793{,}12$</li>
-<li>$r = 0{,}946\ldots \approx 0{,}95$</li>
-<li>Option D — NOT to spend R9 000 per month because the point $(18\,000\,;\,9\,000)$ lies very far from the least squares regression line.</li>
+<li>1.1 $a = -1946{,}88$, $b = 0{,}41$  $\Rightarrow$  $\hat{y} = -1946{,}88 + 0{,}41x$</li>
+<li>1.2 $\approx R3\,727{,}16$ (calculator)  OR  $\hat{y} = -1946{,}88+0{,}41(14000) \approx R3\,793{,}12$</li>
+<li>1.3 $r = 0{,}946\ldots \approx 0{,}95$</li>
+<li>1.4 Option D — NOT to spend R9 000 per month because the point $(18\,000\,;\,9\,000)$ lies very far from the least squares regression line.</li>
 </ol>
 <div class="total">Total: [8]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Estimated Mean with Unknowns &amp; Ogive (Cellphone contracts) [13]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[13]</span></div><div class="qplain-body"><div class="q-body">
 <p>A survey of 100 people about monthly cellphone contract payments gave an estimated mean of R309/month. Partial results:</p>
 <table class="data-table">
 <tr><th>Amount paid (R)</th><th>Frequency</th></tr>
@@ -537,19 +523,18 @@ window.MathJax = {
 <tr><td>$500 &lt; x \le 600$</td><td>6</td></tr>
 </table>
 <ol class="subquestions">
-<li>How many people paid R200 or less on their monthly cellphone contracts? <span class="marks">(1)</span></li>
-<li>Use the information above to show that $a=24$ and $b=16$. <span class="marks">(5)</span></li>
-<li>Write down the modal class for the data. <span class="marks">(1)</span></li>
-<li>Draw an ogive (cumulative frequency graph) to represent the data. <span class="marks">(4)</span></li>
-<li>Determine how many people paid more than R420 per month for their cellphone contracts. <span class="marks">(2)</span></li>
+<li>2.1 How many people paid R200 or less on their monthly cellphone contracts? <span class="marks">(1)</span></li>
+<li>2.2 Use the information above to show that $a=24$ and $b=16$. <span class="marks">(5)</span></li>
+<li>2.3 Write down the modal class for the data. <span class="marks">(1)</span></li>
+<li>2.4 Draw an ogive (cumulative frequency graph) to represent the data. <span class="marks">(4)</span></li>
+<li>2.5 Determine how many people paid more than R420 per month for their cellphone contracts. <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>Number people paid R200 or less $= 19$</li>
-<li>
-          $7+12+a+35+b+6=100 \Rightarrow a = 40-b$
+<li>2.1 Number people paid R200 or less $= 19$</li>
+<li>2.2 $7+12+a+35+b+6=100 \Rightarrow a = 40-b$
           <br/>
           $309 = \dfrac{(50\times7)+(150\times12)+(250\times a)+(350\times35)+(450\times b)+(550\times6)}{100}$
           <br/>
@@ -557,9 +542,9 @@ window.MathJax = {
           <br/>
           $200b = 3200 \Rightarrow b=16$, then $a = 24$.
         </li>
-<li>Modal class: $300 &lt; x \le 400$</li>
-<li>Ogive grounded at $(0;0)$, rising through cumulative points, ending at $(600;100)$, smooth curve.</li>
-<li>Number of people $=100-82=18$ people paid more than R420/month (accept 16–20).</li>
+<li>2.3 Modal class: $300 &lt; x \le 400$</li>
+<li>2.4 Ogive grounded at $(0;0)$, rising through cumulative points, ending at $(600;100)$, smooth curve.<br/><img src="./Diagrams/Grade12P2/Answers/2019_A2.4.png" style="width:70%"></li>
+<li>2.5 Number of people $=100-82=18$ people paid more than R420/month (accept 16–20).</li>
 </ol>
 <div class="total">Total: [13]</div>
 </div>
@@ -571,15 +556,15 @@ window.MathJax = {
 <details class="year">
 <summary>2018</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Ogive, Mean, SD &amp; Comparison (Orders &amp; Tips) [15]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[15]</span></div><div class="qplain-body"><div class="q-body">
 <p><strong>1.1</strong> The cumulative frequency graph (ogive) below shows the total number of food items ordered from a menu over a period of 1 hour (refer to your own copy).</p>
 <img src="./Diagrams/Grade12P2/2018_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Write down the total number of food items ordered from the menu during this hour. <span class="marks">(1)</span></li>
-<li>Write down the modal class of the data. <span class="marks">(1)</span></li>
-<li>How long did it take to order the first 30 food items? <span class="marks">(1)</span></li>
-<li>How many food items were ordered in the last 15 minutes? <span class="marks">(2)</span></li>
-<li>Determine the 75th percentile for the data. <span class="marks">(2)</span></li>
-<li>Calculate the interquartile range of the data. <span class="marks">(2)</span></li>
+<li>1.1 Write down the total number of food items ordered from the menu during this hour. <span class="marks">(1)</span></li>
+<li>1.2 Write down the modal class of the data. <span class="marks">(1)</span></li>
+<li>1.3 How long did it take to order the first 30 food items? <span class="marks">(1)</span></li>
+<li>1.4 How many food items were ordered in the last 15 minutes? <span class="marks">(2)</span></li>
+<li>1.5 Determine the 75th percentile for the data. <span class="marks">(2)</span></li>
+<li>1.6 Calculate the interquartile range of the data. <span class="marks">(2)</span></li>
 </ol>
 <p><strong>1.2</strong> Reggie works part-time as a waiter. The amount of money (in rands) he made in tips over a 15-day period:</p>
 <table class="data-table">
@@ -588,16 +573,16 @@ window.MathJax = {
 <tr><td>110</td><td>110</td><td>115</td><td>120</td><td>125</td></tr>
 </table>
 <ol class="subquestions">
-<li>Calculate:
+<li>1.1 Calculate:
         <ol class="subquestions">
-<li>The mean of the data <span class="marks">(2)</span></li>
-<li>The standard deviation of the data <span class="marks">(2)</span></li>
+<li>1.1.1 The mean of the data <span class="marks">(2)</span></li>
+<li>1.1.2 The standard deviation of the data <span class="marks">(2)</span></li>
 </ol>
 </li>
-<li>Mary also works part-time as a waitress at the same restaurant, over the same 15-day period, with the same mean in tips as Reggie, but her SD was R14. Comment on:
+<li>1.2 Mary also works part-time as a waitress at the same restaurant, over the same 15-day period, with the same mean in tips as Reggie, but her SD was R14. Comment on:
         <ol class="subquestions">
-<li>Total amount in tips they EACH collected over the 15-day period <span class="marks">(1)</span></li>
-<li>Variation each of them received in daily tips over this period <span class="marks">(1)</span></li>
+<li>1.2.1 Total amount in tips they EACH collected over the 15-day period <span class="marks">(1)</span></li>
+<li>1.2.2 Variation each of them received in daily tips over this period <span class="marks">(1)</span></li>
 </ol>
 </li>
 </ol>
@@ -605,25 +590,23 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>140 items</li>
-<li>Modal class: $20 &lt; x \le 30$ minutes</li>
-<li>20 minutes</li>
-<li>$140-126=14$ orders (accept 12–16)</li>
-<li>75th percentile is at 105 items $= 37$ minutes (accept 36–38)</li>
-<li>Lower quartile is at 35 items $=21{,}5$ min; IQR $=37-21{,}5=15{,}5$ min (accept 13–17 min)</li>
+<li>1.1 140 items</li>
+<li>1.2 Modal class: $20 &lt; x \le 30$ minutes</li>
+<li>1.3 20 minutes</li>
+<li>1.4 $140-126=14$ orders (accept 12–16)</li>
+<li>1.5 75th percentile is at 105 items $= 37$ minutes (accept 36–38)</li>
+<li>1.6 Lower quartile is at 35 items $=21{,}5$ min; IQR $=37-21{,}5=15{,}5$ min (accept 13–17 min)</li>
 </ol>
 <p><strong>1.2</strong></p>
 <ol class="subquestions">
-<li>
-<ol class="subquestions">
-<li>$\bar{x} = \dfrac{1420}{15} = R94{,}67$</li>
-<li>$\sigma = R22{,}69$</li>
+<li>1.1 <ol class="subquestions">
+<li>1.1.1 $\bar{x} = \dfrac{1420}{15} = R94{,}67$</li>
+<li>1.1.2 $\sigma = R22{,}69$</li>
 </ol>
 </li>
-<li>
-<ol class="subquestions">
-<li>They both collected the same (equal) total amount in tips, i.e. R1 420 over the 15-day period.</li>
-<li>Mary's standard deviation is smaller than Reggie's, suggesting greater variation in Reggie's daily tips compared to Mary's.</li>
+<li>1.2 <ol class="subquestions">
+<li>1.2.1 They both collected the same (equal) total amount in tips, i.e. R1 420 over the 15-day period.</li>
+<li>1.2.2 Mary's standard deviation is smaller than Reggie's, suggesting greater variation in Reggie's daily tips compared to Mary's.</li>
 </ol>
 </li>
 </ol>
@@ -631,32 +614,31 @@ window.MathJax = {
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Scatter Plot, Correlation &amp; Regression Line Interpretation (Tennis serve speed) [5]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[5]</span></div><div class="qplain-body"><div class="q-body">
 <p>The heights of 21 tennis players and the average speed of their serves were recorded (refer to scatter plot with regression line).</p>
 <img src="./Diagrams/Grade12P2/2018_Q2.png" style="width:70%"><ol class="subquestions">
-<li>Write down the fastest average serve speed (km/h) achieved in this tournament. <span class="marks">(1)</span></li>
-<li>Consider correlation coefficients A. $r=0{,}93$ B. $r=-0{,}42$ C. $r=0{,}52$.
+<li>2.1 Write down the fastest average serve speed (km/h) achieved in this tournament. <span class="marks">(1)</span></li>
+<li>2.2 Consider correlation coefficients A. $r=0{,}93$ B. $r=-0{,}42$ C. $r=0{,}52$.
         <ol class="subquestions">
-<li>Which ONE best fits the plotted data? <span class="marks">(1)</span></li>
-<li>Use the scatter plot and regression line to motivate your answer. <span class="marks">(1)</span></li>
+<li>2.2.1 Which ONE best fits the plotted data? <span class="marks">(1)</span></li>
+<li>2.2.2 Use the scatter plot and regression line to motivate your answer. <span class="marks">(1)</span></li>
 </ol>
 </li>
-<li>What does the data suggest about serve speed and player height? <span class="marks">(1)</span></li>
-<li>The regression line is $\hat{y}=27{,}07+bx$. Explain why, in context, the line CANNOT intersect the $y$-axis at $(0\,;\,27{,}07)$. <span class="marks">(1)</span></li>
+<li>2.3 What does the data suggest about serve speed and player height? <span class="marks">(1)</span></li>
+<li>2.4 The regression line is $\hat{y}=27{,}07+bx$. Explain why, in context, the line CANNOT intersect the $y$-axis at $(0\,;\,27{,}07)$. <span class="marks">(1)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>251 km/h</li>
-<li>
-<ol class="subquestions">
-<li>$r = 0{,}52$ (Option C)</li>
-<li>The points are fairly scattered and the least squares regression line is increasing.</li>
+<li>2.1 251 km/h</li>
+<li>2.2 <ol class="subquestions">
+<li>2.2.1 $r = 0{,}52$ (Option C)</li>
+<li>2.2.2 The points are fairly scattered and the least squares regression line is increasing.</li>
 </ol>
 </li>
-<li>There is a weak positive relationship, so height could have some influence, but there is no conclusive evidence that a taller player serves faster than a shorter one.</li>
-<li>A player cannot have a height of 0 m — such a player does not exist, so cannot have a serve speed.</li>
+<li>2.3 There is a weak positive relationship, so height could have some influence, but there is no conclusive evidence that a taller player serves faster than a shorter one.</li>
+<li>2.4 A player cannot have a height of 0 m — such a player does not exist, so cannot have a serve speed.</li>
 </ol>
 <div class="total">Total: [5]</div>
 </div>
@@ -668,48 +650,48 @@ window.MathJax = {
 <details class="year">
 <summary>2017</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Regression Line &amp; Gradient Reasoning (100m sprint vs long jump) [7]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[7]</span></div><div class="qplain-body"><div class="q-body">
 <table class="data-table">
 <tr><th>Time for 100m (s)</th><td>10,1</td><td>10,2</td><td>10,5</td><td>10,9</td><td>11</td><td>11,1</td><td>11,2</td><td>11,5</td><td>12</td><td>12</td><td>12,2</td><td>12,5</td></tr>
 <tr><th>Long jump distance (m)</th><td>8</td><td>7,7</td><td>7,6</td><td>7,3</td><td>7,6</td><td>7,2</td><td>6,8</td><td>7</td><td>6,6</td><td>6,3</td><td>6,8</td><td>6,4</td></tr>
 </table>
 <p>The equation of the least squares regression line is $\hat{y}=a+bx$.</p>
 <img src="./Diagrams/Grade12P2/2017_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Determine the values of $a$ and $b$. <span class="marks">(3)</span></li>
-<li>An athlete runs the 100 m sprint in 11,7 seconds. Use $\hat{y}=a+bx$ to predict the distance of the best long jump of this athlete. <span class="marks">(2)</span></li>
-<li>Another athlete completes the sprint in 12,3 seconds with a long jump of 7,6 m. If included, will the gradient of the regression line increase or decrease? Motivate without further calculation. <span class="marks">(2)</span></li>
+<li>1.1 Determine the values of $a$ and $b$. <span class="marks">(3)</span></li>
+<li>1.2 An athlete runs the 100 m sprint in 11,7 seconds. Use $\hat{y}=a+bx$ to predict the distance of the best long jump of this athlete. <span class="marks">(2)</span></li>
+<li>1.3 Another athlete completes the sprint in 12,3 seconds with a long jump of 7,6 m. If included, will the gradient of the regression line increase or decrease? Motivate without further calculation. <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>$a = 14{,}34$, $b = -0{,}64$</li>
-<li>$y = 14{,}34 - 0{,}64(11{,}7) = 6{,}85$ (calculator: $6{,}83$)</li>
-<li>The gradient increases, because the point $(12{,}3\,;\,7{,}6)$ lies some distance above the current data/trend line.</li>
+<li>1.1 $a = 14{,}34$, $b = -0{,}64$</li>
+<li>1.2 $y = 14{,}34 - 0{,}64(11{,}7) = 6{,}85$ (calculator: $6{,}83$)</li>
+<li>1.3 The gradient increases, because the point $(12{,}3\,;\,7{,}6)$ lies some distance above the current data/trend line.</li>
 </ol>
 <div class="total">Total: [7]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Mean, IQR, SD, Box-and-Whisker Comparison (Colour naming times) [13]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[13]</span></div><div class="qplain-body"><div class="q-body">
 <p>A group of 23 girls were asked to name the colours of 30 rectangles as quickly as possible. Times (seconds):</p>
 <table class="data-table">
 <tr><td>12</td><td>13</td><td>13</td><td>14</td><td>14</td><td>16</td><td>17</td><td>18</td><td>18</td><td>18</td><td>19</td><td>20</td></tr>
 <tr><td>21</td><td>21</td><td>22</td><td>22</td><td>23</td><td>24</td><td>25</td><td>27</td><td>29</td><td>30</td><td>36</td></tr>
 </table>
 <ol class="subquestions">
-<li>Calculate:
+<li>2.1 Calculate:
         <ol class="subquestions">
-<li>The mean of the data <span class="marks">(2)</span></li>
-<li>The interquartile range of the data <span class="marks">(3)</span></li>
+<li>2.1.1 The mean of the data <span class="marks">(2)</span></li>
+<li>2.1.2 The interquartile range of the data <span class="marks">(3)</span></li>
 </ol>
 </li>
-<li>The standard deviation is 5,94. How many girls took longer than ONE standard deviation from the mean to name the colours? <span class="marks">(2)</span></li>
-<li>Draw a box-and-whisker diagram to represent the data. <span class="marks">(3)</span></li>
-<li>The five-number summary for 23 boys is $(15\,;\,21\,;\,23{,}5\,;\,26\,;\,38)$.
+<li>2.2 The standard deviation is 5,94. How many girls took longer than ONE standard deviation from the mean to name the colours? <span class="marks">(2)</span></li>
+<li>2.3 Draw a box-and-whisker diagram to represent the data. <span class="marks">(3)</span></li>
+<li>2.4 The five-number summary for 23 boys is $(15\,;\,21\,;\,23{,}5\,;\,26\,;\,38)$.
         <ol class="subquestions">
-<li>Which group (girls or boys) had the lower median time? <span class="marks">(1)</span></li>
-<li>The first three learners to name all 30 rectangles correctly in the shortest time win a prize. How many boys will be among these three prize-winners? Motivate. <span class="marks">(2)</span></li>
+<li>2.4.1 Which group (girls or boys) had the lower median time? <span class="marks">(1)</span></li>
+<li>2.4.2 The first three learners to name all 30 rectangles correctly in the shortest time win a prize. How many boys will be among these three prize-winners? Motivate. <span class="marks">(2)</span></li>
 </ol>
 </li>
 </ol>
@@ -717,18 +699,16 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>
-<ol class="subquestions">
-<li>Mean $= \dfrac{472}{23} = 20{,}52$ seconds</li>
-<li>$Q_1 = 16$, $Q_3 = 24$  $\Rightarrow$  IQR $= 24-16=8$</li>
+<li>2.1 <ol class="subquestions">
+<li>2.1.1 Mean $= \dfrac{472}{23} = 20{,}52$ seconds</li>
+<li>2.1.2 $Q_1 = 16$, $Q_3 = 24$  $\Rightarrow$  IQR $= 24-16=8$</li>
 </ol>
 </li>
-<li>$20{,}52+5{,}94=26{,}46$  $\therefore$ girls with times $&gt; 26{,}46$: 4 girls.</li>
-<li>Box-and-whisker: whiskers at 12 and 36, $Q_1=16$, median $=20$, $Q_3=24$.</li>
-<li>
-<ol class="subquestions">
-<li>Girls (median 20 vs boys' median 23,5)</li>
-<li>None of the boys — 5 girls completed in less than 15 seconds, which was the minimum time taken by any boy.</li>
+<li>2.2 $20{,}52+5{,}94=26{,}46$  $\therefore$ girls with times $&gt; 26{,}46$: 4 girls.</li>
+<li>2.3 Box-and-whisker: whiskers at 12 and 36, $Q_1=16$, median $=20$, $Q_3=24$.<br/><img src="./Diagrams/Grade12P2/Answers/2017_A2.3.png" style="width:70%"></li>
+<li>2.4 <ol class="subquestions">
+<li>2.4.1 Girls (median 20 vs boys' median 23,5)</li>
+<li>2.4.2 None of the boys — 5 girls completed in less than 15 seconds, which was the minimum time taken by any boy.</li>
 </ol>
 </li>
 </ol>
@@ -742,44 +722,44 @@ window.MathJax = {
 <details class="year">
 <summary>2016</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Scatter Plot, Correlation &amp; Regression (Shopping frequency) [9]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[9]</span></div><div class="qplain-body"><div class="q-body">
 <table class="data-table">
 <tr><th>Distance from store (km)</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>7</td><td>8</td><td>10</td></tr>
 <tr><th>Avg times shopped/week</th><td>12</td><td>10</td><td>7</td><td>7</td><td>6</td><td>2</td><td>3</td><td>2</td></tr>
 </table>
 <img src="./Diagrams/Grade12P2/2016_Q1.png" style="width:70%"><ol class="subquestions">
-<li>Use the scatter plot to comment on the strength of the relationship between distance and shopping frequency. <span class="marks">(1)</span></li>
-<li>Calculate the correlation coefficient of the data. <span class="marks">(1)</span></li>
-<li>Calculate the equation of the least squares regression line of the data. <span class="marks">(3)</span></li>
-<li>Use your answer to 1.3 to estimate the average number of times a shopper living 6 km away will visit the store in a week. <span class="marks">(2)</span></li>
-<li>Sketch the least squares regression line on the scatter plot. <span class="marks">(2)</span></li>
+<li>1.1 Use the scatter plot to comment on the strength of the relationship between distance and shopping frequency. <span class="marks">(1)</span></li>
+<li>1.2 Calculate the correlation coefficient of the data. <span class="marks">(1)</span></li>
+<li>1.3 Calculate the equation of the least squares regression line of the data. <span class="marks">(3)</span></li>
+<li>1.4 Use your answer to 1.3 to estimate the average number of times a shopper living 6 km away will visit the store in a week. <span class="marks">(2)</span></li>
+<li>1.5 Sketch the least squares regression line on the scatter plot. <span class="marks">(2)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>Strong (relationship)</li>
-<li>$r = -0{,}95$ (approx $-0{,}9462$)</li>
-<li>$a = 11{,}71$, $b = -1{,}12$  $\Rightarrow$  $\hat{y} = -1{,}12x + 11{,}71$</li>
-<li>$\hat{y} = -1{,}12(6)+11{,}71 = 5$ times</li>
-<li>Draw a straight line close to points e.g. $(5;6)$, $(10;2{,}5)$, $(6;5)$, $(0;11{,}7)$.</li>
+<li>1.1 Strong (relationship)</li>
+<li>1.2 $r = -0{,}95$ (approx $-0{,}9462$)</li>
+<li>1.3 $a = 11{,}71$, $b = -1{,}12$  $\Rightarrow$  $\hat{y} = -1{,}12x + 11{,}71$</li>
+<li>1.4 $\hat{y} = -1{,}12(6)+11{,}71 = 5$ times</li>
+<li>1.5 Draw a straight line close to points e.g. $(5;6)$, $(10;2{,}5)$, $(6;5)$, $(0;11{,}7)$.</li>
 </ol>
 <div class="total">Total: [9]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Histogram, Ogive, Skewness &amp; Measurement Error (Learner heights) [13]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[13]</span></div><div class="qplain-body"><div class="q-body">
 <p>The heights of 160 learners are measured (shortest 1,39 m, tallest 2,21 m), represented in a histogram (refer to your own copy) with frequencies 24, 71, 38, 23, 4 for intervals 1,1–1,3, 1,3–1,5, ..., 2,1–2,3.</p>
 <img src="./Diagrams/Grade12P2/2016_Q2.png" style="width:70%"><ol class="subquestions">
-<li>Describe the skewness of the data. <span class="marks">(1)</span></li>
-<li>Calculate the range of the heights. <span class="marks">(2)</span></li>
-<li>Complete the cumulative frequency column. <span class="marks">(2)</span></li>
-<li>Draw an ogive to represent the data. <span class="marks">(4)</span></li>
-<li>Eighty learners are less than $x$ metres in height. Estimate $x$. <span class="marks">(2)</span></li>
-<li>The measuring tape was mounted at 1,1 m above ground instead of 1 m. How does this error influence:
+<li>2.1 Describe the skewness of the data. <span class="marks">(1)</span></li>
+<li>2.2 Calculate the range of the heights. <span class="marks">(2)</span></li>
+<li>2.3 Complete the cumulative frequency column. <span class="marks">(2)</span></li>
+<li>2.4 Draw an ogive to represent the data. <span class="marks">(4)</span></li>
+<li>2.5 Eighty learners are less than $x$ metres in height. Estimate $x$. <span class="marks">(2)</span></li>
+<li>2.6 The measuring tape was mounted at 1,1 m above ground instead of 1 m. How does this error influence:
         <ol class="subquestions">
-<li>Mean of the data set <span class="marks">(1)</span></li>
-<li>Standard deviation of the data set <span class="marks">(1)</span></li>
+<li>2.6.1 Mean of the data set <span class="marks">(1)</span></li>
+<li>2.6.2 Standard deviation of the data set <span class="marks">(1)</span></li>
 </ol>
 </li>
 </ol>
@@ -787,15 +767,14 @@ window.MathJax = {
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>Positively skewed (skewed to the right)</li>
-<li>Range $= 2{,}21-1{,}39=0{,}82$ m</li>
-<li>Cumulative frequencies: 24, 95, 133, 156, 160</li>
-<li>Ogive: grounded, plotted at upper class limits vs cumulative frequency, smooth shape.</li>
-<li>Using cumulative frequency $=80$: $x \approx 1{,}65$ m (accept 1,6–1,69)</li>
-<li>
-<ol class="subquestions">
-<li>The mean would change by 0,1 m.</li>
-<li>No influence/change — there is no difference in the variation of the data (all values shift by a constant).</li>
+<li>2.1 Positively skewed (skewed to the right)</li>
+<li>2.2 Range $= 2{,}21-1{,}39=0{,}82$ m</li>
+<li>2.3 Cumulative frequencies: 24, 95, 133, 156, 160</li>
+<li>2.4 Ogive: grounded, plotted at upper class limits vs cumulative frequency, smooth shape.<br/><img src="./Diagrams/Grade12P2/Answers/2016_A2.4.png" style="width:70%"></li>
+<li>2.5 Using cumulative frequency $=80$: $x \approx 1{,}65$ m (accept 1,6–1,69)</li>
+<li>2.6 <ol class="subquestions">
+<li>2.6.1 The mean would change by 0,1 m.</li>
+<li>2.6.2 No influence/change — there is no difference in the variation of the data (all values shift by a constant).</li>
 </ol>
 </li>
 </ol>
@@ -809,63 +788,61 @@ window.MathJax = {
 <details class="year">
 <summary>2015</summary>
 <div class="year-body">
-<div class="qplain"><div class="qplain-title">Question 1 — Scatter Plot, Regression, Outlier &amp; Correlation (Fat vs Energy) [11]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 1 <span class="marks">[11]</span></div><div class="qplain-body"><div class="q-body">
 <table class="data-table">
 <tr><th>Fat (g)</th><td>9</td><td>14</td><td>25</td><td>8</td><td>12</td><td>31</td><td>28</td><td>14</td><td>29</td><td>20</td></tr>
 <tr><th>Energy (kJ)</th><td>1100</td><td>1300</td><td>2100</td><td>300</td><td>1200</td><td>2400</td><td>2200</td><td>1400</td><td>2600</td><td>1600</td></tr>
 </table>
 <p>The equation of the least squares regression line is $\hat{y} = 154{,}60 + 77{,}13x$.</p>
 <ol class="subquestions">
-<li>Represent the information in a scatter plot. <span class="marks">(3)</span></li>
-<li>
-<ol class="subquestions">
-<li>An item contains 18 grams of fat. Calculate the number of kilojoules of energy, rounded to the nearest 100 kJ. <span class="marks">(2)</span></li>
-<li>Draw the least squares regression line on the scatter plot. <span class="marks">(2)</span></li>
+<li>1.1 Represent the information in a scatter plot. <span class="marks">(3)</span></li>
+<li>1.2 <ol class="subquestions">
+<li>1.2.1 An item contains 18 grams of fat. Calculate the number of kilojoules of energy, rounded to the nearest 100 kJ. <span class="marks">(2)</span></li>
+<li>1.2.2 Draw the least squares regression line on the scatter plot. <span class="marks">(2)</span></li>
 </ol>
 </li>
-<li>Identify an outlier in the data set. <span class="marks">(1)</span></li>
-<li>Calculate the value of the correlation coefficient. <span class="marks">(2)</span></li>
-<li>Comment on the strength of the relationship between fat content and energy. <span class="marks">(1)</span></li>
+<li>1.3 Identify an outlier in the data set. <span class="marks">(1)</span></li>
+<li>1.4 Calculate the value of the correlation coefficient. <span class="marks">(2)</span></li>
+<li>1.5 Comment on the strength of the relationship between fat content and energy. <span class="marks">(1)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>(Plot the 10 points yourself.)</li>
-<li>
-<ol class="subquestions">
-<li>$\hat{y} = 154{,}60 + 77{,}13(18) = 1\,542{,}94 \approx 1\,500$ kJ</li>
-<li>Draw a straight line with $y$-intercept close to $(0;150)$ passing near points like $(25;2100)$ or $(20;1700)$.</li>
+<li>1.1 (Plot the 10 points yourself.)</li>
+<li>1.2 <ol class="subquestions">
+<li>1.2.1 $\hat{y} = 154{,}60 + 77{,}13(18) = 1\,542{,}94 \approx 1\,500$ kJ</li>
+<li>1.2.2 Draw a straight line with $y$-intercept close to $(0;150)$ passing near points like $(25;2100)$ or $(20;1700)$.<br/><img src="./Diagrams/Grade12P2/Answers/2015_A1.2.2.png" style="width:70%"></li>
 </ol>
 </li>
-<li>$(8\,;\,300)$ is an outlier.</li>
-<li>$r = 0{,}9520\ldots \approx 0{,}95$</li>
-<li>Very strong positive relationship between fat content and energy.</li>
+<li>1.3 $(8\,;\,300)$ is an outlier.</li>
+<li>1.4 $r = 0{,}9520\ldots \approx 0{,}95$</li>
+<li>1.5 Very strong positive relationship between fat content and energy.</li>
 </ol>
 <div class="total">Total: [11]</div>
 </div>
 </details>
 </div></div></div>
-<div class="qplain"><div class="qplain-title">Question 2 — Mean, Median, SD (Dice sums) [9]</div><div class="qplain-body"><div class="q-body">
+<div class="qplain"><div class="qplain-title">Question 2 <span class="marks">[9]</span></div><div class="qplain-body"><div class="q-body">
 <p>A group of 30 learners each randomly rolled two dice once; the sum of the values on the uppermost faces was recorded.</p>
 <table class="data-table">
 <tr><th>Sum</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
 <tr><th>Frequency</th><td>0</td><td>3</td><td>2</td><td>4</td><td>4</td><td>8</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td></tr>
 </table>
 <ol class="subquestions">
-<li>Calculate the mean of the data. <span class="marks">(2)</span></li>
-<li>Determine the median of the data. <span class="marks">(2)</span></li>
-<li>Determine the standard deviation of the data. <span class="marks">(2)</span></li>
-<li>Determine the number of times that the sum of the recorded values is within ONE standard deviation from the mean. Show your calculations. <span class="marks">(3)</span></li>
+<li>2.1 Calculate the mean of the data. <span class="marks">(2)</span></li>
+<li>2.2 Determine the median of the data. <span class="marks">(2)</span></li>
+<li>2.3 Determine the standard deviation of the data. <span class="marks">(2)</span></li>
+<li>2.4 Determine the number of times that the sum of the recorded values is within ONE standard deviation from the mean. Show your calculations. <span class="marks">(3)</span></li>
 </ol>
 <details class="answer">
 <summary>Show Answer</summary>
 <div class="ans-body">
 <ol class="subquestions">
-<li>Mean $= \dfrac{2(0)+3(3)+4(2)+\ldots+12(1)}{30} = \dfrac{202}{30} = 6{,}73$</li>
-<li>Median $= \dfrac{T_{15}+T_{16}}{2} = \dfrac{7+7}{2} = 7$</li>
-<li>$SD = 2{,}264\ldots \approx 2{,}26$</li>
-<li>$(6{,}73-2{,}26\,;\,6{,}73+2{,}26) = (4{,}47\,;\,8{,}99)$  $\therefore\ 4+4+8+3=19$ times (sums of 5, 6, 7, 8).</li>
+<li>2.1 Mean $= \dfrac{2(0)+3(3)+4(2)+\ldots+12(1)}{30} = \dfrac{202}{30} = 6{,}73$</li>
+<li>2.2 Median $= \dfrac{T_{15}+T_{16}}{2} = \dfrac{7+7}{2} = 7$</li>
+<li>2.3 $SD = 2{,}264\ldots \approx 2{,}26$</li>
+<li>2.4 $(6{,}73-2{,}26\,;\,6{,}73+2{,}26) = (4{,}47\,;\,8{,}99)$  $\therefore\ 4+4+8+3=19$ times (sums of 5, 6, 7, 8).</li>
 </ol>
 <div class="total">Total: [9]</div>
 </div>
@@ -877,7 +854,7 @@ window.MathJax = {
     </details>
 
     <details class="topic">
-      <summary>2. Analytical Geometry</summary>
+      <summary><span class="topic-name">2. Analytical Geometry</span><span class="badge">[40 Marks]</span></summary>
       <div class="topic-body">
         <p class="topic-note">Question 3 &amp; 4 — Distance, gradient, inclination, equations of lines and circles. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
@@ -886,13 +863,13 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[18]</span></div><div class="qplain-body"><div class="content">
 <p>In the diagram, $P(-1;8)$, $Q(-4;-6)$ and $R(12;2)$ are the vertices of $\triangle PQR$. The angle of inclination of $QR$ is $\theta$.</p>
 <img src="./Diagrams/Grade12P2/2025_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the length of $QR$. Leave your answer in simplified surd form. (2)</li>
-<li>Calculate the gradient of $QR$. (2)</li>
-<li>Calculate the size of $\theta$. (2)</li>
-<li>Determine the equation of $QR$. (2)</li>
-<li>$PQRS$, in that order, is a parallelogram. Write down the coordinates of $S$. (2)</li>
-<li>$T$ is a point on $QR$ such that $PT \perp QR$. Calculate the coordinates of $T$. (5)</li>
-<li>Calculate the area of parallelogram $PQRS$. (3)</li>
+<li>3.1 Calculate the length of $QR$. Leave your answer in simplified surd form. (2)</li>
+<li>3.2 Calculate the gradient of $QR$. (2)</li>
+<li>3.3 Calculate the size of $\theta$. (2)</li>
+<li>3.4 Determine the equation of $QR$. (2)</li>
+<li>3.5 $PQRS$, in that order, is a parallelogram. Write down the coordinates of $S$. (2)</li>
+<li>3.6 $T$ is a point on $QR$ such that $PT \perp QR$. Calculate the coordinates of $T$. (5)</li>
+<li>3.7 Calculate the area of parallelogram $PQRS$. (3)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -910,14 +887,14 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[21]</span></div><div class="qplain-body"><div class="content">
 <p>$M(p;q)$ is the centre of the circle that intersects the $x$-axis at $A$ and $B$. $C$ is a point such that the line from $M$ to $C$ is parallel to the $y$-axis and intersects the $x$-axis at $D$. $MC$ intersects the circle at $E(-6;-1)$. Tangents from $C$ touch the circle at $A$ and $B$. $AD=(q-1)$ units.</p>
 <img src="./Diagrams/Grade12P2/2025_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Write down the value of $p$. (1)</li>
-<li>Show that $q=4$. (4)</li>
-<li>Determine the equation of the circle in the form $(x-a)^2+(y-b)^2=r^2$. (2)</li>
-<li>If the circle is translated 2 units left, determine the minimum distance between the circle and the $y$-axis. (1)</li>
-<li>Calculate the coordinates of $A$ and $B$. (3)</li>
-<li>Determine the equation of tangent $BC$. (4)</li>
-<li>Write down the coordinates of $C$. (2)</li>
-<li>Calculate the size of $A\hat CB$. (4)</li>
+<li>4.1 Write down the value of $p$. (1)</li>
+<li>4.2 Show that $q=4$. (4)</li>
+<li>4.3 Determine the equation of the circle in the form $(x-a)^2+(y-b)^2=r^2$. (2)</li>
+<li>4.4 If the circle is translated 2 units left, determine the minimum distance between the circle and the $y$-axis. (1)</li>
+<li>4.5 Calculate the coordinates of $A$ and $B$. (3)</li>
+<li>4.6 Determine the equation of tangent $BC$. (4)</li>
+<li>4.7 Write down the coordinates of $C$. (2)</li>
+<li>4.8 Calculate the size of $A\hat CB$. (4)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -942,13 +919,13 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[19]</span></div><div class="qplain-body"><div class="content">
 <p>$\triangle ACD$ has vertices $A$, $D(3;-9)$ and $C(-9;0)$, where $A$ is in the second quadrant. $B(-1;k)$ lies on side $DC$.</p>
 <img src="./Diagrams/Grade12P2/2024_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the gradient of $DC$. (2)</li>
-<li>Determine the equation of $DC$ in the form $y=mx+c$. (2)</li>
-<li>Show that $k=-6$. (1)</li>
-<li>Calculate the length of $DC$. (2)</li>
-<li>Calculate the ratio of $\dfrac{DB}{DC}$. (2)</li>
-<li>If $M$ is a point on $AD$ such that $AC\parallel MB$, calculate the ratio $\dfrac{\text{Area}\triangle MBD}{\text{Area}\triangle ACD}$. (4)</li>
-<li>If the gradient of $AD$ is $-4$ and $AD=\sqrt{612}$ units, calculate the coordinates of $A$. (6)</li>
+<li>3.1 Calculate the gradient of $DC$. (2)</li>
+<li>3.2 Determine the equation of $DC$ in the form $y=mx+c$. (2)</li>
+<li>3.3 Show that $k=-6$. (1)</li>
+<li>3.4 Calculate the length of $DC$. (2)</li>
+<li>3.5 Calculate the ratio of $\dfrac{DB}{DC}$. (2)</li>
+<li>3.6 If $M$ is a point on $AD$ such that $AC\parallel MB$, calculate the ratio $\dfrac{\text{Area}\triangle MBD}{\text{Area}\triangle ACD}$. (4)</li>
+<li>3.7 If the gradient of $AD$ is $-4$ and $AD=\sqrt{612}$ units, calculate the coordinates of $A$. (6)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -966,12 +943,12 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>$M(1;3)$ is the centre of the circle. The circle cuts the $x$-axis at $N$. $ST$ is a tangent to the circle at $P(3;9)$. $R(d;1)$, with $d&gt;0$, and $L$ lie on the circle. $O$ and $V$ are the $x$-intercepts of $PL$ and $RL$ respectively.</p>
 <img src="./Diagrams/Grade12P2/2024_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Write down the coordinates of $L$. (2)</li>
-<li>Determine the equation of tangent $ST$ to the circle at $P$. (4)</li>
-<li>Show that the equation of the circle with centre $M$ is $x^2+y^2-2x-6y-30=0$. (4)</li>
-<li>Show that $d=7$. (2)</li>
-<li>Calculate the size of $\hat L$. (5)</li>
-<li>$TR$ is a tangent to the circle at $R$. Prove that $PT\perp RT$. (3)</li>
+<li>4.1 Write down the coordinates of $L$. (2)</li>
+<li>4.2 Determine the equation of tangent $ST$ to the circle at $P$. (4)</li>
+<li>4.3 Show that the equation of the circle with centre $M$ is $x^2+y^2-2x-6y-30=0$. (4)</li>
+<li>4.4 Show that $d=7$. (2)</li>
+<li>4.5 Calculate the size of $\hat L$. (5)</li>
+<li>4.6 $TR$ is a tangent to the circle at $R$. Prove that $PT\perp RT$. (3)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -994,14 +971,14 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>$L(-4;1)$, $S(4;5)$ and $N(-2;-3)$ are the vertices of a triangle having $S\hat LN=90^\circ$. $LN$ intersects the $x$-axis at $K$.</p>
 <img src="./Diagrams/Grade12P2/2023_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the length of $SL$. Leave your answer in surd form. (2)</li>
-<li>Calculate the gradient of $SN$. (2)</li>
-<li>Calculate the size of $\theta$, the angle of inclination of $SN$. (2)</li>
-<li>Calculate the size of $L\hat NS$. (3)</li>
-<li>Determine the equation of the line through $L$ parallel to $SN$, in the form $y=mx+c$. (3)</li>
-<li>Calculate the area of $\triangle LSN$. (3)</li>
-<li>Calculate the coordinates of point $P$, equidistant from $L$, $S$ and $N$. (3)</li>
-<li>Calculate the size of $L\hat PS$. (2)</li>
+<li>3.1 Calculate the length of $SL$. Leave your answer in surd form. (2)</li>
+<li>3.2 Calculate the gradient of $SN$. (2)</li>
+<li>3.3 Calculate the size of $\theta$, the angle of inclination of $SN$. (2)</li>
+<li>3.4 Calculate the size of $L\hat NS$. (3)</li>
+<li>3.5 Determine the equation of the line through $L$ parallel to $SN$, in the form $y=mx+c$. (3)</li>
+<li>3.6 Calculate the area of $\triangle LSN$. (3)</li>
+<li>3.7 Calculate the coordinates of point $P$, equidistant from $L$, $S$ and $N$. (3)</li>
+<li>3.8 Calculate the size of $L\hat PS$. (2)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1020,12 +997,12 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>The circle with centre $O$ has equation $x^2+y^2=20$. $G(t;0)$ is the centre of a larger circle. A common tangent touches the circles at $D$ and $F$ respectively, such that $D(p;-2)$ lies in the 4th quadrant.</p>
 <img src="./Diagrams/Grade12P2/2023_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Given that $D(p;-2)$ lies on the smaller circle, show that $p=4$. (2)</li>
-<li>$E(6;2)$ is the midpoint of $DF$. Determine the coordinates of $F$. (3)</li>
-<li>Determine the equation of common tangent $DF$ in the form $y=mx+c$. (4)</li>
-<li>Calculate the value of $t$. Show all working. (3)</li>
-<li>Determine the equation of the larger circle in the form $ax^2+by^2+cx+dy+e=0$. (4)</li>
-<li>The smaller circle is translated $k$ units along the $x$-axis to touch the larger circle internally. Calculate the possible values of $k$. (4)</li>
+<li>4.1 Given that $D(p;-2)$ lies on the smaller circle, show that $p=4$. (2)</li>
+<li>4.2 $E(6;2)$ is the midpoint of $DF$. Determine the coordinates of $F$. (3)</li>
+<li>4.3 Determine the equation of common tangent $DF$ in the form $y=mx+c$. (4)</li>
+<li>4.4 Calculate the value of $t$. Show all working. (3)</li>
+<li>4.5 Determine the equation of the larger circle in the form $ax^2+by^2+cx+dy+e=0$. (4)</li>
+<li>4.6 The smaller circle is translated $k$ units along the $x$-axis to touch the larger circle internally. Calculate the possible values of $k$. (4)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1048,19 +1025,19 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>$A(4;2)$, $B(6;-4)$ and $C(-2;-3)$ are vertices of $\triangle ABC$. $T$ is the midpoint of $CB$. Equation of line $AC$ is $5x-6y=8$. Angle of inclination of $AB$ is $\alpha$. $\triangle DCT$ is drawn such that $CD\parallel BA$. Lines $AC$ and $DT$ intersect at $S$, the $y$-intercept of $AC$. $P$, $F$, $R$ are the $x$-intercepts of $DC$, $AC$, $AB$ respectively.</p>
 <img src="./Diagrams/Grade12P2/2022_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate:
+<li>3.1 Calculate:
   <ol type="a">
-<li>Gradient of $AB$ (2)</li>
-<li>Size of $\alpha$ (2)</li>
-<li>Coordinates of $T$ (2)</li>
-<li>Coordinates of $S$ (2)</li>
+<li>3.1.1 Gradient of $AB$ (2)</li>
+<li>3.1.2 Size of $\alpha$ (2)</li>
+<li>3.1.3 Coordinates of $T$ (2)</li>
+<li>3.1.4 Coordinates of $S$ (2)</li>
 </ol>
 </li>
-<li>Determine the equation of $CD$ in the form $y=mx+c$. (3)</li>
-<li>Calculate:
+<li>3.2 Determine the equation of $CD$ in the form $y=mx+c$. (3)</li>
+<li>3.3 Calculate:
   <ol type="a">
-<li>Size of $D\hat CA$ (4)</li>
-<li>Area of $POSC$ (5)</li>
+<li>3.3.1 Size of $D\hat CA$ (4)</li>
+<li>3.3.2 Area of $POSC$ (5)</li>
 </ol>
 </li>
 </ol>
@@ -1080,18 +1057,18 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>$M(3;-5)$ is the centre of the circle having $PN$ as its diameter. $KL$ is a tangent to the circle at $N(7;-2)$.</p>
 <img src="./Diagrams/Grade12P2/2022_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the coordinates of $P$. (2)</li>
-<li>Determine the equation of:
+<li>4.1 Calculate the coordinates of $P$. (2)</li>
+<li>4.2 Determine the equation of:
   <ol type="a">
-<li>The circle in the form $(x-a)^2+(y-b)^2=r^2$ (3)</li>
-<li>$KL$ in the form $y=mx+c$ (5)</li>
+<li>4.2.1 The circle in the form $(x-a)^2+(y-b)^2=r^2$ (3)</li>
+<li>4.2.2 $KL$ in the form $y=mx+c$ (5)</li>
 </ol>
 </li>
-<li>For which values of $k$ will $y=-\dfrac43x+k$ be a secant to the circle? (4)</li>
-<li>Points $A(t;t)$ and $B$ are not shown. From $A$, another tangent touches the circle with centre $M$ at $B$.
+<li>4.3 For which values of $k$ will $y=-\dfrac43x+k$ be a secant to the circle? (4)</li>
+<li>4.4 Points $A(t;t)$ and $B$ are not shown. From $A$, another tangent touches the circle with centre $M$ at $B$.
   <ol type="a">
-<li>Show that the length of tangent $AB$ is $\sqrt{2t^2+4t+9}$. (2)</li>
-<li>Determine the minimum length of $AB$. (4)</li>
+<li>4.4.1 Show that the length of tangent $AB$ is $\sqrt{2t^2+4t+9}$. (2)</li>
+<li>4.4.2 Determine the minimum length of $AB$. (4)</li>
 </ol>
 </li>
 </ol>
@@ -1116,24 +1093,24 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[24]</span></div><div class="qplain-body"><div class="content">
 <p>$A(-2;10)$, $B(k;k)$ and $C(4;-2)$ are vertices of $\triangle ABC$. Line $BC$ is produced to $H$ and cuts the $x$-axis at $E(12;0)$. $AB$ and $AC$ intersect the $x$-axis at $F$ and $G$ respectively. Angle of inclination of $AB$ is $81{,}87^\circ$.</p>
 <img src="./Diagrams/Grade12P2/2021_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the gradient of:
-  <ol type="a"><li>$BE$ (2)</li><li>$AB$ (2)</li></ol>
+<li>3.1 Calculate the gradient of:
+  <ol type="a"><li>3.1.1 $BE$ (2)</li><li>3.1.2 $AB$ (2)</li></ol>
 </li>
-<li>Determine the equation of $BE$ in the form $y=mx+c$ (2)</li>
-<li>Calculate the:
+<li>3.2 Determine the equation of $BE$ in the form $y=mx+c$ (2)</li>
+<li>3.3 Calculate the:
   <ol type="a">
-<li>Coordinates of $B$, where $k&lt;0$ (2)</li>
-<li>Size of $\hat A$ (4)</li>
-<li>Coordinates of the intersection of the diagonals of parallelogram $ACES$, $S$ in the first quadrant (2)</li>
+<li>3.3.1 Coordinates of $B$, where $k&lt;0$ (2)</li>
+<li>3.3.2 Size of $\hat A$ (4)</li>
+<li>3.3.3 Coordinates of the intersection of the diagonals of parallelogram $ACES$, $S$ in the first quadrant (2)</li>
 </ol>
 </li>
-<li>Point $T(p;p)$, $p&gt;0$, is such that $ET=BE=4\sqrt{17}$ units.
+<li>3.4 Point $T(p;p)$, $p&gt;0$, is such that $ET=BE=4\sqrt{17}$ units.
   <ol type="a">
-<li>Calculate the coordinates of $T$. (5)</li>
-<li>Determine the equation of:
+<li>3.4.1 Calculate the coordinates of $T$. (5)</li>
+<li>3.4.2 Determine the equation of:
     <ol type="i">
-<li>Circle centre $E$ through $B$ and $T$ in the form $(x-a)^2+(y-b)^2=r^2$ (2)</li>
-<li>Tangent to the circle at $B(k;k)$ (3)</li>
+<li>3.4.2.1 Circle centre $E$ through $B$ and $T$ in the form $(x-a)^2+(y-b)^2=r^2$ (2)</li>
+<li>3.4.2.2 Tangent to the circle at $B(k;k)$ (3)</li>
 </ol>
 </li>
 </ol>
@@ -1157,12 +1134,12 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[15]</span></div><div class="qplain-body"><div class="content">
 <p>The circle centred at $N(-1;3)$ passes through $A(-1;-1)$ and $C$. $B(-4;2)$, $C$, $D$, $E$ form a parallelogram such that $BE\parallel x$-axis. $CD$ is tangent to the circle at $C$, $CD=6$ units.</p>
 <img src="./Diagrams/Grade12P2/2021_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Write down the length of the radius. (1)</li>
-<li>Calculate the:
-  <ol type="a"><li>Coordinates of $C$ (2)</li><li>Coordinates of $D$ (2)</li><li>Area of $\triangle BCD$ (3)</li></ol>
+<li>4.1 Write down the length of the radius. (1)</li>
+<li>4.2 Calculate the:
+  <ol type="a"><li>4.2.1 Coordinates of $C$ (2)</li><li>4.2.2 Coordinates of $D$ (2)</li><li>4.2.3 Area of $\triangle BCD$ (3)</li></ol>
 </li>
-<li>The circle centred at $N$ is reflected about $y=x$, giving new centre $M$. Circles intersect at $A$ and $F$.
-  <ol type="a"><li>Length of $NM$ (3)</li><li>Midpoint of $AF$ (4)</li></ol>
+<li>4.3 The circle centred at $N$ is reflected about $y=x$, giving new centre $M$. Circles intersect at $A$ and $F$.
+  <ol type="a"><li>4.3.1 Length of $NM$ (3)</li><li>4.3.2 Midpoint of $AF$ (4)</li></ol>
 </li>
 </ol>
 </div></div></div>
@@ -1186,12 +1163,12 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[21]</span></div><div class="qplain-body"><div class="content">
 <p>$\triangle TSK$ is drawn. Equation of $ST$ is $y=\dfrac12x+6$, cutting the $x$-axis at $M$. $W(-4;4)$ lies on $ST$ and $R$ lies on $SK$ such that $WR\parallel y$-axis. $WK$ cuts the $x$-axis at $V$ and $y$-axis at $P(0;-4)$. $KS$ produced cuts the $x$-axis at $N$. $T\hat SK=\theta$.</p>
 <img src="./Diagrams/Grade12P2/2020_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the gradient of $WP$. (2)</li>
-<li>Show that $WP\perp ST$. (2)</li>
-<li>If the equation of $SK$ is $5y+2x+60=0$, calculate the coordinates of $S$. (4)</li>
-<li>Calculate the length of $WR$. (4)</li>
-<li>Calculate the size of $\theta$. (5)</li>
-<li>Let $L$ be a point in the 3rd quadrant such that $SWRL$, in order, forms a parallelogram. Calculate the area of $SWRL$. (4)</li>
+<li>3.1 Calculate the gradient of $WP$. (2)</li>
+<li>3.2 Show that $WP\perp ST$. (2)</li>
+<li>3.3 If the equation of $SK$ is $5y+2x+60=0$, calculate the coordinates of $S$. (4)</li>
+<li>3.4 Calculate the length of $WR$. (4)</li>
+<li>3.5 Calculate the size of $\theta$. (5)</li>
+<li>3.6 Let $L$ be a point in the 3rd quadrant such that $SWRL$, in order, forms a parallelogram. Calculate the area of $SWRL$. (4)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1208,11 +1185,11 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[19]</span></div><div class="qplain-body"><div class="content">
 <p>$M(-3;4)$ is the centre of the large circle and a point on the small circle centred at $O(0;0)$. From $N(-11;p)$, a tangent touches the large circle at $T$, with $NT\parallel y$-axis. $NM$ is a tangent to the small circle at $M$, with $MOS$ a diameter.</p>
 <img src="./Diagrams/Grade12P2/2020_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Determine the equation of the small circle. (2)</li>
-<li>Determine the equation of the circle centred at $M$ in the form $(x-a)^2+(y-b)^2=r^2$. (3)</li>
-<li>Determine the equation of $NM$ in the form $y=mx+c$. (4)</li>
-<li>Calculate the length of $SN$. (5)</li>
-<li>If another circle centred $B(-2;5)$ radius $k$ touches the circle centred at $M$, find value(s) of $k$, to 1 decimal. (5)</li>
+<li>4.1 Determine the equation of the small circle. (2)</li>
+<li>4.2 Determine the equation of the circle centred at $M$ in the form $(x-a)^2+(y-b)^2=r^2$. (3)</li>
+<li>4.3 Determine the equation of $NM$ in the form $y=mx+c$. (4)</li>
+<li>4.4 Calculate the length of $SN$. (5)</li>
+<li>4.5 If another circle centred $B(-2;5)$ radius $k$ touches the circle centred at $M$, find value(s) of $k$, to 1 decimal. (5)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1234,13 +1211,13 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[19]</span></div><div class="qplain-body"><div class="content">
 <p>$P$, $R(3;5)$, $S(-3;-7)$ and $T(-5;k)$ are vertices of trapezium $PRST$, $PT\parallel RS$. $RS$ and $PR$ cut the $y$-axis at $D$ and $C(0;5)$ respectively. $PT$ and $RS$ cut the $x$-axis at $E$ and $F$ respectively. $P\hat EF=\theta$.</p>
 <img src="./Diagrams/Grade12P2/2019_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Write down the equation of $PR$. (1)</li>
-<li>Calculate the:
-  <ol type="a"><li>Gradient of $RS$ (2)</li><li>Size of $\theta$ (3)</li><li>Coordinates of $D$ (3)</li></ol>
+<li>3.1 Write down the equation of $PR$. (1)</li>
+<li>3.2 Calculate the:
+  <ol type="a"><li>3.2.1 Gradient of $RS$ (2)</li><li>3.2.2 Size of $\theta$ (3)</li><li>3.2.3 Coordinates of $D$ (3)</li></ol>
 </li>
-<li>If $TS=2\sqrt5$, calculate the value of $k$. (4)</li>
-<li>Parallelogram $TDSN$, $N$ in the 4th quadrant, is drawn. Calculate the coordinates of $N$. (3)</li>
-<li>$\triangle PRD$ is reflected about the $y$-axis to form $\triangle P'R'D'$. Calculate the size of $R\hat DR'$. (3)</li>
+<li>3.3 If $TS=2\sqrt5$, calculate the value of $k$. (4)</li>
+<li>3.4 Parallelogram $TDSN$, $N$ in the 4th quadrant, is drawn. Calculate the coordinates of $N$. (3)</li>
+<li>3.5 $\triangle PRD$ is reflected about the $y$-axis to form $\triangle P'R'D'$. Calculate the size of $R\hat DR'$. (3)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1258,12 +1235,12 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>A circle centred $M$ touches the $x$-axis at $A(-1;0)$ and $y$-axis at $B(0;1)$. Smaller circle, centred $N\left(-\dfrac12;\dfrac32\right)$, passes through $M$ and cuts the larger circle at $B$ and $C$. $BNC$ is a diameter of the smaller circle. A tangent at $C$ cuts the $x$-axis at $D$.</p>
 <img src="./Diagrams/Grade12P2/2019_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Determine the equation of the circle centred $M$ in form $(x-a)^2+(y-b)^2=r^2$ (3)</li>
-<li>Calculate the coordinates of $C$. (2)</li>
-<li>Show that the equation of tangent $CD$ is $y-x=3$. (4)</li>
-<li>Determine values of $t$ for which $y=x+t$ will NOT touch or cut the smaller circle. (3)</li>
-<li>The smaller circle centred $N$ is translated along the tangent so $C$ maps to $D$. Calculate coordinates of $E$, the new centre. (3)</li>
-<li>If area of quadrilateral $OBCD$ is $2a^2$ square units, $a&gt;0$, show that $a=\dfrac{\sqrt7}{2}$ units. (5)</li>
+<li>4.1 Determine the equation of the circle centred $M$ in form $(x-a)^2+(y-b)^2=r^2$ (3)</li>
+<li>4.2 Calculate the coordinates of $C$. (2)</li>
+<li>4.3 Show that the equation of tangent $CD$ is $y-x=3$. (4)</li>
+<li>4.4 Determine values of $t$ for which $y=x+t$ will NOT touch or cut the smaller circle. (3)</li>
+<li>4.5 The smaller circle centred $N$ is translated along the tangent so $C$ maps to $D$. Calculate coordinates of $E$, the new centre. (3)</li>
+<li>4.6 If area of quadrilateral $OBCD$ is $2a^2$ square units, $a&gt;0$, show that $a=\dfrac{\sqrt7}{2}$ units. (5)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1286,17 +1263,17 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[22]</span></div><div class="qplain-body"><div class="content">
 <p>$K(-1;2)$, $L$ and $N(1;-1)$ are vertices of $\triangle KLN$ such that $L\hat KN=78{,}69^\circ$. $KL$ intersects the $x$-axis at $P$; $KL$ is produced. Inclination of $KN$ is $\theta$. $M(-3;-5)$.</p>
 <img src="./Diagrams/Grade12P2/2018_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate:
-  <ol type="a"><li>Gradient of $KN$ (2)</li><li>Size of $\theta$ (2)</li></ol>
+<li>3.1 Calculate:
+  <ol type="a"><li>3.1.1 Gradient of $KN$ (2)</li><li>3.1.2 Size of $\theta$ (2)</li></ol>
 </li>
-<li>Show that the gradient of $KL$ is $1$. (2)</li>
-<li>Determine the equation of $KL$ in the form $y=mx+c$. (2)</li>
-<li>Calculate the length of $KN$. (2)</li>
-<li>Given $KN=LM$:
-  <ol type="a"><li>Calculate the possible coordinates of $L$. (5)</li>
-<li>Determine coordinates of $L$ if $KLMN$ is a parallelogram. (3)</li></ol>
+<li>3.2 Show that the gradient of $KL$ is $1$. (2)</li>
+<li>3.3 Determine the equation of $KL$ in the form $y=mx+c$. (2)</li>
+<li>3.4 Calculate the length of $KN$. (2)</li>
+<li>3.5 Given $KN=LM$:
+  <ol type="a"><li>3.5.1 Calculate the possible coordinates of $L$. (5)</li>
+<li>3.5.2 Determine coordinates of $L$ if $KLMN$ is a parallelogram. (3)</li></ol>
 </li>
-<li>$T$ is a point on $KL$ produced. $TM$ is drawn such that $TM=LM$. Calculate the area of $\triangle KTN$. (4)</li>
+<li>3.6 $T$ is a point on $KL$ produced. $TM$ is drawn such that $TM=LM$. Calculate the area of $\triangle KTN$. (4)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1315,15 +1292,15 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[18]</span></div><div class="qplain-body"><div class="content">
 <p>Circle centre $F$: $(x-3)^2+(y-1)^2=r^2$. $S(6;5)$ is on the circle. Another circle centre $G(m;n)$ in the 4th quadrant touches circle $F$ at $H$ such that $FH:HG=1:2$. $J$ in the 1st quadrant is such that $HJ$ is a common tangent. $JK$ is tangent to the larger circle at $K$.</p>
 <img src="./Diagrams/Grade12P2/2018_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Write down the coordinates of $F$. (2)</li>
-<li>Calculate the length of $FS$. (2)</li>
-<li>Write down the length of $HG$. (1)</li>
-<li>Give a reason why $JH=JK$. (1)</li>
-<li>Determine:
+<li>4.1 Write down the coordinates of $F$. (2)</li>
+<li>4.2 Calculate the length of $FS$. (2)</li>
+<li>4.3 Write down the length of $HG$. (1)</li>
+<li>4.4 Give a reason why $JH=JK$. (1)</li>
+<li>4.5 Determine:
   <ol type="a">
-<li>The distance $FJ$, with reasons, if $JK=20$ (4)</li>
-<li>The equation of the circle centre $G$ in terms of $m,n$ in the form $(x-a)^2+(y-b)^2=r^2$ (1)</li>
-<li>The coordinates of $G$, if the equation of tangent $JK$ is $x=22$ (7)</li>
+<li>4.5.1 The distance $FJ$, with reasons, if $JK=20$ (4)</li>
+<li>4.5.2 The equation of the circle centre $G$ in terms of $m,n$ in the form $(x-a)^2+(y-b)^2=r^2$ (1)</li>
+<li>4.5.3 The coordinates of $G$, if the equation of tangent $JK$ is $x=22$ (7)</li>
 </ol>
 </li>
 </ol>
@@ -1349,13 +1326,13 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[17]</span></div><div class="qplain-body"><div class="content">
 <p>$A$, $B(-6;-5)$ and $C(8;-4)$ are points in the plane. $F\left(3;3\dfrac12\right)$ and $G$ are points on line $AC$ such that $AF=FG$. $E$ is the $x$-intercept of $AB$.</p>
 <img src="./Diagrams/Grade12P2/2017_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate:
-  <ol type="a"><li>The equation of $AC$ in the form $y=mx+c$ (4)</li>
-<li>The coordinates of $G$ if equation of $BG$ is $7x-10y=8$ (3)</li></ol>
+<li>3.1 Calculate:
+  <ol type="a"><li>3.1.1 The equation of $AC$ in the form $y=mx+c$ (4)</li>
+<li>3.1.2 The coordinates of $G$ if equation of $BG$ is $7x-10y=8$ (3)</li></ol>
 </li>
-<li>Show by calculation that the coordinates of $A$ are $(2;5)$. (2)</li>
-<li>Prove that $EF\parallel BG$. (4)</li>
-<li>$ABCD$ is a parallelogram with $D$ in the first quadrant. Calculate the coordinates of $D$. (4)</li>
+<li>3.2 Show by calculation that the coordinates of $A$ are $(2;5)$. (2)</li>
+<li>3.3 Prove that $EF\parallel BG$. (4)</li>
+<li>3.4 $ABCD$ is a parallelogram with $D$ in the first quadrant. Calculate the coordinates of $D$. (4)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1371,17 +1348,17 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>$P(-4;5)$ and $K(0;-3)$ are endpoints of the diameter of a circle centre $M$. $S$ and $R$ are the $x$- and $y$-intercepts of the tangent to the circle at $P$. $\theta$ is the inclination of $PK$.</p>
 <img src="./Diagrams/Grade12P2/2017_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Determine:
+<li>4.1 Determine:
   <ol type="a">
-<li>The gradient of $SR$ (4)</li>
-<li>The equation of $SR$ in the form $y=mx+c$ (2)</li>
-<li>The equation of the circle in the form $(x-a)^2+(y-b)^2=r^2$ (4)</li>
-<li>The size of $P\hat KR$ (3)</li>
-<li>The equation of the tangent to the circle at $K$ in the form $y=mx+c$ (2)</li>
+<li>4.1.1 The gradient of $SR$ (4)</li>
+<li>4.1.2 The equation of $SR$ in the form $y=mx+c$ (2)</li>
+<li>4.1.3 The equation of the circle in the form $(x-a)^2+(y-b)^2=r^2$ (4)</li>
+<li>4.1.4 The size of $P\hat KR$ (3)</li>
+<li>4.1.5 The equation of the tangent to the circle at $K$ in the form $y=mx+c$ (2)</li>
 </ol>
 </li>
-<li>Determine values of $t$ such that $y=\dfrac12x+t$ cuts the circle at two different points. (3)</li>
-<li>Calculate the area of $\triangle SMK$. (5)</li>
+<li>4.2 Determine values of $t$ such that $y=\dfrac12x+t$ cuts the circle at two different points. (3)</li>
+<li>4.3 Calculate the area of $\triangle SMK$. (5)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1405,14 +1382,14 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 3 <span class="marks">[19]</span></div><div class="qplain-body"><div class="content">
 <p>$A(-7;2)$, $B$, $C(6;3)$ and $D$ are vertices of rectangle $ABCD$. Equation of $AD$ is $y=2x+16$. Line $AB$ cuts the $y$-axis at $G$. The $x$-intercept of line $BC$ is $F(p;0)$, angle of inclination of $BC$ with positive $x$-axis is $\alpha$. Diagonals intersect at $M$.</p>
 <img src="./Diagrams/Grade12P2/2016_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>Calculate the coordinates of $M$. (2)</li>
-<li>Write down the gradient of $BC$ in terms of $p$. (1)</li>
-<li>Hence, calculate the value of $p$. (3)</li>
-<li>Calculate the length of $DB$. (3)</li>
-<li>Calculate the size of $\alpha$. (2)</li>
-<li>Calculate the size of $O\hat GB$. (3)</li>
-<li>Determine the equation of the circle through $D$, $B$, $C$ in the form $(x-a)^2+(y-b)^2=r^2$. (3)</li>
-<li>If $AD$ is shifted so $ABCD$ becomes a square, will $BC$ be tangent to the circle through $A$, $M$, $B$ (new $M$)? Motivate. (2)</li>
+<li>3.1 Calculate the coordinates of $M$. (2)</li>
+<li>3.2 Write down the gradient of $BC$ in terms of $p$. (1)</li>
+<li>3.3 Hence, calculate the value of $p$. (3)</li>
+<li>3.4 Calculate the length of $DB$. (3)</li>
+<li>3.5 Calculate the size of $\alpha$. (2)</li>
+<li>3.6 Calculate the size of $O\hat GB$. (3)</li>
+<li>3.7 Determine the equation of the circle through $D$, $B$, $C$ in the form $(x-a)^2+(y-b)^2=r^2$. (3)</li>
+<li>3.8 If $AD$ is shifted so $ABCD$ becomes a square, will $BC$ be tangent to the circle through $A$, $M$, $B$ (new $M$)? Motivate. (2)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1431,16 +1408,16 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[23]</span></div><div class="qplain-body"><div class="content">
 <p>$M$ is the centre of the circle through $T(3;7)$, $R$ and $S(5;2)$. $RT$ is a diameter. $K(a;b)$ is in the 4th quadrant such that $KTL$ is tangent to the circle at $T$.</p>
 <img src="./Diagrams/Grade12P2/2016_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Give a reason why $T\hat SR=90^\circ$. (1)</li>
-<li>Calculate the gradient of $TS$. (2)</li>
-<li>Determine equation of $SR$ in form $y=mx+c$. (3)</li>
-<li>The equation of the circle is $(x-9)^2+\left(y-6\dfrac12\right)^2=36\dfrac14$.
+<li>4.1 Give a reason why $T\hat SR=90^\circ$. (1)</li>
+<li>4.2 Calculate the gradient of $TS$. (2)</li>
+<li>4.3 Determine equation of $SR$ in form $y=mx+c$. (3)</li>
+<li>4.4 The equation of the circle is $(x-9)^2+\left(y-6\dfrac12\right)^2=36\dfrac14$.
   <ol type="a">
-<li>Calculate length of $TR$ in surd form. (2)</li>
-<li>Calculate coordinates of $R$. (3)</li>
-<li>Calculate $\sin R$. (3)</li>
-<li>Show that $b=12a-29$. (3)</li>
-<li>If $TK=TR$, calculate the coordinates of $K$. (6)</li>
+<li>4.4.1 Calculate length of $TR$ in surd form. (2)</li>
+<li>4.4.2 Calculate coordinates of $R$. (3)</li>
+<li>4.4.3 Calculate $\sin R$. (3)</li>
+<li>4.4.4 Show that $b=12a-29$. (3)</li>
+<li>4.4.5 If $TK=TR$, calculate the coordinates of $K$. (6)</li>
 </ol>
 </li>
 </ol>
@@ -1468,12 +1445,12 @@ window.MathJax = {
 <p>The line joining $Q(-2;-3)$ and $P(a;b)$, $a,b&gt;0$, makes a $45^\circ$ angle with positive $x$-axis. $QP=7\sqrt2$ units. $N(7;1)$ is the midpoint of $PR$ and $M$ is the midpoint of $QR$.</p>
 <p>Determine:</p>
 <img src="./Diagrams/Grade12P2/2015_Q3.png" style="width:70%"><ol class="sub-parts">
-<li>The gradient of $PQ$ (2)</li>
-<li>The equation of $MN$ in the form $y=mx+c$, and give reasons (4)</li>
-<li>The length of $MN$ (2)</li>
-<li>The length of $RS$ (1)</li>
-<li>The coordinates of $S$ such that $PQRS$, in order, is a parallelogram (3)</li>
-<li>The coordinates of $P$ (6)</li>
+<li>3.1 The gradient of $PQ$ (2)</li>
+<li>3.2 The equation of $MN$ in the form $y=mx+c$, and give reasons (4)</li>
+<li>3.3 The length of $MN$ (2)</li>
+<li>3.4 The length of $RS$ (1)</li>
+<li>3.5 The coordinates of $S$ such that $PQRS$, in order, is a parallelogram (3)</li>
+<li>3.6 The coordinates of $P$ (6)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1490,12 +1467,12 @@ window.MathJax = {
 <div class="qplain"><div class="qplain-title">Question 4 <span class="marks">[20]</span></div><div class="qplain-body"><div class="content">
 <p>$Q(5;2)$ is the centre of a circle that intersects the $y$-axis at $P(0;6)$ and $S$. Tangent $APB$ at $P$ intersects the $x$-axis at $B$, making angle $\alpha$ with positive $x$-axis. $R$ is on the circle and $P\hat RS=\theta$.</p>
 <img src="./Diagrams/Grade12P2/2015_Q4.png" style="width:70%"><ol class="sub-parts">
-<li>Determine the equation of the circle in the form $(x-a)^2+(y-b)^2=r^2$. (3)</li>
-<li>Calculate the coordinates of $S$. (3)</li>
-<li>Determine the equation of tangent $APB$ in the form $y=mx+c$. (4)</li>
-<li>Calculate the size of $\alpha$. (2)</li>
-<li>Calculate, with reasons, the size of $\theta$. (4)</li>
-<li>Calculate the area of $\triangle PQS$. (4)</li>
+<li>4.1 Determine the equation of the circle in the form $(x-a)^2+(y-b)^2=r^2$. (3)</li>
+<li>4.2 Calculate the coordinates of $S$. (3)</li>
+<li>4.3 Determine the equation of tangent $APB$ in the form $y=mx+c$. (4)</li>
+<li>4.4 Calculate the size of $\alpha$. (2)</li>
+<li>4.5 Calculate, with reasons, the size of $\theta$. (4)</li>
+<li>4.6 Calculate the area of $\triangle PQS$. (4)</li>
 </ol>
 </div></div></div>
 <details class="answer-block">
@@ -1515,13 +1492,13 @@ window.MathJax = {
     </details>
 
     <details class="topic">
-      <summary>3. Trigonometry</summary>
+      <summary><span class="topic-name">3. Trigonometry</span><span class="badge">[50 Marks]</span></summary>
       <div class="topic-body">
         <p class="topic-note">Identities, equations, graphs, and 2D/3D trigonometry. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> It is given that $\tan 50^\circ = k$. Express EACH of the following in terms of $k$:</p>
 <p>5.1.1 $\cos 40^\circ$ <span class="marks">(2)</span></p>
@@ -1551,6 +1528,8 @@ window.MathJax = {
 <p><b>6.1</b> LHS $=(-\tan x)(\sin^2x)+\cos^2x = \dfrac{\sin^3x-\cos^3x}{-\cos x}=\dfrac{(\sin x-\cos x)(1+\sin x\cos x)}{-\cos x}=$RHS</p>
 <p><b>6.2</b> $\cos^2x-\sin^2x=\tfrac12\sin2x-\cos^2x \Rightarrow 2\cos^2x-\sin x\cos x-\sin^2x=0 \Rightarrow (2\cos x+\sin x)(\cos x-\sin x)=0$. $\tan x=-2$ or $\tan x=1$: $x=116{,}57^\circ+k.180^\circ$ or $x\ne45^\circ+k.180^\circ;\ k\in\mathbb{Z}$</p>
 <p><b>7.1</b> $180^\circ$</p>
+<p><b>7.2</b></p>
+<img src="./Diagrams/Grade12P2/Answers/2025_A7.2.png" style="width:70%">
 <p><b>7.3</b> $h(x)=\cos(2x+90^\circ)=-\sin2x$</p>
 <p><b>7.4</b> $y\in[-1;1]$</p>
 <p><b>7.5</b> $x=22{,}5^\circ$; solve $(\tan2x-1)(\cos2x)\le0 \Rightarrow x\in[0^\circ;22{,}5^\circ]\cup[112{,}5^\circ;135^\circ)$</p>
@@ -1558,7 +1537,7 @@ window.MathJax = {
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 8 [10]</div><div class="qplain-body"><p>As part of a school project, learners design a portable stage. BKLC is a horizontal base with $K\hat{B}C = 104°$ and $B\hat{K}C = 52,6°$. Rectangular backdrop ABCD is vertical to the base, area $648\text{ cm}^2$, with $AB:BC = 1:2$. Triangular sides ABK and DCL partly enclose the stage.</p><img src="./Diagrams/Grade12P2/2025_Q8.png" style="width:70%"><p class="part">8.1 Show that AB = 18 cm. (2)</p><p class="part">8.2 Calculate the length of AC. (2)</p><p class="part">8.3 Calculate the length of diagonal KC. (2)</p><p class="part">8.4 If AB = BK, calculate the size of $K\hat{A}C$. (4)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 8 <span class="marks">[10]</span></div><div class="qplain-body"><p>As part of a school project, learners design a portable stage. BKLC is a horizontal base with $K\hat{B}C = 104°$ and $B\hat{K}C = 52,6°$. Rectangular backdrop ABCD is vertical to the base, area $648\text{ cm}^2$, with $AB:BC = 1:2$. Triangular sides ABK and DCL partly enclose the stage.</p><img src="./Diagrams/Grade12P2/2025_Q8.png" style="width:70%"><p class="part">8.1 Show that AB = 18 cm. (2)</p><p class="part">8.2 Calculate the length of AC. (2)</p><p class="part">8.3 Calculate the length of diagonal KC. (2)</p><p class="part">8.4 If AB = BK, calculate the size of $K\hat{A}C$. (4)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>8.1</strong></p>$$\text{Area of ABCD} = BC \times AB, \quad 648 = 2AB \times AB$$
 $$AB^2 = 324 \implies AB = 18\text{ cm}$$<p><strong>8.2</strong></p>$$AC^2 = AB^2 + BC^2 = 18^2+36^2 = 1620$$
 $$AC = \sqrt{1620} = 18\sqrt5 = 40,25\text{ cm}$$<p><strong>8.3</strong></p>$$\frac{KC}{\sin K\hat{B}C} = \frac{BC}{\sin B\hat{K}C}$$
@@ -1573,11 +1552,11 @@ $$\cos K\hat{A}C = 0,16... \implies K\hat{A}C = 80,60°$$</div></details>
 <details class="year">
 <summary>2024</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <img src="./Diagrams/Grade12P2/2024_Q5.png" style="width:70%"><p><span class="qnum">5.1</span> Line OP is given with P(–3 ; –4). $\hat{KOP}=A$.</p>
 <p>5.1.1 $\cos A$ <span class="marks">(2)</span>   5.1.2 $\cos 2A$ <span class="marks">(2)</span></p>
-<p>5.1.3 $\sin(A-B)$, given $\sin B = \dfrac45$ and $90^\circ<b<360^\circ$ <span="" class="marks">(4)</b<360^\circ$></p>
+<p>5.1.3 $\sin(A-B)$, given $\sin B = \dfrac45$ and $90^\circ&lt;B&lt;360^\circ$ <span class="marks">(4)</span></p>
 <p><span class="qnum">5.2</span> If $\cos\alpha=p$, express in terms of $p$: $\dfrac{\cos\left(\dfrac{\alpha}{2}-45^\circ\right)\sin\left(\dfrac{\alpha}{2}-45^\circ\right)}{2}$ <span class="marks">(4)</span></p>
 <hr/>
 <p><span class="qnum">6.1</span> Given: $\cos(x-y)=\cos x\cos y+\sin x\sin y$</p>
@@ -1610,12 +1589,14 @@ $$\cos K\hat{A}C = 0,16... \implies K\hat{A}C = 80,60°$$</div></details>
 <p><b>7.1</b> $x=90^\circ$</p>
 <p><b>7.2</b> $x=-180^\circ$ or $x\in(-90^\circ;0^\circ]$</p>
 <p><b>7.3.1</b> $180^\circ$</p>
+<p><b>7.3.2</b></p>
+<img src="./Diagrams/Grade12P2/Answers/2024_A7.3.2.png" style="width:70%">
 <p><b>7.4</b> $2\cos^3x=\sin x \Rightarrow 2\cos^2x=\tan x \Rightarrow \cos2x+1=\tan x \Rightarrow x=45^\circ+k.180^\circ;\ k\in\mathbb{Z}$</p>
 </div>
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 8 [9]</div><div class="qplain-body"><p>C is the foot of a vertical building, D is the top. Height $CD = 16$ m. Observers stand 19 m apart at A and B, in the same horizontal plane as C. A painter works at E on the building. Angle of elevation of D from A is $46,85°$. $D\hat{E}B = 122°$, $B\hat{C}A = 105,61°$.</p><img src="./Diagrams/Grade12P2/2024_Q8.png" style="width:70%"><p class="part">8.1 Calculate the length of AC. (2)</p><p class="part">8.2 Calculate how far the painter at E is from the top of the building. (7)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 8 <span class="marks">[9]</span></div><div class="qplain-body"><p>C is the foot of a vertical building, D is the top. Height $CD = 16$ m. Observers stand 19 m apart at A and B, in the same horizontal plane as C. A painter works at E on the building. Angle of elevation of D from A is $46,85°$. $D\hat{E}B = 122°$, $B\hat{C}A = 105,61°$.</p><img src="./Diagrams/Grade12P2/2024_Q8.png" style="width:70%"><p class="part">8.1 Calculate the length of AC. (2)</p><p class="part">8.2 Calculate how far the painter at E is from the top of the building. (7)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>8.1</strong></p>$$\tan D\hat{A}C = \frac{DC}{AC} \implies AC = \frac{16}{\tan46,85°} = 15\text{ m}$$<p><strong>8.2</strong></p>$$AB^2 = BC^2+AC^2-2(BC)(AC)\cos B\hat{C}A$$
 $$19^2 = x^2+15^2-2x(15)\cos105,61° \implies x^2+8,07x-136=0$$
 $$x = \frac{-8,07\pm\sqrt{8,07^2-4(1)(-136)}}{2(1)} \implies x=BC=8,30\text{ m}$$
@@ -1630,7 +1611,7 @@ $$DE = DC-EC = 16-5,19 = 10,81\text{ m}$$
 <details class="year">
 <summary>2023</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> Given: $\sin\beta=\dfrac13$, where $\beta\in(90^\circ;270^\circ)$. Without a calculator determine:</p>
 <p>5.1.1 $\cos\beta$ <span class="marks">(3)</span>   5.1.2 $\sin2\beta$ <span class="marks">(3)</span>   5.1.3 $\cos(450^\circ-\beta)$ <span class="marks">(3)</span></p>
@@ -1672,7 +1653,7 @@ $$DE = DC-EC = 16-5,19 = 10,81\text{ m}$$
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [7]</div><div class="qplain-body"><p>S, T, K lie in the same horizontal plane. RS is a vertical tower. Angle of depression from R to K is $\beta$. $T\hat{S}K=\alpha$, $TS=p$ metres, area of $\triangle STK$ is $q\text{ m}^2$.</p><img src="./Diagrams/Grade12P2/2023_Q7.png" style="width:70%"><p class="part">7.1 Determine the length of SK in terms of p, q and α. (2)</p><p class="part">7.2 Show that $RS = \dfrac{2q\tan\beta}{p\sin\alpha}$. (2)</p><p class="part">7.3 Calculate the size of α if α<90°, RS=70 m, p=80 m, q=2500 m², β=42°. (3)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[7]</span></div><div class="qplain-body"><p>S, T, K lie in the same horizontal plane. RS is a vertical tower. Angle of depression from R to K is $\beta$. $T\hat{S}K=\alpha$, $TS=p$ metres, area of $\triangle STK$ is $q\text{ m}^2$.</p><img src="./Diagrams/Grade12P2/2023_Q7.png" style="width:70%"><p class="part">7.1 Determine the length of SK in terms of p, q and α. (2)</p><p class="part">7.2 Show that $RS = \dfrac{2q\tan\beta}{p\sin\alpha}$. (2)</p><p class="part">7.3 Calculate the size of α if α<90°, RS=70 m, p=80 m, q=2500 m², β=42°. (3)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$$\text{Area}\triangle STK = \frac12 p(SK)\sin\alpha = q$$
 $$SK = \frac{2q}{p\sin\alpha}$$<p><strong>7.2</strong></p>$R\hat{K}S=\beta$ (angle of depression = angle of elevation).
 $$\frac{RS}{SK}=\tan\beta \implies RS = SK\tan\beta = \frac{2q\tan\beta}{p\sin\alpha}$$<p><strong>7.3</strong></p>$$70 = \frac{2(2500)\tan42°}{80\sin\alpha}$$
@@ -1685,7 +1666,7 @@ $$\alpha = 53,51°$$</div></details>
 <details class="year">
 <summary>2022</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> Given $\sqrt{13}\sin x+3=0$, where $x\in(90^\circ;270^\circ)$. Without a calculator, determine:</p>
 <p>5.1.1 $\sin(360^\circ+x)$ <span class="marks">(2)</span>   5.1.2 $\tan x$ <span class="marks">(3)</span>   5.1.3 $\cos(180^\circ+x)$ <span class="marks">(2)</span></p>
@@ -1724,7 +1705,7 @@ $$\alpha = 53,51°$$</div></details>
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [10]</div><div class="qplain-body"><p>AB is a vertical flagpole $\sqrt5\,p$ metres long. AC and AD are cables anchoring the flagpole. B, C, D are in the same horizontal plane. $BD = 2p$ metres, $A\hat{C}D = x$, $A\hat{D}C = 45°$.</p><img src="./Diagrams/Grade12P2/2022_Q7.png" style="width:70%"><p class="part">7.1 Determine the length of AD in terms of p. (2)</p><p class="part">7.2 Show that $CD = \dfrac{3p(\sin x+\cos x)}{\sqrt2\sin x}$. (5)</p><p class="part">7.3 If p=10 and x=110°, calculate the area of $\triangle ADC$. (3)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[10]</span></div><div class="qplain-body"><p>AB is a vertical flagpole $\sqrt5\,p$ metres long. AC and AD are cables anchoring the flagpole. B, C, D are in the same horizontal plane. $BD = 2p$ metres, $A\hat{C}D = x$, $A\hat{D}C = 45°$.</p><img src="./Diagrams/Grade12P2/2022_Q7.png" style="width:70%"><p class="part">7.1 Determine the length of AD in terms of p. (2)</p><p class="part">7.2 Show that $CD = \dfrac{3p(\sin x+\cos x)}{\sqrt2\sin x}$. (5)</p><p class="part">7.3 If p=10 and x=110°, calculate the area of $\triangle ADC$. (3)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$$AD^2 = AB^2+BD^2 = (\sqrt5p)^2+(2p)^2 = 9p^2$$
 $$AD = 3p$$<p><strong>7.2</strong></p>$$\frac{CD}{\sin(135°-x)} = \frac{3p}{\sin x}$$
 $$CD = \frac{3p\sin(135°-x)}{\sin x} = \frac{3p(\sin135°\cos x-\cos135°\sin x)}{\sin x}$$
@@ -1737,7 +1718,7 @@ $$=\frac12(30)\left(\frac{30(\sin110°+\cos110°)}{\sqrt2\sin110°}\right)\sin45
 <details class="year">
 <summary>2021</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> Without a calculator, simplify to ONE trig ratio: $\dfrac{\sin140^\circ.\sin(360^\circ-x)}{\cos50^\circ.\tan(-x)}$ <span class="marks">(6)</span></p>
 <p><span class="qnum">5.2</span> Prove the identity: $\dfrac{-2\sin^2x+\cos x+1}{1-\cos(540^\circ-x)}=2\cos x-1$ <span class="marks">(4)</span></p>
@@ -1763,13 +1744,15 @@ $$=\frac12(30)\left(\frac{30(\sin110°+\cos110°)}{\sqrt2\sin110°}\right)\sin45
 <p><b>6.1.1</b> $\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$</p>
 <p><b>6.1.2</b> $=1$</p>
 <p><b>6.2</b> $\sin x(4\cos^2x-1)=0$: $\sin x=0$ or $\cos x=\pm\tfrac12$. With $\cos x&lt;0$: $x=180^\circ+k.360^\circ$ or $x=120^\circ+k.360^\circ$ or $x=240^\circ+k.360^\circ;\ k\in\mathbb{Z}$</p>
+<p><b>7.1</b></p>
+<img src="./Diagrams/Grade12P2/Answers/2021_A7.1.png" style="width:70%">
 <p><b>7.2</b> Period $=\dfrac{360^\circ}{3}=120^\circ$</p>
 <p><b>7.4</b> $y\in\left[\tfrac12;\tfrac32\right]$</p>
 </div>
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 8 [10]</div><div class="qplain-body"><p>T is a hook on the ceiling of an art gallery. Q, S, R are on the same horizontal plane. Angle of elevation from Q to T is $x$. $Q\hat{S}R = 90°+x$, $Q\hat{R}S = x$, $QR = 5$ units, $TS = SQ$.</p><img src="./Diagrams/Grade12P2/2021_Q8.png" style="width:70%"><p class="part">8.1 Prove that QS = 5 tan x (3)</p><p class="part">8.2 Prove that the length of QT = 10 sin x (5)</p><p class="part">8.3 Calculate the area of $\triangle TQR$ if $T\hat{Q}R=70°$ and $x=25°$. (2)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 8 <span class="marks">[10]</span></div><div class="qplain-body"><p>T is a hook on the ceiling of an art gallery. Q, S, R are on the same horizontal plane. Angle of elevation from Q to T is $x$. $Q\hat{S}R = 90°+x$, $Q\hat{R}S = x$, $QR = 5$ units, $TS = SQ$.</p><img src="./Diagrams/Grade12P2/2021_Q8.png" style="width:70%"><p class="part">8.1 Prove that QS = 5 tan x (3)</p><p class="part">8.2 Prove that the length of QT = 10 sin x (5)</p><p class="part">8.3 Calculate the area of $\triangle TQR$ if $T\hat{Q}R=70°$ and $x=25°$. (2)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>8.1</strong></p>In $\triangle SQR$: $$\frac{QS}{\sin x} = \frac{QR}{\sin(90°+x)} = \frac{5}{\cos x}$$
 $$QS = \frac{5\sin x}{\cos x} = 5\tan x$$<p><strong>8.2</strong></p>$$\frac{QT}{\sin(180°-2x)} = \frac{TS}{\sin x}, \quad TS=QS=5\tan x$$
 $$QT = \frac{5\tan x\sin2x}{\sin x} = \frac{5\left(\frac{\sin x}{\cos x}\right)(2\sin x\cos x)}{\sin x} = 5\sin x(2\sin x)/\sin x \cdot ... = 10\sin x$$
@@ -1781,7 +1764,7 @@ $$QT = \frac{5\tan x\sin2x}{\sin x} = \frac{5\left(\frac{\sin x}{\cos x}\right)(
 <details class="year">
 <summary>2020</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <img src="./Diagrams/Grade12P2/2020_Q6.png" style="width:70%"><p><span class="qnum">6.1</span> P(–5 ; 12), T on positive x-axis, $\hat{POT}=\theta$. Without a calculator:</p>
 <p>6.1.1 $\tan\theta$ <span class="marks">(1)</span>   6.1.2 $\cos\theta$ <span class="marks">(3)</span></p>
@@ -1815,7 +1798,7 @@ $$QT = \frac{5\tan x\sin2x}{\sin x} = \frac{5\left(\frac{\sin x}{\cos x}\right)(
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [10]</div><div class="qplain-body"><p>Flowers planted within two concentric circles around a vertical light pole PQ. R on inner circle, S on outer circle, R,Q,S in same horizontal plane. Inner radius $r$, outer radius $QS$. Angle of elevation from S to P is $30°$. $R\hat{Q}S = 2x$, $PQ=\sqrt3\,r$.</p><img src="./Diagrams/Grade12P2/2020_Q7.png" style="width:70%"><p class="part">7.1 Show that QS = 3r (3)</p><p class="part">7.2 Determine, in terms of r, the area of the flower garden. (2)</p><p class="part">7.3 Show that $RS = r\sqrt{10-6\cos2x}$ (3)</p><p class="part">7.4 If r=10 metres and x=56°, calculate RS. (2)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[10]</span></div><div class="qplain-body"><p>Flowers planted within two concentric circles around a vertical light pole PQ. R on inner circle, S on outer circle, R,Q,S in same horizontal plane. Inner radius $r$, outer radius $QS$. Angle of elevation from S to P is $30°$. $R\hat{Q}S = 2x$, $PQ=\sqrt3\,r$.</p><img src="./Diagrams/Grade12P2/2020_Q7.png" style="width:70%"><p class="part">7.1 Show that QS = 3r (3)</p><p class="part">7.2 Determine, in terms of r, the area of the flower garden. (2)</p><p class="part">7.3 Show that $RS = r\sqrt{10-6\cos2x}$ (3)</p><p class="part">7.4 If r=10 metres and x=56°, calculate RS. (2)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$$\tan30° = \frac{\sqrt3 r}{QS} \implies QS = \frac{\sqrt3 r}{\tan30°} = 3r$$<p><strong>7.2</strong></p>$$\text{Area} = \pi(3r)^2-\pi r^2 = 9\pi r^2-\pi r^2 = 8\pi r^2$$<p><strong>7.3</strong></p>$$RS^2 = r^2+(3r)^2-2(r)(3r)\cos2x = 10r^2-6r^2\cos2x = r^2(10-6\cos2x)$$
 $$RS = r\sqrt{10-6\cos2x}$$<p><strong>7.4</strong></p>$$RS = 10\sqrt{10-6\cos(112°)} = 34,9966... \approx 35\text{ m}$$</div></details>
 </div></div>
@@ -1825,7 +1808,7 @@ $$RS = r\sqrt{10-6\cos2x}$$<p><strong>7.4</strong></p>$$RS = 10\sqrt{10-6\cos(11
 <details class="year">
 <summary>2019</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> Simplify to ONE trig term: $\dfrac{\sin x}{\cos x.\tan x}+\sin(180^\circ+x)\cos(90^\circ-x)$ <span class="marks">(5)</span></p>
 <p><span class="qnum">5.2</span> Without a calculator, determine: $\dfrac{\sin^235^\circ-\cos^235^\circ}{4\sin10^\circ\cos10^\circ}$ <span class="marks">(4)</span></p>
@@ -1853,7 +1836,7 @@ $$RS = r\sqrt{10-6\cos2x}$$<p><strong>7.4</strong></p>$$RS = 10\sqrt{10-6\cos(11
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [10]</div><div class="qplain-body"><p>Solar panel ABCD fixed to concrete slab EFCD. ABCD and EFCD are identical rhombuses. K on DC with $DK=KC$, $AK\perp DC$. AF, KF drawn. $A\hat{D}C = C\hat{D}E = 60°$, $AD = x$ units.</p><img src="./Diagrams/Grade12P2/2019_Q7.png" style="width:70%"><p class="part">7.1 Determine AK in terms of x. (2)</p><p class="part">7.2 Write down the size of $K\hat{C}F$. (1)</p><p class="part">7.3 Given $A\hat{K}F = y$, determine the area of $\triangle AKF$ in terms of x and y. (7)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[10]</span></div><div class="qplain-body"><p>Solar panel ABCD fixed to concrete slab EFCD. ABCD and EFCD are identical rhombuses. K on DC with $DK=KC$, $AK\perp DC$. AF, KF drawn. $A\hat{D}C = C\hat{D}E = 60°$, $AD = x$ units.</p><img src="./Diagrams/Grade12P2/2019_Q7.png" style="width:70%"><p class="part">7.1 Determine AK in terms of x. (2)</p><p class="part">7.2 Write down the size of $K\hat{C}F$. (1)</p><p class="part">7.3 Given $A\hat{K}F = y$, determine the area of $\triangle AKF$ in terms of x and y. (7)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$$\sin60° = \frac{AK}{x} \implies AK = x\sin60° = \frac{\sqrt3}{2}x \approx 0,866x$$<p><strong>7.2</strong></p>$$K\hat{C}F = 120°$$<p><strong>7.3</strong></p>$$KF^2 = CF^2+CK^2-2(CF)(CK)\cos K\hat{C}F = x^2+\left(\frac x2\right)^2-2x\left(\frac x2\right)\cos120°$$
 $$= x^2+\frac{x^2}{4}-x^2\left(-\frac12\right) = \frac{7x^2}{4} \implies KF=\frac{\sqrt7}{2}x$$
 $$\text{Area}\triangle AKF = \frac12(AK)(KF)\sin A\hat{K}F = \frac12\cdot\frac{\sqrt3}{2}x\cdot\frac{\sqrt7}{2}x\sin y = \frac{x^2\sqrt{21}\sin y}{8}$$</div></details>
@@ -1864,7 +1847,7 @@ $$\text{Area}\triangle AKF = \frac12(AK)(KF)\sin A\hat{K}F = \frac12\cdot\frac{\
 <details class="year">
 <summary>2018</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <img src="./Diagrams/Grade12P2/2018_Q5.png" style="width:70%"><p><span class="qnum">5.1</span> P$(k;1)$ in 2nd quadrant, $\sqrt5$ from origin; R on positive x-axis, obtuse $\hat{ROP}=\theta$.</p>
 <p>5.1.1 Calculate $k$. <span class="marks">(2)</span></p>
@@ -1892,12 +1875,14 @@ $$\text{Area}\triangle AKF = \frac12(AK)(KF)\sin A\hat{K}F = \frac12\cdot\frac{\
 <p><b>5.3</b> Pairs cos²A with sin² via co-ratio → $7(1)+\cos^245^\circ = 7\tfrac12=7\dfrac12$</p>
 <p><b>6.1</b> Period $=\dfrac{180^\circ}{3/2}=120^\circ$</p>
 <p><b>6.2</b> $\tan\left(\tfrac32t\right)=-1 \Rightarrow \tfrac32t=135^\circ+k.180^\circ \Rightarrow t=90^\circ+k.120^\circ;\ k\in\mathbb{Z}$</p>
+<p><b>6.3</b></p>
+<img src="./Diagrams/Grade12P2/Answers/2018_A6.3.png" style="width:70%">
 <p><b>6.5</b> Translation of $40^\circ$ to the left</p>
 </div>
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [6]</div><div class="qplain-body"><p>A pilot flying a helicopter. At A, $h$ metres above D on the ground, notices object B; angle of depression from A to B is $30°$. Control room C is $3h$ metres from A, $B\hat{A}C = 2x$. B, C, D in same horizontal plane.</p><img src="./Diagrams/Grade12P2/2018_Q7.png" style="width:70%"><p class="part">7.1 Determine the distance AB in terms of h. (2)</p><p class="part">7.2 Show that $BC = h\sqrt{25-24\cos^2x}$. (4)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[6]</span></div><div class="qplain-body"><p>A pilot flying a helicopter. At A, $h$ metres above D on the ground, notices object B; angle of depression from A to B is $30°$. Control room C is $3h$ metres from A, $B\hat{A}C = 2x$. B, C, D in same horizontal plane.</p><img src="./Diagrams/Grade12P2/2018_Q7.png" style="width:70%"><p class="part">7.1 Determine the distance AB in terms of h. (2)</p><p class="part">7.2 Show that $BC = h\sqrt{25-24\cos^2x}$. (4)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$A\hat{B}D = 30°$ (alternate angles).
 $$\sin30° = \frac{h}{AB} \implies AB = \frac{h}{\sin30°} = 2h$$<p><strong>7.2</strong></p>$$BC^2 = AB^2+AC^2-2(AB)(AC)\cos B\hat{A}C = (2h)^2+(3h)^2-2(2h)(3h)\cos2x$$
 $$=13h^2-12h^2(2\cos^2x-1) = 25h^2-24h^2\cos^2x$$
@@ -1909,7 +1894,7 @@ $$BC = h\sqrt{25-24\cos^2x}$$</div></details>
 <details class="year">
 <summary>2017</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <img src="./Diagrams/Grade12P2/2017_Q5.png" style="width:70%"><p><span class="qnum">5.1</span> Given: $\dfrac{\sin(A-360^\circ).\cos(90^\circ+A)}{\cos(90^\circ-A).\tan(-A)}$. Simplify to a single trig ratio. <span class="marks">(6)</span></p>
 <p><span class="qnum">5.2</span> P$(3;t)$, OP $=\sqrt{34}$, $\hat{HOP}=\beta$ is reflex. Without a calculator, determine:</p>
@@ -1932,12 +1917,14 @@ $$BC = h\sqrt{25-24\cos^2x}$$</div></details>
 <p><b>5.2.3</b> $\cos2\beta=2\cos^2\beta-1$ using $\cos\beta=\dfrac{3}{\sqrt{34}}$</p>
 <p><b>5.3.1</b> Expand both compound angles and subtract</p>
 <p><b>5.3.2</b> $\sin77^\circ-\sin43^\circ=2\cos60^\circ\sin17^\circ=\sin17^\circ$</p>
+<p><b>6.1</b></p>
+<img src="./Diagrams/Grade12P2/Answers/2017_A6.1.png" style="width:70%">
 <p><b>6.2</b> $\cos2x=2\sin x-1 \Rightarrow 1-2\sin^2x=2\sin x-1 \Rightarrow 2\sin^2x+2\sin x-2=0 \Rightarrow \sin^2x+\sin x-1=0$; quadratic formula gives $\sin x=\dfrac{-1+\sqrt5}{2}$ (other root $&lt;-1$, rejected)</p>
 </div>
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [10]</div><div class="qplain-body"><p>AB represents a vertical netball pole. Players at D and E on the same straight line through B. A third player at C. B, C, D, E in the same horizontal plane. Angles of elevation from C and E to A are $x$ and $y$. Distance BE = $k$.</p><img src="./Diagrams/Grade12P2/2017_Q7.png" style="width:70%"><p class="part">7.1 Write down the size of $A\hat{B}C$. (1)</p><p class="part">7.2 Show that $AC = \dfrac{k\tan y}{\sin x}$ (4)</p><p class="part">7.3 If $D\hat{A}C=2x$ and $AD=AC$, show that $DC = 2k\tan y$. (5)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[10]</span></div><div class="qplain-body"><p>AB represents a vertical netball pole. Players at D and E on the same straight line through B. A third player at C. B, C, D, E in the same horizontal plane. Angles of elevation from C and E to A are $x$ and $y$. Distance BE = $k$.</p><img src="./Diagrams/Grade12P2/2017_Q7.png" style="width:70%"><p class="part">7.1 Write down the size of $A\hat{B}C$. (1)</p><p class="part">7.2 Show that $AC = \dfrac{k\tan y}{\sin x}$ (4)</p><p class="part">7.3 If $D\hat{A}C=2x$ and $AD=AC$, show that $DC = 2k\tan y$. (5)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$$A\hat{B}C = 90°$$<p><strong>7.2</strong></p>In $\triangle ABE$: $\tan y = \dfrac{AB}{BE} \implies AB = k\tan y$.
 In $\triangle ABC$: $\sin x = \dfrac{AB}{AC} \implies AC = \dfrac{AB}{\sin x} = \dfrac{k\tan y}{\sin x}$<p><strong>7.3</strong></p>$A\hat{D}C = A\hat{C}D = 90°-x$ (isosceles, angle sum).
 $$\frac{DC}{\sin2x} = \frac{AC}{\sin(90°-x)} \implies DC = \frac{AC\cdot\sin2x}{\cos x} = \frac{AC(2\sin x\cos x)}{\cos x}=2AC\sin x$$
@@ -1949,12 +1936,12 @@ $$DC = 2\left(\frac{k\tan y}{\sin x}\right)\sin x = 2k\tan y$$</div></details>
 <details class="year">
 <summary>2016</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> Given: $\sin16^\circ=p$. Determine, without a calculator, in terms of $p$:</p>
 <p>5.1.1 $\sin196^\circ$ <span class="marks">(2)</span>   5.1.2 $\cos16^\circ$ <span class="marks">(2)</span></p>
 <p><span class="qnum">5.2</span> Given $\cos(A-B)=\cos A\cos B+\sin A\sin B$, derive a formula for $\sin(A+B)$. <span class="marks">(3)</span></p>
-<p><span class="qnum">5.3</span> Simplify $\dfrac{\sqrt{1-\cos^22A}}{\cos(-A).\cos(90^\circ+A)}$ completely, given $0^\circ<a<90^\circ$. <span="" class="marks">(5)</a<90^\circ$.></p>
+<p><span class="qnum">5.3</span> Simplify $\dfrac{\sqrt{1-\cos^22A}}{\cos(-A).\cos(90^\circ+A)}$ completely, given $0^\circ&lt;A&lt;90^\circ$. <span class="marks">(5)</span></p>
 <p><span class="qnum">5.4</span> Given: $\cos2B=\dfrac35$ and $0^\circ\le B\le90^\circ$. Determine, without a calculator:</p>
 <p>5.4.1 $\cos B$ <span class="marks">(3)</span>   5.4.2 $\sin B$ <span class="marks">(2)</span>   5.4.3 $\cos(B+45^\circ)$ <span class="marks">(4)</span></p>
 <hr/>
@@ -1962,7 +1949,7 @@ $$DC = 2\left(\frac{k\tan y}{\sin x}\right)\sin x = 2k\tan y$$</div></details>
 <p>6.1 Draw $g(x)=-\cos2x$ for $x\in[-180^\circ;180^\circ]$, showing intercepts, turning points, endpoints. <span class="marks">(3)</span></p>
 <p>6.2 Write down the maximum value of $f(x)-3$. <span class="marks">(2)</span></p>
 <p>6.3 Determine the general solution of $f(x)=g(x)$. <span class="marks">(4)</span></p>
-<p>6.4 Hence determine $x\in[-180^\circ;0^\circ]$ for which $f(x)<g(x)$. <span="" class="marks">(3)</g(x)$.></p>
+<p>6.4 Hence determine $x\in[-180^\circ;0^\circ]$ for which $f(x)&lt;g(x)$. <span class="marks">(3)</span></p>
 </div></div></div>
 <details class="asection">
 <summary>Answers</summary>
@@ -1974,13 +1961,15 @@ $$DC = 2\left(\frac{k\tan y}{\sin x}\right)\sin x = 2k\tan y$$</div></details>
 <p><b>5.4.1</b> $\cos2B=2\cos^2B-1=\tfrac35 \Rightarrow \cos^2B=\tfrac45 \Rightarrow \cos B=\dfrac{2}{\sqrt5}$</p>
 <p><b>5.4.2</b> $\sin B=\dfrac{1}{\sqrt5}$ (since $y=1$, $r=\sqrt5$)</p>
 <p><b>5.4.3</b> $\cos(B+45^\circ)=\cos B\cos45^\circ-\sin B\sin45^\circ=\dfrac{2}{\sqrt5}\cdot\dfrac{1}{\sqrt2}-\dfrac{1}{\sqrt5}\cdot\dfrac{1}{\sqrt2}=\dfrac{1}{\sqrt{10}}=\dfrac{\sqrt{10}}{10}$</p>
+<p><b>6.1</b></p>
+<img src="./Diagrams/Grade12P2/Answers/2016_A6.1.png" style="width:70%">
 <p><b>6.2</b> Max of $f$ is 2, so max of $f(x)-3=-1$</p>
 <p><b>6.3</b> $2\sin2x=-\cos2x$; solve via $\tan2x=-\tfrac12$: $x=76{,}72^\circ+k.90^\circ$ or $x=-13{,}28^\circ+k.90^\circ;\ k\in\mathbb{Z}$</p>
 </div>
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [12]</div><div class="qplain-body"><p>E is the apex of a pyramid with square base ABCD, O is the centre of the base. $E\hat{B}A=\theta$, $AB=3$ m, EO (perpendicular height) $=x$.</p><p>$$\text{Volume of pyramid} = \frac13(\text{area of base})\times(\perp\text{height})$$</p><img src="./Diagrams/Grade12P2/2016_Q7.png" style="width:70%"><p class="part">7.1 Calculate the length of OB. (3)</p><p class="part">7.2 Show that $\cos\theta = \dfrac{3}{2\sqrt{x^2+\frac92}}$ (5)</p><p class="part">7.3 If the volume of the pyramid is 15 m³, calculate the value of θ. (4)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[12]</span></div><div class="qplain-body"><p>E is the apex of a pyramid with square base ABCD, O is the centre of the base. $E\hat{B}A=\theta$, $AB=3$ m, EO (perpendicular height) $=x$.</p><p>$$\text{Volume of pyramid} = \frac13(\text{area of base})\times(\perp\text{height})$$</p><img src="./Diagrams/Grade12P2/2016_Q7.png" style="width:70%"><p class="part">7.1 Calculate the length of OB. (3)</p><p class="part">7.2 Show that $\cos\theta = \dfrac{3}{2\sqrt{x^2+\frac92}}$ (5)</p><p class="part">7.3 If the volume of the pyramid is 15 m³, calculate the value of θ. (4)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>Diagonal $DB^2 = 3^2+3^2=18$ (Pythagoras), $OB=\frac12 DB$
 $$OB = \frac{\sqrt{18}}{2} = \frac{3\sqrt2}{2} \approx 2,12\text{ m}$$<p><strong>7.2</strong></p>$$BE^2 = EO^2+OB^2 = x^2+\frac92 \implies BE=\sqrt{x^2+\frac92}$$
 Using $\cos\theta = \dfrac{AB^2+EB^2-AE^2}{2(AB)(EB)}$ with $AE=EB$ (isosceles), or directly via the right-triangle formed by dropping a perpendicular from E to AB (midpoint F, $AF=\frac32$):
@@ -1993,7 +1982,7 @@ $$\cos\theta = \frac{3}{2\sqrt{25+\frac92}} \implies \theta = 73,97°$$</div></d
 <details class="year">
 <summary>2015</summary>
 <div class="year-body">
-<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7) — Identities, Equations &amp; Graphs</div><div class="qgroup-body">
+<div class="qgroup"><div class="qgroup-title">Questions 5 &amp; 6 (and 7)</div><div class="qgroup-body">
 <div class="qplain"><div class="qplain-body"><div class="content">
 <p><span class="qnum">5.1</span> Given $\sin23^\circ=\sqrt{k}$. Determine, in simplest form, in terms of $k$, without a calculator:</p>
 <p>5.1.1 $\sin203^\circ$ <span class="marks">(2)</span>   5.1.2 $\cos23^\circ$ <span class="marks">(3)</span>   5.1.3 $\tan(-23^\circ)$ <span class="marks">(2)</span></p>
@@ -2022,7 +2011,7 @@ $$\cos\theta = \frac{3}{2\sqrt{25+\frac92}} \implies \theta = 73,97°$$</div></d
 </details>
 </div></div>
 <div class="qgroup"><div class="qgroup-title">2D &amp; 3D Trigonometry</div><div class="qgroup-body">
-<div class="qplain"><div class="qplain-title">Question 7 [10]</div><div class="qplain-body"><p>A corner of a rectangular block of wood is cut off, forming inclined plane $\triangle ACD$, isosceles with $A\hat{D}C=A\hat{C}D=\theta$. Also $A\hat{C}B=\frac12\theta$, $AC=x+3$, $CD=2x$.</p><img src="./Diagrams/Grade12P2/2015_Q7.png" style="width:70%"><p class="part">7.1 Determine an expression for $C\hat{A}D$ in terms of θ. (1)</p><p class="part">7.2 Prove that $\cos\theta = \dfrac{x}{x+3}$. (4)</p><p class="part">7.3 If x=2, calculate AB, the height of the piece of wood. (5)</p></div></div>
+<div class="qplain"><div class="qplain-title">Question 7 <span class="marks">[10]</span></div><div class="qplain-body"><p>A corner of a rectangular block of wood is cut off, forming inclined plane $\triangle ACD$, isosceles with $A\hat{D}C=A\hat{C}D=\theta$. Also $A\hat{C}B=\frac12\theta$, $AC=x+3$, $CD=2x$.</p><img src="./Diagrams/Grade12P2/2015_Q7.png" style="width:70%"><p class="part">7.1 Determine an expression for $C\hat{A}D$ in terms of θ. (1)</p><p class="part">7.2 Prove that $\cos\theta = \dfrac{x}{x+3}$. (4)</p><p class="part">7.3 If x=2, calculate AB, the height of the piece of wood. (5)</p></div></div>
 <details class="answer"><summary>Show Answer</summary><div class="ans-body"><p><strong>7.1</strong></p>$$C\hat{A}D = 180°-2\theta$$<p><strong>7.2</strong></p>$AD = x+3$ (sides opposite equal angles in isosceles $\triangle ACD$).
 $$AC^2 = AD^2+CD^2-2(AD)(CD)\cos\theta$$
 $$(x+3)^2 = (x+3)^2+(2x)^2-2(2x)(x+3)\cos\theta$$
@@ -2036,14 +2025,14 @@ $$\sin33,21° = \frac{AB}{AC} \implies AB = 5\sin33,21° \approx 2,74$$</div></d
     </details>
 
     <details class="topic">
-      <summary>4. Euclidean Geometry</summary>
+      <summary><span class="topic-name">4. Euclidean Geometry</span><span class="badge">[40 Marks]</span></summary>
       <div class="topic-body">
         <p class="topic-note">Circle geometry and proportionality theorems. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
 <div class="qgroup">
-<div class="qgroup-title">Question 9.1 — Angle at centre = 2 × angle at circumference</div>
+<div class="qgroup-title">Question 9.1</div>
 <div class="qtext">
 In the diagram, $O$ is the centre of the circle. $K$, $T$ and $P$ lie on the circle.<br/>
 Use the diagram to prove the theorem which states that the angle subtended by a chord (or arc) at the centre of the circle is equal to twice the angle subtended by the same chord (or arc) at the circumference, that is, prove that $T\hat{O}P = 2T\hat{K}P$.
@@ -2094,7 +2083,7 @@ $O$ is the centre of the circle. $POF$ is the diameter, $MF$ is a tangent at $F$
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10 — Cyclic quadrilateral PQRS</div>
+<div class="qgroup-title">Question 10</div>
 <div class="qtext">
 $PQRS$ is a cyclic quadrilateral. $T$ is on the circle such that $QT \perp SR$ at $V$. $PT$ and $ST$ are drawn. $\hat{Q}_2 = 35°$ and $\hat{R}=\hat{S}_1$.
 <img src="./Diagrams/Grade12P2/2025_Q10.png" style="width:70%"><div class="subq">10.1 Calculate, with reasons, $Q\hat{T}S$ <span class="marks">(3)</span></div>
@@ -2126,7 +2115,7 @@ $PQRS$ is a cyclic quadrilateral. $T$ is on the circle such that $QT \perp SR$ a
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 11.1 — Proportionality (E–A–B–D–C–F–G)</div>
+<div class="qgroup-title">Question 11.1</div>
 <div class="qtext">
 $\Delta ABC$ is drawn; $BA$ produced to $E$; $F, D$ on $BC$ such that $AD \parallel EF$; $AC$ and $EF$ intersect at $G$. $\dfrac{CF}{FB}=\dfrac{2}{5}$, $\dfrac{CG}{GA}=\dfrac{3}{2}$.
 <img src="./Diagrams/Grade12P2/2025_Q11.png" style="width:70%"><div class="subq">11.1.1 Calculate $\dfrac{FD}{CF}$ <span class="marks">(2)</span></div>
@@ -2150,7 +2139,7 @@ $\Delta ABC$ is drawn; $BA$ produced to $E$; $F, D$ on $BC$ such that $AD \paral
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 11.2 — Cyclic quad WVZR with tangent QS</div>
+<div class="qgroup-title">Question 11.2</div>
 <div class="qtext">
 $WVZR$ is a cyclic quadrilateral, $RZ$ produced to $Q$, tangent from $Q$ touching at $S$, $WV$ produced to $E$ on $ZQ$, $RW$ produced meets $ZV$ produced in $P$; $PQ \parallel WE$. $RS$ and $ZS$ drawn.
 <img src="./Diagrams/Grade12P2/2025_Q11_2.png" style="width:70%"><div class="subq">11.2.1 Prove $PR = \dfrac{PW\cdot QR}{QE}$ <span class="marks">(2)</span></div>
@@ -2194,7 +2183,7 @@ $WVZR$ is a cyclic quadrilateral, $RZ$ produced to $Q$, tangent from $Q$ touchin
 <summary>2024</summary>
 <div class="year-body">
 <div class="qgroup">
-<div class="qgroup-title">Question 9 — Cyclic quad ABCD</div>
+<div class="qgroup-title">Question 9</div>
 <div class="qtext">
 $ABCD$ is a cyclic quadrilateral, $BC$ produced to $E$, $AC$ drawn. $\hat{A}_1=\frac12\hat{B}$, $\hat{A}_2=46°$, $\hat{C}_1=86°$.
 <img src="./Diagrams/Grade12P2/2024_Q9.png" style="width:70%"><div class="subq">9.1 Calculate, with a reason, $\hat{A}_1$ <span class="marks">(2)</span></div>
@@ -2215,7 +2204,7 @@ $ABCD$ is a cyclic quadrilateral, $BC$ produced to $E$, $AC$ drawn. $\hat{A}_1=\
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10.1 — Proportionality theorem proof (areas method)</div>
+<div class="qgroup-title">Question 10.1</div>
 <div class="qtext">
 In the diagram, $A$ and $B$ are on $RS$ and $RT$ resp. of $\Delta RST$ with $AB \parallel ST$.
 Prove the theorem: a line drawn parallel to one side of a triangle divides the other two proportionally, i.e. $\dfrac{RA}{AS}=\dfrac{RB}{BT}$. <span class="marks">(6)</span>
@@ -2234,7 +2223,7 @@ Prove the theorem: a line drawn parallel to one side of a triangle divides the o
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10.2 — Circle with $\Delta PWS$, $OR \perp PS$</div>
+<div class="qgroup-title">Question 10.2</div>
 <div class="qtext">
 $O$ is centre; $\Delta PWS$ has $P,W,S$ on the circle; $OR \perp PS$; $PRS$ produced to $T$; $SW$ and $OT$ intersect at $V$; $OV:OT = 1:4$.
 <img src="./Diagrams/Grade12P2/2024_Q10_2.png" style="width:70%"><img src="./Diagrams/Grade12P2/2024_Q10.png" style="width:70%"><div class="subq">10.2.1 Prove $OR:WS = 1:2$ <span class="marks">(5)</span></div>
@@ -2257,7 +2246,7 @@ $O$ is centre; $\Delta PWS$ has $P,W,S$ on the circle; $OR \perp PS$; $PRS$ prod
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 11 — Two touching circles, tangent EA, tangent EBCF</div>
+<div class="qgroup-title">Question 11</div>
 <div class="qtext">
 $A,B,G,F$ lie on the larger circle; a smaller circle touches the larger internally at $A$; $EA$ common tangent; $EBCF$ tangent to smaller circle at $C$; $AC$ produced to $G$; $AF$ cuts smaller circle at $D$; $AB,CD,GF$ drawn. $E\hat{A}G = x$.
 <img src="./Diagrams/Grade12P2/2024_Q11.png" style="width:70%"><div class="subq">11.1 Determine, with reasons, FOUR other angles equal to $x$ <span class="marks">(6)</span></div>
@@ -2297,7 +2286,7 @@ $A,B,G,F$ lie on the larger circle; a smaller circle touches the larger internal
 <summary>2023</summary>
 <div class="year-body">
 <div class="qgroup">
-<div class="qgroup-title">Question 8.1 — Angle at centre theorem (using OB, OD)</div>
+<div class="qgroup-title">Question 8.1</div>
 <div class="qtext">
 $O$ is the centre of the circle. Use the diagram (K, T, P on circle) to prove $T\hat{O}P=2T\hat{K}P$. <span class="marks">(5)</span>
 </div>
@@ -2309,7 +2298,7 @@ Same proof as the 2025 Q9.1 solution above (draw $KO$ produced; ext ∠ of Δ tw
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 8.2 — Cyclic quad ABCD, find $x$</div>
+<div class="qgroup-title">Question 8.2</div>
 <div class="qtext">
 $O$ centre, $ABCD$ cyclic quad, $OB,OD$ drawn. $\hat{O}_1=4x+100°$, $\hat{C}=x+34°$. Calculate, giving reasons, $x$. <span class="marks">(5)</span>
 </div>
@@ -2328,7 +2317,7 @@ $O$ centre, $ABCD$ cyclic quad, $OB,OD$ drawn. $\hat{O}_1=4x+100°$, $\hat{C}=x+
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 8.3 — Two circles, chord AB</div>
+<div class="qgroup-title">Question 8.3</div>
 <div class="qtext">
 $O$ centre of larger circle; $OB$ diameter of smaller circle; chord $AB$ of the larger circle intersects the smaller circle at $M$ and $B$.
 <img src="./Diagrams/Grade12P2/2023_Q8_3.png" style="width:70%"><img src="./Diagrams/Grade12P2/2023_Q8_2.png" style="width:70%"><img src="./Diagrams/Grade12P2/2023_Q8.png" style="width:70%"><div class="subq">8.3.1 Write down the size of $O\hat{M}B$. Provide a reason. <span class="marks">(2)</span></div>
@@ -2348,7 +2337,7 @@ $O$ centre of larger circle; $OB$ diameter of smaller circle; chord $AB$ of the 
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 9 — Parallelogram ABCD, AD produced to E</div>
+<div class="qgroup-title">Question 9</div>
 <div class="qtext">
 $ABCD$ is a parallelogram with $AB=14$ units. $AD$ produced to $E$ with $AD:DE=4:3$. $EB$ intersects $DC$ in $F$; $EB=21$ units.
 <img src="./Diagrams/Grade12P2/2023_Q9.png" style="width:70%"><div class="subq">9.1 Calculate, with reasons, $FB$ <span class="marks">(3)</span></div>
@@ -2374,7 +2363,7 @@ $ABCD$ is a parallelogram with $AB=14$ units. $AD$ produced to $E$ with $AD:DE=4
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10 — Cyclic quad PQRS, PQ=PR, tangents at P and R</div>
+<div class="qgroup-title">Question 10</div>
 <div class="qtext">
 $PQRS$ cyclic with $PQ=PR$. Tangents at $P$ and $R$ meet $QS$ produced at $A$. $RS$ produced meets tangent $AP$ at $B$. $PS$ produced meets tangent $AR$ at $C$. $PR$ and $QS$ intersect at $M$.
 <img src="./Diagrams/Grade12P2/2023_Q10.png" style="width:70%"><div class="subq">10.1 Prove $\hat{S}_3=\hat{S}_4$ <span class="marks">(5)</span></div>
@@ -2411,7 +2400,7 @@ $PQRS$ cyclic with $PQ=PR$. Tangents at $P$ and $R$ meet $QS$ produced at $A$. $
 <summary>2022</summary>
 <div class="year-body">
 <div class="qgroup">
-<div class="qgroup-title">Question 8.1 — Cyclic quad MNPR, diameter SN</div>
+<div class="qgroup-title">Question 8.1</div>
 <div class="qtext">
 $O$ centre; $MNPR$ cyclic quad; $SN$ diameter; chord $MS$ and radius $OR$ drawn. $\hat{M}_2=64°$.
 <img src="./Diagrams/Grade12P2/2022_Q8.png" style="width:70%"><div class="subq">8.1.1 $\hat{P}$ <span class="marks">(2)</span></div>
@@ -2432,7 +2421,7 @@ $O$ centre; $MNPR$ cyclic quad; $SN$ diameter; chord $MS$ and radius $OR$ drawn.
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 8.2 — $\Delta ABG$, midpoints D, E</div>
+<div class="qgroup-title">Question 8.2</div>
 <div class="qtext">
 $D,E$ are midpoints of $AB,AG$; $AG,BG$ produced to $C,H$; $F$ on $BC$ with $FG\parallel CH$.
 <img src="./Diagrams/Grade12P2/2022_Q8_2.png" style="width:70%"><div class="subq">8.2.1 Give a reason why $DE\parallel BH$ <span class="marks">(1)</span></div>
@@ -2452,7 +2441,7 @@ $D,E$ are midpoints of $AB,AG$; $AG,BG$ produced to $C,H$; $F$ on $BC$ with $FG\
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 9.1 — Line from centre bisecting chord is ⊥ (proof)</div>
+<div class="qgroup-title">Question 9.1</div>
 <div class="qtext">
 $O$ centre; $AD=DB$ on chord $AB$. Prove: $\Delta ADO \equiv \Delta BDO$ and hence $OD \perp AB$. <span class="marks">(5)</span>
 </div>
@@ -2468,7 +2457,7 @@ $O$ centre; $AD=DB$ on chord $AB$. Prove: $\Delta ADO \equiv \Delta BDO$ and hen
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 9.2 — Tangent GB, chords EBFSP</div>
+<div class="qgroup-title">Question 9.2</div>
 <div class="qtext">
 $E,B,F,S,P$ on circle centre $O$; $GB$ tangent at $B$; $FE$ produced meets tangent at $G$; $OT$ drawn, $T$ midpoint of $EF$; $GO, BO$ drawn; $BS$ through $T$; $PS \parallel GF$.
 <img src="./Diagrams/Grade12P2/2022_Q9_2.png" style="width:70%"><img src="./Diagrams/Grade12P2/2022_Q9.png" style="width:70%"><div class="subq">9.2.1 Prove $OTBG$ is a cyclic quadrilateral <span class="marks">(5)</span></div>
@@ -2490,7 +2479,7 @@ $E,B,F,S,P$ on circle centre $O$; $GB$ tangent at $B$; $FE$ produced meets tange
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10 — Cyclic quad PQRS, tangent KP</div>
+<div class="qgroup-title">Question 10</div>
 <div class="qtext">
 $PQRS$ cyclic; $KP$ tangent at $P$; $C,D$ on chords $PQ, PS$; $CD$ produced meets $RS$ produced at $A$; $CA \parallel QS$; $RC$ drawn; $\hat{P}_1=\hat{R}_2$.
 <img src="./Diagrams/Grade12P2/2022_Q10.png" style="width:70%"><div class="subq">10.1 Prove $\hat{S}_1=\hat{T}_2$ <span class="marks">(4)</span></div>
@@ -2524,7 +2513,7 @@ $PQRS$ cyclic; $KP$ tangent at $P$; $C,D$ on chords $PQ, PS$; $CD$ produced meet
 <summary>2021</summary>
 <div class="year-body">
 <div class="qgroup">
-<div class="qgroup-title">Question 9 — Cyclic quad PQRS, tangents TR, TS</div>
+<div class="qgroup-title">Question 9</div>
 <div class="qtext">
 $PQRS$ cyclic quad; $PS$ produced to $W$; $TR,TS$ tangents at $R,S$. $\hat{T}=78°$, $\hat{Q}=93°$.
 <img src="./Diagrams/Grade12P2/2021_Q9.png" style="width:70%"><div class="subq">9.1 Give a reason why $ST=TR$ <span class="marks">(1)</span></div>
@@ -2549,7 +2538,7 @@ $PQRS$ cyclic quad; $PS$ produced to $W$; $TR,TS$ tangents at $R,S$. $\hat{T}=78
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10 — Circle centre M, diameters BE, CD</div>
+<div class="qgroup-title">Question 10</div>
 <div class="qtext">
 $BE$ and $CD$ diameters of circle centre $M$; chord $AE$ cuts $CD$ at $F$; $AE\perp CD$. Let $\hat{C}=x$.
 <img src="./Diagrams/Grade12P2/2021_Q10.png" style="width:70%"><div class="subq">10.1 Give a reason why $AF=FE$ <span class="marks">(1)</span></div>
@@ -2580,7 +2569,7 @@ $BE$ and $CD$ diameters of circle centre $M$; chord $AE$ cuts $CD$ at $F$; $AE\p
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 11.1 — Tangent-chord theorem proof</div>
+<div class="qgroup-title">Question 11.1</div>
 <div class="qtext">
 Chords $DE, EF, DF$ in circle centre $O$; $KFC$ tangent at $F$. Prove $D\hat{F}K = \hat{E}$. <span class="marks">(5)</span>
 </div>
@@ -2596,7 +2585,7 @@ Chords $DE, EF, DF$ in circle centre $O$; $KFC$ tangent at $F$. Prove $D\hat{F}K
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 11.2 — Tangent PK, similar triangles KLMN, KSM</div>
+<div class="qgroup-title">Question 11.2</div>
 <div class="qtext">
 $PK$ tangent at $K$; chord $LS$ produced to $P$; $N,M$ on $KP, SP$ with $MN\parallel SK$; chord $KS$ and $LN$ intersect at $T$.
 <img src="./Diagrams/Grade12P2/2021_Q11_2.png" style="width:70%"><img src="./Diagrams/Grade12P2/2021_Q11.png" style="width:70%"><div class="subq">11.2.1(a) Prove $\hat{K}_4=N\hat{M}L$ <span class="marks">(4)</span></div>
@@ -2636,7 +2625,7 @@ $PK$ tangent at $K$; chord $LS$ produced to $P$; $N,M$ on $KP, SP$ with $MN\para
 <summary>2020</summary>
 <div class="year-body">
 <div class="qgroup">
-<div class="qgroup-title">Question 8.1 — Chord LN bisected, KP, OP drawn</div>
+<div class="qgroup-title">Question 8.1</div>
 <div class="qtext">
 $O$ centre; $KOM$ bisects chord $LN$; $M\hat{N}O=26°$; $K,P$ on circle with $N\hat{K}P=32°$; $OP$ drawn.
 <img src="./Diagrams/Grade12P2/2020_Q8.png" style="width:70%"><div class="subq">8.1.1(a) $\hat{O}_2$ <span class="marks">(2)</span></div>
@@ -2660,7 +2649,7 @@ $O$ centre; $KOM$ bisects chord $LN$; $M\hat{N}O=26°$; $K,P$ on circle with $N\
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 8.2 — Tangent AF to circle FGD</div>
+<div class="qgroup-title">Question 8.2</div>
 <div class="qtext">
 In $\Delta ABC$, $F,G$ on $AB,AC$; $D$ on $GC$ with $\hat{D}_1=\hat{B}$.
 <img src="./Diagrams/Grade12P2/2020_Q8_2.png" style="width:70%"><div class="subq">8.2.1 If $AF$ is tangent to circle through $F,G,D$, prove $FG\parallel BC$ <span class="marks">(4)</span></div>
@@ -2681,7 +2670,7 @@ In $\Delta ABC$, $F,G$ on $AB,AC$; $D$ on $GC$ with $\hat{D}_1=\hat{B}$.
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 9.1 — Tangent-chord theorem proof (QST = R)</div>
+<div class="qgroup-title">Question 9.1</div>
 <div class="qtext">
 $O$ centre; $S,T,R$ on circle; chords $ST,SR,TR$ drawn; $QS$ tangent at $S$. Prove $Q\hat{S}T=\hat{R}$. <span class="marks">(5)</span>
 </div>
@@ -2698,7 +2687,7 @@ $O$ centre; $S,T,R$ on circle; chords $ST,SR,TR$ drawn; $QS$ tangent at $S$. Pro
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 9.2 — Chord QN bisects angle, tangent PR</div>
+<div class="qgroup-title">Question 9.2</div>
 <div class="qtext">
 Chord $QN$ bisects $M\hat{N}P$ and intersects chord $MP$ at $S$. Tangent at $P$ meets $MN$ produced at $R$ with $QN\parallel PR$. Let $\hat{P}_1=x$.
 <img src="./Diagrams/Grade12P2/2020_Q9_2.png" style="width:70%"><img src="./Diagrams/Grade12P2/2020_Q9.png" style="width:70%"><div class="subq">9.2.1(a) $\hat{N}_2$ in terms of $x$ <span class="marks">(2)</span></div>
@@ -2723,7 +2712,7 @@ Chord $QN$ bisects $M\hat{N}P$ and intersects chord $MP$ at $S$. Tangent at $P$ 
 </details>
 </div>
 <div class="qgroup">
-<div class="qgroup-title">Question 10 — Circle DBE, diameter ED produced to C, tangent AC at B</div>
+<div class="qgroup-title">Question 10</div>
 <div class="qtext">
 Circle through $D,B,E$; diameter $ED$ produced to $C$; $AC$ tangent at $B$; $M$ on $DE$ with $AM\perp DE$; $AM$ and chord $BE$ intersect at $F$.
 <img src="./Diagrams/Grade12P2/2020_Q10.png" style="width:70%"><div class="subq">10.1.1 Prove $FBDM$ is a cyclic quadrilateral <span class="marks">(3)</span></div>
@@ -3254,6 +3243,7 @@ Circle through $D,B,E$; diameter $ED$ produced to $C$; $AC$ tangent at $B$; $M$ 
     </details>
 
   </div>
+</div>
 
   <!--Footer-->
   <footer id="site-footer">
@@ -3278,18 +3268,6 @@ Circle through $D,B,E$; diameter $ED$ produced to $C$; $AC$ tangent at $B$; $M$ 
     <div class="footer-bottom">Created by: Phuluso Nembilwi</div>
   </footer>
   <!--Footer End-->
-
-</div>
-
-<script>
-function toggleAll(selector, open){
-  document.querySelectorAll(selector).forEach(d => d.open = open);
-}
-function hideAllAnswers(){
-  document.querySelectorAll('details.answer, details.ans, details.answer-block, details.asection, details.sub.answer')
-    .forEach(d => d.open = false);
-}
-</script>
 
 </body>
 </html>

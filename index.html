@@ -2,24 +2,13 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="./Codes/main.css"> 
-<script src="./Codes/main.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mathematics P1</title>
-
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(', '\\)'], ['$', '$']],
-    displayMath: [['\\[', '\\]'], ['$$', '$$']]
-  },
-  svg: { fontCache: 'global' }
-};
-</script>
+<title>Mathematics P1 - Better Math Education</title>
+<link rel="stylesheet" href="./Codes/main.css">
+<script src="./Codes/mathjax-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
-
-
+<script src="./Codes/main.js" defer></script>
 </head>
 <body>
 
@@ -57,7 +46,7 @@ window.MathJax = {
         </div>
 
         <!-- Mobile Hamburger Menu Icon (Optional) -->
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
             ☰
         </div>
     </nav>
@@ -67,10 +56,21 @@ window.MathJax = {
 <!--Header End-->
 
 
-<div class="wrap">
+<!-- Homepage intro slide: shown first; the arrow scrolls smoothly down to the P1 content below -->
+<section class="intro-slide" id="intro">
+  <h1>Better Math Education</h1>
+  <p>Get infinitely better at math, one day at a time.</p>
+  <p>Free, exam-style NSC Grade 12 Mathematics practice, organised by topic and by year, with full worked answers you can reveal whenever you're ready to check your work.</p>
+  <a href="#p1-content" class="jump-arrow">
+    <span>Jump to P1</span>
+    <span class="arrow-icon" aria-hidden="true">↓</span>
+  </a>
+</section>
+
+<div class="wrap" id="p1-content">
   <header>
     <h1>NSC Grade 12 Mathematics P1 Practice By topic</h1>
-    <p>How P1 Math is structured<p>
+    <p>How P1 Math is structured</p>
       <img src="./Diagrams/Grade12P1/P1 Marks Breakdown.png" style="width:70%">
       <p>Explaining how to pactice, tips and advice</p>
   </header>
@@ -80,7 +80,8 @@ window.MathJax = {
     <button onclick="toggleAll('details.topic', false)">Collapse all topics</button>
     <button onclick="toggleAll('details.yr', true)">Expand all years</button>
     <button onclick="toggleAll('details.yr', false)">Collapse all years</button>
-    <button onclick="toggleAll('details.answers', false)">Hide all answers</button>
+    <button onclick="showAllAnswers()">Show all answers</button>
+    <button onclick="hideAllAnswers()">Hide all answers</button>
   </div>
 
 
@@ -658,8 +659,7 @@ window.MathJax = {
   <div class="topic-body">
     <details class="yr">
       <summary>2025<span class="badge">[10]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
 
@@ -674,27 +674,11 @@ window.MathJax = {
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2025)</span></div>
-          <div class="q-content-wrap">
-
-
-<p class="stem">The depth of a torpedo below sea level forms a quadratic pattern, where 0 metres is at sea level. A submarine tracked a torpedo in one-second intervals. The depth (in metres) reached is given below:</p>
-<img src="./Diagrams/Grade12P1/2025 Q3.png" style="width:70%">
-
-<p class="stem">At the end of the first second: 36  |  At the end of the first 2 seconds: 71  |  At the end of the first 3 seconds: 104</p>
-<div class="sub"><span class="sub-label">3.1</span> Calculate the depth of the torpedo at the end of the first 5 seconds. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">3.2</span> Show that the depth of the torpedo at the end of $n$ seconds was $T_n=-n^2+38n-1$. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">3.3</span> Calculate the maximum depth that the torpedo reached. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">3.4</span> After how many seconds was the torpedo at 104 m below sea level for the second time? <span class="marks">(2)</span></div>
-<div class="total">[10]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1.1</span>
               \(\dfrac{t-2}{t+10}=\dfrac{t+4}{t-2} \Rightarrow (t-2)^2=(t+4)(t+10)\)<br/>
               \(t^2-4t+4=t^2+14t+40 \Rightarrow -18t=36 \Rightarrow t=-2\)
@@ -714,8 +698,29 @@ window.MathJax = {
               \(k=21\) (reject \(k=-\tfrac{39}{2}\))
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2025)</span></div>
+          <div class="q-content-wrap">
+
+
+<p class="stem">The depth of a torpedo below sea level forms a quadratic pattern, where 0 metres is at sea level. A submarine tracked a torpedo in one-second intervals. The depth (in metres) reached is given below:</p>
+<img src="./Diagrams/Grade12P1/2025 Q3.png" style="width:70%">
+
+<p class="stem">At the end of the first second: 36  |  At the end of the first 2 seconds: 71  |  At the end of the first 3 seconds: 104</p>
+<div class="sub"><span class="sub-label">3.1</span> Calculate the depth of the torpedo at the end of the first 5 seconds. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">3.2</span> Show that the depth of the torpedo at the end of $n$ seconds was $T_n=-n^2+38n-1$. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">3.3</span> Calculate the maximum depth that the torpedo reached. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">3.4</span> After how many seconds was the torpedo at 104 m below sea level for the second time? <span class="marks">(2)</span></div>
+<div class="total">[10]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span> Sequence: $36;71;104;135;164$ (first differences $35,33,31,29$; second difference $-2$).<br/>$T_5 = 164$</div>
 <div class="a-sub"><span class="a-sub-label">3.2</span>
@@ -746,8 +751,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2024<span class="badge">[10]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
 
@@ -761,24 +765,11 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2024)</span></div>
-          <div class="q-content-wrap">
-
-<p class="stem">A circle with radius 6 cm is drawn. A second, smaller circle is drawn through the centre of the first circle and touches the first circle internally. A third, smaller circle is drawn through the centre of the second circle and touches the second circle internally. The process continues, forming a geometric pattern.</p>
-<img src="./Diagrams/Grade12P1/2024 Q3.png" style="width:70%">
-
-<div class="sub"><span class="sub-label">3.1</span> Write down the radius of the 3rd circle. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">3.2</span> Calculate the sum of the areas of the first 10 circles. <span class="marks">(4)</span></div>
-<div class="sub"><span class="sub-label">3.3</span> Which circle has a diameter of $\dfrac{3}{128}$ cm? <span class="marks">(4)</span></div>
-<div class="total">[10]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1.1</span>
               \(S_{20}=\dfrac{20}{2}\big[2(7)+19(5)\big]=1\,090\)
             </div>
@@ -796,8 +787,26 @@ Maximum depth = 360 m.</div>
               \(T_n=n^2-2n+29\)
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2024)</span></div>
+          <div class="q-content-wrap">
+
+<p class="stem">A circle with radius 6 cm is drawn. A second, smaller circle is drawn through the centre of the first circle and touches the first circle internally. A third, smaller circle is drawn through the centre of the second circle and touches the second circle internally. The process continues, forming a geometric pattern.</p>
+<img src="./Diagrams/Grade12P1/2024 Q3.png" style="width:70%">
+
+<div class="sub"><span class="sub-label">3.1</span> Write down the radius of the 3rd circle. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">3.2</span> Calculate the sum of the areas of the first 10 circles. <span class="marks">(4)</span></div>
+<div class="sub"><span class="sub-label">3.3</span> Which circle has a diameter of $\dfrac{3}{128}$ cm? <span class="marks">(4)</span></div>
+<div class="total">[10]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span> 2nd circle: $\dfrac{6}{2}=3$ cm    3rd circle: $\dfrac{3}{2}=1{,}5$ cm</div>
 <div class="a-sub"><span class="a-sub-label">3.2</span>
@@ -821,8 +830,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2023<span class="badge">[16+10]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2023)</span></div>
           <div class="q-content-wrap">
 
@@ -839,23 +847,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[16]</div>
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2023)</span></div>
-          <div class="q-content-wrap">
-
-<div class="sub"><span class="sub-label">3.1</span> Given the geometric series: $3+6+12+\dots$ to $n$ terms.
-<div class="sub"><span class="sub-label">3.1.1</span> Write down the general term of this series. <span class="marks">(1)</span></div>
-<div class="sub"><span class="sub-label">3.1.2</span> Calculate the value of $k$ such that $\displaystyle\sum_{p=1}^{k}\tfrac32(2)^p=98\,301$. <span class="marks">(4)</span></div>
-</div>
-<div class="sub"><span class="sub-label">3.2</span> A geometric sequence and an arithmetic sequence have the same first term. The common ratio of the geometric sequence is $\tfrac13$; the common difference of the arithmetic sequence is 3; the sum of 22 terms of the arithmetic sequence is 734 more than the sum to infinity of the geometric sequence. Calculate the value of the first term. <span class="marks">(5)</span></div>
-<div class="total">[10]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">2.1.1</span> $d=5$, $T_{91}=7+(91-1)(5)=457$</div>
 <div class="a-sub"><span class="a-sub-label">2.1.2</span> $S_{91}=\tfrac{91}{2}[2(7)+(90)(5)]=21\,112$</div>
@@ -872,8 +868,25 @@ Maximum depth = 360 m.</div>
 <div class="a-sub"><span class="a-sub-label">2.2.3</span> $T_n'=12n-9&gt;0 \Rightarrow n&gt;\tfrac34$, so $T_n$ is increasing for all $n\in N$.</div>
 <div class="total">[16]</div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2023)</span></div>
+          <div class="q-content-wrap">
+
+<div class="sub"><span class="sub-label">3.1</span> Given the geometric series: $3+6+12+\dots$ to $n$ terms.
+<div class="sub"><span class="sub-label">3.1.1</span> Write down the general term of this series. <span class="marks">(1)</span></div>
+<div class="sub"><span class="sub-label">3.1.2</span> Calculate the value of $k$ such that $\displaystyle\sum_{p=1}^{k}\tfrac32(2)^p=98\,301$. <span class="marks">(4)</span></div>
+</div>
+<div class="sub"><span class="sub-label">3.2</span> A geometric sequence and an arithmetic sequence have the same first term. The common ratio of the geometric sequence is $\tfrac13$; the common difference of the arithmetic sequence is 3; the sum of 22 terms of the arithmetic sequence is 734 more than the sum to infinity of the geometric sequence. Calculate the value of the first term. <span class="marks">(5)</span></div>
+<div class="total">[10]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1.1</span> $T_n=3(2)^{n-1}$</div>
 <div class="a-sub"><span class="a-sub-label">3.1.2</span>
@@ -898,8 +911,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2022<span class="badge">[10]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2022)</span></div>
           <div class="q-content-wrap">
 
@@ -912,23 +924,11 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2022)</span></div>
-          <div class="q-content-wrap">
-
-<p class="stem">The general term of a quadratic number pattern is $T_n=n^2+bn+9$ and the first term of the first differences is 7.</p>
-<div class="sub"><span class="sub-label">3.1</span> Show that $b=4$. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">3.2</span> Determine the value of the 60th term of this number pattern. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">3.3</span> Determine the general term for the sequence of first differences, in the form $T_p=mp+q$. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">3.4</span> Which TWO consecutive terms in the quadratic number pattern have a first difference of 157? <span class="marks">(3)</span></div>
-<div class="total">[10]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1.1</span>
               \(14r^5=448 \Rightarrow r^5=32 \Rightarrow r=2\)
             </div>
@@ -946,8 +946,25 @@ Maximum depth = 360 m.</div>
               \(\therefore k=10\)
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2022)</span></div>
+          <div class="q-content-wrap">
+
+<p class="stem">The general term of a quadratic number pattern is $T_n=n^2+bn+9$ and the first term of the first differences is 7.</p>
+<div class="sub"><span class="sub-label">3.1</span> Show that $b=4$. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">3.2</span> Determine the value of the 60th term of this number pattern. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">3.3</span> Determine the general term for the sequence of first differences, in the form $T_p=mp+q$. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">3.4</span> Which TWO consecutive terms in the quadratic number pattern have a first difference of 157? <span class="marks">(3)</span></div>
+<div class="total">[10]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span> $3a+b=7$, $a=1 \Rightarrow 3+b=7 \Rightarrow b=4$</div>
 <div class="a-sub"><span class="a-sub-label">3.2</span> $T_{60}=(60)^2+4(60)+9=3849$</div>
@@ -961,8 +978,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2021<span class="badge">[11+10]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2021)</span></div>
           <div class="q-content-wrap">
 
@@ -974,6 +990,23 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<div class="sub"><span class="tag">2.1</span>
+              \(r=\dfrac{81}{90}=\dfrac{9}{10}\); \(\dfrac{90}{x}=\dfrac{81}{90}\Rightarrow x=100\)
+            </div>
+<div class="sub"><span class="tag">2.2</span>
+              \(S_n=\dfrac{100\big(1-(0{,}9)^n\big)}{1-0{,}9}=1\,000\big(1-(0{,}9)^n\big)\)
+            </div>
+<div class="sub"><span class="tag">2.3</span>
+              \(S_\infty=\dfrac{100}{1-0{,}9}=1\,000\)
+            </div>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 3 <span class="src-year">(2021)</span></div>
           <div class="q-content-wrap">
@@ -986,35 +1019,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[11]</div>
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 4 <span class="src-year">(2021)</span></div>
-          <div class="q-content-wrap">
-
-<p class="stem">Consider the linear pattern: $5;7;9;\dots$</p>
-<div class="sub"><span class="sub-label">4.1</span> Determine $T_{51}$. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">4.2</span> Calculate the sum of the first 51 terms. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">4.3</span> Write down the expansion of $\displaystyle\sum_{n=1}^{5000}(2n+3)$, showing only the first 3 terms and the last term. <span class="marks">(1)</span></div>
-<div class="sub"><span class="sub-label">4.4</span> Hence, or otherwise, calculate $\displaystyle\sum_{n=1}^{5000}(2n+3)+\sum_{n=1}^{4999}(-2n-1)$. Show all working. <span class="marks">(4)</span></div>
-<div class="total">[10]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
-<div class="sub"><span class="tag">2.1</span>
-              \(r=\dfrac{81}{90}=\dfrac{9}{10}\); \(\dfrac{90}{x}=\dfrac{81}{90}\Rightarrow x=100\)
-            </div>
-<div class="sub"><span class="tag">2.2</span>
-              \(S_n=\dfrac{100\big(1-(0{,}9)^n\big)}{1-0{,}9}=1\,000\big(1-(0{,}9)^n\big)\)
-            </div>
-<div class="sub"><span class="tag">2.3</span>
-              \(S_\infty=\dfrac{100}{1-0{,}9}=1\,000\)
-            </div>
-</div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span> $T_4=-82$</div>
 <div class="a-sub"><span class="a-sub-label">3.2</span>
@@ -1028,8 +1037,25 @@ Maximum depth = 360 m.</div>
 <div class="a-sub"><span class="a-sub-label">3.4</span> $n=\dfrac{-26}{2(-1)}=13$, $T_{13}=-1$, so add 2 (to make max $=1$)</div>
 <div class="total">[11]</div>
 </div>
-            <div class="ans-sub-label">Question 4</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 4 <span class="src-year">(2021)</span></div>
+          <div class="q-content-wrap">
+
+<p class="stem">Consider the linear pattern: $5;7;9;\dots$</p>
+<div class="sub"><span class="sub-label">4.1</span> Determine $T_{51}$. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">4.2</span> Calculate the sum of the first 51 terms. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">4.3</span> Write down the expansion of $\displaystyle\sum_{n=1}^{5000}(2n+3)$, showing only the first 3 terms and the last term. <span class="marks">(1)</span></div>
+<div class="sub"><span class="sub-label">4.4</span> Hence, or otherwise, calculate $\displaystyle\sum_{n=1}^{5000}(2n+3)+\sum_{n=1}^{4999}(-2n-1)$. Show all working. <span class="marks">(4)</span></div>
+<div class="total">[10]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">4.1</span> $a=5,\ d=2$; $T_{51}=5+(50)(2)=105$</div>
 <div class="a-sub"><span class="a-sub-label">4.2</span> $S_{51}=\dfrac{51}{2}[2(5)+50(2)]=2805$</div>
@@ -1048,8 +1074,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2020<span class="badge">[8]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
 
@@ -1063,20 +1088,11 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2020)</span></div>
-          <div class="q-content-wrap">
-
-<div class="sub"><span class="sub-label">3.1</span> Prove that $\displaystyle\sum_{k=1}^{\infty}4\cdot3^{2-k}$ is a convergent geometric series. Show all calculations. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">3.2</span> If $\displaystyle\sum_{k=p}^{\infty}4\cdot3^{2-k}=\tfrac29$, determine the value of $p$. <span class="marks">(5)</span></div>
-<div class="total">[8]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1</span>
               \(a=7\); \(a+3d=-11 \Rightarrow d=-6\)<br/>
               \(x=1\); \(y=-5\)
@@ -1098,8 +1114,22 @@ Maximum depth = 360 m.</div>
               \(n=\dfrac{-1\pm\sqrt{56\,169}}{4}=\dfrac{-1\pm237}{4} \Rightarrow n=59\)
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2020)</span></div>
+          <div class="q-content-wrap">
+
+<div class="sub"><span class="sub-label">3.1</span> Prove that $\displaystyle\sum_{k=1}^{\infty}4\cdot3^{2-k}$ is a convergent geometric series. Show all calculations. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">3.2</span> If $\displaystyle\sum_{k=p}^{\infty}4\cdot3^{2-k}=\tfrac29$, determine the value of $p$. <span class="marks">(5)</span></div>
+<div class="total">[8]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span>
 <div class="worklines">
@@ -1122,11 +1152,9 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2019<span class="badge">[9]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
-<img src="./Diagrams/Grade12P1/2019 Q2.png" style="width:70%">
 
 <p class="prose">2.1 Given the quadratic sequence: \(321\ ;\ 290\ ;\ 261\ ;\ 234\ ;\ldots\)</p>
 <div class="sub"><span class="tag">2.1.1</span> Write down the values of the next TWO terms of the sequence <span class="marks">(2)</span></div>
@@ -1140,23 +1168,11 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2019)</span></div>
-          <div class="q-content-wrap">
-
-<div class="sub"><span class="sub-label">3.1</span> Without using a calculator, determine the value of $\displaystyle\sum_{y=3}^{10}\dfrac{1}{y-2}-\sum_{y=3}^{10}\dfrac{1}{y-1}$. <span class="marks">(3)</span></div>
-<p class="stem">3.2 A steel pavilion at a sports ground comprises a series of 12 steps. Each step is 5 m wide, with a rise of $\tfrac13$ m and a tread of $\tfrac23$ m. The open (shaded) side on each side of the pavilion must be covered with metal sheeting.</p>
-<img src="./Diagrams/Grade12P1/2019 Q3.png" style="width:70%">
-
-<div class="sub">Calculate the area (in m²) of metal sheeting needed to cover both open sides. <span class="marks">(6)</span></div>
-<div class="total">[9]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1.1</span> \(209\ ;\ 186\)</div>
 <div class="sub"><span class="tag">2.1.2</span>
               Second difference \(=2 \Rightarrow a=1\); \(b=-34\); \(c=354\)<br/>
@@ -1178,8 +1194,25 @@ Maximum depth = 360 m.</div>
               \(n-1&lt;10 \Rightarrow n&lt;11 \Rightarrow n=10\)
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2019)</span></div>
+          <div class="q-content-wrap">
+
+<div class="sub"><span class="sub-label">3.1</span> Without using a calculator, determine the value of $\displaystyle\sum_{y=3}^{10}\dfrac{1}{y-2}-\sum_{y=3}^{10}\dfrac{1}{y-1}$. <span class="marks">(3)</span></div>
+<p class="stem">3.2 A steel pavilion at a sports ground comprises a series of 12 steps. Each step is 5 m wide, with a rise of $\tfrac13$ m and a tread of $\tfrac23$ m. The open (shaded) side on each side of the pavilion must be covered with metal sheeting.</p>
+<img src="./Diagrams/Grade12P1/2019 Q3.png" style="width:70%">
+
+<div class="sub">Calculate the area (in m²) of metal sheeting needed to cover both open sides. <span class="marks">(6)</span></div>
+<div class="total">[9]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span>
 <div class="worklines">
@@ -1201,8 +1234,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2018<span class="badge">[11]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
 
@@ -1217,23 +1249,11 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2018)</span></div>
-          <div class="q-content-wrap">
-
-<p class="stem">A geometric series has a constant ratio of $\tfrac12$ and a sum to infinity of 6.</p>
-<div class="sub"><span class="sub-label">3.1</span> Calculate the first term of the series. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">3.2</span> Calculate the 8th term of the series. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">3.3</span> Given: $\displaystyle\sum_{k=1}^{n}3(2)^{1-k}=5{,}8125$. Calculate the value of $n$. <span class="marks">(4)</span></div>
-<div class="sub"><span class="sub-label">3.4</span> If $\displaystyle\sum_{k=1}^{20}3(2)^{1-k}=p$, write down $\displaystyle\sum_{k=1}^{20}24(2)^{-k}$ in terms of $p$. <span class="marks">(3)</span></div>
-<div class="total">[11]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1.1</span> \(T_5=42\)</div>
 <div class="sub"><span class="tag">2.1.2</span>
               Second difference \(=6 \Rightarrow a=3\); \(b=-8\); \(c=7\)<br/>
@@ -1251,8 +1271,25 @@ Maximum depth = 360 m.</div>
               \((n-7)(13n-2)=0 \Rightarrow n=7\) (reject \(n=\tfrac{2}{13}\))
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2018)</span></div>
+          <div class="q-content-wrap">
+
+<p class="stem">A geometric series has a constant ratio of $\tfrac12$ and a sum to infinity of 6.</p>
+<div class="sub"><span class="sub-label">3.1</span> Calculate the first term of the series. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">3.2</span> Calculate the 8th term of the series. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">3.3</span> Given: $\displaystyle\sum_{k=1}^{n}3(2)^{1-k}=5{,}8125$. Calculate the value of $n$. <span class="marks">(4)</span></div>
+<div class="sub"><span class="sub-label">3.4</span> If $\displaystyle\sum_{k=1}^{20}3(2)^{1-k}=p$, write down $\displaystyle\sum_{k=1}^{20}24(2)^{-k}$ in terms of $p$. <span class="marks">(3)</span></div>
+<div class="total">[11]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span> $S_\infty=\dfrac{a}{1-r}\Rightarrow 6=\dfrac{a}{1-\tfrac12}\Rightarrow a=3$</div>
 <div class="a-sub"><span class="a-sub-label">3.2</span> $T_8=3\left(\tfrac12\right)^7=\dfrac{3}{128}$</div>
@@ -1275,8 +1312,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2017</summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
 
@@ -1291,22 +1327,11 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 3 <span class="src-year">(2017)</span></div>
-          <div class="q-content-wrap">
-
-<p class="prose">A convergent geometric series consisting of only positive terms has first term \(a\), constant ratio \(r\) and \(n\)th term \(T_n\), such that \(\displaystyle\sum_{n=3}^{\infty}T_n=\dfrac14\).</p>
-<div class="sub"><span class="tag">3.1</span> If \(T_1+T_2=2\), write down an expression for \(a\) in terms of \(r\) <span class="marks">(2)</span></div>
-<div class="sub"><span class="tag">3.2</span> Calculate the values of \(a\) and \(r\) <span class="marks">(6)</span></div>
-<div class="total">[8]</div>
-
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
+<div>
 <div class="sub"><span class="tag">2.1.1</span> Second difference \(=-6\)</div>
 <div class="sub"><span class="tag">2.1.2</span>
               \(a=-3\); \(b=0\); \(c=8\)<br/>
@@ -1325,8 +1350,24 @@ Maximum depth = 360 m.</div>
               \(S_{30}=\dfrac{30}{2}\big[2(20)+29(6)\big]=3\,210\)
             </div>
 </div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 3 <span class="src-year">(2017)</span></div>
+          <div class="q-content-wrap">
+
+<p class="prose">A convergent geometric series consisting of only positive terms has first term \(a\), constant ratio \(r\) and \(n\)th term \(T_n\), such that \(\displaystyle\sum_{n=3}^{\infty}T_n=\dfrac14\).</p>
+<div class="sub"><span class="tag">3.1</span> If \(T_1+T_2=2\), write down an expression for \(a\) in terms of \(r\) <span class="marks">(2)</span></div>
+<div class="sub"><span class="tag">3.2</span> Calculate the values of \(a\) and \(r\) <span class="marks">(6)</span></div>
+<div class="total">[8]</div>
+
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 <div class="sub"><span class="tag">3.1</span>
               \(a+ar=2 \Rightarrow a=\dfrac{2}{1+r}\)
             </div>
@@ -1342,8 +1383,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2016<span class="badge">[15]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
 
@@ -1356,6 +1396,26 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<div class="sub"><span class="tag">2.1</span> \(T_4=-7\)</div>
+<div class="sub"><span class="tag">2.2</span>
+              \(a=5,\ d=-4\); \(-87=5+(n-1)(-4) \Rightarrow n=24\)
+            </div>
+<div class="sub"><span class="tag">2.3</span>
+              \(S_{24}=12\big[10-92\big]=-984\); subtract the first two (positive) terms \(5+1=6\)<br/>
+              Sum of negatives \(=-984-6=-990\)
+            </div>
+<div class="sub"><span class="tag">2.4</span>
+              \(T_n=-4n+9\); \(-4175=-4n+9 \Rightarrow n=1\,046\) is out of range; using full sequence to \(-4187\): \(n=1\,049\) terms total.<br/>
+              Terms divisible by 5 occur every 5th term starting at \(T_1=5\): there are 210 such terms.
+            </div>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 3 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
@@ -1371,26 +1431,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[15]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
-<div class="sub"><span class="tag">2.1</span> \(T_4=-7\)</div>
-<div class="sub"><span class="tag">2.2</span>
-              \(a=5,\ d=-4\); \(-87=5+(n-1)(-4) \Rightarrow n=24\)
-            </div>
-<div class="sub"><span class="tag">2.3</span>
-              \(S_{24}=12\big[10-92\big]=-984\); subtract the first two (positive) terms \(5+1=6\)<br/>
-              Sum of negatives \(=-984-6=-990\)
-            </div>
-<div class="sub"><span class="tag">2.4</span>
-              \(T_n=-4n+9\); \(-4175=-4n+9 \Rightarrow n=1\,046\) is out of range; using full sequence to \(-4187\): \(n=1\,049\) terms total.<br/>
-              Terms divisible by 5 occur every 5th term starting at \(T_1=5\): there are 210 such terms.
-            </div>
-</div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1.1</span>
 <div class="worklines">
@@ -1419,8 +1464,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2015<span class="badge">[12]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 2 <span class="src-year">(2015)</span></div>
           <div class="q-content-wrap">
 
@@ -1433,6 +1477,21 @@ Maximum depth = 360 m.</div>
 
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<div class="sub"><span class="tag">2.1</span> \(T_5=10(0{,}5)^4=0{,}625\)</div>
+<div class="sub"><span class="tag">2.2</span> \(T_n=10(0{,}5)^{n-1}\)</div>
+<div class="sub"><span class="tag">2.3</span> The series converges because \(|r|=0{,}5&lt;1\)</div>
+<div class="sub"><span class="tag">2.4</span>
+              \(S_\infty=\dfrac{10}{0{,}5}=20\); \(S_n=20\big(1-(0{,}5)^n\big)\)<br/>
+              \(S_\infty-S_n=20(0{,}5)^n\)
+            </div>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 3 <span class="src-year">(2015)</span></div>
           <div class="q-content-wrap">
@@ -1448,21 +1507,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[12]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 2</div>
-            <div>
-<div class="sub"><span class="tag">2.1</span> \(T_5=10(0{,}5)^4=0{,}625\)</div>
-<div class="sub"><span class="tag">2.2</span> \(T_n=10(0{,}5)^{n-1}\)</div>
-<div class="sub"><span class="tag">2.3</span> The series converges because \(|r|=0{,}5&lt;1\)</div>
-<div class="sub"><span class="tag">2.4</span>
-              \(S_\infty=\dfrac{10}{0{,}5}=20\); \(S_n=20\big(1-(0{,}5)^n\big)\)<br/>
-              \(S_\infty-S_n=20(0{,}5)^n\)
-            </div>
-</div>
-            <div class="ans-sub-label">Question 3</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">3.1</span> $d=8$: $T_k=-3+(k-1)(8)=8k-11$</div>
 <div class="a-sub"><span class="a-sub-label">3.2</span> $S_n=\displaystyle\sum_{k=1}^{n}(8k-11)$</div>
@@ -1490,8 +1539,7 @@ Maximum depth = 360 m.</div>
   <div class="topic-body">
     <details class="yr">
       <summary>2025<span class="badge">[36]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
 <p class="stem">The graph of $f(x)=\log_{\frac13}x$ is drawn below. Point A is the $x$-intercept of $f$ and $(3;t)$ lies on $f$.</p>
@@ -1505,6 +1553,22 @@ Maximum depth = 360 m.</div>
 <div class="total">[10]</div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>4.1</b> $t=\log_{\frac13}3=\textbf{-1}$</p>
+<p><b>4.2</b> $x$-intercept: $\log_{\frac13}x=0\Rightarrow x=1$. $\textbf{A(1;0)}$</p>
+<p><b>4.3</b> $y = \log_{1/3}(x) \implies x = \left(\frac{1}{3}\right)^y$; swap: $\mathbf{y = \left(\frac{1}{3}\right)^x}$</p>
+<p><b>4.4</b> $y=0$</p>
+<p><b>4.5</b> Decreasing exponential through $(1;0)$ and $(0;1)$ (translated up from A), asymptote $y=0$.</p>
+<img src="./Diagrams/Grade12P1/Answers/2025_A4.5.png" style="width:70%">
+<p><b>4.6</b> $h(x)=f^{-1}(x-5)=\left(\tfrac13\right)^{x-5}$. As $x\to4^{+}$, $y\to3$; as $x\to\infty$, $y\to0$. $\textbf{0&lt;y&lt;3}$</p>
+<p class="total-line">Total: 10</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
@@ -1522,6 +1586,22 @@ Maximum depth = 360 m.</div>
 <div class="total">[18]</div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>5.1</b> $x\in\mathbb{R}, x\ne3$</p>
+<p><b>5.2</b> $y\le8$</p>
+<p><b>5.3.1</b> Solving $f = g$ gives the single real solution $x = 5$ (D); testing regions shows $g \le f$ for $\mathbf{3 < x \le 5}$</p>
+<p><b>5.3.2</b> $-\tfrac12x^2+3x+3{,}5&lt;6 \Rightarrow x^2-6x+5&gt;0 \Rightarrow (x-1)(x-5)&gt;0 \Rightarrow \textbf{x&lt;1 or x&gt;5}$</p>
+<p><b>5.4</b> Using vertex form with P$(3; 8)$: $f(x) = a(x - 3)^2 + 8$. Substituting D$(5; 6)$: $4a + 8 = 6 \implies a = -\frac{1}{2}$. $\therefore f(x) = -\frac{1}{2}(x - 3)^2 + 8 = \mathbf{-\frac{1}{2}x^2 + 3x + \frac{7}{2}}$</p>
+<p><b>5.5</b> $f(x)=0$: $x^2-6x-7=0\Rightarrow(x-7)(x+1)=0\Rightarrow x=7$ (M). $g(x)=0$: $\tfrac{-4}{x-3}+8=0\Rightarrow x=3{,}5$ (T). $MT=7-3{,}5=\textbf{3,5 units}$</p>
+<p><b>5.6</b> $f'(x)=-x+3$; $f'(5)=-2$. Tangent: $y-6=-2(x-5)\Rightarrow \textbf{y=-2x+16}$</p>
+<p class="total-line">Total: 18</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 6 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
@@ -1533,34 +1613,13 @@ Maximum depth = 360 m.</div>
 <div class="total">[8]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 4 <span class="src-year">(2025)</span></div>
-            <div>
-<p><b>4.1</b> $t=\log_{\frac13}3=\textbf{-1}$</p>
-<p><b>4.2</b> $x$-intercept: $\log_{\frac13}x=0\Rightarrow x=1$. $\textbf{A(1;0)}$</p>
-<p><b>4.3</b> $y=\log_{\frac13}x \Rightarrow x=\left(\tfrac13\right)^y$; swap: $\textbf{y=\left(\tfrac13\right)^x}$</p>
-<p><b>4.4</b> $y=0$</p>
-<p><b>4.5</b> Decreasing exponential through $(1;0)$ and $(0;1)$ (translated up from A), asymptote $y=0$.</p>
-<p><b>4.6</b> $h(x)=f^{-1}(x-5)=\left(\tfrac13\right)^{x-5}$. As $x\to4^{+}$, $y\to3$; as $x\to\infty$, $y\to0$. $\textbf{0&lt;y&lt;3}$</p>
-<p class="total-line">Total: 10</p>
-</div>
-            <div class="ans-sub-label">Question 5 <span class="src-year">(2025)</span></div>
-            <div>
-<p><b>5.1</b> $x\in\mathbb{R}, x\ne3$</p>
-<p><b>5.2</b> $y\le8$</p>
-<p><b>5.3.1</b> Solving $f=g$ gives the single real solution $x=5$ (D); testing regions shows $g\le f$ for $\textbf{3&lt;x\le5}$</p>
-<p><b>5.3.2</b> $-\tfrac12x^2+3x+3{,}5&lt;6 \Rightarrow x^2-6x+5&gt;0 \Rightarrow (x-1)(x-5)&gt;0 \Rightarrow \textbf{x&lt;1 or x&gt;5}$</p>
-<p><b>5.4</b> Using vertex form with P$(3;8)$: $f(x)=a(x-3)^2+8$. Substituting D$(5;6)$: $4a+8=6\Rightarrow a=-\tfrac12$. $\therefore f(x)=-\tfrac12(x-3)^2+8=\textbf{-\tfrac12x^2+3x+\tfrac72}$</p>
-<p><b>5.5</b> $f(x)=0$: $x^2-6x-7=0\Rightarrow(x-7)(x+1)=0\Rightarrow x=7$ (M). $g(x)=0$: $\tfrac{-4}{x-3}+8=0\Rightarrow x=3{,}5$ (T). $MT=7-3{,}5=\textbf{3,5 units}$</p>
-<p><b>5.6</b> $f'(x)=-x+3$; $f'(5)=-2$. Tangent: $y-6=-2(x-5)\Rightarrow \textbf{y=-2x+16}$</p>
-<p class="total-line">Total: 18</p>
-</div>
-            <div class="ans-sub-label">Question 6 <span class="src-year">(2025)</span></div>
-            <div>
+<div>
 <p><b>6.1</b> Since $g$ meets its own $x$-axis intercept where the vertical asymptote crosses: $\textbf{(-p;0)}$</p>
-<p><b>6.2</b> Let $c=p$ (from 6.1). $g(1)=q\Rightarrow q=1+c$. $g(0)=f(0)\Rightarrow c=\tfrac{a}{p}+q$. $g(3)=f(3)\Rightarrow 3+p=\tfrac{a}{3+p}+q$. Solving simultaneously: $p=-2,\ a=2,\ q=-1$. $\therefore \textbf{f(x)=\dfrac{2}{x-2}-1}$</p>
+<p><b>6.2</b> Let $c = p$ (from 6.1). $g(1) = q \implies q = 1 + c$. $g(0) = f(0) \implies c = \frac{a}{p} + q$. $g(3) = f(3) \implies 3 + p = \frac{a}{3+p} + q$. Solving simultaneously: $p = -2$, $a = 2$, $q = -1$. $\therefore \mathbf{f(x) = \frac{2}{x-2} - 1}$</p>
 <p><b>6.3</b> Centre of $f$ is $(2;-1)$; axis of symmetry with gradient 1 through the centre is $y=x-3$, whereas $g:y=x-2$. $\textbf{Translate }g\textbf{ 1 unit down}$</p>
 <p class="total-line">Total: 8</p>
 </div>
@@ -1570,8 +1629,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2024<span class="badge">[9+18+15]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
 
@@ -1583,6 +1641,7 @@ Maximum depth = 360 m.</div>
 <div class="total">[9]</div>
 </div>
         </div>
+        
         <div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
@@ -1596,6 +1655,20 @@ Maximum depth = 360 m.</div>
 <div class="total">[10]</div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>5.1</b> Vertical asymptote $x=1 \Rightarrow \textbf{p=-1}$</p>
+<p><b>5.2</b> Centre $(1;q)$ lies on $g(x)=x-3$: $q=1-3=\textbf{-2},\ \text{so } y=-2$</p>
+<p><b>5.3</b> $f(0)=\dfrac{a}{-1}-2=1 \Rightarrow -a=3 \Rightarrow \textbf{a=-3}$</p>
+<p><b>5.4</b> $f(x) = \frac{-3}{x-1} - 2$; $x$-intercept at $x = -0.5$. Testing branches: $\mathbf{-0.5 \le x < 1}$</p>
+<p><b>5.5</b> $f$ is increasing on each branch; reflecting $f$ about the vertical asymptote $x=1$ keeps the same domain and range but makes $h$ decreasing.</p>
+<p class="total-line">Total: 10</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 6 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
@@ -1608,37 +1681,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[15]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div>
-
-<div class="a-sub"><span class="a-sub-label">4.1</span>
-<div class="worklines">
-<div>$-\tfrac{5}{9}=a^2-1 \Rightarrow a^2=\tfrac49 \Rightarrow a=\tfrac23$</div>
-</div>
-</div>
-<div class="a-sub"><span class="a-sub-label">4.2</span> $y&gt;-1$</div>
-<div class="a-sub"><span class="a-sub-label">4.3</span> Decreasing exponential curve through $(0;0)$ with horizontal asymptote $y=-1$.</div>
-<div class="a-sub"><span class="a-sub-label">4.4</span>
-<div class="worklines">
-<div>$\tfrac{19}{8}=\left(\tfrac23\right)^x-1 \Rightarrow \tfrac{27}{8}=\left(\tfrac23\right)^x \Rightarrow \left(\tfrac32\right)^3=\left(\tfrac32\right)^{-x}\Rightarrow x=-3$</div>
-<div>$C\left(-3;\tfrac{19}{8}\right)$, so $C'\left(\tfrac{19}{8};-3\right)$</div>
-</div>
-</div>
-<div class="total">[9]</div>
-</div>
-            <div class="ans-sub-label">Question 5 <span class="src-year">(2024)</span></div>
-            <div>
-<p><b>5.1</b> Vertical asymptote $x=1 \Rightarrow \textbf{p=-1}$</p>
-<p><b>5.2</b> Centre $(1;q)$ lies on $g(x)=x-3$: $q=1-3=\textbf{-2},\ \text{so } y=-2$</p>
-<p><b>5.3</b> $f(0)=\dfrac{a}{-1}-2=1 \Rightarrow -a=3 \Rightarrow \textbf{a=-3}$</p>
-<p><b>5.4</b> $f(x)=\dfrac{-3}{x-1}-2$; $x$-intercept at $x=-0{,}5$. Testing branches: $\textbf{-0,5\le x&lt;1}$</p>
-<p><b>5.5</b> $f$ is increasing on each branch; reflecting $f$ about the vertical asymptote $x=1$ keeps the same domain and range but makes $h$ decreasing.</p>
-<p class="total-line">Total: 10</p>
-</div>
-            <div class="ans-sub-label">Question 6 <span class="src-year">(2024)</span></div>
-            <div>
+<div>
 <p><b>6.1</b> $x=\dfrac{-4}{2(-1)}=2$; $f(2)=9$. $\textbf{B(2;9)}$</p>
 <p><b>6.2</b> $f(x)=0\Rightarrow x^2-4x-5=0\Rightarrow(x-5)(x+1)=0$; A$(-1;0)$. Gradient$=\dfrac{8-0}{3-(-1)}=2$. $\therefore \textbf{g(x)=2x+2}$</p>
 <p><b>6.3</b> $EH=f(x)-g(x)=-x^2+2x+3$, maximum at $x=1$: $EH=\textbf{4 units}$</p>
@@ -1651,8 +1698,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2023<span class="badge">[32]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2023)</span></div>
           <div class="q-content-wrap">
 <p class="stem">Sketched below is the graph of $f(x)=2^x-4$ for $x\in[-2;4)$. A and B are respectively the $y$- and $x$-intercepts of $f$.</p>
@@ -1667,6 +1713,22 @@ Maximum depth = 360 m.</div>
 <div class="total">[14]</div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>4.1</b> $y=-4$</p>
+<p><b>4.2</b> $2^x=4\Rightarrow x=2$. $\textbf{B(2;0)}$</p>
+<p><b>4.3</b> A$(0; -3)$. Gradient $= \frac{0 - (-3)}{2 - 0} = \frac{3}{2}$. $\mathbf{k(x) = \frac{3}{2}x - 3}$</p>
+<p><b>4.4</b> $f(1)=-2$; $k(1)=-1{,}5$. Distance$=\textbf{0,5 units}$</p>
+<p><b>4.5</b> $\textbf{g(x)=2^x}$</p>
+<p><b>4.6</b> Range of $g$ for $x \in [-2; 4)$ is $[0.25; 16)$, so domain of $g^{-1}$ is $\mathbf{\left[\frac{1}{4}; 16\right)}$</p>
+<p><b>4.7</b> $x = 2^y \implies \mathbf{y = \log_2 x}$</p>
+<p class="total-line">Total: 14</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2023)</span></div>
           <div class="q-content-wrap">
@@ -1682,27 +1744,16 @@ Maximum depth = 360 m.</div>
 <div class="total">[18]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 4 <span class="src-year">(2023)</span></div>
-            <div>
-<p><b>4.1</b> $y=-4$</p>
-<p><b>4.2</b> $2^x=4\Rightarrow x=2$. $\textbf{B(2;0)}$</p>
-<p><b>4.3</b> A$(0;-3)$. Gradient$=\dfrac{0-(-3)}{2-0}=\tfrac32$. $\textbf{k(x)=\tfrac32x-3}$</p>
-<p><b>4.4</b> $f(1)=-2$; $k(1)=-1{,}5$. Distance$=\textbf{0,5 units}$</p>
-<p><b>4.5</b> $\textbf{g(x)=2^x}$</p>
-<p><b>4.6</b> Range of $g$ for $x\in[-2;4)$ is $[0{,}25;16)$, so domain of $g^{-1}$ is $\textbf{[\tfrac14;16)}$</p>
-<p><b>4.7</b> $x=2^y \Rightarrow \textbf{y=\log_2x}$</p>
-<p class="total-line">Total: 14</p>
-</div>
-            <div class="ans-sub-label">Question 5 <span class="src-year">(2023)</span></div>
-            <div>
+<div>
 <p><b>5.1</b> $\textbf{(1;8)}$</p>
 <p><b>5.2</b> $f(0)=7{,}5$. $\textbf{C(0;7,5)}$</p>
 <p><b>5.3</b> B$(1;8)$ on $g$: $\textbf{d=8}$</p>
 <p><b>5.4</b> $y\in\mathbb{R},\ \textbf{y\ne0}$</p>
-<p><b>5.5</b> $f\ge0$ for $x\in[-3;5]$; $g&gt;0$ for $x&gt;0$. Sign analysis of the product gives $\textbf{-3\le x&lt;0 or x\ge5}$</p>
+<p><b>5.5</b> $f \ge 0$ for $x \in [-3; 5]$; $g > 0$ for $x > 0$. Sign analysis of the product gives $\mathbf{-3 \le x < 0 \text{ or } x \ge 5}$</p>
 <p><b>5.6</b> $-2x+k=\tfrac8x \Rightarrow 2x^2-kx+8=0$. No solution: $k^2-64&lt;0 \Rightarrow \textbf{-8&lt;k&lt;8}$</p>
 <p><b>5.7</b> Tangency (first quadrant): $k=8\Rightarrow h(x)=-2x+8$; point of contact $x=2$, R$(2;4)$. $f(2)=7{,}5$. $f(2)+t=4\Rightarrow \textbf{t=-3,5}$</p>
 <p class="total-line">Total: 18</p>
@@ -1777,9 +1828,9 @@ Maximum depth = 360 m.</div>
           <div class="ans-body">
             <div>
 <p><b>5.1</b> $g(0)=6$. $\textbf{y=6}$</p>
-<p><b>5.2</b> Swap: $x=2y+6 \Rightarrow \textbf{g^{-1}(x)=0,5x-3}$</p>
+<p><b>5.2</b> Swap: $x = 2y + 6 \implies \mathbf{g^{-1}(x) = 0.5x - 3}$</p>
 <p><b>5.3</b> $A$ lies on $y=x$: $2x+6=x \Rightarrow x=-6$. $\textbf{A(-6;-6)}$</p>
-<p><b>5.4</b> $AB=\sqrt{(0-(-6))^2+(6-(-6))^2}=\sqrt{36+144}=\textbf{6\sqrt5\ (\approx13,42)\text{ units}}$</p>
+<p><b>5.4</b> $AB = \sqrt{(0 - (-6))^2 + (6 - (-6))^2} = \sqrt{36 + 144} = \mathbf{6\sqrt{5} \approx 13.42\text{ units}}$</p>
 <p><b>5.5</b> $C(6;0)$. Using the shoelace formula for A$(-6;-6)$, B$(0;6)$, C$(6;0)$: Area$=\tfrac12|(-6)(6-0)+0(0-(-6))+6(-6-6)|=\tfrac12|-36-72|=\textbf{54 square units}$</p>
 <p class="total-line">Total: 13</p>
 </div>
@@ -1812,7 +1863,7 @@ Maximum depth = 360 m.</div>
 <div class="a-sub"><span class="a-sub-label">5.2</span> $x\in R,\ x\ne3$</div>
 <div class="a-sub"><span class="a-sub-label">5.3</span> $0=\dfrac{-1}{x-3}+2 \Rightarrow -2x+6=-1 \Rightarrow x=\tfrac72$, so $\left(\tfrac72;0\right)$</div>
 <div class="a-sub"><span class="a-sub-label">5.4</span> $\left(0;\tfrac73\right)$</div>
-<div class="a-sub"><span class="a-sub-label">5.5</span> Hyperbola with asymptotes $x=3,\ y=2$, intercepts as above, correct branch shape.</div>
+<div class="a-sub"><span class="a-sub-label">5.5</span> Hyperbola with asymptotes $x=3,\ y=2$, intercepts as above, correct branch shape.<br/><img src="./Diagrams/Grade12P1/Answers/2021_A5.5.png" style="width:70%"></div>
 <div class="total">[10]</div>
 </div>
           </div>
@@ -1821,8 +1872,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2021 (cont.)<span class="badge">[8+17]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 6 <span class="src-year">(2021)</span></div>
           <div class="q-content-wrap">
 <p class="stem">The graph of $f(x)=\log_4x$ is drawn below. B$(k;2)$ is a point on $f$.</p>
@@ -1834,6 +1884,19 @@ Maximum depth = 360 m.</div>
 <div class="total">[8]</div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>6.1</b> $\log_4k=2 \Rightarrow \textbf{k=16}$</p>
+<p><b>6.2</b> $4^{-1} \le x \le 4^2 \implies \mathbf{0.25 \le x \le 16}$</p>
+<p><b>6.3</b> $x=4^y \Rightarrow \textbf{y=4^x}$</p>
+<p><b>6.4</b> $f^{-1}(x)=4^x&gt;0$ always, so need $x&lt;0$. $\textbf{x&lt;0}$</p>
+<p class="total-line">Total: 8</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 7 <span class="src-year">(2021)</span></div>
           <div class="q-content-wrap">
@@ -1850,19 +1913,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[17]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 6 <span class="src-year">(2021)</span></div>
-            <div>
-<p><b>6.1</b> $\log_4k=2 \Rightarrow \textbf{k=16}$</p>
-<p><b>6.2</b> $4^{-1}\le x\le4^2 \Rightarrow \textbf{0,25\le x\le16}$</p>
-<p><b>6.3</b> $x=4^y \Rightarrow \textbf{y=4^x}$</p>
-<p><b>6.4</b> $f^{-1}(x)=4^x&gt;0$ always, so need $x&lt;0$. $\textbf{x&lt;0}$</p>
-<p class="total-line">Total: 8</p>
-</div>
-            <div class="ans-sub-label">Question 7 <span class="src-year">(2021)</span></div>
-            <div>
+<div>
 <p><b>7.1</b> $\textbf{B(-4;0), D(6;0)}$</p>
 <p><b>7.2</b> $x=\tfrac{-4+6}{2}=1$; $f(1)=-25$. $\textbf{C(1;-25)}$</p>
 <p><b>7.3</b> $y\ge-25$</p>
@@ -1878,17 +1933,6 @@ Maximum depth = 360 m.</div>
     <details class="yr">
       <summary>2020<span class="badge">[12+23+12]</span></summary>
       <div class="yr-body">
-        <div class="q-item">
-          <div class="q-item-label">Question 7 <span class="src-year">(2020)</span></div>
-          <div class="q-content-wrap">
-<p>7.1 Determine \(f'(x)\) from first principles if \(f(x)=2x^2-1\). <span class="marks">(5)</span></p>
-<p>7.2 Determine:</p>
-<ul class="subq">
-<li>7.2.1 \(\dfrac{d}{dx}\left(\sqrt[5]{x^2}+x^3\right)\) <span class="marks">(3)</span></li>
-<li>7.2.2 \(f'(x)\) if \(f(x)=\dfrac{4x^2-9}{4x+6}\); \(x\neq -\dfrac{3}{2}\) <span class="marks">(4)</span></li>
-</ul>
-</div>
-        </div>
         <div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
@@ -1908,31 +1952,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[23]</div>
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 5 <span class="src-year">(2020)</span></div>
-          <div class="q-content-wrap">
-<p class="stem">The graph of $f(x)=3^{-x}$ is sketched below. A is the $y$-intercept of $f$. B is the point of intersection of $f$ and the line $y=9$.</p>
-<img src="./Diagrams/Grade12P1/2020 Q5.png" style="width:70%">
-<div class="sub"><span class="sub-label">5.1</span> Write down the coordinates of A. <span class="marks">(1)</span></div>
-<div class="sub"><span class="sub-label">5.2</span> Determine the coordinates of B. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">5.3</span> Write down the domain of $f^{-1}$. <span class="marks">(2)</span></div>
-<div class="sub"><span class="sub-label">5.4</span> Describe the translation from $f$ to $h(x)=\dfrac{27}{3^x}$. <span class="marks">(3)</span></div>
-<div class="sub"><span class="sub-label">5.5</span> Determine the values of $x$ for which $h(x)&lt;1$. <span class="marks">(3)</span></div>
-<div class="total">[12]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 7</div>
-            <div>
-<p class="note">Official memorandum not supplied for this paper — worked outline:</p>
-<p>7.1 \(f'(x)=\lim_{h\to0}\dfrac{2(x+h)^2-1-(2x^2-1)}{h}=\lim_{h\to0}\dfrac{4xh+2h^2}{h}=4x\)</p>
-<p>7.2.1 Rewrite \(x^{2/5}+x^3\): derivative \(=\dfrac{2}{5}x^{-3/5}+3x^2\)</p>
-<p>7.2.2 Simplify first: \(\dfrac{4x^2-9}{4x+6}=\dfrac{(2x-3)(2x+3)}{2(2x+3)}=\dfrac{2x-3}{2}=x-\dfrac{3}{2}\); so \(f'(x)=1\)</p>
-</div>
-            <div class="ans-sub-label">Question 4</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">4.1.1</span> $x=1$, $y=2$</div>
 <div class="a-sub"><span class="a-sub-label">4.1.2</span> Substituting $(1;2)$ into $y=-x+c$: $2=-1+c\Rightarrow c=3$, so $y=-x+3$</div>
@@ -1950,8 +1974,26 @@ Maximum depth = 360 m.</div>
 </div>
 <div class="total">[23]</div>
 </div>
-            <div class="ans-sub-label">Question 5 <span class="src-year">(2020)</span></div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 5 <span class="src-year">(2020)</span></div>
+          <div class="q-content-wrap">
+<p class="stem">The graph of $f(x)=3^{-x}$ is sketched below. A is the $y$-intercept of $f$. B is the point of intersection of $f$ and the line $y=9$.</p>
+<img src="./Diagrams/Grade12P1/2020 Q5.png" style="width:70%">
+<div class="sub"><span class="sub-label">5.1</span> Write down the coordinates of A. <span class="marks">(1)</span></div>
+<div class="sub"><span class="sub-label">5.2</span> Determine the coordinates of B. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">5.3</span> Write down the domain of $f^{-1}$. <span class="marks">(2)</span></div>
+<div class="sub"><span class="sub-label">5.4</span> Describe the translation from $f$ to $h(x)=\dfrac{27}{3^x}$. <span class="marks">(3)</span></div>
+<div class="sub"><span class="sub-label">5.5</span> Determine the values of $x$ for which $h(x)&lt;1$. <span class="marks">(3)</span></div>
+<div class="total">[12]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 <p><b>5.1</b> $f(0)=3^0=1$. $\textbf{A(0;1)}$</p>
 <p><b>5.2</b> $3^{-x}=9=3^2 \Rightarrow -x=2 \Rightarrow x=-2$. $\textbf{B(-2;9)}$</p>
 <p><b>5.3</b> Range of $f$ is $y&gt;0$, so domain of $f^{-1}$ is $\textbf{x&gt;0}$</p>
@@ -1965,8 +2007,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2019<span class="badge">[19+16+8]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2019 Q4.png" style="width:70%">
@@ -1987,6 +2028,24 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>4.1</th><td>\(p=-1\)  <span class="marks">✓ (1)</span></td></tr>
+<tr><th>4.2</th><td>D\((0;-3)\Rightarrow -3=\dfrac{a}{0-1}\Rightarrow a=3\). Sub \((1;0)\): \(0=1^2+b-3\Rightarrow b=2\). <span class="marks">✓✓✓ (3)</span></td></tr>
+<tr><th>4.3</th><td>\(y=x^2+2x-3\); axis of symmetry \(x=\dfrac{-2}{2(1)}=-1\); \(y=(-1)^2+2(-1)-3=-4\); C\((-1;-4)\). <span class="marks">(4)</span></td></tr>
+<tr><th>4.4</th><td>\(y\in[-4;\infty)\) or \(y\ge-4\) <span class="marks">(2)</span></td></tr>
+<tr><th>4.5</th><td>\(m=\tan45^\circ=1\); \(-4=(1)(-1)+c\Rightarrow c=-3\); \(y=x-3\) <span class="marks">(3)</span></td></tr>
+<tr><th>4.6</th><td>No — the line passes through C and D (or: a tangent at the turning point C has gradient 0). <span class="marks">(2)</span></td></tr>
+<tr><th>4.7</th><td>\(f(m-x)=f[-(x-m)]\): reflection in \(y\)-axis and translation 1 left, 4 up \(\Rightarrow m=-1,\ q=4\). <span class="marks">✓✓✓✓ (4)</span></td></tr>
+</table>
+<p class="totalmark">Total [19]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
@@ -2001,35 +2060,11 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 8 <span class="src-year">(2019)</span></div>
-          <div class="q-content-wrap">
-<p>An insect's height above the floor is modelled by \(h(t)=-2t^3+15t^2-24t+36\) (cm), \(t\) in seconds.</p>
-<ul class="subq">
-<li>8.1 Write down the height of the insect at \(t=0\). <span class="marks">(1)</span></li>
-<li>8.2 Show the insect reaches the floor only once (at \(t=6\)). <span class="marks">(3)</span></li>
-<li>8.3 Determine the maximum height of the insect above the floor. <span class="marks">(4)</span></li>
-</ul>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 4</div>
-            <div>
-<table class="marktable">
-<tr><th>4.1</th><td>\(p=-1\)  <span class="marks">✓ (1)</span></td></tr>
-<tr><th>4.2</th><td>D\((0;-3)\Rightarrow -3=\dfrac{a}{0-1}\Rightarrow a=3\). Sub \((1;0)\): \(0=1^2+b-3\Rightarrow b=2\). <span class="marks">✓✓✓ (3)</span></td></tr>
-<tr><th>4.3</th><td>\(y=x^2+2x-3\); axis of symmetry \(x=\dfrac{-2}{2(1)}=-1\); \(y=(-1)^2+2(-1)-3=-4\); C\((-1;-4)\). <span class="marks">(4)</span></td></tr>
-<tr><th>4.4</th><td>\(y\in[-4;\infty)\) or \(y\ge-4\) <span class="marks">(2)</span></td></tr>
-<tr><th>4.5</th><td>\(m=\tan45^\circ=1\); \(-4=(1)(-1)+c\Rightarrow c=-3\); \(y=x-3\) <span class="marks">(3)</span></td></tr>
-<tr><th>4.6</th><td>No — the line passes through C and D (or: a tangent at the turning point C has gradient 0). <span class="marks">(2)</span></td></tr>
-<tr><th>4.7</th><td>\(f(m-x)=f[-(x-m)]\): reflection in \(y\)-axis and translation 1 left, 4 up \(\Rightarrow m=-1,\ q=4\). <span class="marks">✓✓✓✓ (4)</span></td></tr>
-</table>
-<p class="totalmark">Total [19]</p>
-</div>
-            <div class="ans-sub-label">Question 5</div>
-            <div>
+<div>
 <table class="marktable">
 <tr><th>5.1</th><td>\(16=k^4\Rightarrow k=2\) <span class="marks">(2)</span></td></tr>
 <tr><th>5.2</th><td>\(f^{-1}: x=2^y \Rightarrow y=\log_2 x\) <span class="marks">(2)</span></td></tr>
@@ -2045,26 +2080,14 @@ Maximum depth = 360 m.</div>
 </table>
 <p class="totalmark">Total [16]</p>
 </div>
-            <div class="ans-sub-label">Question 8</div>
-            <div>
-<table class="marktable">
-<tr><th>8.1</th><td>36 cm <span class="marks">(1)</span></td></tr>
-<tr><th>8.2</th><td>At \(t=6\), \(h=0\); the remaining quadratic factor \(-2t^2+3t-6\) has no real roots \(\Rightarrow\) reaches the floor only once. <span class="marks">(3)</span></td></tr>
-<tr><th>8.3</th><td>
-                  \(h'(t)=-6t^2+30t-24=0\Rightarrow t^2-5t+4=0\Rightarrow(t-4)(t-1)=0\Rightarrow t=4\) or \(t=1\).
-                  <br/>Only \(t=4\) gives a maximum: \(h(4)=52\) cm <span class="marks">(4)</span>
-</td></tr>
-</table>
-<p class="totalmark">Total [8]</p>
-</div>
           </div>
         </details>
+        
       </div>
     </details>
     <details class="yr">
       <summary>2018<span class="badge">[8+8+20+8]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2018 Q4.png" style="width:70%">
@@ -2076,6 +2099,25 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+
+<div class="a-sub"><span class="a-sub-label">4.1</span> Yes — for every $x$-value there is only one corresponding $y$-value (one-to-one mapping / vertical line test).</div>
+<div class="a-sub"><span class="a-sub-label">4.2</span> R$(-12;-6)$</div>
+<div class="a-sub"><span class="a-sub-label">4.3</span> $-12=a(-6)^2 \Rightarrow a=-\tfrac13$</div>
+<div class="a-sub"><span class="a-sub-label">4.4</span>
+<div class="worklines">
+<div>$f:\ y=-\tfrac13x^2$, swap $x,y$: $x=-\tfrac13y^2 \Rightarrow y^2=-3x \Rightarrow y=\pm\sqrt{-3x}$</div>
+<div>Only $y=-\sqrt{-3x}$ (with $x\le0$) is valid for $f^{-1}$</div>
+</div>
+</div>
+<div class="total">[8]</div>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
@@ -2088,6 +2130,21 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>5.1</th><td>\(x\in\mathbb{R};x\neq1\) <span class="marks">(1)</span></td></tr>
+<tr><th>5.2</th><td>\(x=1\); \(y=0\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.3</th><td>\(y\)-intercept, vertical asymptote, correct shape shown. <span class="marks">(3)</span></td></tr>
+<tr><th>5.4</th><td>\(x\ge0;\ x\neq1\) (equivalently \(0\le x&lt;1\) or \(x&gt;1\)) <span class="marks">(2)</span></td></tr>
+</table>
+<p class="totalmark">Total [8]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 6 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
@@ -2103,6 +2160,24 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>6.1</th><td>Gradient \(=\dfrac{5-1}{4-0}=1\); \(y\)-intercept \((0;1)\Rightarrow g(x)=x+1\) <span class="marks">(2)</span></td></tr>
+<tr><th>6.2</th><td>\(x^2-2x-3=0\Rightarrow(x+1)(x-3)=0\Rightarrow\) A\((-1;0)\), B\((3;0)\) <span class="marks">(3)</span></td></tr>
+<tr><th>6.3</th><td>Turning point at \(x=1\Rightarrow y=-4\); range \(y\ge-4\) or \([-4;\infty)\) <span class="marks">(3)</span></td></tr>
+<tr><th>6.4.1</th><td>Set up \(x^2-4x-2=0\) (from MN=6 condition), solve: OT \(=2\) <span class="marks">(4)</span></td></tr>
+<tr><th>6.4.2</th><td>Substitute \(x=-2\) into \(g\): \(y=-1\Rightarrow\) N\((-2;-1)\) <span class="marks">(2)</span></td></tr>
+<tr><th>6.5</th><td>\(f'(x)=2x-2=1\Rightarrow x=\dfrac32\); \(f\left(\dfrac32\right)=-\dfrac{15}{4}\); tangent: \(y=x-\dfrac{21}{4}\) <span class="marks">(5)</span></td></tr>
+<tr><th>6.6</th><td>\(k&lt;-\dfrac{21}{4}\) <span class="marks">(1)</span></td></tr>
+</table>
+<p class="totalmark">Total [20]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
@@ -2116,44 +2191,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[8]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 4</div>
-            <div>
-<table class="marktable">
-<tr><th>4.1</th><td>Yes — for every \(x\)-value there is only one corresponding \(y\)-value (one-to-one mapping / vertical line test). <span class="marks">(2)</span></td></tr>
-<tr><th>4.2</th><td>R\((-12;-6)\) <span class="marks">(1)</span></td></tr>
-<tr><th>4.3</th><td>\(-12=a(-6)^2\Rightarrow a=-\dfrac13\) <span class="marks">(2)</span></td></tr>
-<tr><th>4.4</th><td>Swap: \(x=-\dfrac13y^2\Rightarrow y^2=-3x\Rightarrow y=\pm\sqrt{-3x}\); only \(y=-\sqrt{-3x}\), \(x\le0\) <span class="marks">(3)</span></td></tr>
-</table>
-<p class="totalmark">Total [8]</p>
-</div>
-            <div class="ans-sub-label">Question 5</div>
-            <div>
-<table class="marktable">
-<tr><th>5.1</th><td>\(x\in\mathbb{R};x\neq1\) <span class="marks">(1)</span></td></tr>
-<tr><th>5.2</th><td>\(x=1\); \(y=0\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.3</th><td>\(y\)-intercept, vertical asymptote, correct shape shown. <span class="marks">(3)</span></td></tr>
-<tr><th>5.4</th><td>\(x\ge0;\ x\neq1\) (equivalently \(0\le x&lt;1\) or \(x&gt;1\)) <span class="marks">(2)</span></td></tr>
-</table>
-<p class="totalmark">Total [8]</p>
-</div>
-            <div class="ans-sub-label">Question 6</div>
-            <div>
-<table class="marktable">
-<tr><th>6.1</th><td>Gradient \(=\dfrac{5-1}{4-0}=1\); \(y\)-intercept \((0;1)\Rightarrow g(x)=x+1\) <span class="marks">(2)</span></td></tr>
-<tr><th>6.2</th><td>\(x^2-2x-3=0\Rightarrow(x+1)(x-3)=0\Rightarrow\) A\((-1;0)\), B\((3;0)\) <span class="marks">(3)</span></td></tr>
-<tr><th>6.3</th><td>Turning point at \(x=1\Rightarrow y=-4\); range \(y\ge-4\) or \([-4;\infty)\) <span class="marks">(3)</span></td></tr>
-<tr><th>6.4.1</th><td>Set up \(x^2-4x-2=0\) (from MN=6 condition), solve: OT \(=2\) <span class="marks">(4)</span></td></tr>
-<tr><th>6.4.2</th><td>Substitute \(x=-2\) into \(g\): \(y=-1\Rightarrow\) N\((-2;-1)\) <span class="marks">(2)</span></td></tr>
-<tr><th>6.5</th><td>\(f'(x)=2x-2=1\Rightarrow x=\dfrac32\); \(f\left(\dfrac32\right)=-\dfrac{15}{4}\); tangent: \(y=x-\dfrac{21}{4}\) <span class="marks">(5)</span></td></tr>
-<tr><th>6.6</th><td>\(k&lt;-\dfrac{21}{4}\) <span class="marks">(1)</span></td></tr>
-</table>
-<p class="totalmark">Total [20]</p>
-</div>
-            <div class="ans-sub-label">Question 4</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">4.1</span> Yes — for every $x$-value there is only one corresponding $y$-value (one-to-one mapping / vertical line test).</div>
 <div class="a-sub"><span class="a-sub-label">4.2</span> R$(-12;-6)$</div>
@@ -2172,8 +2214,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2017<span class="badge">[14+23]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2017 Q5.png" style="width:70%">
@@ -2188,6 +2229,23 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>5.1</th><td>\(y\in\mathbb{R};\ y\neq-1\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.2</th><td>E\((2;-1)\) using OB=BE \(\Rightarrow p=-2,\ q=-1\): \(g(x)=\dfrac{2}{x-2}-1\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.3</th><td>\(\log_3t=1\Rightarrow t=3\) (from \(g\) or \(f\)) <span class="marks">(3)</span></td></tr>
+<tr><th>5.4</th><td>\(f^{-1}:y=3^x\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.5</th><td>\(3^x&lt;3\Rightarrow x&lt;1\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.6</th><td>Axis of symmetry with negative gradient: \(y=-x+3\); intersects \(f\) at B\((1;0)\). <span class="marks">(3)</span></td></tr>
+</table>
+<p class="totalmark">Total [14]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
@@ -2203,23 +2261,11 @@ Maximum depth = 360 m.</div>
 <div class="total">[23]</div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 5</div>
-            <div>
-<table class="marktable">
-<tr><th>5.1</th><td>\(y\in\mathbb{R};\ y\neq-1\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.2</th><td>E\((2;-1)\) using OB=BE \(\Rightarrow p=-2,\ q=-1\): \(g(x)=\dfrac{2}{x-2}-1\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.3</th><td>\(\log_3t=1\Rightarrow t=3\) (from \(g\) or \(f\)) <span class="marks">(3)</span></td></tr>
-<tr><th>5.4</th><td>\(f^{-1}:y=3^x\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.5</th><td>\(3^x&lt;3\Rightarrow x&lt;1\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.6</th><td>Axis of symmetry with negative gradient: \(y=-x+3\); intersects \(f\) at B\((1;0)\). <span class="marks">(3)</span></td></tr>
-</table>
-<p class="totalmark">Total [14]</p>
-</div>
-            <div class="ans-sub-label">Question 4</div>
-            <div>
+<div>
 
 <div class="a-sub"><span class="a-sub-label">4.1</span>
 <div class="worklines">
@@ -2248,8 +2294,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2016<span class="badge">[11+14+10]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 4 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2016 Q4.png" style="width:70%">
@@ -2263,6 +2308,24 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>4.1</th><td>\(y=0\) <span class="marks">(1)</span></td></tr>
+<tr><th>4.2</th><td>R\((0;1)\) <span class="marks">(1)</span></td></tr>
+<tr><th>4.3</th><td>\(9=a^2\Rightarrow a=3\) <span class="marks">(2)</span></td></tr>
+<tr><th>4.4</th><td>
+                  \(b^3=\dfrac{1}{81}\Rightarrow 3^b=3^{-4}\Rightarrow b=-4\); D has \(x=-4\), and \(y=y_P=9\Rightarrow\) DP \(=2-(-4)=6\) units <span class="marks">(4)</span>
+</td></tr>
+<tr><th>4.5</th><td>\(-\dfrac{1}{81}<k<0\) <span="" class="marks">(3)</k<0\)></td></tr>
+</table>
+<p class="totalmark">Total [11]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
@@ -2278,6 +2341,23 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>5.1</th><td>Axis of symmetry \(x=\dfrac{-4}{-2}=2\); \(f(2)=-4+8-3=1\Rightarrow\) B\((2;1)\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.2</th><td>\(y\le1\) <span class="marks">(1)</span></td></tr>
+<tr><th>5.3</th><td>\(-1\le x&lt;2\) <span class="marks">(2)</span></td></tr>
+<tr><th>5.4</th><td>\(x=-2\) <span class="marks">(1)</span></td></tr>
+<tr><th>5.5</th><td>Asymptotes intersect at B\((2;1)\Rightarrow p=2,\ t=-1\) <span class="marks">(4)</span></td></tr>
+<tr><th>5.6</th><td>\(x\le1\) or \(x\ge3\) (combining sign of \(f\) and \(g'\)) <span class="marks">(4)</span></td></tr>
+</table>
+<p class="totalmark">Total [14]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 6 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
@@ -2290,36 +2370,11 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 4</div>
-            <div>
-<table class="marktable">
-<tr><th>4.1</th><td>\(y=0\) <span class="marks">(1)</span></td></tr>
-<tr><th>4.2</th><td>R\((0;1)\) <span class="marks">(1)</span></td></tr>
-<tr><th>4.3</th><td>\(9=a^2\Rightarrow a=3\) <span class="marks">(2)</span></td></tr>
-<tr><th>4.4</th><td>
-                  \(b^3=\dfrac{1}{81}\Rightarrow 3^b=3^{-4}\Rightarrow b=-4\); D has \(x=-4\), and \(y=y_P=9\Rightarrow\) DP \(=2-(-4)=6\) units <span class="marks">(4)</span>
-</td></tr>
-<tr><th>4.5</th><td>\(-\dfrac{1}{81}<k<0\) <span="" class="marks">(3)</k<0\)></td></tr>
-</table>
-<p class="totalmark">Total [11]</p>
-</div>
-            <div class="ans-sub-label">Question 5</div>
-            <div>
-<table class="marktable">
-<tr><th>5.1</th><td>Axis of symmetry \(x=\dfrac{-4}{-2}=2\); \(f(2)=-4+8-3=1\Rightarrow\) B\((2;1)\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.2</th><td>\(y\le1\) <span class="marks">(1)</span></td></tr>
-<tr><th>5.3</th><td>\(-1\le x&lt;2\) <span class="marks">(2)</span></td></tr>
-<tr><th>5.4</th><td>\(x=-2\) <span class="marks">(1)</span></td></tr>
-<tr><th>5.5</th><td>Asymptotes intersect at B\((2;1)\Rightarrow p=2,\ t=-1\) <span class="marks">(4)</span></td></tr>
-<tr><th>5.6</th><td>\(x\le1\) or \(x\ge3\) (combining sign of \(f\) and \(g'\)) <span class="marks">(4)</span></td></tr>
-</table>
-<p class="totalmark">Total [14]</p>
-</div>
-            <div class="ans-sub-label">Question 6</div>
-            <div>
+<div>
 <table class="marktable">
 <tr><th>6.1</th><td>\(f\): line through \((3;0)\) and \((0;3)\); \(g\): increasing log curve through \((1;0)\). <span class="marks">(4)</span></td></tr>
 <tr><th>6.2</th><td>\(g^{-1}:y=2^x\) <span class="marks">(2)</span></td></tr>
@@ -2334,8 +2389,7 @@ Maximum depth = 360 m.</div>
     </details>
     <details class="yr">
       <summary>2015<span class="badge">[19+12+6]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 5 <span class="src-year">(2015)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2015 Q5.png" style="width:70%">
@@ -2350,36 +2404,11 @@ Maximum depth = 360 m.</div>
 </ul>
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 6 <span class="src-year">(2015)</span></div>
-          <div class="q-content-wrap">
-<img src="./Diagrams/Grade12P1/2015 Q6.png" style="width:70%">
-<p>6.1 Graphs of \(f(x)=-2x^2+18\) and \(g(x)=ax^2+bx+c\). P and Q are the \(x\)-intercepts of \(f\); Q and R are the \(x\)-intercepts of \(g\); S is the turning point of \(g\); T is the \(y\)-intercept of both.</p>
-<ul class="subq">
-<li>6.1.1 Write down the coordinates of T. <span class="marks">(1)</span></li>
-<li>6.1.2 Determine the coordinates of Q. <span class="marks">(3)</span></li>
-<li>6.1.3 Given that \(x=4{,}5\) at S, determine the coordinates of R. <span class="marks">(2)</span></li>
-<li>6.1.4 Determine the value(s) of \(x\) for which \(g''(x)&gt;0\). <span class="marks">(2)</span></li>
-</ul>
-<p>6.2 The function \(y=\dfrac{a}{x+p}+q\) has: domain \(x\in\mathbb{R},x\neq-2\); axis of symmetry \(y=x+6\); increasing for all \(x\neq-2\). Draw a neat sketch graph, including asymptotes. <span class="marks">(4)</span></p>
-</div>
-        </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 4 <span class="src-year">(2015)</span></div>
-          <div class="q-content-wrap">
-
-<p class="stem">Given: $f(x)=2^{x+1}-8$</p>
-<div class="sub"><span class="sub-label">4.1</span> Write down the equation of the asymptote of $f$. <span class="marks">(1)</span></div>
-<div class="sub"><span class="sub-label">4.2</span> Sketch the graph of $f$, clearly indicating all intercepts with the axes as well as the asymptote. <span class="marks">(4)</span></div>
-<div class="sub"><span class="sub-label">4.3</span> The graph of $g$ is obtained by reflecting the graph of $f$ in the $y$-axis. Write down the equation of $g$. <span class="marks">(1)</span></div>
-<div class="total">[6]</div>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 5</div>
-            <div>
+<div>
 <table class="marktable">
 <tr><th>5.1</th><td>\(2x-3=0\Rightarrow\) Q\((1{,}5;0)\) <span class="marks">(2)</span></td></tr>
 <tr><th>5.2</th><td>\(h(-2)=-7,\ h(4)=5\Rightarrow\) domain of \(h^{-1}\): \(-7\le x\le5\) <span class="marks">(3)</span></td></tr>
@@ -2394,19 +2423,54 @@ Maximum depth = 360 m.</div>
 </table>
 <p class="totalmark">Total [19]</p>
 </div>
-            <div class="ans-sub-label">Question 6</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 6 <span class="src-year">(2015)</span></div>
+          <div class="q-content-wrap">
+<img src="./Diagrams/Grade12P1/2015 Q6.png" style="width:70%">
+<p>6.1 Graphs of \(f(x)=-2x^2+18\) and \(g(x)=ax^2+bx+c\). P and Q are the \(x\)-intercepts of \(f\); Q and R are the \(x\)-intercepts of \(g\); S is the turning point of \(g\); T is the \(y\)-intercept of both.</p>
+<ul class="subq">
+<li>6.1.1 Write down the coordinates of T. <span class="marks">(1)</span></li>
+<li>6.1.2 Determine the coordinates of Q. <span class="marks">(3)</span></li>
+<li>6.1.3 Given that \(x=4{,}5\) at S, determine the coordinates of R. <span class="marks">(2)</span></li>
+<li>6.1.4 Determine the value(s) of \(x\) for which \(g''(x)&gt;0\). <span class="marks">(2)</span></li>
+</ul>
+<p>6.2 The function \(y=\dfrac{a}{x+p}+q\) has: domain \(x\in\mathbb{R},x\neq-2\); axis of symmetry \(y=x+6\); increasing for all \(x\neq-2\). Draw a neat sketch graph, including asymptotes. <span class="marks">(4)</span></p>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 <table class="marktable">
 <tr><th>6.1.1</th><td>T\((0;18)\) <span class="marks">(1)</span></td></tr>
 <tr><th>6.1.2</th><td>\(-2x^2+18=0\Rightarrow x^2=9\Rightarrow\) Q\((3;0)\) <span class="marks">(3)</span></td></tr>
 <tr><th>6.1.3</th><td>By symmetry about \(x=4{,}5\): R \(=(4{,}5+(4{,}5-3);0)=(6;0)\) <span class="marks">(2)</span></td></tr>
 <tr><th>6.1.4</th><td>For all \(x\in\mathbb{R}\) (or \((-\infty;\infty)\)) — since \(g\) is quadratic with constant, positive \(g''\). <span class="marks">(2)</span></td></tr>
-<tr><th>6.2</th><td>Centre \((-2;4)\) (from \(y=x+6\Rightarrow4=-2+6\)); increasing-branch hyperbola with asymptotes \(x=-2\) and \(y=4\). <span class="marks">(4)</span></td></tr>
+<tr><th>6.2</th><td>Centre \((-2;4)\) (from \(y=x+6\Rightarrow4=-2+6\)); increasing-branch hyperbola with asymptotes \(x=-2\) and \(y=4\). <span class="marks">(4)</span><br/><img src="./Diagrams/Grade12P1/Answers/2015_A6.2.png" style="width:70%"></td></tr>
 </table>
 <p class="totalmark">Total [12]</p>
 </div>
-            <div class="ans-sub-label">Question 4</div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 4 <span class="src-year">(2015)</span></div>
+          <div class="q-content-wrap">
+
+<p class="stem">Given: $f(x)=2^{x+1}-8$</p>
+<div class="sub"><span class="sub-label">4.1</span> Write down the equation of the asymptote of $f$. <span class="marks">(1)</span></div>
+<div class="sub"><span class="sub-label">4.2</span> Sketch the graph of $f$, clearly indicating all intercepts with the axes as well as the asymptote. <span class="marks">(4)</span></div>
+<div class="sub"><span class="sub-label">4.3</span> The graph of $g$ is obtained by reflecting the graph of $f$ in the $y$-axis. Write down the equation of $g$. <span class="marks">(1)</span></div>
+<div class="total">[6]</div>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 
 <div class="a-sub"><span class="a-sub-label">4.1</span> $y=-8$</div>
 <div class="a-sub"><span class="a-sub-label">4.2</span> Increasing exponential curve through $y$-intercept $-6$, $x$-intercept $-4$, asymptote $y=-8$.</div>
@@ -2475,7 +2539,7 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
             <div>
 <p><b>7.1</b> $A=5\,000\left(1+\tfrac{0{,}068}{4}\right)^{64}=\textbf{R14\,714,74}$</p>
 <p><b>7.2</b> $1-4r=0{,}5 \Rightarrow \textbf{r=12,5\%}$ p.a.</p>
-<p><b>7.3.1</b> Total paid $=60\times2\,300{,}98=138\,058{,}80$. Interest $=138\,058{,}80-100\,000=\textbf{R38\,058,80}$</p>
+<p><b>7.3.1</b> Total paid $= 60 \times 2300.98 = 138058.80$. Interest $= 138058.80 - 100000 = \mathbf{\text{R}38\,058.80}$</p>
 <p><b>7.3.2</b> Balance after 23 payments (monthly rate $i=0{,}135/12$): $B_{23}\approx R69\,338{,}78$. After accruing one more month's interest and the R22 300,98 payment on 1 March 2024, balance $\approx R47\,817{,}21$. Amortising this at R2 300,98/month takes a further $\approx24$ months, versus the $36$ months that would have remained. $\therefore$ loan is repaid approximately $\textbf{12 months earlier}$.</p>
 <p class="total-line">Total: 14</p>
 </div>
@@ -2507,7 +2571,7 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
 <p><b>6.1.1</b> $19\,319{,}48=18\,500\left(1+\tfrac{r}{12}\right)^6 \Rightarrow \left(1+\tfrac{r}{12}\right)^6=1{,}044296 \Rightarrow \textbf{r\approx8,70\%}$</p>
 <p><b>6.1.2</b> Effective $=\left(1+\tfrac{0{,}087}{12}\right)^{12}-1\approx\textbf{9,06\%}$</p>
 <p><b>6.2.1</b> $100\%\div20\%=\textbf{5 years}$</p>
-<p><b>6.2.2</b> $20\,000=x\cdot\dfrac{(1+\frac{0{,}087}{12})^{60}-1}{\frac{0{,}087}{12}} \Rightarrow \textbf{x\approx R267,18}$</p>
+<p><b>6.2.2</b> $20\,000 = x \cdot \frac{\left(1 + \frac{0.087}{12}\right)^{60} - 1}{\frac{0.087}{12}} \implies \mathbf{x \approx \text{R}267.18}$</p>
 <p><b>6.3</b> $1\,600\,000=20\,000\cdot\dfrac{1-(1+\frac{0{,}112}{12})^{-n}}{\frac{0{,}112}{12}} \Rightarrow n\approx147{,}85 \Rightarrow \textbf{147 full withdrawals}$</p>
 <p class="total-line">Total: 16</p>
 </div>
@@ -2533,10 +2597,14 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
           <summary>Show answers</summary>
           <div class="ans-body">
             <div>
-<p><b>6.1</b> $13\,459=12\,000\left(1+\tfrac{m}{400}\right)^8 \Rightarrow \left(1+\tfrac{m}{400}\right)^8=1{,}121583 \Rightarrow \textbf{m\approx5,78\%}$</p>
-<p><b>6.2</b> $F=1\,000\cdot\dfrac{(1+\frac{0{,}075}{12})^{12}-1}{\frac{0{,}075}{12}}\approx R12\,422{,}40$. Since $R12\,422{,}40&lt;R13\,000$, $\textbf{No, insufficient funds}$</p>
-<p><b>6.3.1</b> Loan $=0{,}85\times250\,000=\textbf{R212\,500}$</p>
-<p><b>6.3.2</b> Accumulate for 5 months of no payments: $P_5=212\,500(1+\tfrac{0{,}13}{12})^5\approx R224\,261{,}50$. Amortise over the remaining 67 months: $224\,261{,}50=x\cdot\dfrac{1-(1+\frac{0{,}13}{12})^{-67}}{\frac{0{,}13}{12}} \Rightarrow \textbf{x\approx R4\,724,00}$</p>
+<p><b>6.1</b> $13\,459 = 12\,000\left(1 + \frac{m}{400}\right)^8 \implies \left(1 + \frac{m}{400}\right)^8 = 1.121583 \implies \mathbf{m \approx 5.78\%}$</p>
+
+<p><b>6.2</b> $F = 1\,000 \cdot \frac{\left(1 + \frac{0.075}{12}\right)^{12} - 1}{\frac{0.075}{12}} \approx \text{R}12\,422.40$. Since $\text{R}12\,422.40 < \text{R}13\,000$, $\mathbf{\text{No, insufficient funds}}$</p>
+
+<p><b>6.3.1</b> Loan $= 0.85 \times 250\,000 = \mathbf{\text{R}212\,500}$</p>
+
+<p><b>6.3.2</b> Accumulate for 5 months of no payments: $P_5 = 212\,500\left(1 + \frac{0.13}{12}\right)^5 \approx \text{R}224\,261.50$. Amortise over the remaining 67 months: $224\,261.50 = x \cdot \frac{1 - \left(1 + \frac{0.13}{12}\right)^{-67}}{\frac{0.13}{12}} \implies \mathbf{x \approx \text{R}4\,724.00}$</p>
+
 <p class="total-line">Total: 14</p>
 </div>
           </div>
@@ -2564,11 +2632,12 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
           <summary>Show answers</summary>
           <div class="ans-body">
             <div>
-<p><b>8.1</b> $BV=980\,000(1-0{,}092)^7=\textbf{R498\,688,68}$</p>
-<p><b>8.2</b> $116\,253{,}50=75\,000\left(1+\tfrac{0{,}068}{4}\right)^{4n} \Rightarrow 4n\approx26 \Rightarrow \textbf{n=6,5 years}$</p>
-<p><b>8.3.1</b> $450\,000=x\cdot\dfrac{(1+\frac{0{,}0835}{12})^{60}-1}{\frac{0{,}0835}{12}} \Rightarrow \textbf{x\approx R6\,068,86}$</p>
-<p><b>8.3.2(a)</b> Loan $=1\,500\,000-450\,000=1\,050\,000$; $i=0{,}01$/month. Outstanding after 252 payments: $Bal=1\,050\,000(1{,}01)^{252}-11\,058{,}85\cdot\dfrac{(1{,}01)^{252}-1}{0{,}01}\approx\textbf{R419\,952}$</p>
-<p><b>8.3.2(b)</b> Total paid over 252 months $=252\times11\,058{,}85\approx R2\,786\,830$. Principal reduced by $1\,050\,000-419\,952=630\,048$. Interest $\approx2\,786\,830-630\,048\approx\textbf{R2\,156\,782}$</p>
+<p><b>8.1</b> $BV = 980\,000(1 - 0.092)^7 = \mathbf{\text{R}498\,688.68}$</p>
+
+<p><b>8.2</b> $116\,253.50 = 75\,000\left(1 + \frac{0.068}{4}\right)^{4n} \implies 4n \approx 26 \implies \mathbf{n = 6.5 \text{ years}}$</p>
+<p><b>8.3.1</b> $450\,000 = x \cdot \frac{\left(1 + \frac{0.0835}{12}\right)^{60} - 1}{\frac{0.0835}{12}} \implies \mathbf{x \approx \text{R}6\,068.86}$</p>
+<p><b>8.3.2(a)</b> Loan $= 1\,500\,000 - 450\,000 = 1\,050\,000$; $i = 0.01\text{/month}$. Outstanding after 252 payments: $Bal = 1\,050\,000(1.01)^{252} - 11\,058.85 \cdot \frac{(1.01)^{252} - 1}{0.01} \approx \mathbf{\text{R}419\,952}$</p>
+<p><b>8.3.2(b)</b> Total paid over 252 months $= 252 \times 11\,058.85 \approx \text{R}2\,786\,830$. Principal reduced by $1\,050\,000 - 419\,952 = 630\,048$. Interest $\approx 2\,786\,830 - 630\,048 \approx \mathbf{\text{R}2\,156\,782}$</p>
 <p class="total-line">Total: 20</p>
 </div>
           </div>
@@ -2598,7 +2667,6 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
           <summary>Show answers</summary>
           <div class="ans-body">
             <div>
-<p class="note">Official DBE memorandum for this paper was not included in the supplied solutions document. Suggested method:</p>
 <p>6.1.1 Future value annuity: \( F = \dfrac{x[(1+i)^n-1]}{i} \), with \(i=\dfrac{0{,}075}{12}\), \(n=144\).</p>
 <p>6.1.2 Compound growth on the 6.1.1 answer for one further year: \(A=F(1+i)^{12}\) at the same monthly rate.</p>
 <p>6.2 Reducing balance: \(92\,537{,}64 = 250\,000(1-0{,}22)^n\); solve for \(n\) using logs.</p>
@@ -2794,8 +2862,7 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
   <div class="topic-body">
     <details class="yr">
       <summary>2025<span class="badge">[33]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>8.1</b> Determine $f'(x)$ from first principles if $f(x)=-2x+3$. <span class="marks">(4)</span></div>
@@ -2805,6 +2872,18 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
 </div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{f(x+h)-f(x)}{h}=\lim_{h\to0}\dfrac{-2h}{h}=\textbf{-2}$</p>
+<p><b>8.2.1</b> $g'(x) = -12x^3+2$</p>
+<p><b>8.2.2</b> $y=2x^2+x^{-2} \Rightarrow \dfrac{dy}{dx}=4x-2x^{-3}$</p>
+<p class="total-line">Total: 10</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
@@ -2815,6 +2894,21 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
 <div class="part"><b>9.4</b> For which values of $t$ will $y=-11x+t$ intersect $f$ at 3 distinct points? <span class="marks">(6)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>9.1</b> $f'(x)=3x^2-16x+5=0 \Rightarrow (3x-1)(x-5)=0 \Rightarrow x=\tfrac13$ or $x=5$. E is the minimum: $\textbf{E(5;-36)}$</p>
+<p><b>9.2</b> $f''(x)=6x-16&lt;0 \Rightarrow \textbf{x &lt; 8/3}$</p>
+<p><b>9.3</b> $x$-intercepts of $f$: $(-1;0)$ and $(7;0)$. Answer: $\textbf{-1&lt;x&lt;8/3 or 3&lt;x&lt;7}$</p>
+<p><b>9.4</b> Equate gradients: $3x^2-16x+5=-11 \Rightarrow 3x^2-16x+16=0 \Rightarrow (x-4)(3x-4)=0 \Rightarrow x=4$ or $x=4/3$.
+At $x=4$: $t=14$. At $x=4/3$: $t=634/27=23{,}48$.
+$\therefore \textbf{14 &lt; t &lt; 634/27}$</p>
+<p class="total-line">Total: 17</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2025)</span></div>
           <div class="q-content-wrap">
@@ -2824,28 +2918,11 @@ Final payment $= 4173,55(1+\tfrac{0.068}{12}) = \textbf{R4 197,21}$</p>
 <div class="part"><b>10.2</b> Calculate the value of $x$ that will maximise the volume of the cylinder. <span class="marks">(3)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2025)</span></div>
-            <div>
-<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{f(x+h)-f(x)}{h}=\lim_{h\to0}\dfrac{-2h}{h}=\textbf{-2}$</p>
-<p><b>8.2.1</b> $g'(x) = -12x^3+2$</p>
-<p><b>8.2.2</b> $y=2x^2+x^{-2} \Rightarrow \dfrac{dy}{dx}=4x-2x^{-3}$</p>
-<p class="total-line">Total: 10</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2025)</span></div>
-            <div>
-<p><b>9.1</b> $f'(x)=3x^2-16x+5=0 \Rightarrow (3x-1)(x-5)=0 \Rightarrow x=\tfrac13$ or $x=5$. E is the minimum: $\textbf{E(5;-36)}$</p>
-<p><b>9.2</b> $f''(x)=6x-16&lt;0 \Rightarrow \textbf{x &lt; 8/3}$</p>
-<p><b>9.3</b> $x$-intercepts of $f$: $(-1;0)$ and $(7;0)$. Answer: $\textbf{-1&lt;x&lt;8/3 or 3&lt;x&lt;7}$</p>
-<p><b>9.4</b> Equate gradients: $3x^2-16x+5=-11 \Rightarrow 3x^2-16x+16=0 \Rightarrow (x-4)(3x-4)=0 \Rightarrow x=4$ or $x=4/3$.
-At $x=4$: $t=14$. At $x=4/3$: $t=634/27=23{,}48$.
-$\therefore \textbf{14 &lt; t &lt; 634/27}$</p>
-<p class="total-line">Total: 17</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2025)</span></div>
-            <div>
+<div>
 <p><b>10.1</b> $2x+2h=50 \Rightarrow h=25-x$; $2\pi r = x \Rightarrow r = \tfrac{x}{2\pi}$.
 $V=\pi r^2 h = \pi\left(\tfrac{x}{2\pi}\right)^2(25-x) = \dfrac{25x^2}{4\pi}-\dfrac{x^3}{4\pi}$ ✓</p>
 <p><b>10.2</b> $V'(x)=\dfrac{50x}{4\pi}-\dfrac{3x^2}{4\pi}=0 \Rightarrow x(50-3x)=0 \Rightarrow x=\dfrac{50}{3}=\textbf{16,67}$ (selecting $x\ne0$)</p>
@@ -2857,8 +2934,7 @@ $V=\pi r^2 h = \pi\left(\tfrac{x}{2\pi}\right)^2(25-x) = \dfrac{25x^2}{4\pi}-\df
     </details>
     <details class="yr">
       <summary>2024<span class="badge">[16+18]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2024 Q9.png" style="width:70%">
@@ -2869,6 +2945,19 @@ $V=\pi r^2 h = \pi\left(\tfrac{x}{2\pi}\right)^2(25-x) = \dfrac{25x^2}{4\pi}-\df
 <div class="part"><b>9.4</b> Determine the value of $k$ for which $y=f(x)+k$ will have THREE positive $x$-intercepts. <span class="marks">(2)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>9.1</b> $\textbf{1 &lt; x &lt; 5/2}$</p>
+<p><b>9.2</b> $\textbf{(1;0) and (5/2;0)}$</p>
+<p><b>9.3</b> Midpoint of TPs $=\tfrac{1+5/2}{2}=\tfrac74$. Concave up for $\textbf{x&gt;7/4}$</p>
+<p><b>9.4</b> $\textbf{-9&lt;k&lt;-8}$</p>
+<p class="total-line">Total: 8</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
@@ -2877,6 +2966,18 @@ $V=\pi r^2 h = \pi\left(\tfrac{x}{2\pi}\right)^2(25-x) = \dfrac{25x^2}{4\pi}-\df
 <div class="part"><b>10.2</b> Calculate the distance between town P and town T. <span class="marks">(5)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>10.1</b> $-6t+18=0 \Rightarrow t=3$; $s'(3)=-3(9)+18(3)=\textbf{27 km/h}$</p>
+<p><b>10.2</b> $-3t^2+18t=0 \Rightarrow t=0$ or $t=6$. With $s(t)=at^3+bt^2$: $3a=-3, 2b=18 \Rightarrow a=-1, b=9$.
+$s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
+<p class="total-line">Total: 8</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
@@ -2892,33 +2993,17 @@ $V=\pi r^2 h = \pi\left(\tfrac{x}{2\pi}\right)^2(25-x) = \dfrac{25x^2}{4\pi}-\df
 </div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2024)</span></div>
-            <div>
+<div>
 <p><b>8.1.1</b> $3-10x$</p>
-<p><b>8.1.2</b> $g(x)=2x^{-2}-x^{7/3} \Rightarrow g'(x)=\textbf{-4x^{-3}-\tfrac73x^{4/3}}$</p>
-<p><b>8.2</b> $f(2)=-1$; $f'(x)=3x^2-8x+2$, $f'(2)=-2$. Tangent: $\textbf{y=-2x+3}$</p>
+<p><b>8.1.2</b> $g(x) = 2x^{-2} - x^{7/3} \implies g'(x) = \mathbf{-4x^{-3} - \frac{7}{3}x^{4/3}}$</p><p><b>8.2</b> $f(2)=-1$; $f'(x)=3x^2-8x+2$, $f'(2)=-2$. Tangent: $\textbf{y=-2x+3}$</p>
 <p><b>8.3.1</b> $f'(x)=\lim_{h\to0}\dfrac{-6(x+h)^2+6x^2}{h}=\lim_{h\to0}(-12x-6h)=\textbf{-12x}$</p>
 <p><b>8.3.2</b> Restrict to $\textbf{x\le0}$ (or $x\ge0$)</p>
-<p><b>8.3.3</b> $x=-6y^2 \Rightarrow y^2=-\tfrac{x}{6} \Rightarrow \textbf{y=-\sqrt{-x/6}}$ (for $x\le0$)</p>
+<p><b>8.3.3</b> $x = -6y^2 \implies y^2 = -\frac{x}{6} \implies \mathbf{y = -\sqrt{-\frac{x}{6}}}$ (for $x \le 0$)</p>
 <p class="total-line">Total: 18</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2024)</span></div>
-            <div>
-<p><b>9.1</b> $\textbf{1 &lt; x &lt; 5/2}$</p>
-<p><b>9.2</b> $\textbf{(1;0) and (5/2;0)}$</p>
-<p><b>9.3</b> Midpoint of TPs $=\tfrac{1+5/2}{2}=\tfrac74$. Concave up for $\textbf{x&gt;7/4}$</p>
-<p><b>9.4</b> $\textbf{-9&lt;k&lt;-8}$</p>
-<p class="total-line">Total: 8</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2024)</span></div>
-            <div>
-<p><b>10.1</b> $-6t+18=0 \Rightarrow t=3$; $s'(3)=-3(9)+18(3)=\textbf{27 km/h}$</p>
-<p><b>10.2</b> $-3t^2+18t=0 \Rightarrow t=0$ or $t=6$. With $s(t)=at^3+bt^2$: $3a=-3, 2b=18 \Rightarrow a=-1, b=9$.
-$s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
-<p class="total-line">Total: 8</p>
 </div>
           </div>
         </details>
@@ -2926,8 +3011,7 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
     </details>
     <details class="yr">
       <summary>2023<span class="badge">[24+13]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 7 <span class="src-year">(2023)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>7.1</b> Determine $f'(x)$ from first principles if $f(x)=-4x^2$. <span class="marks">(5)</span></div>
@@ -2938,6 +3022,20 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
 <div class="part"><b>7.3</b> For which values of $x$ will the tangent to $f(x)=-2x^3+8x$ have a positive gradient? <span class="marks">(3)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>7.1</b> $f'(x) = \lim_{h \to 0}\frac{-4(x + h)^2 - (-4x^2)}{h} = \lim_{h \to 0}(-8x - 4h) = \mathbf{-8x}$</p>
+
+<p><b>7.2.1</b> $f'(x) = \mathbf{6x^2 - 3}$</p>
+<p><b>7.2.2</b> $7x^{2/3} + 2x^{-5} \implies \mathbf{\frac{14}{3}x^{-1/3} - 10x^{-6}}$</p>
+<p><b>7.3</b> $f'(x) = -6x^2 + 8 > 0 \implies x^2 < \frac{4}{3} \implies \mathbf{-\frac{2\sqrt{3}}{3} < x < \frac{2\sqrt{3}}{3}}$</p>
+<p class="total-line">Total: 13</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2023)</span></div>
           <div class="q-content-wrap">
@@ -2949,6 +3047,21 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
 <div class="part"><b>8.5</b> Calculate the value of $\theta$, the acute angle formed between $g$ and the $x$-axis in the first quadrant. <span class="marks">(2)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $f'(x)=-3x^2+12x-9=0 \Rightarrow x^2-4x+3=0 \Rightarrow x=1,3$. $f(1)=0, f(3)=4$. TPs: $\textbf{(1;0) and (3;4)}$</p>
+<p><b>8.2</b> Sketch: negative cubic through $(1;0)$ [touching], with local min $(1;0)$, local max $(3;4)$, $y$-intercept $4$.</p>
+<img src="./Diagrams/Grade12P1/Answers/2023_A8.2.png" style="width:70%">
+<p><b>8.3</b> $\textbf{0 &lt; k &lt; 4}$</p>
+<p><b>8.4</b> Point of inflection: $x=\tfrac{3+1}{2}=2$, max at... $f''(x)=-6x+12=0\Rightarrow x=2$, $f(2)=2$. Gradient $f'(2)=3$. Tangent: $y-2=3(x-2) \Rightarrow \textbf{g(x)=3x-4}$</p>
+<p><b>8.5</b> $\tan\theta=3 \Rightarrow \theta=\textbf{71,57°}$</p>
+<p class="total-line">Total: 18</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2023)</span></div>
           <div class="q-content-wrap">
@@ -2958,28 +3071,11 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
 <div class="part"><b>9.2</b> Determine $x$ such that the total area is a minimum. <span class="marks">(3)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 7 <span class="src-year">(2023)</span></div>
-            <div>
-<p><b>7.1</b> $f'(x)=\lim_{h\to0}\dfrac{-4(x+h)^2+4x^2}{h}=\lim_{h\to0}(-8x-4h)=\textbf{-8x}$</p>
-<p><b>7.2.1</b> $f'(x)=\textbf{6x^2-3}$</p>
-<p><b>7.2.2</b> $7x^{2/3}+2x^{-5} \Rightarrow \textbf{\tfrac{14}{3}x^{-1/3}-10x^{-6}}$</p>
-<p><b>7.3</b> $f'(x)=-6x^2+8&gt;0 \Rightarrow x^2&lt;\tfrac43 \Rightarrow \textbf{-\tfrac{2\sqrt3}{3}&lt;x&lt;\tfrac{2\sqrt3}{3}}$</p>
-<p class="total-line">Total: 13</p>
-</div>
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2023)</span></div>
-            <div>
-<p><b>8.1</b> $f'(x)=-3x^2+12x-9=0 \Rightarrow x^2-4x+3=0 \Rightarrow x=1,3$. $f(1)=0, f(3)=4$. TPs: $\textbf{(1;0) and (3;4)}$</p>
-<p><b>8.2</b> Sketch: negative cubic through $(1;0)$ [touching], with local min $(1;0)$, local max $(3;4)$, $y$-intercept $4$.</p>
-<p><b>8.3</b> $\textbf{0 &lt; k &lt; 4}$</p>
-<p><b>8.4</b> Point of inflection: $x=\tfrac{3+1}{2}=2$, max at... $f''(x)=-6x+12=0\Rightarrow x=2$, $f(2)=2$. Gradient $f'(2)=3$. Tangent: $y-2=3(x-2) \Rightarrow \textbf{g(x)=3x-4}$</p>
-<p><b>8.5</b> $\tan\theta=3 \Rightarrow \theta=\textbf{71,57°}$</p>
-<p class="total-line">Total: 18</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2023)</span></div>
-            <div>
+<div>
 <p><b>9.1</b> $b=\tfrac{432}{x}$; $A(x)=(x+8)\left(\tfrac{432}{x}+6\right)=432+6x+\tfrac{3456}{x}+480 = \tfrac{3456}{x}+6x+480$</p>
 <p><b>9.2</b> $A'(x)=-\tfrac{3456}{x^2}+6=0 \Rightarrow x^2=576 \Rightarrow x=\textbf{24 cm}$</p>
 <p class="total-line">Total: 6</p>
@@ -2990,8 +3086,7 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
     </details>
     <details class="yr">
       <summary>2022<span class="badge">[25+12]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 7 <span class="src-year">(2022)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>7.1</b> Determine $f'(x)$ from first principles if $f(x)=x^2+x$. <span class="marks">(5)</span></div>
@@ -2999,6 +3094,18 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
 <div class="part"><b>7.3</b> The tangent to $g(x)=ax^3+3x^2+bx+c$ has a minimum gradient at the point $(-1;-7)$. For which values of $x$ will $g$ be concave up? <span class="marks">(4)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>7.1</b> $f'(x)=\lim_{h\to0}\dfrac{(x+h)^2+(x+h)-x^2-x}{h}=\lim_{h\to0}(2x+h+1)=\textbf{2x+1}$</p>
+<p><b>7.2</b> $f'(x) = \mathbf{10x^4 - 12x^3 + 8}$</p>
+<p><b>7.3</b> Point of inflection (min gradient) at $x=-1$: $g''(x)=6ax+6=0$ at $x=-1 \Rightarrow \textbf{a=1}$. Concave up where $g''(x)=6x+6&gt;0 \Rightarrow \textbf{x&gt;-1}$</p>
+<p class="total-line">Total: 12</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2022)</span></div>
           <div class="q-content-wrap">
@@ -3015,34 +3122,33 @@ $s(6) = -(6)^3+9(6)^2 = \textbf{108 km}$</p>
 </div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $f'(x)=m(x+\tfrac13)(x-1)$; using $R(0;1)$: $1=m(\tfrac13)(-1)\Rightarrow m=-3$.
+Expand: $f'(x)=-3x^2+2x+1 \Rightarrow \textbf{m=-3, n=2, k=1}$</p>
+<p><b>8.2.1</b> $f(-\tfrac13)=\tfrac{49}{27}=1{,}81$; $f(1)=3$. TPs: $\textbf{(-1/3;49/27) and (1;3)}$</p>
+<p><b>8.2.2</b> Negative cubic: one $x$-intercept at $x=2$, $y$-intercept 2, local min $(-1/3;1,81)$, local max $(1;3)$.</p>
+<img src="./Diagrams/Grade12P1/Answers/2022_A8.2.2.png" style="width:70%">
+<p><b>8.3.1</b> By symmetry of the parabola $f'$, $a=\dfrac{-1/3+1}{2}=\textbf{1/3}$</p>
+<p><b>8.3.2</b> $\textbf{b &lt; 4/3}$</p>
+<p class="total-line">Total: 17</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2022)</span></div>
           <div class="q-content-wrap">
 <p>Given $f(x)=x^2$. Determine the minimum distance between the point $(10;2)$ and a point on $f$. <span class="marks">(8)</span></p>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 7 <span class="src-year">(2022)</span></div>
-            <div>
-<p><b>7.1</b> $f'(x)=\lim_{h\to0}\dfrac{(x+h)^2+(x+h)-x^2-x}{h}=\lim_{h\to0}(2x+h+1)=\textbf{2x+1}$</p>
-<p><b>7.2</b> $f'(x)=\textbf{10x^4-12x^3+8}$</p>
-<p><b>7.3</b> Point of inflection (min gradient) at $x=-1$: $g''(x)=6ax+6=0$ at $x=-1 \Rightarrow \textbf{a=1}$. Concave up where $g''(x)=6x+6&gt;0 \Rightarrow \textbf{x&gt;-1}$</p>
-<p class="total-line">Total: 12</p>
-</div>
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2022)</span></div>
-            <div>
-<p><b>8.1</b> $f'(x)=m(x+\tfrac13)(x-1)$; using $R(0;1)$: $1=m(\tfrac13)(-1)\Rightarrow m=-3$.
-Expand: $f'(x)=-3x^2+2x+1 \Rightarrow \textbf{m=-3, n=2, k=1}$</p>
-<p><b>8.2.1</b> $f(-\tfrac13)=\tfrac{49}{27}=1{,}81$; $f(1)=3$. TPs: $\textbf{(-1/3;49/27) and (1;3)}$</p>
-<p><b>8.2.2</b> Negative cubic: one $x$-intercept at $x=2$, $y$-intercept 2, local min $(-1/3;1,81)$, local max $(1;3)$.</p>
-<p><b>8.3.1</b> By symmetry of the parabola $f'$, $a=\dfrac{-1/3+1}{2}=\textbf{1/3}$</p>
-<p><b>8.3.2</b> $\textbf{b &lt; 4/3}$</p>
-<p class="total-line">Total: 17</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2022)</span></div>
-            <div>
+<div>
 <p>Distance$^2 = (x-10)^2+(x^2-2)^2 = x^4-3x^2-20x+104$.
 Minimise: $4x^3-6x-20=0 \Rightarrow (x-2)(4x^2+8x+10)=0$; quadratic factor has no real roots ($\Delta&lt;0$), so $x=2$.
 $d=\sqrt{2^4-3(2)^2-20(2)+104}=\sqrt{68}=2\sqrt{17}=\textbf{8,25}$</p>
@@ -3054,8 +3160,7 @@ $d=\sqrt{2^4-3(2)^2-20(2)+104}=\sqrt{68}=2\sqrt{17}=\textbf{8,25}$</p>
     </details>
     <details class="yr">
       <summary>2021<span class="badge">[22+12]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2021)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>9.1</b> Determine $f'(x)$ from first principles if $f(x)=2x^2-3x$. <span class="marks">(5)</span></div>
@@ -3065,6 +3170,18 @@ $d=\sqrt{2^4-3(2)^2-20(2)+104}=\sqrt{68}=2\sqrt{17}=\textbf{8,25}$</p>
 </div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>9.1</b> $f'(x) = \lim_{h \to 0}\frac{2(x + h)^2 - 3(x + h) - (2x^2 - 3x)}{h} = \lim_{h \to 0}(4x + 2h - 3) = \mathbf{4x - 3}$</p>
+<p><b>9.2.1</b> $\frac{dy}{dx} = \mathbf{20x^4 - 24x^3 + 3}$</p>
+<p><b>9.2.2</b> $-\frac{1}{2}x^{1/3} + \frac{1}{9}x^{-2} \implies \mathbf{-\frac{1}{6}x^{-2/3} - \frac{2}{9}x^{-3}}$</p>
+<p class="total-line">Total: 12</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2021)</span></div>
           <div class="q-content-wrap">
@@ -3076,24 +3193,11 @@ $d=\sqrt{2^4-3(2)^2-20(2)+104}=\sqrt{68}=2\sqrt{17}=\textbf{8,25}$</p>
 <div class="part"><b>10.4</b> For which values of $k$ will $-(x-1)^3+6(x-1)^2-k=0$ have one negative and two distinct positive roots? <span class="marks">(3)</span></div>
 </div>
         </div>
-        <div class="q-item">
-          <div class="q-item-label">Question 11 <span class="src-year">(2021)</span></div>
-          <div class="q-content-wrap">
-<p>After travelling 20 km, a person turns around to close a tap. Water cost R1,60/hour. Petrol cost $\left(1{,}2+\tfrac{x}{4000}\right)$ rands/km, $x$ = average speed (km/h). Calculate the average speed to minimise cost. <span class="marks">(7)</span></p>
-</div>
-        </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2021)</span></div>
-            <div>
-<p><b>9.1</b> $f'(x)=\lim_{h\to0}\dfrac{2(x+h)^2-3(x+h)-2x^2+3x}{h}=\lim_{h\to0}(4x+2h-3)=\textbf{4x-3}$</p>
-<p><b>9.2.1</b> $\dfrac{dy}{dx}=\textbf{20x^4-24x^3+3}$</p>
-<p><b>9.2.2</b> $-\tfrac12x^{1/3}+\tfrac19x^{-2} \Rightarrow \textbf{-\tfrac16x^{-2/3}-\tfrac29x^{-3}}$</p>
-<p class="total-line">Total: 12</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2021)</span></div>
-            <div>
+<div>
 <p><b>10.1</b> $h'(x)=3ax^2+2bx$. $h'(4)=0 \Rightarrow 48a+8b=0 \Rightarrow 6a+b=0$. $h(4)=32 \Rightarrow 64a+16b=32 \Rightarrow 4a+b=2$. Solving: $2a=-2 \Rightarrow \textbf{a=-1}$, $\textbf{b=6}$</p>
 <p><b>10.2</b> $-x^3+6x^2=0 \Rightarrow x^2(6-x)=0 \Rightarrow x=6$. $\textbf{A(6;0)}$</p>
 <p><b>10.3.1</b> $\textbf{0&lt;x&lt;4}$</p>
@@ -3101,8 +3205,19 @@ $d=\sqrt{2^4-3(2)^2-20(2)+104}=\sqrt{68}=2\sqrt{17}=\textbf{8,25}$</p>
 <p><b>10.4</b> $f(x)=h(x-1)$; new $y$-intercept $f(0)=7$. $\textbf{7&lt;k&lt;32}$</p>
 <p class="total-line">Total: 15</p>
 </div>
-            <div class="ans-sub-label">Question 11 <span class="src-year">(2021)</span></div>
-            <div>
+          </div>
+        </details>
+        <div class="q-item">
+          <div class="q-item-label">Question 11 <span class="src-year">(2021)</span></div>
+          <div class="q-content-wrap">
+<p>After travelling 20 km, a person turns around to close a tap. Water cost R1,60/hour. Petrol cost $\left(1{,}2+\tfrac{x}{4000}\right)$ rands/km, $x$ = average speed (km/h). Calculate the average speed to minimise cost. <span class="marks">(7)</span></p>
+</div>
+        </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
 <p>Time $=\tfrac{20}{x}$. $C(x)=1{,}6\times\tfrac{20}{x}+20\left(1{,}2+\tfrac{x}{4000}\right)=\tfrac{32}{x}+24+\tfrac{x}{200}$.
 $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textbf{80 km/h}$</p>
 <p class="total-line">Total: 7</p>
@@ -3113,8 +3228,7 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
     </details>
     <details class="yr">
       <summary>2020<span class="badge">[25+12]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 7 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>7.1</b> Determine $f'(x)$ from first principles if $f(x)=2x^2-1$. <span class="marks">(5)</span></div>
@@ -3124,6 +3238,18 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 </div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>7.1</b> $f'(x)=\lim_{h\to0}\dfrac{2(x+h)^2-1-2x^2+1}{h}=\lim_{h\to0}(4x+2h)=\textbf{4x}$</p>
+<p><b>7.2.1</b> $x^{2/3} + x^3 \implies \mathbf{\frac{2}{3}x^{-1/3} + 3x^2}$</p>
+<p><b>7.2.2</b> $\dfrac{(2x-3)(2x+3)}{2(2x+3)}=x-\tfrac32 \Rightarrow \textbf{f'(x)=1}$</p>
+<p class="total-line">Total: 12</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
@@ -3136,35 +3262,33 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 <div class="part"><b>8.5</b> Determine the equation of the tangent to $g$ with maximum gradient. Form $y=mx+c$. <span class="marks">(5)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $\textbf{-1&lt;x&lt;2}$</p>
+<p><b>8.2</b> $x=\dfrac{-1+2}{2}=\textbf{1/2}$</p>
+<p><b>8.3</b> $\textbf{x&gt;1/2}$</p>
+<p><b>8.4</b> $3a = -6, 2b = 6, c = 12 \implies a = -2, b = 3 \implies \mathbf{g(x) = -2x^3 + 3x^2 + 12x}$</p>
+<p><b>8.5</b> Max gradient at $x=1/2$ (turning pt of $g'$): $m=g'(1/2)=13,5$; $y=g(1/2)=6,5$. Tangent: $\textbf{y=13,5x-0,25}$</p>
+<p class="total-line">Total: 15</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
 <p>A closed rectangular box: length $\ell=3w$, volume $=5\text{ m}^3$. Top/bottom material R15/m², sides R6/m².</p>
-<div class="part"><b>9.1</b> Show that Cost $=90w^2+48wh$ <span class="marks">(4)</span></div>
+<div class="part"><b>9.1</b> $\text{Cost} = 30(2w^2) + 15(2wh + 4wh) = 60w^2 + 15(6wh) \implies \mathbf{\text{Cost} = 90w^2 + 48wh}$ <span class="marks">(4)</span></div>
 <div class="part"><b>9.2</b> Determine the width for minimum cost. <span class="marks">(6)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 7 <span class="src-year">(2020)</span></div>
-            <div>
-<p><b>7.1</b> $f'(x)=\lim_{h\to0}\dfrac{2(x+h)^2-1-2x^2+1}{h}=\lim_{h\to0}(4x+2h)=\textbf{4x}$</p>
-<p><b>7.2.1</b> $x^{2/3}+x^3 \Rightarrow \textbf{\tfrac23x^{-1/3}+3x^2}$</p>
-<p><b>7.2.2</b> $\dfrac{(2x-3)(2x+3)}{2(2x+3)}=x-\tfrac32 \Rightarrow \textbf{f'(x)=1}$</p>
-<p class="total-line">Total: 12</p>
-</div>
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2020)</span></div>
-            <div>
-<p><b>8.1</b> $\textbf{-1&lt;x&lt;2}$</p>
-<p><b>8.2</b> $x=\dfrac{-1+2}{2}=\textbf{1/2}$</p>
-<p><b>8.3</b> $\textbf{x&gt;1/2}$</p>
-<p><b>8.4</b> $3a=-6, 2b=6, c=12 \Rightarrow a=-2, b=3 \Rightarrow \textbf{g(x)=-2x^3+3x^2+12x}$</p>
-<p><b>8.5</b> Max gradient at $x=1/2$ (turning pt of $g'$): $m=g'(1/2)=13,5$; $y=g(1/2)=6,5$. Tangent: $\textbf{y=13,5x-0,25}$</p>
-<p class="total-line">Total: 15</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2020)</span></div>
-            <div>
+<div>
 <p><b>9.1</b> Surface $=2\ell w+2wh+2\ell h=6w^2+2wh+6wh$. $C=15(6w^2)+6(8wh)=\textbf{90w^2+48wh}$</p>
 <p><b>9.2</b> $5=3w^2h \Rightarrow h=\tfrac{5}{3w^2}$. $C(w)=90w^2+80w^{-1}$. $C'(w)=180w-80w^{-2}=0 \Rightarrow w^3=\tfrac{80}{180} \Rightarrow w=\textbf{0,76}$</p>
 <p class="total-line">Total: 10</p>
@@ -3175,8 +3299,7 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
     </details>
     <details class="yr">
       <summary>2019<span class="badge">[39]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 7 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
 <ul class="subq">
@@ -3187,12 +3310,41 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>7.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{4-7(x+h)-(4-7x)}{h}=\lim_{h\to0}\dfrac{-7h}{h}=-7\) <span class="marks">(4)</span></td></tr>
+<tr><th>7.2</th><td>\(y=4x^8+x^{3/2}\Rightarrow \dfrac{dy}{dx}=32x^7+\dfrac{3}{2}x^{1/2}\) <span class="marks">(3)</span></td></tr>
+<tr><th>7.3.1</th><td>\(\dfrac{dy}{dx}=2ax\) <span class="marks">(1)</span></td></tr>
+<tr><th>7.3.2</th><td>\(\dfrac{dy}{da}=x^2+1\) <span class="marks">(2)</span></td></tr>
+<tr><th>7.4</th><td>
+                  \(b=2+\dfrac{12}{2}=8\). \(\dfrac{dy}{dx}=1-\dfrac{12}{x^2}\Rightarrow m_{tangent}=1-\dfrac{12}{4}=-2\Rightarrow m_{perp}=\dfrac12\).
+<p>$y - 8 = \frac{1}{2}(x - 2) \implies \mathbf{y = \frac{1}{2}x + 7}$ <span class="marks">(4)</span></p>
+</td></tr>
+</table>
+<p class="totalmark">Total [14]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 7.4 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
 <p>Given the curve $y=x+\dfrac{12}{x}$. Point $(2;b)$ lies on the curve; determine the equation of the line through $(2;b)$ perpendicular to the tangent at that point. <span class="marks">(4)</span></p>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p>$b=2+6=8$. $\dfrac{dy}{dx}=1-\dfrac{12}{x^2}$; at $x=2$: $m_{tan}=1-3=-2$. $m_{perp}=\tfrac12$. Line: $y-8=\tfrac12(x-2) \Rightarrow \textbf{y=\tfrac12x+7}$</p>
+<p class="total-line">Total: 4</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
@@ -3206,6 +3358,20 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 <div class="part"><b>9.4</b> For which value(s) of $x$ is $f(x)-f'(x)&lt;0$? <span class="marks">(4)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>9.1</b> $f'(x)=9x^2$; $3x^3=9x^2 \Rightarrow 3x^2(x-3)=0 \Rightarrow \textbf{x=0 or x=3}$</p>
+<p><b>9.2.1</b> $\textbf{f and f'}$</p>
+<p><b>9.2.2</b> For $f$, $(0;0)$ is a point of inflection; for $f'$, it is a turning point (minimum).</p>
+<p><b>9.3</b> $f''(x)=18x$; distance $=f''(1)-f'(1)=18-9=\textbf{9}$</p>
+<p><b>9.4</b> $3x^3 - 9x^2 < 0 \implies 3x^2(x - 3) < 0$; since $3x^2 > 0$ (for $x \ne 0$), need $x - 3 < 0$. $\mathbf{x < 3, x \ne 0}$</p>
+<p class="total-line">Total: 13</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
@@ -3215,39 +3381,11 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 <div class="part"><b>8.3</b> Determine the maximum height reached. <span class="marks">(4)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 7</div>
-            <div>
-<table class="marktable">
-<tr><th>7.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{4-7(x+h)-(4-7x)}{h}=\lim_{h\to0}\dfrac{-7h}{h}=-7\) <span class="marks">(4)</span></td></tr>
-<tr><th>7.2</th><td>\(y=4x^8+x^{3/2}\Rightarrow \dfrac{dy}{dx}=32x^7+\dfrac{3}{2}x^{1/2}\) <span class="marks">(3)</span></td></tr>
-<tr><th>7.3.1</th><td>\(\dfrac{dy}{dx}=2ax\) <span class="marks">(1)</span></td></tr>
-<tr><th>7.3.2</th><td>\(\dfrac{dy}{da}=x^2+1\) <span class="marks">(2)</span></td></tr>
-<tr><th>7.4</th><td>
-                  \(b=2+\dfrac{12}{2}=8\). \(\dfrac{dy}{dx}=1-\dfrac{12}{x^2}\Rightarrow m_{tangent}=1-\dfrac{12}{4}=-2\Rightarrow m_{perp}=\dfrac12\).
-                  <br/>\(y-8=\dfrac12(x-2)\Rightarrow y=\dfrac12 x+7\) <span class="marks">(4)</span>
-</td></tr>
-</table>
-<p class="totalmark">Total [14]</p>
-</div>
-            <div class="ans-sub-label">Question 7.4</div>
-            <div>
-<p>$b=2+6=8$. $\dfrac{dy}{dx}=1-\dfrac{12}{x^2}$; at $x=2$: $m_{tan}=1-3=-2$. $m_{perp}=\tfrac12$. Line: $y-8=\tfrac12(x-2) \Rightarrow \textbf{y=\tfrac12x+7}$</p>
-<p class="total-line">Total: 4</p>
-</div>
-            <div class="ans-sub-label">Question 9</div>
-            <div>
-<p><b>9.1</b> $f'(x)=9x^2$; $3x^3=9x^2 \Rightarrow 3x^2(x-3)=0 \Rightarrow \textbf{x=0 or x=3}$</p>
-<p><b>9.2.1</b> $\textbf{f and f'}$</p>
-<p><b>9.2.2</b> For $f$, $(0;0)$ is a point of inflection; for $f'$, it is a turning point (minimum).</p>
-<p><b>9.3</b> $f''(x)=18x$; distance $=f''(1)-f'(1)=18-9=\textbf{9}$</p>
-<p><b>9.4</b> $3x^3-9x^2&lt;0 \Rightarrow 3x^2(x-3)&lt;0$; since $3x^2&gt;0$ (for $x\ne0$), need $x-3&lt;0$. $\textbf{x&lt;3, x\ne0}$</p>
-<p class="total-line">Total: 13</p>
-</div>
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2019)</span></div>
-            <div>
+<div>
 <p><b>8.1</b> $h(0)=(-6)(-6)=\textbf{36 cm}$</p>
 <p><b>8.2</b> $t=6$ gives $h=0$; $-2t^2+3t-6=0$ has no real roots (discriminant negative). $\therefore$ insect reaches the floor $\textbf{only once}$</p>
 <p><b>8.3</b> Expand: $h(t)=-2t^3+15t^2-24t+36$. $h'(t)=-6t^2+30t-24=0 \Rightarrow t^2-5t+4=0 \Rightarrow t=1$ or $t=4$. Maximum at $t=4$: $h(4)=\textbf{52 cm}$</p>
@@ -3259,8 +3397,7 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
     </details>
     <details class="yr">
       <summary>2018<span class="badge">[33]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
 <ul class="subq">
@@ -3269,6 +3406,20 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>8.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{(x+h)^2-5-(x^2-5)}{h}=\lim_{h\to0}(2x+h)=2x\) <span class="marks">(5)</span></td></tr>
+<tr><th>8.2.1</th><td>\(\dfrac{dy}{dx}=9x^2+12x+1\) <span class="marks">(3)</span></td></tr>
+<tr><th>8.2.2</th><td>\(y(x-1)=2x(x-1)\Rightarrow y=2x\ (x\neq1)\Rightarrow\dfrac{dy}{dx}=2\) <span class="marks">(4)</span></td></tr>
+</table>
+<p class="totalmark">Total [12]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
@@ -3282,6 +3433,21 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 <p>9.2 If \(g\) is a cubic function with \(g(3)=g'(3)=0\), \(g(0)=27\), \(g''(x)&gt;0\) for \(x&lt;3\) and \(g''(x)&lt;0\) for \(x&gt;3\), draw a sketch graph of \(g\) indicating all relevant points. <span class="marks">(3)</span></p>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>9.1.1</th><td>Use \((-5;0)\) and \((0;20)\) with the given shape/turning-point conditions to solve simultaneously for \(b,c,d\): \(b=1,\ c=-16,\ d=20\). <span class="marks">(4)</span></td></tr>
+<tr><th>9.1.2</th><td>Factorise \(g(x)=(x+5)(x-2)^2\Rightarrow\) P\((2;0)\); \(g'(x)=3x^2+2x-16=0\Rightarrow\) turning points at \(x=2\) and \(x=-\dfrac83\Rightarrow\) R\(\left(-\dfrac83;50{,}81\right)\). <span class="marks">(5)</span></td></tr>
+<tr><th>9.1.3</th><td>\(g''(x)=6x+2\Rightarrow g''(0)=2&gt;0\Rightarrow\) concave up. <span class="marks">(3)</span></td></tr>
+<tr><th>9.2</th><td>Sketch: \(y\)-intercept 27, point of inflection &amp; stationary point at \(x=3\), concave up for \(x&lt;3\), concave down for \(x&gt;3\). <span class="marks">(3)</span><br/><img src="./Diagrams/Grade12P1/Answers/2018_A9.2.png" style="width:70%"></td></tr>
+</table>
+<p class="totalmark">Total [15]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
@@ -3291,30 +3457,11 @@ $C'(x)=-\tfrac{32}{x^2}+\tfrac1{200}=0 \Rightarrow x^2=6400 \Rightarrow x=\textb
 <div class="part"><b>10.2</b> Calculate $t$ if the area of the parallelogram is a maximum. <span class="marks">(5)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2018)</span></div>
-            <div>
-<table class="marktable">
-<tr><th>8.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{(x+h)^2-5-(x^2-5)}{h}=\lim_{h\to0}(2x+h)=2x\) <span class="marks">(5)</span></td></tr>
-<tr><th>8.2.1</th><td>\(\dfrac{dy}{dx}=9x^2+12x+1\) <span class="marks">(3)</span></td></tr>
-<tr><th>8.2.2</th><td>\(y(x-1)=2x(x-1)\Rightarrow y=2x\ (x\neq1)\Rightarrow\dfrac{dy}{dx}=2\) <span class="marks">(4)</span></td></tr>
-</table>
-<p class="totalmark">Total [12]</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2018)</span></div>
-            <div>
-<table class="marktable">
-<tr><th>9.1.1</th><td>Use \((-5;0)\) and \((0;20)\) with the given shape/turning-point conditions to solve simultaneously for \(b,c,d\): \(b=1,\ c=-16,\ d=20\). <span class="marks">(4)</span></td></tr>
-<tr><th>9.1.2</th><td>Factorise \(g(x)=(x+5)(x-2)^2\Rightarrow\) P\((2;0)\); \(g'(x)=3x^2+2x-16=0\Rightarrow\) turning points at \(x=2\) and \(x=-\dfrac83\Rightarrow\) R\(\left(-\dfrac83;50{,}81\right)\). <span class="marks">(5)</span></td></tr>
-<tr><th>9.1.3</th><td>\(g''(x)=6x+2\Rightarrow g''(0)=2&gt;0\Rightarrow\) concave up. <span class="marks">(3)</span></td></tr>
-<tr><th>9.2</th><td>Sketch: \(y\)-intercept 27, point of inflection &amp; stationary point at \(x=3\), concave up for \(x&lt;3\), concave down for \(x&gt;3\). <span class="marks">(3)</span></td></tr>
-</table>
-<p class="totalmark">Total [15]</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2018)</span></div>
-            <div>
+<div>
 <p><b>10.1</b> $\textbf{AH:HG = 3:2}$</p>
 <p><b>10.2</b> $DE = \tfrac35(5-t)$ (similar triangles), height of parallelogram $=\tfrac25t$. Area $=\tfrac{6}{25}(5-t)t = -\tfrac{6}{25}t^2+\tfrac65t$.
 $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/12 = 5/2}$</p>
@@ -3326,14 +3473,27 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2017<span class="badge">[34]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 7 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
 <p>7.1 Given \(f(x)=2x^2-x\). Determine \(f'(x)\) from first principles. <span class="marks">(6)</span></p>
 <p>7.2 Determine: 7.2.1 \(D_x\big[(x+1)(3x-7)\big]\) <span class="marks">(2)</span>; 7.2.2 \(\dfrac{dy}{dx}\) if \(y=\sqrt{x^3}-\dfrac5x+\dfrac12\pi\) <span class="marks">(4)</span></p>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>7.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{2(x+h)^2-(x+h)-(2x^2-x)}{h}=\lim_{h\to0}(4x+2h-1)=4x-1\) <span class="marks">(6)</span></td></tr>
+<tr><th>7.2.1</th><td>\((x+1)(3x-7)=3x^2-4x-7\Rightarrow D_x=6x-4\) <span class="marks">(2)</span></td></tr>
+<tr><th>7.2.2</th><td>\(y=x^{3/2}-5x^{-1}+\dfrac{\pi}{2}\Rightarrow\dfrac{dy}{dx}=\dfrac32x^{1/2}+5x^{-2}\) (derivative of constant \(\tfrac{\pi}{2}\) is 0) <span class="marks">(4)</span></td></tr>
+</table>
+<p class="totalmark">Total [12]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
@@ -3347,6 +3507,22 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<table class="marktable">
+<tr><th>8.1</th><td>\(f(x)=x^3-6x^2+9x\); \(f''(x)=6x-12=0\Rightarrow x=2\). Sign change of \(f''\) around \(x=2\) confirms point of inflection. <span class="marks">(5)</span></td></tr>
+<tr><th>8.2</th><td>Through \((0;0)\), turning point \((1;4)\), \(x\)-intercept/turning point at \((3;0)\), standard cubic shape. <span class="marks">(4)</span><br/><img src="./Diagrams/Grade12P1/Answers/2017_A8.2.png" style="width:70%"></td></tr>
+<tr><th>8.3</th><td>\(f\) concave up for \(x&gt;2\Rightarrow -f(x)\) concave down for \(x&gt;2\). <span class="marks">(2)</span></td></tr>
+<tr><th>8.4.1</th><td>Local max of \(f\) at \((1;4)\) shifts to \((3;7)\). <span class="marks">(2)</span></td></tr>
+<tr><th>8.4.2</th><td>No — \(f'(2)=3(2)^2-12(2)+9=-3\neq1\). <span class="marks">(2)</span></td></tr>
+</table>
+<p class="totalmark">Total [15]</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
@@ -3354,31 +3530,11 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <p>A road follows \(y=x^2+2,\ x\ge0\). Benny sits at B\((0;3)\) watching a car P travelling along the road. Calculate the distance between Benny and the car when the car is closest to Benny. <span class="marks">(7)</span></p>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 7 <span class="src-year">(2017)</span></div>
-            <div>
-<table class="marktable">
-<tr><th>7.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{2(x+h)^2-(x+h)-(2x^2-x)}{h}=\lim_{h\to0}(4x+2h-1)=4x-1\) <span class="marks">(6)</span></td></tr>
-<tr><th>7.2.1</th><td>\((x+1)(3x-7)=3x^2-4x-7\Rightarrow D_x=6x-4\) <span class="marks">(2)</span></td></tr>
-<tr><th>7.2.2</th><td>\(y=x^{3/2}-5x^{-1}+\dfrac{\pi}{2}\Rightarrow\dfrac{dy}{dx}=\dfrac32x^{1/2}+5x^{-2}\) (derivative of constant \(\tfrac{\pi}{2}\) is 0) <span class="marks">(4)</span></td></tr>
-</table>
-<p class="totalmark">Total [12]</p>
-</div>
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2017)</span></div>
-            <div>
-<table class="marktable">
-<tr><th>8.1</th><td>\(f(x)=x^3-6x^2+9x\); \(f''(x)=6x-12=0\Rightarrow x=2\). Sign change of \(f''\) around \(x=2\) confirms point of inflection. <span class="marks">(5)</span></td></tr>
-<tr><th>8.2</th><td>Through \((0;0)\), turning point \((1;4)\), \(x\)-intercept/turning point at \((3;0)\), standard cubic shape. <span class="marks">(4)</span></td></tr>
-<tr><th>8.3</th><td>\(f\) concave up for \(x&gt;2\Rightarrow -f(x)\) concave down for \(x&gt;2\). <span class="marks">(2)</span></td></tr>
-<tr><th>8.4.1</th><td>Local max of \(f\) at \((1;4)\) shifts to \((3;7)\). <span class="marks">(2)</span></td></tr>
-<tr><th>8.4.2</th><td>No — \(f'(2)=3(2)^2-12(2)+9=-3\neq1\). <span class="marks">(2)</span></td></tr>
-</table>
-<p class="totalmark">Total [15]</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2017)</span></div>
-            <div>
+<div>
 <p>
                 \(BP^2=(x-0)^2+(x^2+2-3)^2=x^4-x^2+1\).
                 <br/>Minimise: \(\dfrac{d}{dx}(BP^2)=4x^3-2x=0\Rightarrow x(4x^2-2)=0\Rightarrow x=\dfrac{1}{\sqrt2}\) (taking \(x&gt;0\)).
@@ -3392,8 +3548,7 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2016<span class="badge">[49]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
 <p>8.1 Determine \(f'(x)\) from first principles if \(f(x)=2x^2+5x-5\). <span class="marks">(5)</span></p>
@@ -3404,6 +3559,19 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 </ul>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{3(x+h)^2-3x^2}{h}=\lim_{h\to0}(6x+3h)=\textbf{6x}$</p>
+<p><b>8.2</b> $\mathbf{g(x) = \sqrt{x}, a = 4}$</p>
+<p><b>8.3</b> $y=x^{3/2}-5x^{-3} \Rightarrow \dfrac{dy}{dx}=\tfrac32x^{1/2}+15x^{-4}$</p>
+<p><b>8.4</b> $f'(x)=3x^2+2ax+b$; $f'(1)=-8 \Rightarrow 3+2a+b=-8$ (1). Also $f(1)=g(1)=12 \Rightarrow 1+a+b+18=12 \Rightarrow a+b=-7$ (2). Solve: from (1) $2a+b=-11$; subtract (2): $a=-4$, then $b=-3$. $\textbf{a=-4, b=-3}$</p>
+<p class="total-line">Total: 16</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
@@ -3413,6 +3581,19 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>8.4</b> $g(x)=-8x+20$ is a tangent to $f(x)=x^3+ax^2+bx+18$ at $x=1$. Calculate the values of $a$ and $b$. <span class="marks">(5)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{3(x+h)^2-3x^2}{h}=\lim_{h\to0}(6x+3h)=\textbf{6x}$</p>
+<p><b>8.2</b> $\mathbf{g(x) = \sqrt{x}, a = 4}$</p>
+<p><b>8.3</b> $y=x^{3/2}-5x^{-3} \Rightarrow \dfrac{dy}{dx}=\tfrac32x^{1/2}+15x^{-4}$</p>
+<p><b>8.4</b> $f'(x)=3x^2+2ax+b$; $f'(1)=-8 \Rightarrow 3+2a+b=-8$ (1). Also $f(1)=g(1)=12 \Rightarrow 1+a+b+18=12 \Rightarrow a+b=-7$ (2). Solve: from (1) $2a+b=-11$; subtract (2): $a=-4$, then $b=-3$. $\textbf{a=-4, b=-3}$</p>
+<p class="total-line">Total: 16</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
@@ -3423,46 +3604,33 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>9.4</b> If $f(x)=ax^3+bx^2+cx+d$ and $f(0)=-18$, determine the equation of $f$. <span class="marks">(5)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>9.1</b> $3x^2 + 8x - 3 = 0 \implies (3x - 1)(x + 3) = 0 \implies \mathbf{x = \frac{1}{3} \text{ or } x = -3}$</p>
+<p><b>9.2</b> $f''(x) = 6x + 8 < 0 \implies \mathbf{x < -\frac{4}{3}}$</p>
+<p><b>9.3</b> $\mathbf{x \le -3 \text{ or } x \ge \frac{1}{3}}$</p>
+<p><b>9.4</b> $f'(x) = 3ax^2 + 2bx + c$ matches $3x^2 + 8x - 3$: $a = 1, b = 4, c = -3$; $d = f(0) = -18$. $\mathbf{f(x) = x^3 + 4x^2 - 3x - 18}$</p>
+<p class="total-line">Total: 13</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
 <p>Number of molecules of a drug in bloodstream: $M(t)=-t^3+3t^2+72t$, $0&lt;t&lt;10$.</p>
-<img src="./Diagrams/Grade12P1/2016 Q10.png" style="width:70%">
 <div class="part"><b>10.1</b> Number of molecules 3 hours after taking the drug. <span class="marks">(2)</span></div>
 <div class="part"><b>10.2</b> Rate of change exactly 2 hours after taking the drug. <span class="marks">(3)</span></div>
 <div class="part"><b>10.3</b> How many hours after taking the drug will the rate of change be a maximum? <span class="marks">(3)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 8</div>
-            <div>
-<table class="marktable">
-<tr><th>8.1</th><td>\(f'(x)=\lim_{h\to0}\dfrac{f(x+h)-f(x)}{h}=\lim_{h\to0}(4x+2h+5)=4x+5\) <span class="marks">(5)</span></td></tr>
-<tr><th>8.2.1</th><td>\(\dfrac{dy}{dx}=3x^2+12x+12\) <span class="marks">(3)</span></td></tr>
-<tr><th>8.2.2</th><td>\(y=2x\ (x\neq1)\Rightarrow \dfrac{dy}{dx}=2\) <span class="marks">(4)</span></td></tr>
-</table>
-<p class="totalmark">Total [12]</p>
-</div>
-            <div class="ans-sub-label">Question 8</div>
-            <div>
-<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{3(x+h)^2-3x^2}{h}=\lim_{h\to0}(6x+3h)=\textbf{6x}$</p>
-<p><b>8.2</b> $\textbf{g(x)=\sqrt{x}, a=4}$</p>
-<p><b>8.3</b> $y=x^{3/2}-5x^{-3} \Rightarrow \dfrac{dy}{dx}=\tfrac32x^{1/2}+15x^{-4}$</p>
-<p><b>8.4</b> $f'(x)=3x^2+2ax+b$; $f'(1)=-8 \Rightarrow 3+2a+b=-8$ (1). Also $f(1)=g(1)=12 \Rightarrow 1+a+b+18=12 \Rightarrow a+b=-7$ (2). Solve: from (1) $2a+b=-11$; subtract (2): $a=-4$, then $b=-3$. $\textbf{a=-4, b=-3}$</p>
-<p class="total-line">Total: 16</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2016)</span></div>
-            <div>
-<p><b>9.1</b> $3x^2+8x-3=0 \Rightarrow (3x-1)(x+3)=0 \Rightarrow \textbf{x=1/3 or x=-3}$</p>
-<p><b>9.2</b> $f''(x)=6x+8&lt;0 \Rightarrow \textbf{x&lt;-4/3}$</p>
-<p><b>9.3</b> $\textbf{x\le-3 or x\ge1/3}$</p>
-<p><b>9.4</b> $f'(x)=3ax^2+2bx+c$ matches $3x^2+8x-3$: $a=1, b=4, c=-3$; $d=f(0)=-18$. $\textbf{f(x)=x^3+4x^2-3x-18}$</p>
-<p class="total-line">Total: 13</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2016)</span></div>
-            <div>
+<div>
 <p><b>10.1</b> $M(3)=-27+27+216=\textbf{216 molecules}$</p>
 <p><b>10.2</b> $M'(t)=-3t^2+6t+72$; $M'(2)=-12+12+72=\textbf{72 molecules/hour}$</p>
 <p><b>10.3</b> Maximise $M'(t)$: $M''(t)=-6t+6=0 \Rightarrow \textbf{t=1 hour}$</p>
@@ -3474,8 +3642,7 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2015<span class="badge">[35]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 8 <span class="src-year">(2015)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>8.1</b> If $f(x)=x^2-3x$, determine $f'(x)$ from first principles. <span class="marks">(5)</span></div>
@@ -3485,6 +3652,18 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 </div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{2xh+h^2-3h}{h}=\textbf{2x-3}$</p>
+<p><b>8.2.1</b> $y = x^4 - 2 + x^{-4}$; $\frac{dy}{dx} = \mathbf{4x^3 - 4x^{-5}}$</p>
+<p><b>8.2.2</b> $\dfrac{x^3-1}{x-1}=x^2+x+1$ (factorisation) $\Rightarrow D_x=\textbf{2x+1}$</p>
+<p class="total-line">Total: 11</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 9 <span class="src-year">(2015)</span></div>
           <div class="q-content-wrap">
@@ -3497,6 +3676,20 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>9.5</b> Determine the value of $x$, given $x&lt;0$, at which the tangent to $h$ is parallel to $g$. <span class="marks">(4)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>9.1</b> Since Q(2;10) is TP: $h'(2)=0$ and $h(2)=10$. $h'(x)=-3x^2+2ax+b$. $-12+4a+b=0$ (1); $-8+4a+2b=10$ (2). Solve: from (1) $b=12-4a$; sub into (2): $-8+4a+24-8a=10 \Rightarrow -4a=-6 \Rightarrow \textbf{a=3/2}$, then $\textbf{b=6}$</p>
+<p><b>9.2</b> $f(-1)=1+\tfrac32-6=-3,5$. Average gradient $=\dfrac{10-(-3,5)}{2-(-1)}=\dfrac{13,5}{3}=\textbf{4,5}$</p>
+<p><b>9.3</b> $h''(x)=-6x+3=-3(2x-1)$. Sign changes at $\textbf{x=1/2}$ (positive for $x&lt;1/2$, negative for $x&gt;1/2$)</p>
+<p><b>9.4</b> The graph has a $\textbf{point of inflection}$ at $x=1/2$ (concavity changes from up to down)</p>
+<p><b>9.5</b> Gradient of $g=-12$. $h'(x)=-3x^2+3x+6=-12 \Rightarrow 3x^2-3x-18=0 \Rightarrow x^2-x-6=0 \Rightarrow (x-3)(x+2)=0$. Since $x&lt;0$: $\textbf{x=-2}$</p>
+<p class="total-line">Total: 17</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2015)</span></div>
           <div class="q-content-wrap">
@@ -3507,28 +3700,12 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>10.2</b> Determine the derivative of the volume of water with respect to $h$ when $h=9$ cm. <span class="marks">(5)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 8 <span class="src-year">(2015)</span></div>
-            <div>
-<p><b>8.1</b> $f'(x)=\lim_{h\to0}\dfrac{2xh+h^2-3h}{h}=\textbf{2x-3}$</p>
-<p><b>8.2.1</b> $y=x^4-2+x^{-4}$; $\dfrac{dy}{dx}=\textbf{4x^3-4x^{-5}}$</p>
-<p><b>8.2.2</b> $\dfrac{x^3-1}{x-1}=x^2+x+1$ (factorisation) $\Rightarrow D_x=\textbf{2x+1}$</p>
-<p class="total-line">Total: 11</p>
-</div>
-            <div class="ans-sub-label">Question 9 <span class="src-year">(2015)</span></div>
-            <div>
-<p><b>9.1</b> Since Q(2;10) is TP: $h'(2)=0$ and $h(2)=10$. $h'(x)=-3x^2+2ax+b$. $-12+4a+b=0$ (1); $-8+4a+2b=10$ (2). Solve: from (1) $b=12-4a$; sub into (2): $-8+4a+24-8a=10 \Rightarrow -4a=-6 \Rightarrow \textbf{a=3/2}$, then $\textbf{b=6}$</p>
-<p><b>9.2</b> $f(-1)=1+\tfrac32-6=-3,5$. Average gradient $=\dfrac{10-(-3,5)}{2-(-1)}=\dfrac{13,5}{3}=\textbf{4,5}$</p>
-<p><b>9.3</b> $h''(x)=-6x+3=-3(2x-1)$. Sign changes at $\textbf{x=1/2}$ (positive for $x&lt;1/2$, negative for $x&gt;1/2$)</p>
-<p><b>9.4</b> The graph has a $\textbf{point of inflection}$ at $x=1/2$ (concavity changes from up to down)</p>
-<p><b>9.5</b> Gradient of $g=-12$. $h'(x)=-3x^2+3x+6=-12 \Rightarrow 3x^2-3x-18=0 \Rightarrow x^2-x-6=0 \Rightarrow (x-3)(x+2)=0$. Since $x&lt;0$: $\textbf{x=-2}$</p>
-<p class="total-line">Total: 17</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2015)</span></div>
-            <div>
-<p><b>10.1</b> $\tan60°=\dfrac{r}{h} \Rightarrow \textbf{r=h\sqrt3}$</p>
+<div>
+<p><b>10.1</b> $\tan 60^\circ = \frac{r}{h} \implies \mathbf{r = h\sqrt{3}}$</p>
 <p><b>10.2</b> $V=\tfrac13\pi r^2 h = \tfrac13\pi(3h^2)h=\pi h^3$. $\dfrac{dV}{dh}=3\pi h^2$; at $h=9$: $=3\pi(81)=\textbf{243\pi ≈ 763,4 cm}^3\textbf{/cm}$</p>
 <p class="total-line">Total: 7</p>
 </div>
@@ -3576,8 +3753,7 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2024<span class="badge">[17]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 11 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
 <p>A certain number of learners sit for Mathematics, Tourism and Geography exams. All sit for at least one. M=22, T=16, G=18. 5 sit M&amp;T not G. 4 sit M&amp;G not T. 3 sit T&amp;G not M. 6 sit only Tourism.</p>
@@ -3586,6 +3762,19 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>11.3</b> Determine if sitting for Mathematics and sitting for Tourism are independent. <span class="marks">(4)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>11.1</b> Only M = 11, M∩T only = 5, M∩G only = 4, all three = 2, T∩G only = 3, Only T = 6, Only G = 9. Total n(S) = 40.</p>
+<img src="./Diagrams/Grade12P1/Answers/2024_A11.1.png" style="width:70%">
+<p><b>11.2</b> $P(\ge2)=\dfrac{4+2+5+3}{40}=\dfrac{14}{40}=\textbf{0,35}$</p>
+<p><b>11.3</b> $P(M)\times P(T)=\tfrac{22}{40}\times\tfrac{16}{40}=\tfrac{11}{50}=0,22$; $P(M\text{ and }T)=\tfrac{7}{40}=0,175$. Since $0,22\ne0,175$, $\textbf{not independent}$</p>
+<p class="total-line">Total: 9</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 12 <span class="src-year">(2024)</span></div>
           <div class="q-content-wrap">
@@ -3595,22 +3784,15 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>12.3</b> Percentage increase in codes if D,F,I,Q,U,V are now allowed (with 12.2's other restrictions). <span class="marks">(2)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 11 <span class="src-year">(2024)</span></div>
-            <div>
-<p><b>11.1</b> Only M = 11, M∩T only = 5, M∩G only = 4, all three = 2, T∩G only = 3, Only T = 6, Only G = 9. Total n(S) = 40.</p>
-<p><b>11.2</b> $P(\ge2)=\dfrac{4+2+5+3}{40}=\dfrac{14}{40}=\textbf{0,35}$</p>
-<p><b>11.3</b> $P(M)\times P(T)=\tfrac{22}{40}\times\tfrac{16}{40}=\tfrac{11}{50}=0,22$; $P(M\text{ and }T)=\tfrac{7}{40}=0,175$. Since $0,22\ne0,175$, $\textbf{not independent}$</p>
-<p class="total-line">Total: 9</p>
-</div>
-            <div class="ans-sub-label">Question 12 <span class="src-year">(2024)</span></div>
-            <div>
+<div>
 <p><b>12.1</b> $26\times10\times26\times10=\textbf{67 600}$</p>
 <p><b>12.2</b> Letters available: $26-6=20$. First letter: $20-2=18$ options (excl W,Z). Last digit: 5 odd digits. Second letter: 19 remaining. Second digit (from remaining 9, minus 1 for used odd digit... ): $18\times9\times19\times5=\textbf{15 390}$</p>
 <p><b>12.3</b> With all 26 letters allowed: first letter $24$ options (26 minus W,Z), second letter $25-...$: $24\times9\times25\times5=27\,000$.
-% increase $=\dfrac{27\,000-15\,390}{15\,390}\times100=\textbf{75,44\%}$</p>
+% increase $=\dfrac{27\,000-15\,390}{15\,390}\times100=\textbf{75,44%}$</p>
 <p class="total-line">Total: 8</p>
 </div>
           </div>
@@ -3721,8 +3903,7 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2020<span class="badge">[15]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 11 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
 <p>Harry shoots arrows with 50% chance of bullseye each shot.</p>
@@ -3731,6 +3912,18 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>11.3</b> Glenda also has 50%; they take turns, first to hit wins. P(person who shoots first wins). <span class="marks">(3)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>11.1</b> $0,5\times0,5=\textbf{0,25}$</p>
+<p><b>11.2</b> $=0,125\times4=\textbf{0,5}$</p>
+<p><b>11.3</b> $P=(0,5)+(0,5)^3+(0,5)^5+\ldots=\dfrac{0,5}{1-0,25}=\textbf{2/3 ≈ 0,67}$</p>
+<p class="total-line">Total: 8</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2020)</span></div>
           <div class="q-content-wrap">
@@ -3743,21 +3936,14 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 </div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 11 <span class="src-year">(2020)</span></div>
-            <div>
-<p><b>11.1</b> $0,5\times0,5=\textbf{0,25}$</p>
-<p><b>11.2</b> $=0,125\times4=\textbf{0,5}$</p>
-<p><b>11.3</b> $P=(0,5)+(0,5)^3+(0,5)^5+\ldots=\dfrac{0,5}{1-0,25}=\textbf{2/3 ≈ 0,67}$</p>
-<p class="total-line">Total: 8</p>
-</div>
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2020)</span></div>
-            <div>
+<div>
 <p><b>10.1</b> $\textbf{10^{10}=10\,000\,000\,000}$</p>
-<p><b>10.2.1</b> $(8\times10\times10)\times(8\times8\times10)\times(2\times10\times10\times10)=\textbf{1,024\times10^9}$</p>
-<p><b>10.2.2</b> $\dfrac{1,024\times10^9}{10^{10}}=\textbf{0,1024 (10,24\%)}$</p>
+<p><b>10.2.1</b> $(8 \times 10 \times 10) \times (8 \times 8 \times 10) \times (2 \times 10 \times 10 \times 10) = \mathbf{1.024 \times 10^9}$</p>
+<p><b>10.2.2</b> $\frac{1.024 \times 10^9}{10^{10}} = \mathbf{0.1024 \text{ } (10.24\%)}$</p>
 <p class="total-line">Total: 7</p>
 </div>
           </div>
@@ -3766,8 +3952,7 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2019<span class="badge">[16]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
 <p>Library open Monday–Thursday. Anna and Ben each studied one day this week, equally likely each day.</p>
@@ -3775,6 +3960,17 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>10.2</b> P(consecutive days) <span class="marks">(3)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>10.1</b> $\dfrac{4}{16}=\textbf{1/4}$</p>
+<p><b>10.2</b> $\dfrac{3\times2}{16}=\textbf{3/8}$</p>
+<p class="total-line">Total: 5</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 11 <span class="src-year">(2019)</span></div>
           <div class="q-content-wrap">
@@ -3786,17 +3982,11 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>11.2</b> Motors Inc. makes cars: 5 body styles, 4 interior colours, 6 exterior colours (interior ≠ exterior colour). Showroom floor space 500 m², each car needs 5 m². Is displaying one of each variation possible? Justify. <span class="marks">(6)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 10</div>
-            <div>
-<p><b>10.1</b> $\dfrac{4}{16}=\textbf{1/4}$</p>
-<p><b>10.2</b> $\dfrac{3\times2}{16}=\textbf{3/8}$</p>
-<p class="total-line">Total: 5</p>
-</div>
-            <div class="ans-sub-label">Question 11</div>
-            <div>
+<div>
 <p><b>11.1.1</b> $P(A\text{ and }B)=0,1$; only A $=0,3$; only B $=0,15$; neither $=0,45$</p>
 <p><b>11.1.2</b> $=P(A)+P(\text{not }B)-P(A\text{ and not }B) = 0,4+0,75-0,3=\textbf{0,85}$</p>
 <p><b>11.2</b> Total variations $=5\times[(4\times6)-4]=5\times20=100$ variations... using the interior≠exterior constraint per style: $5\times4\times5=100$. Space needed $=100\times5=500$ m² — exactly the available space, so $\textbf{it is possible}$ (check working: e.g. $5\times(4\times6-4)=100$; $100\times5=500\le500$ m²).</p>
@@ -3808,14 +3998,25 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
     </details>
     <details class="yr">
       <summary>2018<span class="badge">[16]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 12 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
 <div class="part"><b>12.1</b> $P(A)=0,45$; $P(B)=y$; $P(A\text{ or }B)=0,74$. Determine $y$ if A and B are mutually exclusive. <span class="marks">(3)</span></div>
 <div class="part"><b>12.2</b> Gift bags of sweets; mystery gift in exactly $\tfrac14$ of bags. A learner selects two bags (one after other, no replacement implied by wording). P(two bags both with mystery gift) $=\tfrac{7}{118}$. Calculate the number of gift bags with a mystery gift. <span class="marks">(6)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>12.1</b> $P(A\text{ or }B)=P(A)+P(B) \Rightarrow 0,74=0,45+y \Rightarrow \textbf{y=0,29}$</p>
+<p><b>12.2</b> Let total mystery bags $=x$, total bags $=4x$. $\dfrac{x}{4x}\times\dfrac{x-1}{4x-1}=\dfrac{7}{118} \Rightarrow \dfrac14\times\dfrac{x-1}{4x-1}=\dfrac{7}{118}$.
+Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
+<p class="total-line">Total: 9</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 11 <span class="src-year">(2018)</span></div>
           <div class="q-content-wrap">
@@ -3827,18 +4028,11 @@ $A'(t)=-\tfrac{12}{25}t+\tfrac65=0 \Rightarrow 12t=30 \Rightarrow t=\textbf{30/1
 <div class="part"><b>11.2</b> How many unique 3-digit codes if digits may repeat, code is between 400 and 600, and code divisible by 5? <span class="marks">(3)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 12 <span class="src-year">(2018)</span></div>
-            <div>
-<p><b>12.1</b> $P(A\text{ or }B)=P(A)+P(B) \Rightarrow 0,74=0,45+y \Rightarrow \textbf{y=0,29}$</p>
-<p><b>12.2</b> Let total mystery bags $=x$, total bags $=4x$. $\dfrac{x}{4x}\times\dfrac{x-1}{4x-1}=\dfrac{7}{118} \Rightarrow \dfrac14\times\dfrac{x-1}{4x-1}=\dfrac{7}{118}$.
-Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
-<p class="total-line">Total: 9</p>
-</div>
-            <div class="ans-sub-label">Question 11 <span class="src-year">(2018)</span></div>
-            <div>
+<div>
 <p><b>11.1.1</b> $7^5=\textbf{16 807}$</p>
 <p><b>11.1.2</b> $7\times6\times5\times4\times3=\dfrac{7!}{2!}=\textbf{2520}$</p>
 <p><b>11.2</b> First digit must be 4 or 5 (to be between 400–600); last digit must be 5 or 0 (only 5 available) for divisibility by 5. Case first digit=4: last digit=5, middle any of 7 $\Rightarrow 1\times7\times1=7$. Case first digit=5: last digit=5 not allowed to repeat with itself in this simplified count but digits may repeat, so allowed: $1\times7\times1=7$. Total $\textbf{=14}$ (as per memo: $2\times7\times1=14$)</p>
@@ -3850,8 +4044,7 @@ Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
     </details>
     <details class="yr">
       <summary>2017<span class="badge">[14]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 10 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
 <p>Survey of 100 Grade 12 learners on Instagram (I), Twitter (T), WhatsApp (W): 8 use all three; 12 use I&amp;T 5 use T&amp;W not I; $x$ use I&amp;W not T; 61 use I; 19 use T; 73 use W; 14 use none.</p>
@@ -3860,6 +4053,19 @@ Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
 <div class="part"><b>10.3</b> Calculate the probability that a learner, chosen randomly, uses only ONE of these applications. <span class="marks">(2)</span></div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>10.1</b> I only $=49-x$; I∩T only $=4$; all three $=8$; T only $=2$; I∩W only $=x$; T∩W only $=5$; W only $=60-x$; none $=14$.</p>
+<img src="./Diagrams/Grade12P1/Answers/2017_A10.1.png" style="width:70%">
+<p><b>10.2</b> $(49-x)+x+8+4+5+2+(60-x)+14=100 \Rightarrow -x+142=100 \Rightarrow \textbf{x=42}$</p>
+<p><b>10.3</b> Only-one totals: I only$=7$, T only$=2$, W only$=18$. $P=\dfrac{7+2+18}{100}=\dfrac{27}{100}=\textbf{27%}$</p>
+<p class="total-line">Total: 8</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 11 <span class="src-year">(2017)</span></div>
           <div class="q-content-wrap">
@@ -3868,18 +4074,11 @@ Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
 <div class="part"><b>11.2</b> Determine the least number of digits required to uniquely identify 700 000 clients. <span class="marks">(3)</span></div>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 10 <span class="src-year">(2017)</span></div>
-            <div>
-<p><b>10.1</b> I only $=49-x$; I∩T only $=4$; all three $=8$; T only $=2$; I∩W only $=x$; T∩W only $=5$; W only $=60-x$; none $=14$.</p>
-<p><b>10.2</b> $(49-x)+x+8+4+5+2+(60-x)+14=100 \Rightarrow -x+142=100 \Rightarrow \textbf{x=42}$</p>
-<p><b>10.3</b> Only-one totals: I only$=7$, T only$=2$, W only$=18$. $P=\dfrac{7+2+18}{100}=\dfrac{27}{100}=\textbf{27\%}$</p>
-<p class="total-line">Total: 8</p>
-</div>
-            <div class="ans-sub-label">Question 11 <span class="src-year">(2017)</span></div>
-            <div>
+<div>
 <p><b>11.1</b> $5\times5\times10\times9=\textbf{2250}$</p>
 <p><b>11.2</b> Testing digit counts (letters fixed at $5\times5=25$): 1 digit→250; 2→2250; 3→18 000; 4→126 000; 5→756 000. Need $\ge700\,000$, so $\textbf{5 digits}$ (giving 756 000 unique codes)</p>
 <p class="total-line">Total: 6</p>
@@ -3890,8 +4089,7 @@ Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
     </details>
     <details class="yr">
       <summary>2016<span class="badge">[13]</span></summary>
-      <div class="yr-body">
-        <div class="q-item">
+      <div class="yr-body"><div class="q-item">
           <div class="q-item-label">Question 11 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
 <img src="./Diagrams/Grade12P1/2016 Q11.png" style="width:70%">
@@ -3904,25 +4102,30 @@ Solving: $118x-118=112x-28 \Rightarrow \textbf{x=15}$</p>
 </div>
 </div>
         </div>
+        
+        <details class="answers">
+          <summary>Show answers</summary>
+          <div class="ans-body">
+<div>
+<p><b>11.1</b> $a=20$ (male, didn't watch), $b=128$ (total watched)</p>
+<p><b>11.2</b> $\textbf{No}$, since $P(\text{male and not watching})=\tfrac{20}{160}\ne0$</p>
+<p><b>11.3.1</b> $\dfrac{128}{160}=\textbf{0,8 (80%)}$</p>
+<p><b>11.3.2</b> $\dfrac{12}{160}=\textbf{0,075 (7,5%)}$</p>
+<p class="total-line">Total: 8</p>
+</div>
+          </div>
+        </details>
         <div class="q-item">
           <div class="q-item-label">Question 12 <span class="src-year">(2016)</span></div>
           <div class="q-content-wrap">
 <p>Digits 1–7 used to create a four-digit code to enter a locked room. How many different codes are possible if digits may not repeat and the code must be an even number bigger than 5000? <span class="marks">[5]</span></p>
 </div>
         </div>
+        
         <details class="answers">
           <summary>Show answers</summary>
           <div class="ans-body">
-            <div class="ans-sub-label">Question 11 <span class="src-year">(2016)</span></div>
-            <div>
-<p><b>11.1</b> $a=20$ (male, didn't watch), $b=128$ (total watched)</p>
-<p><b>11.2</b> $\textbf{No}$, since $P(\text{male and not watching})=\tfrac{20}{160}\ne0$</p>
-<p><b>11.3.1</b> $\dfrac{128}{160}=\textbf{0,8 (80\%)}$</p>
-<p><b>11.3.2</b> $\dfrac{12}{160}=\textbf{0,075 (7,5\%)}$</p>
-<p class="total-line">Total: 8</p>
-</div>
-            <div class="ans-sub-label">Question 12 <span class="src-year">(2016)</span></div>
-            <div>
+<div>
 <p>Case 1: first digit = 6. Remaining last digit even (2 or 4), $2$ choices; middle two digits from remaining 5: $5\times4$. Codes $=1\times5\times4\times2=40$.
 Case 2: first digit = 5 or 7 (2 choices). Last digit even (from remaining, excluding used digits): 3 choices remain. Middle two: $5\times4$. Codes $=2\times5\times4\times3=120$.
 Total $=40+120=\textbf{160}$</p>
@@ -3996,10 +4199,5 @@ Solving: $t^2-3t\cdot(\ldots)$ leads to $t^2-13t+... \Rightarrow \textbf{t=3}$ o
 </footer>
 <!--Footer End-->
 
-<script>
-function toggleAll(selector, open){
-  document.querySelectorAll(selector).forEach(d => d.open = open);
-}
-</script>
 </body>
 </html>

@@ -31,13 +31,32 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  padding: 0 0 60px 0;
+  padding: 0;
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   background: var(--bg-light);
   color: var(--text);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sticky footer: whichever direct child of body holds the page content
+   grows to fill any leftover space, so the footer always sits flush
+   with the bottom of the viewport instead of leaving a gap. */
+body > .wrap,
+body > .page-content {
+  flex: 1 0 auto;
+}
+body > #site-footer {
+  flex-shrink: 0;
+  width: 100%;
 }
 
 /* Unified wrapper for your main content area */
@@ -157,6 +176,22 @@ body {
   color: #fff;
 }
 
+/* Mobile nav menu: toggled by JS adding/removing this class (instead of
+   inline styles), so it always defers to the media query below and
+   never gets stuck open when the viewport is resized back to desktop. */
+#nav .nav-links.mobile-open, #header nav .nav-links.mobile-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  background-color: var(--bg-dark);
+  width: 100%;
+  padding: 20px 0;
+  z-index: 50;
+}
+
 /* =========================================
    TYPOGRAPHY & TOOLBARS
 ========================================= */
@@ -221,7 +256,8 @@ details.topic {
 details.topic > summary {
   list-style: none;
   cursor: pointer;
-  padding: 22px 26px;
+  position: relative;
+  padding: 22px 52px 22px 26px;
   font-size: 1.35em;
   font-weight: 700;
   background: linear-gradient(135deg, var(--bg-dark), #1e293b 60%, var(--accent-dark));
@@ -243,7 +279,8 @@ details.year, details.yr {
 details.year > summary, details.yr > summary {
   list-style: none;
   cursor: pointer;
-  padding: 16px 20px;
+  position: relative;
+  padding: 16px 46px 16px 20px;
   font-size: 1.12em;
   font-weight: 600;
   background: linear-gradient(90deg, var(--accent), var(--accent-dark));
@@ -259,18 +296,25 @@ details.yr > summary::-webkit-details-marker {
   display: none;
 }
 
+/* The dropdown arrow is positioned absolutely (not a flex child) so that
+   with only 2 real children - name and badge - space-between puts the
+   marks badge hard against the right edge, not the middle. */
 details.topic > summary::after,
 details.year > summary::after,
 details.yr > summary::after {
   content: '▾';
   font-size: 1em;
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: transform 0.2s ease;
 }
 
 details.topic[open] > summary::after,
 details.year[open] > summary::after,
 details.yr[open] > summary::after {
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .topic-body { padding: 20px 22px 24px; }
@@ -296,9 +340,22 @@ details.yr[open] > summary::after {
   font-size: 1.02em;
   border-bottom: 1px solid var(--border);
   margin: 0;
-  display: block;
+  display: flex;             /* was block - flex guarantees the marks badge sits at the
+                                 far right regardless of how long the title text is */
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+/* Marks badge inside a title bar: always pinned far right, never uppercase/stretched */
+.qgroup-title .marks, .qblock-title .marks, .qplain-title .marks, .q-item-label .marks {
+  float: none;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: nowrap;
+  margin-left: auto;
 }
 
 .qgroup-body, .qplain-body { padding: 14px 16px; }
@@ -318,7 +375,8 @@ details.yr[open] > summary::after {
 .sub .tag { font-weight: 700; color: var(--accent); margin-right: 6px; }
 .part, .subpart { margin: 10px 0 10px 6px; }
 .subpart { margin-left: 20px; }
-.part-label, .qnum { font-weight: 700; }
+.part-label { font-weight: 700; }
+.qnum { font-weight: 400; } /* was bold - made consistent with the rest of the page's plain-text numbering */
 
 /* =========================================
    ANSWERS & SOLUTIONS
@@ -354,7 +412,7 @@ details.answer-block > summary::-webkit-details-marker, details.asection > summa
 
 details.answers > summary::before, details.answer > summary::before, details.solution > summary::before, 
 details.ans > summary::before, details.answer-block > summary::before, details.asection > summary::before, details.sub.answer > summary::before {
-  content: '🔓';
+  content: '';
   font-size: 1.1em;
 }
 
@@ -467,4 +525,88 @@ hr, hr.qsep, hr.sep, hr.divider { border: none; border-top: 1px dashed #ccc; mar
   .wrap, .container {
     padding: 0 12px;
   }
+}
+/* =========================================
+   P2 THEME (greenish spectrum)
+   Applied via <body class="theme-p2">. P1 keeps the default blue
+   spectrum untouched; only the accent variables change here.
+========================================= */
+body.theme-p2 {
+  --accent: #16a34a;
+  --accent-dark: #15803d;
+  --accent-soft: #ecfdf5;
+  --answer-bg: #f0fdf4;
+  --answer-border: #4ade80;
+}
+
+/* =========================================
+   HOMEPAGE INTRO SLIDE (P1 / index.html)
+   A full-height intro "slide" the visitor sees first; the arrow /
+   "Jump to P1" link scrolls smoothly down into the existing P1 content.
+========================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+.intro-slide {
+  min-height: calc(100vh - 90px); /* full viewport minus the site header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  color: #fff;
+  background: linear-gradient(160deg, var(--bg-dark) 0%, #1e293b 55%, var(--accent-dark) 100%);
+}
+
+.intro-slide h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0 0 12px;
+}
+
+.intro-slide p {
+  max-width: 640px;
+  margin: 0 auto 10px;
+  color: #cbd5e1;
+  font-size: 1.05em;
+}
+
+.jump-arrow {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  animation: jump-bounce 2s infinite;
+}
+
+.jump-arrow .arrow-icon {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.jump-arrow:hover { color: #93c5fd; }
+
+@keyframes jump-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+#p1-content { scroll-margin-top: 90px; }
+
+/* Topic / year marks badges, e.g. "[20 Marks]" */
+.badge {
+  font-size: 0.7em;
+  font-weight: 600;
+  background: rgba(255,255,255,0.15);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-transform: none;
+  letter-spacing: normal;
 }
