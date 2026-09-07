@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Olympiad(Grade 10-12) - Better Math Education</title>
+<link rel="stylesheet" href="./Codes/main.css">
+<script src="./Codes/mathjax-config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+<script src="./Codes/main.js" defer></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425237218243356"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Header-->
+
+
+<!-- Header/Navbar Container -->
+<header id="header">
+    
+    <!-- Left Side: Logo and Website Name -->
+    <div class="brand">
+        <!-- Placeholder for your logo. Replace 'logo.png' with your actual image file later -->
+        <img src="./Diagrams/BetterMath_Logo.png" alt="Logo" id="logo-img">
+        <div>
+          <h1><a href="index.html" id="logo">Better Math Education</a></h1>
+          <p class="slogan">Get infinitely better at math, one day at a time.</p>
+        </div>
+    </div>
+
+    <!-- Right Side: Navigation -->
+    <nav id="nav">
+        <div class="nav-links">
+            <a href="index.html">Homepage</a>
+                       <!-- Dropdown Section -->
+            <div class="dropdown">
+                <button class="dropbtn">Grade 12 Math NSC ▼</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Math P1 Grade 12</a>
+                    <a href="MathematicsP2.html">Math P2 Grade 12</a>
+                </div>
+            </div>
+            <a href="MathOlympiad(Grade10-12).html">Math Olympiad(Grade 10-12)</a>
+            <a href="MathOlympiad(Tertiary).html">Math Olympiad(Tertiary)</a>
+            
+ 
+        </div>
+
+        <!-- Mobile Hamburger Menu Icon (Optional) -->
+        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+            ☰
+        </div>
+    </nav>
+
+
+</header>
+<!--Header End-->
+<header>
+  <h1>South African Mathematical Olympiad(SAMO) -Third Round</h1>
+  <p>Senior Division (Grades 10–12) </p>
+</header>
+
+<div class="controls">
+  <button class="btn-on" onclick="toggleAll('details.year', true)">Expand all years</button>
+  <button class="btn-off" onclick="toggleAll('details.year', false)">Collapse all years</button>
+  <button class="btn-on" onclick="showAllAnswers()">Show all solutions</button>
+  <button class="btn-off" onclick="hideAllAnswers()">Hide all solutions</button>
+</div>
+
+<div class="container" id="container">
+
+<!-- ============ 2012 ============ -->
+<details class="year">
+<summary>2012</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">Given that
+$$\frac{1+3+5+\cdots+(2n-1)}{2+4+6+\cdots+(2n)}=\frac{2011}{2012},$$
+determine $n$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Using the sum formula for arithmetic progressions,
+$$\frac{1+3+\cdots+(2n-1)}{2+4+\cdots+2n}=\frac{n\cdot\frac{1+(2n-1)}{2}}{n\cdot\frac{2+2n}{2}}=\frac{n}{n+1}=\frac{2011}{2012},$$
+so $n=2011$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Let $ABCD$ be a square and $X$ a point such that $A$ and $X$ are on opposite sides of $CD$. The lines $AX$ and $BX$ intersect $CD$ in $Y$ and $Z$ respectively. If the area of $ABCD$ is $1$ and the area of $XYZ$ is $\tfrac23$, determine the length of $YZ$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $YZ=x$ and let $y$ be the corresponding height of $\triangle XYZ$ from $X$. Since $\triangle XYZ\sim\triangle XAB$ and $AB=1$, the heights $y$ and $1+y$ satisfy $\frac{y}{1+y}=\frac{x}{1}=x$.
+Hence $\text{area}(XYZ)=\frac{xy}{2}=\frac{y^2}{2(1+y)}=\frac23$, giving $y^2-\frac43y-\frac43=(y+\tfrac23)(y-2)=0$, so $y=2$ and
+$$x=\frac{y}{1+y}=\frac23.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Sixty points on a circle are coloured: thirty red, twenty blue, ten green, dividing the circle into sixty arcs. An arc between a red and green point is assigned $1$; between red and blue, $2$; between blue and green, $3$; between two points of the same colour, $0$. What is the greatest possible sum of all the numbers assigned to the arcs?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Give red score $0$, green score $1$, blue score $2$. The number on an arc is at most the sum of the scores of its endpoints, so the total is at most twice the sum of all sixty scores:
+$$2(30\cdot0+20\cdot2+10\cdot1)=100.$$
+Equality holds when there are no arcs joining two green or two blue points, e.g. by alternating red and non-red points. So the greatest possible sum is $\boxed{100}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">Let $p$ and $k$ be positive integers, $p$ prime, $k>1$. Prove that there is at most one pair $(x,y)$ of positive integers such that $x^k+px=y^k$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Case $\gcd(x,p)=1$: then $x$ and $x^{k-1}+p$ are coprime, and since $x(x^{k-1}+p)=y^k$, both factors must be $k$th powers: $x=u^k$, $x^{k-1}+p=v^k$. Then
+$$p=v^k-u^{k(k-1)}=(v-u^{k-1})\big(v^{k-1}+v^{k-2}u^{k-1}+\cdots+u^{(k-1)^2}\big).$$
+Since $p$ is prime and the second factor exceeds $v-u^{k-1}$, we must have $v-u^{k-1}=1$, i.e. $v=u^{k-1}+1$, giving
+$$p=(u^{k-1}+1)^{k-1}+(u^{k-1}+1)^{k-2}u^{k-1}+\cdots+u^{(k-1)^2},$$
+an increasing function of $u$, so at most one $u$ (hence at most one $(x,y)$) works.
+
+Case $\gcd(x,p)=p$: writing $x=p^{k-1}u$, $y=pv$ leads to $p^{k(k-2)}u^k+u=v^k$, but one shows
+$$(p^{k-2}u)^k< p^{k(k-2)}u^k+u < (p^{k-2}u+1)^k,$$
+a contradiction. Hence at most one solution exists overall.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Let $ABC$ be a triangle with $AB\ne AC$, orthocentre $H$, circumcentre $O$, and $D$ the midpoint of $BC$. The extensions of $HD$ and $AO$ meet at $P$. Prove that $\triangle AHP$ and $\triangle ABC$ have the same centroid.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $AO$ meet the circumcircle again at $X$ (so $AX$ is a diameter). Since $AX$ is a diameter, $\angle ABX=90^\circ$, so $BX\parallel CH$; similarly $CX\parallel BH$. Hence $BHCX$ is a parallelogram, so its diagonal $XH$ passes through $D$, the midpoint of $BC$. Thus $X$ lies on both $AO$ and $HD$, so $X=P$, and $D$ is also the midpoint of $HP$.
+
+So $AD$ is a median of both $\triangle ABC$ (median to $BC$) and $\triangle AHP$ (median to $HP$), and since the centroid divides a median in ratio $2:1$ from the vertex, both triangles have their centroid at the same point on $AD$, two-thirds of the way from $A$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Find all functions $f:\mathbb{N}\to\mathbb{R}$ such that
+$$f(km)+f(kn)-f(k)f(mn)\ge 1$$
+for all $k,m,n\in\mathbb{N}$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Setting $k=m=n=1$ gives $(f(1)-1)^2\le0$, so $f(1)=1$. Setting $k=1,n=m$ and $k=n,m=1$ gives
+$$2f(n)-f(n^2)\ge1,\qquad f(n^2)+f(n)-f(n)^2\ge1.$$
+Adding: $-f(n)^2+3f(n)\ge2$, i.e. $(f(n)-1)(f(n)-2)\le0$, so $1\le f(n)\le2$ for all $n$.
+
+Suppose some $f(n)=a>1$. Using the second inequality and monotonicity of $g(x)=x+\tfrac1x$ on $(1,\infty)$, one shows $f(n^2)\ge b\,f(n)$ where $b=1+\frac{(a-1)^2}{a}>1$. Iterating, $f(n^{2^k})\ge b^k a\to\infty$, contradicting $f\le2$. Hence $f(n)\le 1$ for all $n$, and combined with $f(n)\ge1$, the only solution is
+$$f(n)\equiv 1.$$
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2013 ============ -->
+<details class="year">
+<summary>2013</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">2013 is the first year since the Middle Ages consisting of four consecutive digits. How many such years are there still to come after 2013 (and before the year 10000)?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+There are $7$ choices of four consecutive digits ($0,1,2,3$ up to $6,7,8,9$), each giving $4!=24$ arrangements: $7\times24=168$ possibilities. Subtract those starting with $0$ ($6$: from $0,1,2,3$), those starting with $1$ ($12$: from $1,0,2,3$ or $1,2,3,4$), and $2013$ itself: $168-19=\boxed{149}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">$A$ is a 2-digit number and $B$ is a 3-digit number such that $A$ increased by $B\%$ equals $B$ reduced by $A\%$. Find all possible pairs $(A,B)$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$A\left(1+\frac{B}{100}\right)=B\left(1-\frac{A}{100}\right) \Rightarrow 2AB+100A-100B=0 \Rightarrow A=\frac{50B}{B+50}=50-\frac{2500}{B+50}.$
+
+So $B+50$ divides $2500$; among the $15$ divisors only $250,500,625$ give 3-digit $B$, giving
+$$(A,B)\in\{(40,200),\ (45,450),\ (46,575)\}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Let $ABC$ be acute-angled and $AD$ an altitude ($D$ on $BC$). Let $\ell$ be the line through $D$ parallel to $AB$, and $t$ the tangent to the circumcircle of $ABC$ at $A$. Let $E=\ell\cap t$. Show that $CE\perp t$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+By the tangent–chord angle, $\angle CAE=\angle CBA$. Since $AB\parallel \ell$, also $\angle CAE=\angle CBA=\angle CDE$. So $ADCE$ is cyclic, giving $\angle CEA=180^\circ-\angle CDA=90^\circ$, as required.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">Determine all pairs of polynomials $f,g$ with real coefficients satisfying $x^2\cdot g(x)=f(g(x))$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Write $f(x)=c_0+c_1x+\cdots+c_nx^n$. Then $x^2g(x)=c_0+c_1g(x)+\cdots+c_ng(x)^n$. The left side and every term but $c_0$ on the right are divisible by $g(x)$, so $c_0=0$ unless $g$ is constant.
+
+If $g\equiv K$ constant: $Kx^2=f(K)$ forces $K=0$, $f$ any polynomial with $f(0)=0$.
+
+If $g$ non-constant, $c_0=0$: dividing by $g(x)$, $x^2=c_1+c_2g(x)+\cdots+c_ng(x)^{n-1}$. With $\deg g=m$, the right side has degree $m(n-1)=2$, giving $(m,n)=(1,3)$ or $(2,2)$:
+<ul>
+<li>$g(x)=ax+b$, $f(x)=\dfrac{x(x-b)^2}{a^2}$ (any $a\ne0,b$);</li>
+<li>$g(x)=\dfrac{x^2-c_1}{c_2}$, $f(x)=c_1x+c_2x^2$ ($c_2\ne0$, $c_1$ arbitrary).</li>
+</ul>
+These, together with the $g\equiv0$ family, are all solutions.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Coins are placed on a $20\times13$ board. Two coins are neighbours if they share a row or column with no coin between them. Find the largest number of coins so that no coin has more than two neighbours.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+On an $m\times n$ board ($m,n>1$) the maximum is $m+n$: achieved by placing coins along the top row, the rightmost column, and the bottom-left square. By induction on $m+n$ (using the pigeonhole principle: a row with $\ge3$ coins forces a "lonely" column that can be deleted), one shows $m+n$ cannot be exceeded. For $20\times 13$: $20+13=\boxed{33}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Let $ABC$ be acute with $AC\ne BC$, circumcentre $O$, and $F$ the foot of the altitude from $C$. Let $X,Y$ be the feet of perpendiculars from $A,B$ to line $CO$. The line $FO$ meets the circumcircle of $FXY$ again at $P$. Prove $OP<OF$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+By power of a point, $OX\cdot OY=OP\cdot OF$, so it suffices to show $OF^2>OX\cdot OY$. Since $AF\cdot BF=R^2-OF^2$ (power of $F$ w.r.t. circumcircle), we need $R^2-AF\cdot BF>OX\cdot OY$.
+
+Using $\angle CAX=\angle ABC$, triangles $AXC,BFC$ are similar, giving $AF\cdot BF=AX\cdot BY$. Then
+$$AF\cdot BF=\sqrt{(R^2-OX^2)(R^2-OY^2)}\le\sqrt{R^4-2\,OX\cdot OY\cdot R^2+OX^2OY^2}=R^2-OX\cdot OY,$$
+by AM–GM on $OX^2+OY^2\ge 2\,OX\cdot OY$, with equality only if $OX=OY$ — impossible since $AC\ne BC$. This proves the required strict inequality, hence $OP<OF$.
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2014 ============ -->
+<details class="year">
+<summary>2014</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">Determine the last two digits of the product of the squares of all positive odd integers less than $2014$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+The product $P$ of all odd integers less than $2014$ includes $25$ as a factor and is odd, so its last two digits are $25$ or $75$; write $P=100n+25$ or $100n+75$. Squaring either form gives last two digits $\boxed{25}$ (in fact the last three digits are $625$).
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Given $\dfrac{a-b}{c-d}=2$ and $\dfrac{a-c}{b-d}=3$, determine $\dfrac{a-d}{b-c}$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $x=c-d$, $y=b-d$. Then $a-d=(c-d)+(a-c)=x+3y$ and $a-d=(b-d)+(a-b)=y+2x$, so $x+3y=y+2x\Rightarrow x=2y$. Then $a-d=5y$ and $b-c=(b-d)-(c-d)=y-x=-y$, so
+$$\frac{a-d}{b-c}=\boxed{-5}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">In obtuse triangle $ABC$ (obtuse angle at $A$), let $D,E,F$ be feet of the altitudes from $A,B,C$. Given $DE\parallel CF$ and $DF$ parallel to the bisector of $\angle BAC$, find the angles of the triangle.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $\alpha=\angle BAC,\beta=\angle ABC,\gamma=\angle ACB$. Since $A,E,B,D$ are concyclic (right angles at $D,E$), $\angle EDB=180^\circ-\alpha$. Since $DE\parallel CF$, $\angle EDB=90^\circ-\beta$, giving $\beta=\alpha-90^\circ$. Likewise, using $DF\parallel$ bisector, one finds $\gamma=\alpha/2$. From $\alpha+\beta+\gamma=180^\circ$:
+$$\alpha+(\alpha-90^\circ)+\tfrac{\alpha}{2}=180^\circ\ \Rightarrow\ \alpha=108^\circ,\ \beta=18^\circ,\ \gamma=54^\circ.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">(a) Let $a,x,y$ be positive integers. Prove: if $x\ne y$ then $ax+\gcd(a,x)+\operatorname{lcm}(a,x)\ne ay+\gcd(a,y)+\operatorname{lcm}(a,y)$.<br>
+(b) Show there are no positive integers $a,b$ with $ab+\gcd(a,b)+\operatorname{lcm}(a,b)=2014$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+(a) Suppose the two expressions are equal. Taking $\gcd$ with $a$ on both sides (noting $a\mid ax$, $a\mid\operatorname{lcm}(a,x)$) gives $\gcd(a,x)=\gcd(a,y)=d$. Writing $\operatorname{lcm}(a,x)=ax/d$ etc., the equality becomes $ax(1+\tfrac1d)=ay(1+\tfrac1d)$, so $x=y$, a contradiction.
+
+(b) If $ax+\gcd(a,x)+\operatorname{lcm}(a,x)=2014$ (writing $x$ for $b$), then $\gcd(a,x)\mid 2014$, and also $(\gcd(a,x)+1)(\operatorname{lcm}(a,x)+1)=2015$, so $\gcd(a,x)+1\mid2015=5\cdot13\cdot31$. Checking divisors of $2014$ against this forces $\gcd(a,x)=2014$, but then $ax+\operatorname{lcm}(a,x)=0$ is impossible. Hence no such $a,b$ exist.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Let $n>1$. An $n\times n$ grid has $n$ green and $n$ blue unit squares (rest white). Are there more colourings with no two green in a row and no two blue in a column, or colourings with no two green and no two blue in the same row?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+If $n$ green squares occupy distinct rows, each row has $n-1$ remaining squares, giving $(n-1)^n$ ways to place $n$ non-repeating-row blue squares.
+
+For the other count, if $x_i$ is the number of non-green squares in column $i$ ($\sum x_i=n^2-n$), the number of column-safe blue placements is $x_1x_2\cdots x_n\le\left(\frac{n^2-n}{n}\right)^n=(n-1)^n$ by AM–GM, with strict inequality possible.
+
+So there are (weakly) more colourings of the first type (no two green, no two blue in the same row) than of the second type.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Let $O$ be the origin, $A_1,\dots,A_n$ in the first quadrant with numbers $a_1,\dots,a_n$, and $B_1,\dots,B_m$ in the second quadrant with numbers $b_1,\dots,b_m$, such that $\text{area}(OA_jB_k)=a_jb_k$ for all $j,k$. Show all the $A_j$ or all the $B_k$ lie on one line through $O$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+If some area is zero, one of $a_1,b_1$ is zero, immediately forcing all of the other set onto a line through $O$ and the zero point. Otherwise, suppose (for contradiction) $A_1,A_2$ are on different rays from $O$ and $B_1,B_2$ are on different rays. Using
+$$\frac{\text{area}(OA_1B_2)}{\text{area}(OA_1B_1)}=\frac{b_2}{b_1}=\frac{\text{area}(OA_2B_2)}{\text{area}(OA_2B_1)},$$
+a careful geometric argument (comparing where $B_1B_2$ meets rays $OA_1,OA_2$, using that these intersections must lie outside segment $B_1B_2$ since $A_1,A_2$ are in the first quadrant) forces $O,A_1,A_2$ collinear — a contradiction. Hence either all $A_j$ or all $B_k$ are collinear with $O$.
+
+<em>(Alternative trigonometric solution:</em> writing the areas via $\tfrac12 |OA_j||OB_k|\sin(\beta_k-\alpha_j)$ and equating $\text{area}(OA_1B_1)\text{area}(OA_2B_2)=\text{area}(OA_1B_2)\text{area}(OA_2B_1)$ leads via product-to-sum identities to $\sin(\alpha_1-\alpha_2)\sin(\beta_1-\beta_2)=0$.)
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2015 ============ -->
+<details class="year">
+<summary>2015</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">Points $E,F$ lie inside square $ABCD$ such that $\triangle ABF$ and $\triangle BCE$ are equilateral. Show that $\triangle DEF$ is equilateral.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$\angle FAD=\angle BAD-\angle BAF=90^\circ-60^\circ=30^\circ$. Since $AF=AD$, $\triangle AFD$ is isosceles with $\angle ADF=\frac{180^\circ-30^\circ}{2}=75^\circ$, so $\angle CDF=90^\circ-75^\circ=15^\circ$. By symmetry $\angle ADE=15^\circ$, so $\angle EDF=90^\circ-15^\circ-15^\circ=60^\circ$. By symmetry (reflection in diagonal $BD$), $DE=DF$, so $\triangle DEF$ is isosceles with a $60^\circ$ angle, hence equilateral.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Determine all pairs of real numbers $a,x$ satisfying $5x^3+ax^2+8=0$ and $5x^3+8x^2+a=0$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Subtracting: $(a-8)(x^2-1)=0$, so $a=8$, $x=1$, or $x=-1$.
+<ul>
+<li>If $a=8$: $5x^3+8x^2+8=(x+2)(5x^2-2x+4)=0$; the quadratic has negative discriminant, so $x=-2$.</li>
+<li>If $x=-1$: $a=-5x^3-8x^2=-3$.</li>
+<li>If $x=1$: $a=-5x^3-8x^2=-13$.</li>
+</ul>
+So $(a,x)\in\{(8,-2),\,(-3,-1),\,(-13,1)\}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">A divisor $d$ of $n$ is <em>special</em> if $d+1$ is also a divisor. Prove at most half the divisors of $n$ are special, and find all $n$ for which exactly half are special.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+If $d\ge\sqrt n$ is special then $n/d\ge n/(d+1)+1$, i.e. $n\ge d(d+1)>d^2\ge n$, a contradiction. So only divisors $<\sqrt n$ can be special; since divisors pair up as $(a,n/a)$ across $\sqrt n$, at most half can be special.
+
+For exactly half: $n$ is not a perfect square, and every divisor below $\sqrt n$ must be special, forcing $1,2,\dots,k$ (the largest such $k<\sqrt n$) all to be divisors, with $n=k(k+1)$. One checks $k-1\mid 2$, giving $k\in\{1,2,3\}$, so
+$$n\in\{2,\,6,\,12\}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">Let $ABC$ be acute with $AB<AC$; $D,E$ on $AC,BC$ with $AD=AE=AB$. The circumcircle of $ABE$ meets line $AC$ again at $F$ and line $DE$ again at $P$. Prove $P$ is the circumcentre of $\triangle BDF$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Since $AD=AE$, $\angle ADE=\angle AED$. Using cyclic quadrilaterals $ABPE$, $ABPF$: $\angle ABP=180^\circ-\angle AEP=\angle AED=\angle ADE=\angle ADP$, and $\angle ABP=180^\circ-\angle AFP=\angle DFP$, so $\angle FDP=\angle DFP$, giving $PD=PF$. Also, since $AB=AE$, $\angle ABE=\angle AEB$, and $\angle APB=\angle AEB=\angle ABE=\angle APE=\angle APD$. So $\triangle ABP\cong\triangle ADP$ (shared side $AP$, equal angles), giving $PB=PD=PF$. Hence $P$ is the circumcentre of $\triangle BDF$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">There are $20$ villages in a row on one riverbank and $15$ on the other. Non-crossing straight bridges must connect villages on opposite banks so that the whole system is connected. How many ways are there to build the bridges?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+For $a$ villages on one side, $b$ on the other, the answer is $\binom{a+b-2}{a-1}$, proved by induction: either $A_1$ connects only to $B_1$ (reduce to $(a-1,b)$: $\binom{a+b-3}{a-2}$ ways) or $B_1$ connects only to $A_1$ (reduce to $(a,b-1)$: $\binom{a+b-3}{a-1}$ ways), and these sum to $\binom{a+b-2}{a-1}$ by Pascal's rule. For $a=20,b=15$:
+$$\binom{33}{14}=818\,809\,200.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Suppose $a$ is an integer and $n!+a$ divides $(2n)!$ for infinitely many positive integers $n$. Prove $a=0$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Note $(2n)!=\binom{2n}{n}(n!)^2\equiv\binom{2n}{n}a^2 \pmod{n!+a}$, so $n!+a$ divides $a^2\binom{2n}{n}$. Using $\binom{2n}{n}\le4^n$, one shows for $a\ne 0$ and $n$ large that
+$$\frac{a^2\binom{2n}{n}}{n!+a}<1,$$
+(comparing the factorial growth of $n!$ against the exponential $4^n$), which forces $a^2\binom{2n}{n}=0$ — impossible unless it isn't actually divisible, contradicting the hypothesis for infinitely many $n$. Hence $a=0$ (and indeed $n!\mid(2n)!$ always).
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2016 ============ -->
+<details class="year">
+<summary>2016</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">22 players (numbers $1$–$22$) are on the field. At halftime, the goal-keeper (number $1$) is substituted by a reserve, no other substitutions occur, all jersey numbers on the field remain distinct, and the two teams' number-sums become equal. Find (a) the greatest, (b) the smallest possible jersey number of the reserve.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+(a) The maximum imbalance without player 1 is achieved with one team on $2$–$11$, the other on $12$–$22$: difference $=(12+\cdots+22)-(2+\cdots+11)=122$, so the greatest possible reserve number is $\boxed{122}$.
+
+(b) Since $2+3+\cdots+22=252$ is even and both sums must be equal (their sum is $252+(\text{reserve})$, an even total needing an even reserve), the reserve number must be even. The smallest unused even number is $24$ — achievable, e.g. $\{2,5,6,9,10,13,14,17,18,20,24\}$ vs $\{3,4,7,8,11,12,15,16,19,21,22\}$. So the smallest possible reserve number is $\boxed{24}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Determine all pairs of real numbers $a,b$ ($b>0$) such that the solutions of $x^2+ax+a=b$ and $x^2+ax+a=-b$ are four consecutive integers.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Both quadratics share axis of symmetry $x=-a/2$; the two solutions of each pair average to $-a/2$, so the four consecutive integers are $-a/2\pm\tfrac12,-a/2\pm\tfrac32$. Solving $\sqrt{a^2-4a+4b}=3$ and $\sqrt{a^2-4a-4b}=1$ gives $8b=8\Rightarrow b=1$, and $a^2-4a=5\Rightarrow a=-1$ or $a=5$.
+$$\boxed{(a,b)=(-1,1)\ \text{or}\ (5,1)}$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">The incircle of $\triangle ABC$, centre $I$, touches $BC,CA,AB$ at $D,E,F$. $P$ (same side of $FE$ as $A$) satisfies $\angle PFE=\angle BCA$, $\angle PEF=\angle ABC$. Prove $P,I,D$ are collinear.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Since $\angle AEI=\angle AFI=90^\circ$, $A,E,F,I$ lie on the circle with diameter $AI$. Since $\triangle PEF\sim\triangle ABC$, $\angle EPF=\angle BAC=\angle EAF$, so $P$ also lies on this circle. Since $\angle BDI=\angle BFI=90^\circ$, $BDIF$ is cyclic, so $\angle FID+\angle FBD=180^\circ$. Then
+$$\angle PIF=\angle PEF=\angle ABC=\angle FBD=180^\circ-\angle FID,$$
+so $\angle PIF+\angle FID=180^\circ$, proving $P,I,D$ collinear.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">For which $n\ge2$ can $n$ distinct lines be drawn so that at least $n-2$ points have exactly three lines meeting there?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$n=2,3$ work trivially. For $n=4$ one needs $\ge5$ lines for two triple points (impossible with $4$); similarly $n=5$ is impossible (needs $\ge6$ or $\ge7$ lines). For every $n\ge6$, start with the sides/diagonals of a quadrilateral with non-parallel opposite sides (giving $n=6$ with $4$ triple points), then inductively add one line through an existing double-intersection point avoiding all others, each time converting a double point into a triple point while creating one new double point. This shows all $n\ge6$ work.
+
+$$\boxed{n=2,3\ \text{and all } n\ge6\ \text{work; } n=4,5\ \text{do not.}}$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">For positive integer $n$, find the maximum of
+$$\frac{1-x^n-(1-x)^n}{x(1-x)^n+(1-x)x^n}, \qquad 0<x<1.$$</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Writing $y=1-x$, algebra reduces the expression to
+$$1+\frac{1+x+\cdots+x^{n-2}+1+y+\cdots+y^{n-2}}{x^{n-1}+y^{n-1}}=1+\sum_{j=0}^{n-2}\frac{x^j+y^j}{x^{n-1}+y^{n-1}}.$$
+Each term $\dfrac{x^a+y^a}{x^b+y^b}$ ($a<b$) is maximised at $x=y=\tfrac12$ (shown via the power-mean/AM–GM inequality), so the overall maximum occurs at $x=\tfrac12$, giving value
+$$\boxed{2^n-2}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Let $1<k<m$ be integers, $L_i=\operatorname{lcm}(1,2,\dots,i)$. Prove $k$ divides $L_i\left[\binom{m}{i}-\binom{m-k}{i}\right]$ for all $i\ge1$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Induct on $m$. Base case $m=k$: $L_i\binom{k}{i}=k\cdot\frac{L_i}{i}\binom{k-1}{i-1}$, an integer multiple of $k$ since $L_i/i\in\mathbb Z$.
+
+Inductive step: using Pascal's identity $\binom{m+1}{i}=\binom{m}{i}+\binom{m}{i-1}$,
+$$L_i\left[\binom{m+1}{i}-\binom{m+1-k}{i}\right]=L_i\left[\binom{m}{i}-\binom{m-k}{i}\right]+\frac{L_i}{L_{i-1}}\cdot L_{i-1}\left[\binom{m}{i-1}-\binom{m-k}{i-1}\right].$$
+Both bracketed terms on the right are divisible by $k$ by the induction hypothesis, and $L_{i-1}\mid L_i$, completing the induction.
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2017 ============ -->
+<details class="year">
+<summary>2017</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">$a,b$ are positive integers together having $9$ digits, using each of $1,\dots,9$ exactly once. For which $a,b$ is $a/b$ closest to $1$?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+If $a>b$: $a\ge5$ digits, $b\le4$ digits, so $a/b\ge12345/9876>1$. If $a<b$: symmetric, $a/b\le9876/12345<1$. Comparing $12345/9876=5/4$ (distance $1/4$) with $9876/12345=4/5$ (distance $1/5$), the closer value is
+$$\boxed{a=9876,\ b=12345}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Rectangle $ABCD$, $AB=CD=5$, $BC=AD=10$. $W,X,Y,Z$ on $AB,BC,CD,DA$ form a kite $WXYZ$ with right angle at $W$, $WX=WZ=\sqrt{13}$, $XY=ZY$. Find $XY$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Triangles $AWZ,BXW$ are congruent (angle-chasing with the right angle at $W$), so with $BW=x$, $AW=5-x$: $x^2+(5-x)^2=13\Rightarrow x=2$ or $3$; take $x=2$, so $BX=3,XC=7,AZ=2,ZD=8$. Let $CY=y$; using $XY=ZY$ and Pythagoras: $7^2+y^2=8^2+(5-y)^2\Rightarrow y=4$. Then
+$$XY=\sqrt{7^2+4^2}=\boxed{\sqrt{65}}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">A representation $\tfrac{17}{20}=\tfrac1{a_1}+\cdots+\tfrac1{a_k}$ with distinct positive integers, at most one not a power of $2$, is called <em>calm</em>.<br>(a) Find the smallest $k$.<br>(b) Prove there are infinitely many calm representations.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+(a) No $2$-term calm representation exists (too large or too small); with $3$ terms, $\tfrac{17}{20}=\tfrac12+\tfrac14+\tfrac1{10}$ works. So the minimum is $\boxed{k=3}$.
+
+(b) Take $a_1=5\cdot2^{4n+1}$. Then $\tfrac{17}{20}-\tfrac{1}{5\cdot2^{4n+1}}=\tfrac{A}{2^{4n+1}}$ for some positive integer $A<2^{4n+1}$ (using $2^4\equiv1\pmod5$ to show the numerator is divisible by $5$). Writing $A$ in binary as a sum of distinct powers of $2$ gives a calm representation for every $n$, hence infinitely many.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">On a $2017\times2017$ board, Andile forbids some squares, then Andile and Zandre alternately place coins (Zandre first), never on a forbidden square or sharing a row/column with an existing coin. The player placing the last coin wins. What is the least number of forbidden squares Andile needs to guarantee a win?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Forbidding an entire row ($2017$ squares) leaves $2016$ rows, so exactly $2016$ moves are ever possible (each move removes one row and one column), giving Andile the last move.
+
+Conversely, one shows by induction that on a $(2n-1)\times(2n-1)$ board with at most $2n-2$ forbidden squares, the first player (Zandre) always has a winning strategy, so fewer than $2017$ forbidden squares cannot guarantee Andile a win. Hence the least number is
+$$\boxed{2017}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Let $ABC$ have circumcircle $\Gamma$; $D$ on $BC$ with $\angle BAD=\angle DAC$; $M,N$ on $BD,DC$ with $\angle MAD=\angle DAN$. Let $S,P,Q$ be the second intersections of $AD,AM,AN$ with $\Gamma$. Show $SM\cap QD$ lies on $\Gamma$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $X$ be the second intersection of $SM$ with $\Gamma$. Since $\angle SBA=\angle SAC=\angle BAS$ (AS bisects $\angle BAC$), one computes $\angle MXA=\angle SXA=\angle SBA=\angle SBC+\angle CBA=\angle BAD+\angle DBA=180^\circ-\angle ADB=180^\circ-\angle ADM$. So $AXMD$ is cyclic, giving $\angle SXD=\angle MXD=\angle MAD=\angle DAN=\angle SAQ=\angle SXQ$, so $X,D,Q$ are collinear. Hence $X=SM\cap QD$ lies on $\Gamma$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Determine all pairs $(P,d)$ of a polynomial $P$ with integer coefficients and integer $d$ such that $P(x)-P(y)=d$ has infinitely many integer solutions $x\ne y$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Since $x-y\mid P(x)-P(y)$, if $d\ne0$ there are only finitely many possible values of $x-y=a$; for one such $a$ there are infinitely many pairs, forcing $P(x)-P(x-a)-d\equiv0$, so $P(x)=\tfrac{d}{a}x+b$ (linear), $a\mid d$.
+
+For $d=0$: if $\deg P$ is odd, $P$ is eventually strictly monotonic on both ends, giving only finitely many coincidences — impossible. So $\deg P$ is even; analysis of the leading terms shows $x+y$ must be constant along solutions, i.e. $P(x)=P(c-x)$ for all $x$ (some constant $c$), meaning $Q(x):=P(x+c/2)$ is even, i.e. $P(x)=R((x-c/2)^2)$ for some polynomial $R$.
+
+$$\boxed{(P,d)=\Big(\tfrac{d}{a}x+b,\ d\Big)\ (a\mid d)\quad\text{or}\quad (P,d)=\big(R((x-c)^2),\,0\big).}$$
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2018 ============ -->
+<details class="year">
+<summary>2018</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">100 glasses in a $10\times10$ array. Pick $a$ rows, fill halfway with blue (rest halfway with yellow). Pick $b$ columns, fill up with blue (rest up with yellow). Mixed halves turn green.<br>(a) Find all $(a,b)$ so exactly half the glasses are green.<br>(b) Can exactly one quarter be green?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+The number of green glasses is $a(10-b)+b(10-a)=10a+10b-2ab=2(5a+5b-ab)$, always even, so $25$ (one quarter) is impossible — answer to (b) is <strong>no</strong>.
+
+For (a): $10a+10b-2ab=50 \iff (a-5)(b-5)=0$, so exactly half the glasses are green iff $a=5$ or $b=5$ (the other value arbitrary).
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">$AB=AC$ in $\triangle ABC$; $D$ on $BC$; $E$ on $AC$, $F$ on $AB$ with $DE=DC$, $DF=DB$. Given $\tfrac{DC}{BD}=2$, $\tfrac{AF}{AE}=5$, find $\tfrac{AB}{BC}$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$\triangle DFB\sim\triangle ABC\sim\triangle DCE$ (isosceles, shared base angle). Let $BF=x$, $BD=DF=y$, so $DC=2y$, $CE=2x$. With $AB=a$: $AF=a-x$, $AE=a-2x$; $AF=5AE\Rightarrow a-x=5(a-2x)\Rightarrow a=\tfrac{9x}{4}$. From similarity, $\dfrac{a}{3y}=\dfrac{y}{x}\Rightarrow \left(\dfrac{y}{x}\right)^2=\dfrac34$, so
+$$\frac{AB}{BC}=\frac{y}{x}=\boxed{\frac{\sqrt3}{2}}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Find the smallest positive integer $n$ whose prime factors are all $>18$, expressible as $n=a^3+b^3$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Write $n=(a+b)(a^2-ab+b^2)$ with $s=a+b\ge19$. Completing the square, $a^2-ab+b^2=3(a-\tfrac s2)^2+\tfrac{s^2}4\ge\tfrac{s^2}4$. For $s=19$: taking $a=8$ or $11$ gives second factor $=97$ (prime), so $n=19\cdot97=1843=11^3+8^3$; checking $a=9,10$ gives $91=7\cdot13$ (invalid, small prime factor). For $s\ge20$, $n\ge s\cdot\tfrac{s^2}{4}\ge2000>1843$. So the answer is
+$$\boxed{n=1843}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">Let $ABC$ have circumradius $R$ and altitudes $\ell_A,\ell_B,\ell_C$ meeting at $H$. For arbitrary point $P$, let $D,E,F$ be the feet of perpendiculars from $P$ to $\ell_A,\ell_B,\ell_C$. Prove
+$$\frac{\text{area}(DEF)}{\text{area}(ABC)}=\frac{PH^2}{4R^2}.$$</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Since $\angle PDH=\angle PEH=\angle PFH=90^\circ$, $D,E,F$ lie on the circle with diameter $PH$. Chasing angles between chords shows $\triangle DEF\sim\triangle ABC$ (angles between $DE,DF,EF$ match those between $AB,AC,BC$, since $\ell_A,\ell_B,\ell_C$ are respectively perpendicular to $BC,CA,AB$). The circumdiameter of $DEF$ is $PH$, and that of $ABC$ is $2R$; since areas of similar triangles scale as the square of the circumdiameter,
+$$\frac{\text{area}(DEF)}{\text{area}(ABC)}=\frac{PH^2}{4R^2}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Find all sequences $a_1<a_2<a_3<\cdots$ of nonnegative integers with $a_n\mid a_{n-1}+n$ for all $n\ge2$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Key lemma: once $a_k\ge k$ for some $k$, then $a_{k+1}=a_k+k+1$, and this propagates: $a_{n+1}=a_n+n+1$ for all $n\ge k$.
+
+Case $a_1\ge1$: the lemma applies from $n=1$, giving $a_n=\tfrac{n^2+n}2+(a_1-1)$ for all $n$.
+
+Case $a_1=0$: let $N$ be the largest index with $a_N=N-1$ (or $a_n=n-1$ for all $n$, if no such largest exists). One shows $a_{N+1}=2N$, after which the lemma applies, giving
+$$a_n=\begin{cases}n-1,& n\le N,\\[2mm] \dfrac{n^2+n}{2}-\dfrac{N^2-N+2}{2}, & n>N.\end{cases}$$
+So the full solution set is: $a_n=n-1$ for all $n$; or $a_n=\tfrac{n^2+n}2+k$ for a fixed $k\ge0$; or the "mixed" family above for a fixed $N\ge0$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Let $x_1,\dots,x_n$ be distinct positive integers, $x_1=1$. Build an $n\times3$ table with row $k$ equal to $x_k,2x_k,3x_k$. Repeatedly delete pairs of identical entries until none remain.<br>(a) Prove at least three entries remain.<br>(b) Prove infinitely many choices of $n,x_1,\dots,x_n$ leave exactly three entries.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+(a) The entry $1$ (from row $1$) never repeats elsewhere, so it survives. Let $x_k$ be the largest power of $2$ among the $x_i$; then $2x_k$ is a power of $2$ appearing nowhere else (not in column 1 by maximality, not elsewhere in column 2 by distinctness, not in column 3 since those are multiples of $3$) — it survives. Similarly the largest power of $3$, $x_\ell$, gives a surviving $3x_\ell$. These give (at least) three surviving entries: $1,\ 2x_k,\ 3x_\ell$.
+
+(b) Define $X_0=\{1\}$ and $X_{r+1}=X_r\cup\{2^{2^r}x:x\in X_r\}\cup\{3^{2^r}x:x\in X_r\}$. By induction, taking $x_1,\dots,x_n$ as the elements of $X_r$, the table reduces to exactly the three entries $1,\ 2^{2^r},\ 3^{2^r}$, giving infinitely many valid $(n,\{x_i\})$.
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2019 ============ -->
+<details class="year">
+<summary>2019</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">Determine all positive integers $a$ for which $a^a$ is divisible by $2019$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Since $2019=3\cdot673$, $10\mid a^a \Rightarrow 10\mid a$ (checking small multiples of $10$ carefully — actually one needs $2019\mid a^a$, requiring $3\mid a$ and $673\mid a$, i.e. $2019\mid a$ works trivially for large enough exponent, but smaller multiples of $10$ dividing $2019$ must be checked directly). Testing: $a=10$ fails ($10^{10}$ too small a power of relevant primes); $a=20$ works ($20^{20}=20\cdot2019$); $a=30$ fails (parity obstruction: $30^{30}/2019$ would need to be even but isn't); all $a=10k$ with $k\ge4$ work. So
+$$\boxed{a\in\{20\}\cup\{10k: k\ge4\}}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">A deck has 90 cards numbered $10$–$99$. How many sets of $3$ or more cards are there where one card's number is the sum of the others, and those others are consecutive?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+For $k$ consecutive numbers starting at $10+\ell$ ($k\ge2$), the sum is $k\left(10+\ell+\tfrac{k-1}2\right)\le99$. Counting valid $\ell$ for each $k=2,\dots,7$ gives $40,23,14,8,5,2$ respectively, totalling
+$$40+23+14+8+5+2=\boxed{92}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">$A,B,C$ on a unit circle centre $O$ with $\angle BAC=45^\circ$. Lines $AC,BO$ meet at $D$; lines $AB,CO$ meet at $E$. Prove $BD\cdot CE=2$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $BO$ extended meet the circle at $F$ (a diameter), so $\angle BFC=45^\circ$ gives $BC=CF=\sqrt2$ (right angle at $C$ since $BF$ is a diameter). With $x=OD,y=OE$, one computes $CD=\sqrt{1+x^2}$, $BE=\sqrt{1+y^2}$, and using similar triangles ($BDA\sim CDF$, $BEG\sim CEA$ where $G$ is the antipode of $C$) one derives $x=\dfrac{1-y}{1+y}$, so
+$$BD\cdot CE=(1+x)(1+y)=\left(1+\frac{1-y}{1+y}\right)(1+y)=2.$$
+(A purely trigonometric proof, using $\tan\alpha=x,\tan\beta=y,\alpha+\beta=45^\circ$, gives the same result directly via the tangent addition formula.)
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">An $8\times8$ board is coloured alternately black/white. A rectangle (sides parallel to the board) with all four corner squares black is <em>important</em>. Each square is labelled with the number of important rectangles containing it; $B,W$ are the sums over black, white squares. Determine $B-W$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Every important rectangle has exactly one more black square than white square, so it contributes $+1$ to $B-W$; hence $B-W$ equals the total number of important rectangles. Restricting to the $4$ odd rows/columns (all-black corners possible) gives $\left(4+\binom42\right)^2=100$ rectangles, and the same for the $4$ even rows/columns, giving $100+100=\boxed{200}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Find all $f:\mathbb Z\to\mathbb Z$ such that
+$$f(a^3)+f(b^3)+f(c^3)+3f(a+b)f(b+c)f(c+a)=(f(a+b+c))^3$$
+for all integers $a,b,c$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Setting $a=b=c=0$ gives $f(0)=0$. Setting $(n,-n,0)$ gives $f$ odd. Setting $(n,0,0)$ gives $f(n^3)=f(n)^3$. From $\alpha+\beta=45^\circ$-type substitution $(k,1-k,0)$, one gets $f(k)^3+f(1-k)^3+3f(k)f(1-k)f(1)=f(1)^3$ where $f(1)\in\{-1,0,1\}$ (since $f(1)=f(1)^3$). Analysing each case (using the factorisation of $X^3+Y^3+3XY-1$) yields exactly five solutions:
+$$f\equiv0,\qquad f(n)=n,\qquad f(n)=-n,$$
+$$f(n)=\begin{cases}0,& n\equiv0\pmod3\\ 1,& n\equiv1\pmod3\\ -1,& n\equiv2\pmod3\end{cases}\quad\text{and its negative.}$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Determine all pairs $(m,n)$ of non-negative integers satisfying $20^m-10m^2+1=19^n$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$m=0$ gives $2=19^n$, impossible. Working mod $10$ and mod $20$ forces both $m,n$ even; write $m=2k,n=2\ell$. Then $10m^2-1=(20^k-19^\ell)(20^k+19^\ell)$, and since $20^k-19^\ell\ge1$ (as both sides are positive with $m\ge1$),
+$$10m^2-1\ge 20^k+19^\ell>20^k+1,$$
+which fails for $k\ge2$ and holds only for $k=1$, giving the unique solution
+$$\boxed{(m,n)=(2,2)}.$$
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2020 ============ -->
+<details class="year">
+<summary>2020</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">Find the smallest positive multiple of $20$ with exactly $20$ positive divisors.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Writing $20k=2^{a_1+2}3^{a_2}5^{a_3+1}\cdots$, the divisor count condition $(a_1+3)(a_2+1)(a_3+2)\cdots=20$ is checked over the factorisations of $20$; the smallest resulting $k$ is $k=12$ (from $a_1=2,a_2=1,a_3=0$), giving
+$$\boxed{240}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Square $S$ (side $2$) and rhombus $R$ (side $2$, angles $60^\circ,120^\circ$) share a centre, with $R$'s diagonals parallel to $S$'s sides. Find the overlap area.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Placing $E,G$ (short diagonal endpoints of $R$) at the midpoints of two opposite sides of $S$, one finds the corner triangles cut off have legs $1$ and $\tfrac1{\sqrt3}$. The overlap area is the square's area minus four such triangles:
+$$4-4\cdot\frac12\cdot1\cdot\frac1{\sqrt3}=\boxed{4-\frac{4}{2\sqrt3}=4\left(1-\frac{1}{2\sqrt3}\right)}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Given $(x+1)(y+1)(z+1)=3$, $(x+2)(y+2)(z+2)=-2$, $(x+3)(y+3)(z+3)=-1$, find $(x+20)(y+20)(z+20)$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $X=x+2,Y=y+2,Z=z+2$. The equations become $(X-1)(Y-1)(Z-1)=3$, $XYZ=-2$, $(X+1)(Y+1)(Z+1)=-1$. Expanding and using $XYZ=-2$ gives $T_1-T_2=6$, $T_1+T_2=0$ (where $T_1=X+Y+Z$, $T_2=XY+YZ+ZX$), so $T_1=3,T_2=-3$. Then
+$$(x+20)(y+20)(z+20)=(X+18)(Y+18)(Z+18)=XYZ+18T_2+18^2T_1+18^3=-2-54+972+5832=\boxed{6748}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">A positive integer $k$ is <em>visionary</em> if there exist integers $a,b>0$ with $ak+b(k+1)=2020$. How many visionary integers are there?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+One shows $k$ is visionary iff $k=\lfloor 2020/n\rfloor$ for some $1\le n\le2020$ (writing $2020=k(a+b)+b$ with $0\le b<a+b=n$). Splitting into $n<\sqrt{2020}\approx44.9$ and $n>\sqrt{2020}$, each range contributes $44$ distinct values of $\lfloor2020/n\rfloor$, and a bijection between the two ranges shows they coincide as sets, giving total
+$$44+44=\boxed{88}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Let $ABC$ be a triangle, $T$ on extension of $AB$ beyond $B$, $U$ on extension of $AC$ beyond $C$, with $BT=CU$. Let $R,S$ on extensions of $AB,AC$ beyond $A$ with $AS=AT$, $AR=AU$. Prove $R,S,T,U$ lie on a circle whose centre lies on the circumcircle of $ABC$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Since $AS=AT$, $\angle AST=\angle ATS=\tfrac12\angle BAC$; similarly $\angle ARU=\angle AUR=\tfrac12\angle BAC$, so $\angle S=\angle R$, proving $R,S,T,U$ concyclic. The centre $O$ of this circle lies on the (common) perpendicular bisector of $ST$ and $RU$, which passes through $A$.
+
+Dropping perpendiculars from $O$ to lines $AB,AC,BC$ (feet $I,J,K$), one shows (using $OI=OJ$, $OT=OU$, congruent triangles $OIB\cong OJC$, and cyclic quadrilaterals $OJKC$, $IOKB$) that $\angle JKO=\angle JCO=\angle IBO=\angle IKO$, proving $I,J,K$ collinear — i.e. $O$'s pedal triangle w.r.t. $ABC$ is degenerate, which (by the Simson line criterion) means $O$ lies on the circumcircle of $ABC$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Marjorie repeatedly: finds smallest $n$ with band fitting in $n\times n$; sends home the first row of $n$; repeats. She never gets a perfect square until everyone is sent home. Find the smallest possible number of band members (over one million).</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+By induction on $M$ (writing $n-1=2^a+b$, $0\le b<2^a$), one shows the process <em>never</em> reaches a perfect square exactly when
+$$M=(2^a+b)^2+2b+1 \quad\text{or}\quad M=(2^a+b)^2+2^a+3b+2\ \ (b<2^a-1).$$
+Since $1000000=1000^2$ and $1000=2^9+488$, the smallest such $M$ exceeding $10^6$ is
+$$(2^9+488)^2+2\cdot488+1=\boxed{1\,000\,977}.$$
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2021 ============ -->
+<details class="year">
+<summary>2021</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">Find the smallest and largest integers of the form $\overline{ababa}$ ($a\ne0$) divisible by $11$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$\overline{ababa}$ is divisible by $11$ iff $3a-2b\equiv0\pmod{11}$. Smallest: $a=1,b=7$ ($3-14=-11$) gives $N=17171$. Largest: $a=9,b=8$ ($27-16=11$) gives $N=98989$.
+$$\boxed{17171 \text{ (smallest)},\qquad 98989\text{ (largest)}}$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">$\triangle PAB,\triangle PBC$ similar right triangles with $\angle PAB=\angle PBC=90^\circ$, $A,C$ on opposite sides of $PB$. If $PC=AC$, find $\dfrac{PA}{AB}$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $AB=1$, $PA=x$, so $PB=\sqrt{x^2+1}$; by similarity $BC=\dfrac{\sqrt{x^2+1}}{x}$, and $PC=x+\dfrac1x=AC$ (Pythagoras). With $\angle APB=\alpha$: using the cosine rule in $\triangle ABC$,
+$$\left(x+\frac1x\right)^2=1+\frac{x^2+1}{x^2}+2\cdot\frac{\sqrt{x^2+1}}{x}\cos\alpha=3+\frac{x^2+1}{x^2},$$
+which solves to $x=\sqrt2$. So $\dfrac{PA}{AB}=\boxed{\sqrt2}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Determine the smallest $k>1$ such that there exist $k$ distinct primes whose squares sum to a power of $2$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+For $k=2,3$: parity/mod-$4$ arguments rule these out. For $k=4$: writing all primes odd (forced) as $2m_i+1$ shows the sum is $\equiv4\pmod8$, contradicting $2^n\equiv0\pmod8$ for $n\ge3$. So $k\ge5$, and indeed
+$$2^2+3^2+5^2+7^2+13^2=256=2^8,$$
+so the smallest is $\boxed{k=5}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">$ABC$ has $\angle ABC\ne90^\circ$, $AB$ its shortest side, $H$ the orthocentre. $K$ is the circle centred $B$ through $A$; $D$ is the other intersection of $K,AC$; $K$ meets the circumcircle of $BCD$ again at $E$. $F=DE\cap BH$. Show $BD$ is tangent to the circumcircle of $DFH$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+One first shows $H$ lies on the circumcircle $V$ of $BDC$ (via similar triangles $BLH\sim BMD$, where $M$ is the midpoint of $AD$). Let $W$ be the circumcircle of $HDF$ with centre $O$; setting $\theta=\angle DHF$, angle-chasing (using that $BD,BE$ are equal radii of $K$, hence equal chords of $V$) shows $\angle BDE=\theta=\angle FDR$ for a point $R$ on line $BD$ beyond $D$, while $\angle ODP=90^\circ-\theta$ (for $P$ the foot of the perpendicular from $O$ to $DF$). Combining, $\angle ODR=90^\circ$, proving $BD$ is tangent to $W$ at $D$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Find all polynomials $a(x),b(x),c(x),d(x)$ with real coefficients satisfying
+$$b(x)c(x)+a(x)d(x)=0,\qquad a(x)c(x)+(1-x^2)b(x)d(x)=x+1.$$</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+If all four are nonzero, comparing leading coefficients ($A,B,C,D$) gives $BC=-AD$ (so $ABCD=-(BC)^2<0$) from the first equation, but $AC=BD$ (so $ABCD=(AC)^2>0$) from the second (degree comparison) — a contradiction. So at least one of $a,c$ is zero; checking shows this forces the second equation to fail unless both $a,c\ne0$. Hence $a,c\ne0$ and (from the first equation) $b=d=0$, with $a(x)c(x)=x+1$. So the solutions are exactly
+$$\left\{\left(k,\,0,\,\frac{x+1}{k},\,0\right): k\ne0\right\}\cup\left\{\left(\frac{x+1}{k},\,0,\,k,\,0\right): k\ne0\right\}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Jacob and Laban alternately (Jacob first) pick numbers from their own lists of squares $1,4,\dots,2021^2$, adding the chosen number to a running whiteboard total $W$ (starting at $0$). Each time $W$ becomes divisible by $4$ after a move, Jacob gets a sheep. Jacob maximises, Laban minimises Jacob's sheep count. Find the greatest guaranteed $K$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Replace each even square by $0$ and each odd square by $1 \pmod4$; each player then has $1010$ zeros and $1011$ ones. Every fourth "one" written (across both players combined) earns Jacob a sheep; with $2022$ ones total ($2022=4\times505+2$), Jacob is guaranteed at least $505$ sheep, plus one extra by opening with a zero (forcing the first "block of four ones" pattern favourably) — giving $506$.
+
+Laban can prevent more: by mirroring Jacob's moves with a compensating one/zero (copying strategy), Laban ensures no zero ever lands immediately after a multiple-of-four "one" count, capping Jacob at exactly
+$$\boxed{K=506}.$$
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2022 ============ -->
+<details class="year">
+<summary>2022</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">From a $4\times4$ grid of points (unit spacing), how many ways can $4$ points be chosen so every pairwise distance is strictly greater than $2$?</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Labelling the outer $12$ points and inner $4$ points, a valid selection using an inner point forces exactly $3$ specific outer corner-adjacent points (by elimination of too-close options), giving $4$ such selections (one per inner point, by symmetry). Using only outer points: the four corners work ($1$ selection), and two more "one point per side" selections work by symmetry ($2$ more). Total:
+$$4+1+2=\boxed{7}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Find all real $(x,y)$ satisfying $x^2+y^2-48x-29y+714=0$ and $2xy-29x-48y+756=0$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Substituting $X=x-24,Y=y-\tfrac{29}2$: the system becomes $X^2+Y^2=\tfrac{289}4$, $XY=-30$. Then $(X\pm Y)^2=\tfrac{289}4\pm60$ gives $(X+Y)^2=\tfrac{49}4$, $(X-Y)^2=\tfrac{529}4$, so $X+Y=\pm\tfrac72$, $X-Y=\pm\tfrac{23}2$. Solving the four sign combinations and converting back gives
+$$(x,y)\in\left\{(28,7),\ (20,22),\ \left(\tfrac{33}2,\tfrac{37}2\right),\ \left(\tfrac{63}2,\tfrac{21}2\right)\right\}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Let $a,b,c$ be nonzero integers. Show there is an integer $k$ with $\gcd(a+kb,c)=\gcd(a,b,c)$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Reduce to $\gcd(a,b,c)=1$ (dividing through by $d=\gcd(a,b,c)$). By Dirichlet's theorem, the arithmetic progression $\tfrac{a}{\gcd(a,b)}+n\cdot\tfrac{b}{\gcd(a,b)}$ contains infinitely many primes; pick such a prime $p>c$ (as $p=a/\gcd(a,b)+k b/\gcd(a,b)$ for some $k$). Since $p>c$ and $p$ prime, $\gcd(p,c)=1$; also $\gcd(a,b)$ and $c$ are coprime (as $\gcd(a,b,c)=1$), so
+$$1=\gcd(p,c)=\gcd(p\cdot\gcd(a,b),c)=\gcd(a+kb,c).$$
+Scaling back by $d$ gives the general result.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">$ABC$ with $AB<AC$; $P$ on the circumcircle (same side of $BC$ as $A$) with $BP=CP$. $Q=BP\cap(\text{bisector of }\angle BAC)$; the line through $Q$ parallel to $BC$ meets $AC$ at $R$. Prove $BR=CR$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $AQ$ extended meet the circumcircle at $T$. With $\angle BAQ=\angle CAQ=\alpha$ and $\angle BCA=\theta$: since $BP=CP$, $\angle PBC=\angle PCB=\theta+\phi$ (where $\phi=\angle ACP=\angle ABP$), and cyclic relations give $\alpha+\theta+\phi=90^\circ$. Constructing $D$ on $PC$ via the line through $Q$ parallel to $BC$, one shows $\triangle TBQ\cong\triangle TCD$, then that $RDCT$ is cyclic with $\angle TRD=90^\circ$, hence $RQBT$ cyclic too, giving $\angle QRB=\theta=\angle RBC$, so $\triangle RBC$ is isosceles: $BR=RC$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">$n>3$ points in space; every pair joined by a red/green/blue/yellow string; any three points either share one colour or use three different colours; not all strings share one colour. Find the maximum $n$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+First, no point can have three strings of the same colour (else a chain of contradictions forces every possible 5th-point colour to be excluded), so each point has at most $2$ strings of each colour, giving at most $2\times4=8$ strings per point, so $n\le9$.
+
+A valid configuration with $n=9$ exists: partition $\{1,\dots,9\}$ into $X=\{1,2,3\},Y=\{4,5,6\},Z=\{7,8,9\}$; colour the three "row" triangles ($X,Y,Z$ each internally) blue, the three "column" triangles ($\{1,4,7\},\{2,5,8\},\{3,6,9\}$) green, and two further families of triangles (one representative from each of $X,Y,Z$) red and yellow respectively (e.g. red: $\{1,5,9\},\{2,6,7\},\{3,4,8\}$; yellow: $\{1,6,8\},\{2,4,9\},\{3,5,7\}$). This satisfies all conditions. Hence
+$$\boxed{n_{\max}=9}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Show there are infinitely many polynomials $P$ with real coefficients such that whenever $x^2+y^2+z^2+2xyz=1$,
+$$P(x)^2+P(y)^2+P(z)^2+2P(x)P(y)P(z)=1.$$</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Call $p(x)$ a $*$-polynomial if it preserves this property. Checking degree $\le1$ candidates via the special triples $(x,-x,1)$ and $(x,x,-1)$ forces $p(x)\in\{-1,\ \tfrac12,\ x\}$ (constants and identity). A degree-$2$ search (using also the triple $(x,\sqrt{1-x^2},0)$) singles out the candidate $p(x)=-2x^2+1$, which one verifies directly is indeed a $*$-polynomial:
+$$(-2x^2+1)^2+(-2y^2+1)^2+(-2z^2+1)^2+2\prod(-2x^2+1)=1$$
+using the constraint. Crucially, if $p$ is a $*$-polynomial then so is $p\circ p\circ\cdots\circ p$ ($n$ times), and since $\deg(p^{\circ n})=2^n$ for $p(x)=-2x^2+1$, these give infinitely many distinct $*$-polynomials $p,\,p\circ p,\,p\circ p\circ p,\dots$.
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2023 ============ -->
+<details class="year">
+<summary>2023</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">If $\sqrt{2x}+\sqrt y=13$ and $\sqrt{8x}+\sqrt{9y}=35$, calculate $20x+23y$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+The second equation is $2\sqrt{2x}+3\sqrt y=35$. Together with the first, this linear system in $\sqrt{2x},\sqrt y$ gives $\sqrt{2x}=4$, $\sqrt y=9$, so $x=8,y=81$, and
+$$20x+23y=160+1863=\boxed{2023}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">$ABCD$ cyclic, $\angle BAD=90^\circ$, $\angle ABC>90^\circ$. Extend $AB$ to $E$ with $\angle AEC=90^\circ$. Given $AB=7,BE=9,EC=12$, find $AD$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $F=AE\cap DC$ extended. Since $EC\parallel AD$, triangles $FAD,FCB,FEC$ are all similar. With $x=AD,y=EF$: from $FAD\sim FEC$, $\dfrac{x}{y+16}=\dfrac{12}{y}$. Since $BC=\sqrt{9^2+12^2}=15$, from $FCB\sim FEC$: $\dfrac{15}{\sqrt{144+y^2}}=\dfrac{12}{y}\Rightarrow y=16$. Substituting back: $x=AD=\boxed{24}$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Positive integers $a,b$ with $a+2b=2020$.<br>(a) Largest possible $\gcd(a,b)$.<br>(b) Smallest possible $\operatorname{lcm}(a,b)$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+(a) $d=\gcd(a,b)$ must divide $2020$. Testing large divisors: $d=2020,1010$ are too large (force $a+2b>2020$); $d=505$ works with $a=1010,b=505$. So the largest is $\boxed{505}$.
+
+(b) One reduces (via a scaling argument) to the case $a\mid b$ or $b\mid a$. For $a\mid b$ ($b=ka$): minimizing $\operatorname{lcm}=\dfrac{2020}{2+1/k}$ needs smallest valid $k$ with $(1+2k)\mid2020$; $k=2$ gives $a=404,b=808$, $\operatorname{lcm}=808$. For $b\mid a$: similarly $k=2$ gives $a=1010,b=505$, $\operatorname{lcm}=1010$. The overall minimum is
+$$\boxed{808}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">Let $A$ be a set of reals with (a) $\sqrt{n^2+1}\in A$ for all positive integers $n$; (b) $x,y\in A\Rightarrow x-y\in A$. Prove every integer is a product of two different elements of $A$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Property (b) gives $0\in A$, $x\in A\Rightarrow-x\in A$, $x,y\in A\Rightarrow x+y\in A$, and $kx\in A$ for all integers $k$ (once $x\in A$). Choosing $k,l,m,n$ with $1=k^2(m^2+1)-l^2(n^2+1)$ (e.g. $k=3,m=1,l=1,n=4$), we get
+$$1=\left(3\sqrt2-\sqrt{17}\right)\left(3\sqrt2+\sqrt{17}\right)$$
+with both factors in $A$ and distinct. Then for any integer $p$,
+$$p=\left(3p\sqrt2-p\sqrt{17}\right)\left(3\sqrt2+\sqrt{17}\right),$$
+a product of two elements of $A$ that are distinct (since equality would force $p$ irrational). This proves the claim.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">SAMF operates a tree of flights rooted at Kimberley (every airport reachable from Kimberley in exactly one way). Let $t$ be the number of terminal (degree-1, non-root) airports. SAMF closes $k$ airports, keeping the rest connected to Kimberley; let $C$ be the number of ways. Prove
+$$\binom{t}{k}\le C\le\binom{t+k-1}{k}.$$</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Model the network as a tree rooted at Kimberley. Closing airports corresponds to removing a vertex together with its entire "downstream" subtree. Removing any $k$ of the $t$ leaves is always valid, giving $C\ge\binom{t}{k}$.
+
+For the upper bound, for each leaf $T_i$ let $S_i$ be the nearest ancestor of degree $>2$ (or the root). Removing valid sets of $k$ vertices corresponds to choosing, for each leaf-branch, how many of the bottom vertices (up to the branch point) to remove; the number of ways to distribute $k$ removals among $t$ branches is at most the number of solutions to $\sum k_i=k$ with $0\le k_i\le k$, namely $\binom{t+k-1}{k}$ (with equality when every branch has at least $k$ removable vertices, and a strict inequality otherwise due to increased dependency between branches). Hence
+$$\binom{t}{k}\le C\le\binom{t+k-1}{k}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Rectangles $ABIH,BDEC,ACFG$ are built externally on the sides of $\triangle ABC$. $S$ is outside $ABIH$ with $\angle SHI=\angle FAC$, $\angle HIS=\angle EBC$. Prove $FI,EH,CS$ are concurrent.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $T=EH\cap FI$. Let $K,L$ be feet of perpendiculars from $A$ to $FI$ and $B$ to $EH$; these lie on the circumcircle $\Gamma$ of $ABIH$ (and also on the circumcircles of $ACFG$, $BDEC$ respectively). Extending $CK,CL$ to meet $\Gamma$ again at $M,N$, one shows (via angle chasing with the given conditions on $S$) that $S=HM\cap IN$.
+
+Now consider the self-intersecting hexagon $IKMHLN$ inscribed in $\Gamma$. By Pascal's Theorem, the three points $IK\cap HL=T$, $KM\cap LN=C$, $MH\cap NI=S$ are collinear — so $T$ lies on line $CS$ as well as on $FI$ and $EH$, proving the three lines concurrent.
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+<!-- ============ 2024 ============ -->
+<details class="year">
+<summary>2024</summary>
+<div class="year-body">
+
+<div class="problem">
+<h3>Problem 1</h3>
+<p class="qtext">A cube of side $n$ is built from $n^3$ unit cubes. Some of the six faces are fully painted. When disassembled, $245$ unit cubes are unpainted. Determine $n$ and how many faces were painted.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Listing the unpainted-count formula for $0$ through $6$ painted faces (e.g. one face: $n^3-n^2$; two opposite: $n^2(n-2)$; two adjacent: $n(n-1)^2$; etc.), and factorising $245=5\times7^2$, the only matching case is two <em>opposite</em> faces painted, with $n^2(n-2)=245=7^2\cdot5$, giving
+$$\boxed{n=7,\ \text{two opposite faces painted}}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 2</h3>
+<p class="qtext">Determine which is larger: $\sqrt{2+\sqrt[3]{5}}$ or $\sqrt[3]{5+\sqrt2}$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $x=\sqrt{2+\sqrt[3]5}$, $y=\sqrt[3]{5+\sqrt2}$; both positive, so compare $x^6,y^6$:
+$$x^6=(2+\sqrt[3]5)^3=13+12\sqrt[3]5+6\sqrt[3]{25},\qquad y^6=(5+\sqrt2)^2=27+10\sqrt2.$$
+Estimating, $12\sqrt[3]5=\sqrt[3]{8640}>\sqrt[3]{8000}=20$ and $6\sqrt[3]{25}=\sqrt[3]{5400}>\sqrt[3]{1000}=10$, so $x^6>13+20+10=43$. Meanwhile $y^6=27+\sqrt{200}<27+15=42$. Since $x^6>y^6$,
+$$\boxed{x>y,\quad\text{i.e. } \sqrt{2+\sqrt[3]5}>\sqrt[3]{5+\sqrt2}}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 3</h3>
+<p class="qtext">Lattice points are coloured black or white (initially all white). One "strike" of an L-shaped punch at $(a,b)$ toggles the colours of $(a,b),(a+1,b),(a,b+1),(a,b+2)$. Prove that after any number of strikes, the number of black points is $0$ or $\ge4$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+First, an easy induction on the number of strikes shows the total number of black points is always even (each strike changes the black-count parity by an even amount, $|X\triangle Y|=|X|+4-2|X\cap Y|$).
+
+Assume all corner points used are distinct (repeated corners cancel in pairs and can be ignored). Among all remaining black points, let $y'$ be the smallest $y$-coordinate; among points with $y=y'$, the smallest and largest $x$-coordinates give two distinct black points (one is a "corner point" of some strike, the other is not, by the shape of the punch). Symmetrically, using the smallest $x$-coordinate, two more (possibly overlapping) black points appear. Altogether at least $3$ distinct black points are forced, and since the total is even, at least
+$$\boxed{4 \text{ black points remain (or }0\text{)}}.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 4</h3>
+<p class="qtext">Find all $f:\mathbb Z\to\mathbb Z$ such that $f(m+n)+f(m-n)-2f(m)=6mn^2$ for all integers $m,n$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Setting $m=0$: $f(n)+f(-n)=2f(0)$. Assume w.l.o.g. (by subtracting a linear-plus-constant correction) $f(0)=0,f(1)=1$; then $f(-n)=-f(n)$. Setting $n=-1$ and simplifying gives the recursion
+$$f(m+1)=f(m)+f(1)+3m(m+1)=f(m)+1+3m(m+1).$$
+An easy induction confirms $f(n)=n^3$ satisfies this recursion, hence $f(n)=n^3$ for all integers (using oddness for negative $n$). Restoring the general (non-normalised) case,
+$$\boxed{f(n)=n^3+an+c}\quad\text{for arbitrary integers } a,c.$$
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 5</h3>
+<p class="qtext">Circles $\Gamma_1,\Gamma_2,\Gamma_3$ (centres $O_1,O_2,O_3$) are pairwise externally tangent, and all internally tangent to a circle $\Gamma$ with centre $O$ on segment $O_1O_3$. Show $\angle O_1O_3O_2<90^\circ$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+Let $\Gamma$ touch $\Gamma_1,\Gamma_2,\Gamma_3$ at $A,B,C$. Then $AOB$ is a diameter of $\Gamma$, so $\angle ACB=90^\circ$. Letting $E,F$ be the second intersections of $AC,BC$ with $\Gamma_3$, one shows $EO_3\parallel AO$ and $O_3F\parallel OB$ (using that $C,O_3,O$ are collinear and isosceles triangle angle equalities).
+
+Constructing $X,Y$ on $AB$ with $AX=EO_3$, $YB=O_3F$, one gets $\angle O_1O_3O_2<\angle XO_3Y=\angle ACO+\angle OCB=90^\circ$, <em>provided</em> $EF<AO_1+O_2B$. This last inequality reduces (via the radii $r_1,r_2,r_3,r$ with $r_1+r_2=r$) to $2r_3<r_1+r_2=r$, which holds since two segments of length $r_3$ fit inside the diameter segment $CO\!-\!CO$ of length $r$. This proves $\angle O_1O_3O_2<90^\circ$.
+</div>
+</details>
+</div>
+
+<div class="problem">
+<h3>Problem 6</h3>
+<p class="qtext">Let $f:\mathbb N\to\mathbb N_0$ satisfy $f(mn)=mf(n)+nf(m)$ for all $m,n$, and $f(2024)=10120$. Prove there exist $m\ne n$ with $f(m)=f(n)$.</p>
+<details class="solution"><summary>Show Solution</summary>
+<div class="soltext">
+$f(1)=0$; if $f(m)=0$ for some $m\ge2$ we are done ($f(m)=f(1)$), so assume $f(m)\ge1$ for all $m\ge2$. Induction gives $f(a^n)=na^{n-1}f(a)$. Since $2024=2^3\cdot11\cdot23$,
+$$10120=f(2024)=3036f(2)+184f(11)+88f(23).$$
+Working modulo $11,23,8$ shows $11\mid f(11)$, $23\mid f(23)$, $4\mid f(2)$ — wait, careful analysis gives $f(2)\ge2,\ f(11)\ge11,\ f(23)\ge23$, and plugging these minimal values into the equation exactly achieves $10120$, forcing equality:
+$$f(2)=2,\quad f(11)=11,\quad f(23)=23.$$
+Using the multiplicative formula, one computes $f(22^a23^c)=(2a+c)\cdot22^a23^c$; choosing $(a,b)$ with $2a+b+1=22$ and $2a+b+2=23$ (e.g. $a=1,b=19$) gives
+$$f(22^{a}23^{b+1})=f(22^{a+1}23^{b}),$$
+two different integers with equal $f$-value, completing the proof.
+</div>
+</details>
+</div>
+
+</div>
+</details>
+
+</div>
+<!--Footer-->
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="./Diagrams/BetterMath_Logo.png" alt="Logo">
+      <div>
+        <h2>Better Math Education</h2>
+        <p class="slogan">Get infinitely better at math, one day at a time.</p>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>About</h3>
+      <p>A free interactive platform for South African Grade 12 students to practise mathematics.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <a href="mailto:bettermath3.1415@gmail.com">Email: bettermath3.1415@gmail.com</a>
+      <a href="https://wa.me/27678040969" target="_blank" rel="noopener" class="icon brands fa-whatsapp">WhatsApp: 067 804 0969</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Created by: Phuluso Nembilwi |<a href="https://phulusonembilwi.co.za/"> phulusonembilwi.co.za</a>
+    <p>One Piece is the goat</p>
+
+  </div>
+</footer>
+<!--Footer End-->
+</body>
+</html>

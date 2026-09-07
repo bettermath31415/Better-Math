@@ -3,26 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mathematics P2 — Grade 12 Practice by Topic</title>
+<title>Mathematics P2 - Better Math Education</title>
 <link rel="stylesheet" href="./Codes/main.css">
 <script src="./Codes/mathjax-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
 <script src="./Codes/main.js" defer></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425237218243356"
+     crossorigin="anonymous"></script>
 </head>
 <body class="theme-p2">
 
-<!-- Site Header/Navbar -->
+<!--Header-->
+
+<!-- Header/Navbar Container -->
 <header id="header">
+    
+    <!-- Left Side: Logo and Website Name -->
     <div class="brand">
-        <img src="./Diagrams/logo.png" alt="Logo" id="logo-img">
+        <!-- Placeholder for your logo. Replace 'logo.png' with your actual image file later -->
+        <img src="./Diagrams/BetterMath_Logo.png" alt="Logo" id="logo-img">
         <div>
           <h1><a href="index.html" id="logo">Better Math Education</a></h1>
           <p class="slogan">Get infinitely better at math, one day at a time.</p>
         </div>
     </div>
+
+    <!-- Right Side: Navigation -->
     <nav id="nav">
         <div class="nav-links">
             <a href="index.html">Homepage</a>
+                       <!-- Dropdown Section -->
             <div class="dropdown">
                 <button class="dropbtn">Grade 12 Math NSC ▼</button>
                 <div class="dropdown-content">
@@ -30,37 +40,53 @@
                     <a href="MathematicsP2.html">Math P2 Grade 12</a>
                 </div>
             </div>
-            <a href="SATMO.html">Tertiary Olympiad</a>
-            <a href="SAMO(Gr 10-12).html">High School Olympiad</a>
+            <a href="MathOlympiad(Grade10-12).html">Math Olympiad(Grade 10-12)</a>
+            <a href="MathOlympiad(Tertiary).html">Math Olympiad(Tertiary)</a>
+            
+ 
         </div>
-        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">☰</div>
+
+        <!-- Mobile Hamburger Menu Icon (Optional) -->
+        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+            ☰
+        </div>
     </nav>
+
+
 </header>
 <!--Header End-->
 
 <div class="wrap">
-  <header>
-    <h1>NSC Grade 12 Mathematics P2 Practice By Topic</h1>
-    <p>How P2 Math is structured</p>
-    <img src="./Diagrams/Grade12P2/P2 Marks Breakdown.png" style="width:70%">
-    <p>Open a topic, then a year, then a question — reveal the answer once you've attempted it. Diagrams have been omitted; add your own sketches from the original papers.</p>
-  </header>
+
 
   <div class="toolbar">
-    <button onclick="toggleAll('details.topic', true)">Expand all topics</button>
-    <button onclick="toggleAll('details.topic', false)">Collapse all topics</button>
-    <button onclick="toggleAll('details.year', true)">Expand all years</button>
-    <button onclick="toggleAll('details.year', false)">Collapse all years</button>
-    <button onclick="showAllAnswers()">Show all answers</button>
-    <button onclick="hideAllAnswers()">Hide all answers</button>
+    <button class="btn-on" onclick="toggleAll('details.topic', true)">Expand all topics</button>
+    <button class="btn-off" onclick="toggleAll('details.topic', false)">Collapse all topics</button>
+    <button class="btn-on" onclick="toggleAll('details.yr', true)">Expand all years</button>
+    <button class="btn-off" onclick="toggleAll('details.yr', false)">Collapse all years</button>
+    <button class="btn-on" onclick="showAllAnswers()">Show all answers</button>
+    <button class="btn-off" onclick="hideAllAnswers()">Hide all answers</button>
   </div>
 
   <div class="container">
+<details class="topic" id="topic-tips">
+  <summary><span class="topic-name">Tips and Advice</span></summary>
+  <div class="topic-body">
+        <h2>Mathematics P2</h2>
+        <img src="./Diagrams/Grade12P2/Mathematics P2 Topics Breakdown.png" style="max-width: 95%;" alt="Paper 2 breakdown">
+      <p>Mathematics P2 is where many students lose marks, which is understandable as there are fewer straightforward routine questions compared to Mathematics P1.  Mathematics P2 also has a lot of visual questions, which are difficult to tackle even if you understand the material. But with enough practice, you can still excel regardless of how challenging it is. The heart of Mathematics P2 is geometry. You need to understand the geometry concepts taught to you from the lower grades of 8 -11, which is why many students fall short,  because in grade 12 you are required  to already have this knowledge; revising lower-grade geometry through online materials will definitely take you a long way.</p>
+      <p> Just like in Mathematics P1, you should also not look at these topics as separate topics, but one whole broken up into smaller parts. Analytical geometry is just Euclidean geometry with functions from P1; trigonometry is just geometry with functions and trig ratios; stats are mostly routine. The more you notice these connections, the easier most questions will be. The examiners are aware of this and will often test if you are aware of these connections as well. The more you practice, the clearer these connections will become, helping you draw experiences from other topics when you encounter a challenging question.  Wishing you all the best!!!</p>
+  <h2>Breakdown of what the paper tests</h2>
+<p>Knowledge (20%): knowing which formulas to use, knowing when to use certain mathematical facts, knowing the procedures and how to round. Routine procedures (35%): Knowledge of how to perform procedures, how to prove certain theorems, applications of theorems. Complex procedures (30%): problems involving high order reasoning, involves making connections between different topics, require understanding of the topics and concepts. Problem solving (15%): non routine problem solving, high order reasoning also required, problems that need to be broken into smaller parts to understand, involves using solutions and making conclusions from solutions found in prior questions</p>
+    <h2>How to practice</h2>
+<p>The best way to practice is to first attempt the questions yourself, then view solutions and grade yourself. As each Mathematics paper is only 3 hours long, with 150 marks each, it can be challenging to finish on time; hence, once you are more comfortable with the topic, you should practice answering the questions at a faster pace.  Past papers are an immensely powerful tool for exam practice and understanding; however, they do not replace textbooks. I would suggest first going through a topic in a textbook, notes, or explanation videos before attempting past questions, then go back to the book or notes when you get stuck and see if there is something you might be missing.</p>
+    </div>
+</details>
+
 
     <details class="topic">
       <summary><span class="topic-name">1. Statistics and Regression</span><span class="badge">[20 Marks]</span></summary>
       <div class="topic-body">
-        <p class="topic-note">Question 1 &amp; 2 — Regression, correlation, ogives, histograms and standard deviation. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
@@ -856,7 +882,6 @@
     <details class="topic">
       <summary><span class="topic-name">2. Analytical Geometry</span><span class="badge">[40 Marks]</span></summary>
       <div class="topic-body">
-        <p class="topic-note">Question 3 &amp; 4 — Distance, gradient, inclination, equations of lines and circles. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
@@ -1494,7 +1519,6 @@
     <details class="topic">
       <summary><span class="topic-name">3. Trigonometry</span><span class="badge">[50 Marks]</span></summary>
       <div class="topic-body">
-        <p class="topic-note">Identities, equations, graphs, and 2D/3D trigonometry. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
@@ -2027,7 +2051,6 @@ $$\sin33,21° = \frac{AB}{AC} \implies AB = 5\sin33,21° \approx 2,74$$</div></d
     <details class="topic">
       <summary><span class="topic-name">4. Euclidean Geometry</span><span class="badge">[40 Marks]</span></summary>
       <div class="topic-body">
-        <p class="topic-note">Circle geometry and proportionality theorems. NSC Paper 2, November 2015–2025.</p>
 <details class="year">
 <summary>2025</summary>
 <div class="year-body">
@@ -3246,27 +3269,34 @@ Circle through $D,B,E$; diameter $ED$ produced to $C$; $AC$ tangent at $B$; $M$ 
 </div>
 
   <!--Footer-->
-  <footer id="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="./Diagrams/logo.png" alt="Logo">
-        <div>
-          <h2>Better Math Education</h2>
-          <p class="slogan">Get infinitely better at math, one day at a time.</p>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>About</h3>
-        <p>Practice resources and past-paper solutions for NSC Grade 12 Mathematics and Olympiad prep.</p>
-      </div>
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <a href="mailto:bettermath3.1415@gmail.com">Email: bettermath3.1415@gmail.com</a>
-        <a href="https://wa.me/27678040969" target="_blank" rel="noopener">WhatsApp: 067 804 0969</a>
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="./Diagrams/BetterMath_Logo.png" alt="Logo">
+      <div>
+        <h2>Better Math Education</h2>
+        <p class="slogan">Get infinitely better at math, one day at a time.</p>
       </div>
     </div>
-    <div class="footer-bottom">Created by: Phuluso Nembilwi</div>
-  </footer>
+
+    <div class="footer-col">
+      <h3>About</h3>
+      <p>A free interactive platform for South African Grade 12 students to practise mathematics.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <a href="mailto:bettermath3.1415@gmail.com">Email: bettermath3.1415@gmail.com</a>
+      <a href="https://wa.me/27678040969" target="_blank" rel="noopener" class="icon brands fa-whatsapp">WhatsApp: 067 804 0969</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Created by: Phuluso Nembilwi | <a href="https://phulusonembilwi.co.za/"> phulusonembilwi.co.za</a>
+    <p>One Piece is the goat</p>
+
+  </div>
+</footer>
   <!--Footer End-->
 
 </body>

@@ -9,7 +9,7 @@ function toggleAll(selector, open) {
 }
 
 // All the classes used across P1 and P2 for answer blocks
-const ANSWER_SELECTOR = 'details.answers, details.answer, details.ans, details.answer-block, details.asection, details.sub.answer';
+const ANSWER_SELECTOR = 'details.answers, details.answer, details.ans, details.answer-block, details.asection, details.sub.answer, details.solution';
 
 function showAllAnswers() {
   toggleAll(ANSWER_SELECTOR, true);

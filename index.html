@@ -9,6 +9,8 @@
 <script src="./Codes/mathjax-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
 <script src="./Codes/main.js" defer></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425237218243356"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -20,7 +22,7 @@
     <!-- Left Side: Logo and Website Name -->
     <div class="brand">
         <!-- Placeholder for your logo. Replace 'logo.png' with your actual image file later -->
-        <img src="./Diagrams/logo.png" alt="Logo" id="logo-img">
+        <img src="./Diagrams/BetterMath_Logo.png" alt="Logo" id="logo-img">
         <div>
           <h1><a href="index.html" id="logo">Better Math Education</a></h1>
           <p class="slogan">Get infinitely better at math, one day at a time.</p>
@@ -39,8 +41,8 @@
                     <a href="MathematicsP2.html">Math P2 Grade 12</a>
                 </div>
             </div>
-            <a href="SATMO.html">Tertiary Olympiad</a>
-            <a href="SAMO(Gr 10-12).html">High School Olympiad</a>
+            <a href="MathOlympiad(Grade10-12).html">Math Olympiad(Grade 10-12)</a>
+            <a href="MathOlympiad(Tertiary).html">Math Olympiad(Tertiary)</a>
             
  
         </div>
@@ -57,33 +59,52 @@
 
 
 <!-- Homepage intro slide: shown first; the arrow scrolls smoothly down to the P1 content below -->
-<section class="intro-slide" id="intro">
-  <h1>Better Math Education</h1>
-  <p>Get infinitely better at math, one day at a time.</p>
-  <p>Free, exam-style NSC Grade 12 Mathematics practice, organised by topic and by year, with full worked answers you can reveal whenever you're ready to check your work.</p>
-  <a href="#p1-content" class="jump-arrow">
-    <span>Jump to P1</span>
-    <span class="arrow-icon" aria-hidden="true">↓</span>
-  </a>
+<section class="intro-slide" id="intro" >
+
+  <section class="split-section">
+    <div class="split-image">
+      <img src="./Diagrams/BetterMath_Logo.png" style="max-width: 90%;" alt="Better Math logo">
+
+    </div>
+
+    <div class="split-content">
+      <h2>Welcome to Better Math Education!!!</h2>
+      <h4>About</h4>
+      <p>A wise man once said, “The only way to learn mathematics is to do mathematics.” Better Math aims to make that easier by providing an organised, interactive, and free platform for South African Grade 12 students to practise mathematics. Whether you are a student who is still struggling with mathematics, or an A student striving to refine specific topics, this platform for you.</p>
+      <h4>Why Better Math</h4>
+      <p>Better Math offers Grade 12 Mathematics final examination questions and answers from the South African National Department of Basic Education, grouped by topics for your convenience. You can immediately jump to any topic you are interested in and start practicing. Better Math also provides past questions from various mathematics Olympiads for students who are looking to challenge themselves. </p>
+
+    </div>
+
+  </section>
+
 </section>
 
-<div class="wrap" id="p1-content">
-  <header>
-    <h1>NSC Grade 12 Mathematics P1 Practice By topic</h1>
-    <p>How P1 Math is structured</p>
-      <img src="./Diagrams/Grade12P1/P1 Marks Breakdown.png" style="width:70%">
-      <p>Explaining how to pactice, tips and advice</p>
-  </header>
 
+
+<div class="wrap" id="p1-content">
   <div class="toolbar">
-    <button onclick="toggleAll('details.topic', true)">Expand all topics</button>
-    <button onclick="toggleAll('details.topic', false)">Collapse all topics</button>
-    <button onclick="toggleAll('details.yr', true)">Expand all years</button>
-    <button onclick="toggleAll('details.yr', false)">Collapse all years</button>
-    <button onclick="showAllAnswers()">Show all answers</button>
-    <button onclick="hideAllAnswers()">Hide all answers</button>
+    <button class="btn-on" onclick="toggleAll('details.topic', true)">Expand all topics</button>
+    <button class="btn-off" onclick="toggleAll('details.topic', false)">Collapse all topics</button>
+    <button class="btn-on" onclick="toggleAll('details.yr', true)">Expand all years</button>
+    <button class="btn-off" onclick="toggleAll('details.yr', false)">Collapse all years</button>
+    <button class="btn-on" onclick="showAllAnswers()">Show all answers</button>
+    <button class="btn-off" onclick="hideAllAnswers()">Hide all answers</button>
   </div>
 
+<details class="topic" id="topic-tips">
+  <summary><span class="topic-name">Tips and Advice</span></summary>
+  <div class="topic-body">
+        <h2>Mathematics P1</h2>
+        <img src="./Diagrams/Grade12P1/Mathematics P1 Topics Breakdown.png" style="max-width: 95%;" alt="Paper 1 breakdown">
+        <p>Mathematics paper 1 consists of 6 topics which amount to 150 marks, as you can see on the diagram. The breakdown of the marks can vary slightly from year to year but is usually about the same. The heart of Mathematics P1 is Algebra, i.e. knowing how to solve for x, simultaneous equations, and your laws of exponents. Once you understand algebra, it will become increasingly clear that you are being asked the same the same questions but in different contexts; either it is Functions, Calculus, or finance.</p>
+        <p>So, do not view Mathematics Paper 1 as 6 different topics but one whole divided into smaller parts; functions and graphs are just algebra visualized on the Cartesian plane, Grade 12 Calculus is just functions and graphs with optimization and derivatives, finance is just number patterns with money, number patterns are just algebra and functions with discrete values. The more you notice these connections, the easier most questions will be; The examiners are aware of this and will often evaluate if you are aware of these connections as well. The more you practice, the clearer these connections will become, helping you draw experiences from other topics when you encounter a challenging question. Wishing you all the best!!!</p>
+  <h2>Breakdown of what the paper tests</h2>
+<p>Knowledge (20%): knowing which formulas to use, knowing when to use certain mathematical facts, knowing the procedures and how to round. Routine procedures (35%): Knowledge of how to perform procedures, how to prove certain theorems, applications of theorems. Complex procedures (30%): problems involving high order reasoning, involves making connections between different topics, require understanding of the topics and concepts. Problem solving (15%): non routine problem solving, high order reasoning also required, problems that need to be broken into smaller parts to understand, involves using solutions and making conclusions from solutions found in prior questions</p>
+    <h2>How to practice</h2>
+<p>The best way to practice is to first attempt the questions yourself, then view solutions and grade yourself. As each Mathematics paper is only 3 hours long, with 150 marks each, it can be challenging to finish on time; hence, once you are more comfortable with the topic, you should practice answering the questions at a faster pace.  Past papers are an immensely powerful tool for exam practice and understanding; however, they do not replace textbooks. I would suggest first going through a topic in a textbook, notes, or explanation videos before attempting past questions, then go back to the book or notes when you get stuck and see if there is something you might be missing.</p>
+      </div>
+</details>
 
 <details class="topic" id="topic1">
   <summary> <span class="topic-name">Algebra, Equations and Inequalities(2015-2025) </span><span class="badge">[25 Marks]</span></summary>
@@ -4174,7 +4195,7 @@ Solving: $t^2-3t\cdot(\ldots)$ leads to $t^2-13t+... \Rightarrow \textbf{t=3}$ o
 <footer id="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="./Diagrams/logo.png" alt="Logo">
+      <img src="./Diagrams/BetterMath_Logo.png" alt="Logo">
       <div>
         <h2>Better Math Education</h2>
         <p class="slogan">Get infinitely better at math, one day at a time.</p>
@@ -4183,18 +4204,20 @@ Solving: $t^2-3t\cdot(\ldots)$ leads to $t^2-13t+... \Rightarrow \textbf{t=3}$ o
 
     <div class="footer-col">
       <h3>About</h3>
-      <p>Practice resources and past-paper solutions for NSC Grade 12 Mathematics and Olympiad prep.</p>
+      <p>A free interactive platform for South African Grade 12 students to practise mathematics.</p>
     </div>
 
     <div class="footer-col">
       <h3>Contact</h3>
       <a href="mailto:bettermath3.1415@gmail.com">Email: bettermath3.1415@gmail.com</a>
-      <a href="https://wa.me/27678040969" target="_blank" rel="noopener">WhatsApp: 067 804 0969</a>
+      <a href="https://wa.me/27678040969" target="_blank" rel="noopener" class="icon brands fa-whatsapp">WhatsApp: 067 804 0969</a>
     </div>
   </div>
 
   <div class="footer-bottom">
-    Created by: Phuluso Nembilwi
+    Created by: Phuluso Nembilwi | <a href="https://phulusonembilwi.co.za/"> phulusonembilwi.co.za</a>
+    <p>One Piece is the goat</p>
+
   </div>
 </footer>
 <!--Footer End-->

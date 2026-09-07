@@ -241,6 +241,27 @@ body > #site-footer {
   background: var(--accent-soft);
 }
 
+/* Expand / show-all buttons -> green, collapse / hide-all buttons -> red */
+.toolbar button.btn-on, .controls button.btn-on {
+  background: #16a34a;
+  border-color: #15803d;
+  color: #ffffff;
+}
+
+.toolbar button.btn-on:hover, .controls button.btn-on:hover {
+  background: #15803d;
+}
+
+.toolbar button.btn-off, .controls button.btn-off {
+  background: #dc2626;
+  border-color: #b91c1c;
+  color: #ffffff;
+}
+
+.toolbar button.btn-off:hover, .controls button.btn-off:hover {
+  background: #b91c1c;
+}
+
 /* =========================================
    ACCORDIONS (Topics, Years)
 ========================================= */
@@ -363,6 +384,47 @@ details.yr[open] > summary::after {
 .q-item:first-child, .problem:first-child { margin-top: 12px; }
 
 .q-body, .content, .sub-body { padding: 10px 14px; }
+
+/* Individual question accordion (used on the Olympiad pages, nested
+   inside a year) - styled like a lighter, nested version of
+   details.year/.yr so the three-level hierarchy (year > question >
+   answer) still reads consistently with the rest of the site. */
+details.question {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 0 0 14px;
+  overflow: hidden;
+  background: var(--card);
+}
+
+details.question > summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 40px 12px 16px;
+  font-weight: 700;
+  font-size: 1em;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}
+
+details.question > summary::-webkit-details-marker { display: none; }
+
+details.question > summary::after {
+  content: '▾';
+  font-size: 1em;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+}
+
+details.question[open] > summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.qtext, .prose { margin: 10px 0; line-height: 1.55; }
 
 .qplain-body > .q-body,
 .qplain-body > .content,
@@ -560,6 +622,15 @@ html {
   background: linear-gradient(160deg, var(--bg-dark) 0%, #1e293b 55%, var(--accent-dark) 100%);
 }
 
+/* The intro slide is a centered flex column, so its split-section child
+   won't stretch to the available width on its own - pin it to 100%
+   (minus a max-width cap) so it resizes with the viewport instead of
+   shrink-wrapping its content and "floating" at a fixed size. */
+.intro-slide .split-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .intro-slide h1 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin: 0 0 12px;
@@ -610,3 +681,73 @@ html {
   text-transform: none;
   letter-spacing: normal;
 }
+
+/* =========================================
+  Screen split
+========================================= */
+
+    /* Container layout */
+    .split-section {
+      display: flex;
+      flex-direction: row; /* Side-by-side on desktop */
+      align-items: center; /* Vertically centers image and text */
+      gap: 2rem;           /* Space between image and text */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    /* Left column (Image) */
+    .split-image {
+      flex: 1; /* Takes up 50% width on desktop */
+      width: 100%;
+      min-width: 0; /* allow shrinking below content's intrinsic size */
+    }
+
+    .split-image img {
+      width: 70%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Right column (Text content) */
+    .split-content {
+      flex: 1;
+      min-width: 0; /* prevents long words/text from forcing overflow */
+      object-fit: contain;
+      overflow-wrap: break-word;
+      word-break: break-word;
+ /* Takes up 50% width on desktop */
+    }
+
+    .split-content h2,
+    .split-content p {
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .split-section {
+        flex-direction: column; /* Stacks vertically on mobile */
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+
+      .split-image img {
+        width: 100%;
+      }
+
+      .intro-slide .split-section {
+        padding: 0;
+      }
+
+      .intro-slide {
+        min-height: auto;
+        justify-content: flex-start;
+        padding: 32px 20px;
+      }
+    }
