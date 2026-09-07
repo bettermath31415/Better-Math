@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://bettermath.co.za/sitemap.xml
+Sitemap: https://bettermath.co.za/Sitemap.xml
