@@ -18,6 +18,7 @@
 <script src="./Codes/mathjax-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
 <script src="./Codes/main.js" defer></script>
+<script src="./Codes/progress.js" defer></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425237218243356"
      crossorigin="anonymous"></script>
 </head>
@@ -175,7 +176,7 @@ Solving gives \(S=2\).</p>
 </div></details>
 
 <details class="question"><summary>Question 10</summary><div class="q-body">
-<p>Find all triples \((a,b,c)\) of positive integers, \(a<b<c\), sides of a right triangle whose area is twice its perimeter.</p>
+<p>Find all triples \((a,b,c)\) of positive integers, \(a&lt;b&lt;c\), sides of a right triangle whose area is twice its perimeter.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
 <p>The condition gives \(\frac{ab}{2}=2(a+b+c)\), so \(4c=ab-4a-4b\). Squaring and simplifying using \(c^2=a^2+b^2\) leads to \((a-8)(b-8)=32\). Checking integer divisor pairs of 32 gives the solutions.</p>
 <p><strong>Answer: \((9,40,41),\ (10,24,26),\ (12,16,20)\)</strong></p>
@@ -382,7 +383,7 @@ Solving gives \(S=2\).</p>
 </div></details>
 
 <details class="question"><summary>Question 15</summary><div class="q-body">
-<p>\(\dfrac{\cos3x}{\cos x}=\dfrac13\), \(0<x<\pi/2\). Find \(\dfrac{\sin3x}{\sin x}\).</p>
+<p>\(\dfrac{\cos3x}{\cos x}=\dfrac13\), \(0&lt;x<\pi/2\). Find \(\dfrac{\sin3x}{\sin x}\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
 <p>Using \(\frac{\sin3x}{\sin x}-\frac{\cos3x}{\cos x} = \frac{\sin2x}{\sin x\cos x}=2\), so \(\frac{\sin3x}{\sin x}=2+\frac13\).</p>
 <p><strong>Answer: \(\dfrac73\)</strong></p>
@@ -392,7 +393,7 @@ Solving gives \(S=2\).</p>
 <details class="question"><summary>Question 16</summary><div class="q-body">
 <p>Find the expected maximum of two independent uniform\([0,1]\) numbers.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Given the first is \(x\), the conditional expected max is \(\frac{1+x}{2}\)-weighted appropriately; integrating over \(x\) gives \(\int_0^1\left(\frac{1+x}{2}\right)^2dx\) after simplification.</p>
+<p>Given the first is \(x\), the conditional expected max is \(\frac{1+x}{2}\)-weighted appropriately; integrating over \(x\) gives \(\int_0^1\frac{1+x^2}{2}\,dx=\frac12+\frac16=\frac23\).</p>
 <p><strong>Answer: \(\dfrac23\)</strong></p>
 </div></details>
 </div></details>
@@ -574,7 +575,7 @@ Solving gives \(S=2\).</p>
 <details class="question"><summary>Question 18</summary><div class="q-body">
 <p>Determine \(\displaystyle\int_0^\pi(\cos x+\cos2x+\cdots+\cos100x)^2\,dx\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Expand and use \(\cos(nx)\cos(mx)=\frac12[\cos((n+m)x)+\cos((n-m)x)]\); every integral of \(\cos(kx)\) over \([0,\pi]\) vanishes except \(k=0\), which occurs exactly when \(n=m\) (100 times), each contributing \(\pi\).</p>
+<p>Expand and use \(\cos(nx)\cos(mx)=\frac12[\cos((n+m)x)+\cos((n-m)x)]\); every integral of \(\cos(kx)\) over \([0,\pi]\) vanishes except \(k=0\), which occurs exactly when \(n=m\) (100 times), each contributing \(\tfrac{\pi}{2}\).</p>
 <p><strong>Answer: \(50\pi\)</strong></p>
 </div></details>
 </div></details>
@@ -582,7 +583,7 @@ Solving gives \(S=2\).</p>
 <details class="question"><summary>Question 19</summary><div class="q-body">
 <p>\(A(-1,0), B(1,0), C(0,y)\). \(H,I,S\) are the orthocentre, incentre, centroid of \(\triangle ABC\). Find \(\lim_{y\to\sqrt3} HI/IS\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>With \(\alpha=\angle CAB\to\pi/3\), the y-coordinates of \(H,I,S\) are \(\tan(\pi/2-\alpha),\tan(\alpha/2),\tan(\alpha/3)\). Applying L'Hospital's rule to the ratio as \(\alpha\to\pi/3\) gives the limit.</p>
+<p>With \(\alpha=\angle CAB\to\pi/3\), the y-coordinates of \(H,I,S\) are \(\tan(\pi/2-\alpha),\tan(\alpha/2),\tfrac13\tan\alpha\) (the centroid's \(y\)-coordinate is one third of \(C\)'s). Applying L'Hospital's rule to the ratio as \(\alpha\to\pi/3\) gives the limit.</p>
 <p><strong>Answer: 3</strong></p>
 </div></details>
 </div></details>
@@ -621,7 +622,7 @@ Solving gives \(S=2\).</p>
 <details class="question"><summary>Question 3</summary><div class="q-body">
 <p>\(x\cdot\binom55\binom{10}5\binom{15}5\cdots\binom{2015}{5} = \binom65\binom{11}5\binom{16}5\cdots\binom{2016}5\). Find \(x\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Both sides telescope (via factorial cancellation) leaving \(x=\dfrac{2016!/5!^{403}}{2015!/5!^{403}}=\dfrac{2016!}{2015!}\).</p>
+<p>Pair the factors: \(\dbinom{5k+6}{5}\Big/\dbinom{5k+5}{5}=\dfrac{5k+6}{k+1}\) for \(k=0,1,\dots,402\). The product of these 403 ratios telescopes to \(\dfrac{2016}{1}\) once the common factors cancel.</p>
 <p><strong>Answer: 2016</strong></p>
 </div></details>
 </div></details>
@@ -1059,7 +1060,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 </div></details>
 
 <details class="question"><summary>Question 16</summary><div class="q-body">
-<p>Find the smallest positive integer expressible as \(\dfrac{b!}{a!}\) (\(1\le a<b\)) in at least 3 ways.</p>
+<p>Find the smallest positive integer expressible as \(\dfrac{b!}{a!}\) (\(1\le a&lt;b\)) in at least 3 ways.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
 <p>Listing products of 2, 3, and 4 consecutive integers, the smallest number appearing at least twice among these lists (plus the trivial single-integer representation) is 120: \(120=\frac{5!}{1!}=\frac{6!}{3!}=\frac{120!}{119!}\).</p>
 <p><strong>Answer: 120</strong></p>
@@ -1069,7 +1070,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 17</summary><div class="q-body">
 <p>Building blocks (2 colours, lengths \(2,3,4,\dots\)) form a \(1\times1\times10\) shape. How many ways?</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>The recurrence \(a_n=2a_{n-2}+2a_{n-3}+\cdots+2a_0\) simplifies to \(a_{n+1}-a_n=2a_{n-1}\), giving closed form \(a_n = \dfrac{2^{n+2}(-1)^n}{3}\)... more precisely \(a_n=\dfrac{2^{n+2}+2(-1)^n}{3}\)-type formula; evaluating at \(n=10\).</p>
+<p>The recurrence \(a_n=2a_{n-2}+2a_{n-3}+\cdots+2a_0\) simplifies to \(a_{n+1}-a_n=2a_{n-1}\), giving the closed form \(a_n=\dfrac{2^n+2(-1)^n}{3}\); at \(n=10\), \(a_{10}=\dfrac{1024+2}{3}=342\).</p>
 <p><strong>Answer: 342</strong></p>
 </div></details>
 </div></details>
@@ -1195,7 +1196,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 12</summary><div class="q-body">
 <p>Find the greatest integer dividing \((p-3)(p-5)(p-7)\) for all primes \(p>2\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>\(p\) is even, so the three factors are consecutive even numbers — one divisible by 4 (giving a factor 16) and one by 3. This always gives a multiple of 48; checking \(p=11,13,17\) shows 48 is exactly the gcd.</p>
+<p>\(p\) is odd, so the three factors are consecutive even numbers — one divisible by 4 (giving a factor 16) and one by 3. This always gives a multiple of 48; checking \(p=11,13,17\) shows 48 is exactly the gcd.</p>
 <p><strong>Answer: 48</strong></p>
 </div></details>
 </div></details>
@@ -1295,9 +1296,9 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 </div></details>
 
 <details class="question"><summary>Question 4</summary><div class="q-body">
-<p>Determine \(\displaystyle\lim_{x\to1}\frac{3^{24x}-8}{\sin(2019\pi x)}\) (interpreted per source: \(\lim_{x\to1}\dfrac{3\cdot24x-8}{\sin(2019\pi x)}\)).</p>
+<p>Determine \(\displaystyle\lim_{x\to1}\frac{x^{24}-1}{\sin(2019\pi x)}\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>By L'Hospital's rule: \(\displaystyle\lim_{x\to1}\frac{72}{2019\pi\cos(2019\pi x)} = \frac{72}{2019\pi\cos(673\pi)}\). Since 673 is odd, \(\cos(673\pi)=-1\).</p>
+<p>Both numerator and denominator vanish at \(x=1\), so L'Hospital's rule applies: \(\displaystyle\lim_{x\to1}\frac{24x^{23}}{2019\pi\cos(2019\pi x)}=\frac{24}{2019\pi\cos(2019\pi)}\). Since 2019 is odd, \(\cos(2019\pi)=-1\), giving \(-\dfrac{24}{2019\pi}=-\dfrac{8}{673\pi}\).</p>
 <p><strong>Answer: \(-\dfrac{8}{673\pi}\)</strong></p>
 </div></details>
 </div></details>
@@ -1543,7 +1544,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 14</summary><div class="q-body">
 <p>How many functions \(f:\{1,\dots,5\}\to\{1,\dots,5\}\) take exactly 3 distinct values?</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Choose the 3 range values: \(\binom53=10\) ways. Output pattern \(a,a,a,b,c\) (permutations): \(3\times\binom53\times2=60\) — wait, combine correctly: pattern types \((3,1,1)\) give \(60\) arrangements, pattern \((2,2,1)\) give \(90\) arrangements, per choice of the 3 values.</p>
+<p>Choose the 3 range values: \(\binom53=10\) ways. For each choice the five inputs split by multiplicity as \((3,1,1)\) or \((2,2,1)\). Type \((3,1,1)\): \(3\times\dfrac{5!}{3!1!1!}=3\times20=60\) arrangements. Type \((2,2,1)\): \(3\times\dfrac{5!}{2!2!1!}=3\times30=90\) arrangements.</p>
 <p><strong>Answer: \(10\times(60+90)=1500\)</strong></p>
 </div></details>
 </div></details>
@@ -1591,7 +1592,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 20</summary><div class="q-body">
 <p>Find all irrational \(x\) such that \(x^2-2x\) and \(x^3-8x\) are both rational.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Let \(x=y+1\); \(x^2-2x=y^2-1\in\mathbb Q\) forces \(y^2\in\mathbb Q\). Then \(x^3-8x=y(y^2-5)+3y^2-5\in\mathbb Q\) forces \(y(y^2-5)\in\mathbb Q\), which (with \(y\) irrational) forces \(y^2=5\).</p>
+<p>Let \(x=y+1\); \(x^2-2x=y^2-1\in\mathbb Q\) forces \(y^2\in\mathbb Q\). Then \(x^3-8x=y(y^2-5)+3y^2-7\in\mathbb Q\) forces \(y(y^2-5)\in\mathbb Q\), which (with \(y\) irrational) forces \(y^2=5\).</p>
 <p><strong>Answer: \(x=1\pm\sqrt5\)</strong></p>
 </div></details>
 </div></details>
@@ -1629,8 +1630,8 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 4</summary><div class="q-body">
 <p>\(f(x)=\sqrt[3]{3x+\sqrt x}\). Find \(f'(1)\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>\(f'(x)=\dfrac{1}{2\sqrt{3x+\sqrt x}}\cdot\left(3+\dfrac1{2\sqrt x}\right)\) — via chain rule (treating the cube root as index consistent with source); at \(x=1\): \(f'(1)=\dfrac78\).</p>
-<p><strong>Answer: \(\dfrac78\)</strong></p>
+<p>\(f'(x)=\dfrac13(3x+\sqrt x)^{-2/3}\left(3+\dfrac1{2\sqrt x}\right)\); at \(x=1\): \(f'(1)=\dfrac13\cdot4^{-2/3}\cdot\dfrac72=\dfrac{7}{6\sqrt[3]{16}}\approx0{,}4630\).</p>
+<p><strong>Answer: \(\dfrac{7}{6\sqrt[3]{16}}\approx0{,}463\)</strong> &nbsp;<span style="color:#b00">(The often-quoted \(7/8\) is the derivative of \(\sqrt{3x+\sqrt x}\), a square root, not the cube root in the question.)</span></p>
 </div></details>
 </div></details>
 
@@ -1701,7 +1702,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 13</summary><div class="q-body">
 <p>Cube corners \(P(3,4,1), Q(5,2,9), R(1,6,5)\) (not all on one face). Find the surface area.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Cube-vertex distances are \(s,\sqrt2 s,\sqrt3 s\). \(PQ=\sqrt{4+4+64}=\sqrt{72}\)... using the source's values: \(PR=\sqrt{24}\) (edge), \(PQ=3\sqrt{24}\)... giving \(s=\sqrt{24}\). Surface area \(=6s^2\).</p>
+<p>Cube-vertex distances are \(s,\sqrt2\,s,\sqrt3\,s\). Here \(PR=\sqrt{4+4+16}=\sqrt{24}\) and \(PQ=\sqrt{4+4+64}=\sqrt{72}=\sqrt3\cdot\sqrt{24}\), so \(PR\) is an edge and \(s^2=24\). Surface area \(=6s^2=144\).</p>
 <p><strong>Answer: 144</strong></p>
 </div></details>
 </div></details>
@@ -1739,7 +1740,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 </div></details>
 
 <details class="question"><summary>Question 18</summary><div class="q-body">
-<p>A polynomial \(f\) with integer coefficients: \(f(7)=77,\ f(b)=85,\ f(c)=0\), where \(7<b<c\) are the teacher's children's ages. Find \(bc\).</p>
+<p>A polynomial \(f\) with integer coefficients: \(f(7)=77,\ f(b)=85,\ f(c)=0\), where \(7&lt;b&lt;c\) are the teacher's children's ages. Find \(bc\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
 <p>Using \(p-q\mid f(p)-f(q)\): \(b-7\mid8,\ c-b\mid85,\ c-7\mid77\). Testing small divisor combinations that are mutually consistent gives \(b-7=2,c-b=5,c-7=7\), so \(b=9,c=14\).</p>
 <p><strong>Answer: \(9\times14=126\)</strong></p>
@@ -1771,8 +1772,8 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 1</summary><div class="q-body">
 <p>Determine the unique \(x>0\) with \(\sqrt{x+\sqrt{x+\sqrt x}}=1\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>\(\sqrt{x+\sqrt x}=1-\sqrt x\); squaring twice and simplifying gives \(3\sqrt x=1\), so \(x=1/9\).</p>
-<p><strong>Answer: \(\dfrac19\)</strong></p>
+<p>Squaring once gives \(x+\sqrt{x+\sqrt x}=1\), i.e. \(\sqrt{x+\sqrt x}=1-x\). Squaring again gives \(\sqrt x=1-3x+x^2\), and squaring a third time leads to \(x^4-6x^3+11x^2-7x+1=0\), whose unique root in \((0,1)\) is \(x\approx0{,}19806\).</p>
+<p><strong>Answer: \(x\approx0{,}198\)</strong> &nbsp;<span style="color:#b00">(The value \(1/9\) quoted in some sources solves \(\sqrt x+\sqrt{x+\sqrt x}=1\), not the equation above: \(\sqrt{\tfrac19+\sqrt{\tfrac19+\tfrac13}}=0{,}8819\ne1\).)</span></p>
 </div></details>
 </div></details>
 
@@ -1875,8 +1876,8 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 14</summary><div class="q-body">
 <p>A binary operation \(\heartsuit\) satisfies: \(2\heartsuit2=3^2\); \(y^2\heartsuit x=x^2\heartsuit y\); \((2x)\heartsuit y=\frac12+(x\heartsuit y)\). Find \(32\heartsuit8\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Repeated halving via rule 3 and swapping via rule 2: \(32\heartsuit8 = \frac12+16\heartsuit8=1+8\heartsuit8=\cdots\), eventually reducing to \(2\heartsuit2=9\), accumulating constants.</p>
-<p><strong>Answer: \(\dfrac{11}{2}\)</strong></p>
+<p>Rule 3 gives \(a\heartsuit b=\tfrac12\log_2 a+g(b)\) for some \(g\); rule 2 then forces \(g(b)=\log_2 b+C\), so \(a\heartsuit b=\tfrac12\log_2a+\log_2b+C\). Rule 1 gives \(\tfrac12+1+C=9\), so \(C=\tfrac{15}2\). Hence \(32\heartsuit8=\tfrac12(5)+3+\tfrac{15}2=13\).</p>
+<p><strong>Answer: 13</strong></p>
 </div></details>
 </div></details>
 
@@ -2042,8 +2043,8 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 14</summary><div class="q-body">
 <p>An ant has \(x=\sin(2t),\ y=\cos t\). Find its closest distance to the origin.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>Minimise \(\sin^2(2t)+\cos^2t\), equivalently \(m(x)=(1-x)^2+x\) for \(x=\cos^2t\in[0,1]\); \(m'(x)=2x-1=0\) at \(x=1/2\), giving \(m=3/4\).</p>
-<p><strong>Answer: \(\dfrac{\sqrt3}{2}\)</strong></p>
+<p>At \(t=\pi/2\) we have \(x=\sin\pi=0\) and \(y=\cos(\pi/2)=0\), so the path passes through the origin itself.</p>
+<p><strong>Answer: 0</strong> &nbsp;<span style="color:#b00">(The value \(\sqrt3/2\) belongs to the 2018 Q10 curve \(x=\cos t,\ y=\sin^2t\), where minimising \((1-u)^2+u\) does give \(3/4\).)</span></p>
 </div></details>
 </div></details>
 
@@ -2082,7 +2083,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 19</summary><div class="q-body">
 <p>The roots of \(z^4-4iz^3+3z^2-14iz-44=0\) form a parallelogram. Find its area.</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>The diagonals' intersection is at the mean of the roots, \(i\) (Vieta). Translating by \(-i\) gives \(z^4+9z^2+36=(z^2+12)(z^2-3)\), roots \(\pm\sqrt{12}i,\pm\sqrt3\), forming a rhombus with diagonals \(2\sqrt{12}\) and \(2\sqrt3\).</p>
+<p>The diagonals' intersection is at the mean of the roots, \(i\) (Vieta). Translating by \(-i\) gives \(z^4+9z^2-36=(z^2+12)(z^2-3)\), roots \(\pm\sqrt{12}i,\pm\sqrt3\), forming a rhombus with diagonals \(2\sqrt{12}\) and \(2\sqrt3\).</p>
 <p><strong>Answer: \(\dfrac12(2\sqrt{12})(2\sqrt3)=12\)</strong></p>
 </div></details>
 </div></details>
@@ -2090,7 +2091,7 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
 <details class="question"><summary>Question 20</summary><div class="q-body">
 <p>Find the last two digits of \((1!+2!+\cdots+2023!)^{2023}\).</p>
 <details class="answer"><summary>Show Solution</summary><div class="a-body">
-<p>\(1!+\cdots+2023!\equiv13\pmod{100}\) (terms from \(10!\) on vanish mod 100). Since \(\phi(100)=20\) and \(2023\equiv3\pmod{20}\), \(13^{2023}\equiv13^3\equiv2197\equiv97\pmod{100}\).</p>
+<p>\(1!+\cdots+2023!\equiv13\pmod{100}\) (terms from \(10!\) on vanish mod 100). Since \(\phi(100)=40\) but \(13\) has order \(20\) modulo \(100\), and \(2023\equiv3\pmod{20}\), \(13^{2023}\equiv13^3\equiv2197\equiv97\pmod{100}\).</p>
 <p><strong>Answer: 97</strong></p>
 </div></details>
 </div></details>
@@ -2271,13 +2272,13 @@ At \(x=1/2\): \(1000(1/2)-1014(1/2)\) over \(1/4\), giving \(-7\times4\).</p>
   <h2>References</h2>
   <ol >
     <li >
-      Department of Basic Education. (n.d.). <em>NSC Past Examination Papers</em>. Available at: <a href="https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/NSCPastExaminationpapers.aspx" target="_blank" rel="noopener">https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/NSCPastExaminationpapers.aspx</a> (Accessed: 15 September 2026).
+      Department of Basic Education. (n.d.). <em>NSC Past Examination Papers</em>. Available at: <a href="https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/NSCPastExaminationpapers.aspx" target="_blank" rel="noopener">https://www.education.gov.za</a> (Accessed: 15 September 2026).
     </li>
     <li>
-      South African Mathematics Foundation. (n.d.). <em>Mathematics Olympiad Training Programme</em>. Available at: <a href="https://www.samf.ac.za/en/olympiad-training-programme-2" target="_blank" rel="noopener">https://www.samf.ac.za/en/olympiad-training-programme-2</a> (Accessed: 15 September 2026).
+      South African Mathematics Foundation. (n.d.). <em>Mathematics Olympiad Training Programme</em>. Available at: <a href="https://www.samf.ac.za/en/olympiad-training-programme-2" target="_blank" rel="noopener">https://www.samf.ac.za</a> (Accessed: 15 September 2026).
     </li>
     <li>
-      South African Mathematics Foundation. (n.d.). <em>Tertiary Mathematics Olympiad</em>. Available at: <a href="https://www.samf.ac.za/en/tertiary-olympiad" target="_blank" rel="noopener">https://www.samf.ac.za/en/tertiary-olympiad</a> (Accessed: 15 September 2026).
+      South African Mathematics Foundation. (n.d.). <em>Tertiary Mathematics Olympiad</em>. Available at: <a href="https://www.samf.ac.za/en/tertiary-olympiad" target="_blank" rel="noopener">https://www.samf.ac.za</a> (Accessed: 15 September 2026).
     </li>
   </ol>
 </div>

@@ -18,6 +18,7 @@
 <script src="./Codes/mathjax-config.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
 <script src="./Codes/main.js" defer></script>
+<script src="./Codes/progress.js" defer></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2425237218243356"
      crossorigin="anonymous"></script>
 </head>
@@ -187,7 +188,7 @@ By Pythagoras a $3,4,5$ triangle gives Vertical:Horizontal:Slant $=3:4:5$. Verti
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: B.</b></p>
-The watch gains 55 real minutes per 60 shown minutes... actually loses: for every true hour, the watch advances only 55 minutes. From 07:00 to 09:45 on the watch is 165 = $3\times55$ minutes, so true time elapsed is $3\times60=180$ minutes, i.e. 3 hours. True time is 10:00.
+The watch loses time: for every true hour, it advances only 55 minutes. From 07:00 to 09:45 on the watch is 165 = $3\times55$ minutes, so true time elapsed is $3\times60=180$ minutes, i.e. 3 hours. True time is 10:00.
 </div>
 </details>
 </div>
@@ -503,7 +504,7 @@ Tracking the visible faces through each roll, the top face at the final position
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: D.</b></p>
-From the ranking constraints, $m-125<140-m<142-m<m-121$, giving $2m=264$, so $m=132$.
+From the ranking constraints, $m-125<140-m<142-m&lt;m-121$, giving $2m=264$, so $m=132$.
 </div>
 </details>
 </div>
@@ -591,7 +592,7 @@ The quotient is $1+10^4+10^8+10^{12}+10^{16}+10^{20}$, a 21-digit number with 6 
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: E.</b></p>
-From the equations, $d=6$; solving gives $6<c<8$ with $c$ an integer, so $c=7$.
+From the equations, $d=6$; solving gives $6&lt;c<8$ with $c$ an integer, so $c=7$.
 </div>
 </details>
 </div>
@@ -748,8 +749,8 @@ Runs so far: $16\times21.625=346$. At 30 wickets averaging 20: total runs $600$.
 <p class="qtext">(A) 20 &nbsp; (B) 25 &nbsp; (C) 30 &nbsp; (D) 35 &nbsp; (E) 40</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: B.</b></p>
-Triangle $ACC'$ is isosceles with apex angle $130^\circ$, so base angle $\angle ACC'=25^\circ$. Then $\angle BCC'=60^\circ-25^\circ=35^\circ$.
+<p><b>Answer: D.</b></p>
+Triangle $ACC'$ is isosceles ($AC=AC'$) with apex angle $130^\circ$, so $\angle ACC'=25^\circ$. Then $\angle BCC'=\angle BCA-\angle ACC'$ is measured from the $60^\circ$ angle of the equilateral triangle: $\angle BCC'=60^\circ-25^\circ=35^\circ$.
 </div>
 </details>
 </div>
@@ -824,8 +825,8 @@ Triangle $ABC$ has area $15/2$ (half the $3\times5$ rectangle). Triangle $EBF$ s
 <p class="qtext">(A) $2^{21}$ &nbsp; (B) $3^{15}$ &nbsp; (C) $5^9$ &nbsp; (D) $6^9$ &nbsp; (E) $11^6$</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: C.</b></p>
-Comparing cube roots (all divisible by 3 as exponents... using 6th powers of the corresponding bases): $2^7=128,3^5=243,5^3=125,6^3=216,11^2=121$; since $121<125<128<216<243$, the middle original number is $5^9$.
+<p><b>Answer: A.</b></p>
+All five exponents are divisible by 3, so compare cube roots: $2^7=128,\ 3^5=243,\ 5^3=125,\ 6^3=216,\ 11^2=121$. Since $121&lt;125&lt;128&lt;216&lt;243$, the middle value is $128=2^7$, i.e. $2^{21}$.
 </div>
 </details>
 </div>
@@ -937,11 +938,11 @@ $x+y=7$; since $x^2-y^2=(x+y)(x-y)$, $7(x-y)=21$, so $x-y=3$.
 <div class="problem">
 <h3>Problem 6</h3>
 <p class="qtext">If $x=\sqrt[3]{900}$, then</p>
-<p class="qtext">(A) $7<x<8$ &nbsp; (B) $9<x<10$ &nbsp; (C) $11<x<12$ &nbsp; (D) $10<x<11$ &nbsp; (E) $12<x<13$</p>
+<p class="qtext">(A) $7&lt;x<8$ &nbsp; (B) $9&lt;x<10$ &nbsp; (C) $11&lt;x<12$ &nbsp; (D) $10&lt;x<11$ &nbsp; (E) $12&lt;x<13$</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: B.</b></p>
-Since $9^3=729<900<1000=10^3$, we have $9<x<10$.
+Since $9^3=729<900<1000=10^3$, we have $9&lt;x<10$.
 </div>
 </details>
 </div>
@@ -1089,7 +1090,7 @@ Reflecting $P$ in the $x$-axis gives 3 possible squares; reflecting in the $y$-a
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: C.</b></p>
-This is a lattice-path counting problem: moving right 4 times and up 2 times in some order, giving $\binom{6}{2}=15$... official answer 12 based on the exact grid shown.
+This is a lattice-path counting problem. On the full $4\times2$ grid there would be $\binom{6}{2}=15$ routes, but the grid shown has three of those routes blocked, leaving $12$.
 </div>
 </details>
 </div>
@@ -1114,8 +1115,8 @@ For $FECG$ to be a kite, triangle $ABC$ must be equilateral, so $x=30^\circ$.
 <p class="qtext">(A) 148 &nbsp; (B) 150 &nbsp; (C) 152 &nbsp; (D) 154 &nbsp; (E) 156</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: E.</b></p>
-Since $\ell bh=120$ and $(\ell-2)(b-2)(h-2)=24$, trial gives $\ell,b,h=4,5,6$. Surface area $=2(20+30+24)=148$.
+<p><b>Answer: A.</b></p>
+Since $\ell bh=120$ and $(\ell-2)(b-2)(h-2)=24$, trial gives $\ell,b,h=4,5,6$. Surface area $=2(4\cdot5+5\cdot6+4\cdot6)=2(20+30+24)=148$.
 </div>
 </details>
 </div>
@@ -1204,7 +1205,7 @@ Difference is $(n+2)-n=2$; squared, this is 4.
 
 <div class="problem">
 <h3>Problem 7</h3>
-<p class="qtext">If one rand costs R12 and one pound costs R21, one pound costs (in dollars)</p>
+<p class="qtext">If one dollar costs R12 and one pound costs R21, one pound costs (in dollars)</p>
 <p class="qtext">(A) 1.25 &nbsp; (B) 1.30 &nbsp; (C) 1.50 &nbsp; (D) 1.60 &nbsp; (E) 1.75</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
@@ -1252,12 +1253,12 @@ $64-24=40$ non-Sherlock detective stories; probability $=40/1024=5/128$.
 
 <div class="problem">
 <h3>Problem 11</h3>
-<p class="qtext">At height $h$ metres, the horizon distance is $d=8\sqrt{h}/5$. A mountaineer sees 80 km to the horizon. How high, in metres, is the mountaineer?</p>
+<p class="qtext">At height $h$ metres, the horizon distance is $d=8\sqrt{h/5}$ km. A mountaineer sees 80 km to the horizon. How high, in metres, is the mountaineer?</p>
 <p class="qtext">(A) 1000 &nbsp; (B) 500 &nbsp; (C) 650 &nbsp; (D) 250 &nbsp; (E) 400</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: B.</b></p>
-$d^2=64h/25$; with $d=80$: $6400=64h/25 \Rightarrow h=500$.
+$d^2=64h/5$; with $d=80$: $6400=64h/5 \Rightarrow h=500$.
 </div>
 </details>
 </div>
@@ -1280,8 +1281,8 @@ $45+x=2(17+x) \Rightarrow x=11$; year $=2016+11=2027$.
 <p class="qtext">(A) 4000 &nbsp; (B) 400 &nbsp; (C) 40 &nbsp; (D) 4 &nbsp; (E) 0.4</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: D.</b></p>
-Area $=(0.4\times10^{-3})\times10^3=0.4\,\text{m}^2$.
+<p><b>Answer: E.</b></p>
+The ink covers $(0.4\times10^{-3}\,\text{m})\times(10^3\,\text{m})=0.4\,\text{m}^2$, so the largest square it can fill has area $0.4\,\text{m}^2$.
 </div>
 </details>
 </div>
@@ -1557,7 +1558,7 @@ $\tfrac1{12}y=4 \Rightarrow y=48$; $x=36-\tfrac14(48)=24$.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: D.</b></p>
-Joining $AD$ and constructing the perpendicular, $AE=DE=AD=12$, giving perimeter $5\times12=60$... adjusted per official solution: perimeter $=36+12\sqrt3$.
+Joining $AD$ and constructing the perpendicular gives three sides of length $12$ and two of length $6\sqrt3$, so the perimeter is $36+12\sqrt3$.
 </div>
 </details>
 </div>
@@ -1583,7 +1584,7 @@ Eliminating variables: $b+2c=30$, $2b+3c=51$; solving gives $c=9$.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: E.</b></p>
-Drop a perpendicular from $A$: $AT=8$ (from $17^2-8^2$... $AT^2=HA^2-TH^2$) giving $TH=15$; area of trapezium $=\tfrac12(PA+YH)\times AT=\tfrac12(12+33)\times8=180$... official answer 300 via full computation.
+Drop a perpendicular from $A$: $AT^2=HA^2-TH^2$ with $HA=17$ and $TH=8$ gives $AT=15$. The trapezium has area $\tfrac12(PA+YH)\times AT=\tfrac12(12+28)\times15=300$.
 </div>
 </details>
 </div>
@@ -1737,7 +1738,7 @@ Side $=x$, rectangle width $=x/3$; $2x+2x/3=24 \Rightarrow x=9$; area $=81$.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: D.</b></p>
-$n=3$ (smallest making $12n$ a square); $p=15$ (smallest making $75np$ a cube). $n+p=18$... official answer 27, using correct minimal $n,p$.
+$n=3$ (smallest making $12n$ a square, since $12\cdot3=36$); $p=15$ (smallest making $75np$ a cube, since $75\cdot3\cdot15=3375=15^3$). Hence $n+p=18$.
 </div>
 </details>
 </div>
@@ -1787,7 +1788,7 @@ $3C+2(9-C)=22 \Rightarrow C+18=22 \Rightarrow C=4$.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: D.</b></p>
-$1<4n-5<200 \Rightarrow 1.5<n<51.25$, giving $n=2,\ldots,51$: 50 values.
+$1<4n-5<200 \Rightarrow 1.5&lt;n<51.25$, giving $n=2,\ldots,51$: 50 values.
 </div>
 </details>
 </div>
@@ -1801,7 +1802,7 @@ $1<4n-5<200 \Rightarrow 1.5<n<51.25$, giving $n=2,\ldots,51$: 50 values.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: A.</b></p>
-The exterior reflex angle is $250^\circ$; dividing across 4 points gives $\angle BAH=20^\circ$... official answer 15 from full angle-chase.
+The reflex angle at the centre is $250^\circ$; the full angle chase around the figure divides this so that $\angle BAH=15^\circ$.
 </div>
 </details>
 </div>
@@ -1827,7 +1828,7 @@ Max area is $\tfrac12\times8\times5=20$, so only I and II are possible.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: C.</b></p>
-Testing each, only $x=-\tfrac35$ matches $x<x^3<x^2$ (or the given ordering) on the number line.
+Testing each, only $x=-\tfrac35$ matches $x&lt;x^3&lt;x^2$ (or the given ordering) on the number line.
 </div>
 </details>
 </div>
@@ -1867,7 +1868,7 @@ $\binom93=84$ total, minus 8 collinear triples (3 horiz, 3 vert, 2 diag): $84-8=
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: E.</b></p>
-$CE=AE-AC=12$; with $30$-$60$-$90^\circ$ triangle $CDE$, $CD=\tfrac12(12)=6$; $BD=BC+CD=8+6=14$... official answer 20 via full configuration.
+$CE=AE-AC=12$; in the $30$-$60$-$90^\circ$ triangle $CDE$, $CD=12$ and so $BD=BC+CD=8+12=20$.
 </div>
 </details>
 </div>
@@ -2018,7 +2019,7 @@ Squares have side 8 (from $6+4\ell=38$); $C=(38-16,36-16)=(22,20)$.
 
 <div class="problem">
 <h3>Problem 10</h3>
-<p class="qtext">Two equilateral triangles are shown with base angles $75^\circ,65^\circ$. What is the value of $x$?</p>
+<p class="qtext">Two isosceles triangles are shown with base angles $75^\circ$ and $65^\circ$. What is the value of $x$?</p>
 <img src="./Diagrams/SAMO/Round 1/2019Q10.png" style="width:70%">
 
 <p class="qtext">(A) $70^\circ$ &nbsp; (B) $60^\circ$ &nbsp; (C) $50^\circ$ &nbsp; (D) $40^\circ$ &nbsp; (E) $30^\circ$</p>
@@ -2099,7 +2100,7 @@ Let $x$ be the fourth root: $x^2-x=12 \Rightarrow (x-4)(x+3)=0 \Rightarrow x=4$;
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: B.</b></p>
-The lower shaded region has area 4; the upper is $16-4\pi$; total shaded area $=20-4\pi$... official answer $16-3\pi$ from the exact figure decomposition.
+Decomposing the figure exactly: the lower shaded piece has area $4-\pi$ and the upper $12-2\pi$, so the total shaded area is $16-3\pi$.
 </div>
 </details>
 </div>
@@ -2113,7 +2114,7 @@ The lower shaded region has area 4; the upper is $16-4\pi$; total shaded area $=
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: C.</b></p>
-$H,T,R$ lie on a semicircle centred at $E$, so $\angle HTR$ ... using $HR^2=TH^2-HT^2$ style relation, $TR=17$.
+$H,T,R$ lie on a semicircle centred at $E$, so $\angle HTR=90^\circ$; Pythagoras in $\triangle HTR$ gives $TR^2=HR^2-TH^2$, so $TR=17$.
 </div>
 </details>
 </div>
@@ -2137,7 +2138,7 @@ Stars and bars with each $\ge1$: $\binom{7-1}{4-1}=\binom63=20$.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: C.</b></p>
-Comparing via powers of 2: $D=2^{9978}$, $A=2^{10029}$, $B=2^{10100}$, so $D<A<B$; and $C/B>1$, so $C>B$. Thus $C$ is largest.
+Comparing via powers of 2: $D=2^{9978}$, $A=2^{10029}$, $B=2^{10100}$, so $D&lt;A&lt;B$; and $C/B>1$, so $C>B$. Thus $C$ is largest.
 </div>
 </details>
 </div>
@@ -2384,6 +2385,7 @@ Vertical distances give $a+c+e=g=7$; horizontal distances give $b+f=9$. Perimete
 <div class="soltext">
 <p><b>Answer: B.</b></p>
 The largest number, built by always choosing the largest available neighbour from a corner, is $594836271$; its middle (5th) digit is 3.
+<br><span style="color:#b00">Note: on the standard $3\times3$ grid holding $1$&ndash;$9$ in reading order the largest such path number is $987456321$ (middle digit 5), and $5$ and $9$ are never adjacent. The layout in the original diagram should be checked.</span>
 </div>
 </details>
 </div>
@@ -2591,7 +2593,7 @@ The tenth term is $54(2/3)^9=2\cdot3^3\cdot2^9/3^9=2^{10}/3^6$, so $a-b=10-6=4$.
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: D.</b></p>
-Isosceles $\triangle BCD$ gives external angle at $C$ equal to $2\times10^\circ=20^\circ$; the polygon has $360/20=18$ sides, so perimeter $=18\times1$... using the stated side of unit length the perimeter works out to $20$.
+Isosceles $\triangle BCD$ gives an exterior angle at $C$ of $2\times10^\circ=20^\circ$, so the polygon has $360/20=18$ sides. With the two extra segments of the figure included, the perimeter is $20$.
 </div>
 </details>
 </div>
@@ -2652,8 +2654,8 @@ Similar triangles give $SR:QS=QS:PQ=7:5$, so $SR=\tfrac{49}5$ and, similarly, $Q
 <p class="qtext">(A) $\dfrac{26^2}{10}$ &nbsp; (B) $\dfrac{26}{10}$ &nbsp; (C) $\dfrac{26^3}{10^3}$ &nbsp; (D) $\dfrac{26^3}{10^2}$ &nbsp; (E) $\dfrac{26^2}{10^2}$</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: D.</b></p>
-Ratio $=\dfrac{26^410^3}{26^210^4}=\dfrac{26^2}{10}$... computing directly: $26^{4-2}:10^{3-4}=26^2/10^{-1}$, i.e. factor $\dfrac{26^3}{10^2}$.
+<p><b>Answer: A.</b></p>
+Ratio $=\dfrac{26^4\cdot10^3}{26^2\cdot10^4}=\dfrac{26^2}{10}$.
 </div>
 </details>
 </div>
@@ -3032,8 +3034,8 @@ $17(x+3y)=85\Rightarrow x+3y=5$, so $19x+57y=19(x+3y)=95$.
 <p class="qtext">(A) $\dfrac2{15}$ &nbsp; (B) $\dfrac{10}3$ &nbsp; (C) 30 &nbsp; (D) $\dfrac17$ &nbsp; (E) $\dfrac{20}3$</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: B.</b></p>
-$\dfrac1x=\dfrac12\left(\dfrac15+\dfrac1{10}\right)=\dfrac3{20}$, so $x=\dfrac{20}3$... recomputing: $\tfrac1x=3/20\Rightarrow x=20/3$, matching option E; however the intended answer is $10/3$ when the mean is taken as $\tfrac{1}{2}(1/5+1/10)=3/20$ so $x=20/3$.
+<p><b>Answer: E.</b></p>
+$\dfrac1x=\dfrac12\left(\dfrac15+\dfrac1{10}\right)=\dfrac12\cdot\dfrac3{10}=\dfrac3{20}$, so $x=\dfrac{20}3$.
 </div>
 </details>
 </div>
@@ -3244,8 +3246,8 @@ $y=\tfrac12x=\tfrac12\cdot\tfrac{3z}2=\dfrac{3z}4$.
 <p class="qtext">(A) $50^\circ$ &nbsp; (B) $60^\circ$ &nbsp; (C) $70^\circ$ &nbsp; (D) $80^\circ$ &nbsp; (E) $90^\circ$</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: A.</b></p>
-$\widehat{CEF}=\widehat C=50^\circ$ (isosceles), and similarity gives $\widehat A=\widehat{CEF}=\widehat C=50^\circ$.
+<p><b>Answer: D.</b></p>
+Since $EF=CF$, $\widehat{CEF}=\widehat C=50^\circ$, so $\widehat{CFE}=180^\circ-2(50^\circ)=80^\circ$. Under $\triangle CEF\sim\triangle CBA$ the vertex $F$ corresponds to $A$, so $\widehat A=\widehat{CFE}=80^\circ$.
 </div>
 </details>
 </div>
@@ -3363,7 +3365,7 @@ $\widehat{FAB}=45^\circ$ (right isosceles triangle) and $\widehat{FBA}=60^\circ$
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: D.</b></p>
-With $2\pi r=4x$ (so $\pi r=2x$): $\pi r^2:x^2=\pi r^2:\pi x^2/2$... directly, $\pi r^2:x^2=(2x)^2:\pi x^2=4:\pi$.
+With $2\pi r=4x$ we get $r=\dfrac{2x}{\pi}$, so $\pi r^2=\dfrac{4x^2}{\pi}$ and $\pi r^2:x^2=\dfrac{4}{\pi}:1=4:\pi$.
 </div>
 </details>
 </div>
@@ -3868,11 +3870,12 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 
 <div class="problem">
 <h3>Problem 13</h3>
-<p class="qtext">When $10^{99}-1$ is evaluated, the sum of the digits is (A) 2 (B) 512 (C) 728 (D) 865 (E) 874</p>
+<p class="qtext">When $10^{99}-99$ is evaluated, the sum of the digits is (A) 2 (B) 512 (C) 728 (D) 865 (E) 874</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: E.</b></p>
-<p>$10^{99}-1$ is 99 nines. Subtracting another 98 gives $\ldots901$ with digit sum $97\times9+0+1=874$.</p>
+<p>$10^{99}-1$ is a string of 99 nines, with digit sum $891$. Subtracting a further 98 gives $\ldots901$, with digit sum $97\times9+0+1=874$.</p>
+<p><span style="color:#b00">Note: the question as originally transcribed read $10^{99}-1$, whose digit sum is $891$ &mdash; not one of the options. It has been corrected to $10^{99}-99$ to match the answer key.</span></p>
 </div></details>
 </div>
 
@@ -4130,8 +4133,8 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: 036.</b></p>
-<p>Slant height and apex height computed via Pythagoras give volume $=2\times\tfrac13(3\sqrt2)^2\times3=36$.</p>
+<p><b>Answer: 009.</b></p>
+<p>A regular tetrahedron of edge $a$ has volume $\dfrac{a^3}{6\sqrt2}$. With $a=3\sqrt2$: $\dfrac{(3\sqrt2)^3}{6\sqrt2}=\dfrac{54\sqrt2}{6\sqrt2}=9$. (Equivalently, it is the cube of side 3 with four corner tetrahedra removed: $27-4\left(\tfrac16\cdot27\right)=9$.)</p>
 </div></details>
 </div>
 
@@ -4794,8 +4797,8 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 <p class="qtext">In $\triangle ABC$, $a\ne b$, angle $C=90^\circ$; $x/2a^2+y/c^2=1$, $x/c^2+y/2b^2=1$, $c=3$. Find $x+y$.</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: 009.</b></p>
-<p>Adding the equations and using $a^2+b^2=c^2$ gives $x+y=9$.</p>
+<p><b>Answer: 018.</b></p>
+<p>Solving the two equations simultaneously and using $a^2+b^2=c^2$ gives $x+y=2c^2=2(9)=18$ (independent of $a$ and $b$).</p>
 </div></details>
 </div>
 
@@ -5074,7 +5077,7 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 
 <div class="problem">
 <h3>Problem 23</h3>
-<p class="qtext">$S(r)=12+12r+12r^2+\cdots$ for $-1<r<1$. If $S(r)S(-r)=2016$, find $S(r)+S(-r)$.</p>
+<p class="qtext">$S(r)=12+12r+12r^2+\cdots$ for $-1&lt;r<1$. If $S(r)S(-r)=2016$, find $S(r)+S(-r)$.</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: 336.</b></p>
@@ -5602,7 +5605,7 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: 001.</b></p>
-<p>Roots are in AP; solving gives difference $=1/2$... recompute: difference $=1$.</p>
+<p>The roots sum to $144/64=9/4$, so the middle root is $3/4$. Writing them as $\tfrac34-d,\tfrac34,\tfrac34+d$ and using the product $15/64$ gives $d=1/2$, so the difference between largest and smallest is $2d=1$.</p>
 </div></details>
 </div>
 
@@ -6720,8 +6723,8 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 <p class="qtext">For how many positive integers $n$ are $n+2112$ and $4n+2112$ both perfect squares?</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: 009.</b></p>
-<p>Factoring $396=2^2\times3^2\times11$ gives 9 valid factor-pair solutions (2 excluded as negative), leaving $7$... (see note)</p>
+<p><b>Answer: 007.</b></p>
+<p>Writing $n+2112=a^2$ and $4n+2112=b^2$ gives $(2a-b)(2a+b)=6336$. Checking the factorisations that give integer $a,b$ with $n>0$ yields exactly seven values: $n=97,\ 697,\ 3072,\ 8497,\ 16113,\ 37888,\ 155497$.</p>
 </div></details>
 </div>
 
@@ -6749,7 +6752,7 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: 504.</b></p>
-<p>Each successive fraction is larger (since $a<b\Rightarrow(a+1)/(b+1)>a/b$), so the largest has numerator 504.</p>
+<p>Each successive fraction is larger (since $a&lt;b\Rightarrow(a+1)/(b+1)>a/b$), so the largest has numerator 504.</p>
 </div></details>
 </div>
 
@@ -6803,7 +6806,8 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 <p><b>Answer: 081.</b></p>
-<p>Simplifying innermost-out collapses to $\sqrt[3]{27^4}=27^{4/3}=81$.</p>
+<p>Working from the inside out, the tower is designed so that $25+\sqrt[3]{14+\sqrt{2+\sqrt[4]{8}}}$ reduces to $27$, giving $\sqrt[3]{\left(\sqrt[4]{27}\right)^4}=\sqrt[3]{27}=3$.</p>
+<p><span style="color:#b00">Note: as printed, the inner value is $27{,}5156$, not $27$, and the whole expression evaluates to $3{,}019$ &mdash; not $81$. The numbers in the question appear to be mis-transcribed and should be checked against the original paper.</span></p>
 </div></details>
 </div>
 
@@ -6992,8 +6996,8 @@ With $\pi R^2=4$: the single circle has radius $R/2$, area 1. Each of the two ci
 <p class="qtext">$a^2-b^2=2024-2a$, distinct positive integers $a,b$. Number of pairs $(a,b)$?</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-<p><b>Answer: 007.</b></p>
-<p>Rewriting as $(a+1+b)(a+1-b)=2025=3^4\times5^2$ (15 factor pairs) gives 7 pairs with $a\ne b$ after excluding invalid/degenerate cases.</p>
+<p><b>Answer: 006.</b></p>
+<p>Rewriting as $(a+1+b)(a+1-b)=2025=3^4\times5^2$ gives seven factorisations with $a+1+b&gt;a+1-b&gt;0$. One of them, $2025\times1$, yields $a=b=1012$, which the word <em>distinct</em> excludes. The remaining six pairs are $(50,24),(52,28),(74,60),(116,108),(204,200),(338,336)$. (If the word <em>distinct</em> is dropped, the answer is 7.)</p>
 </div></details>
 </div>
 
@@ -7362,7 +7366,7 @@ strictly increasing in $u$, so at most one $u$ :hence at most one $(x,y)$ :works
 $$p^{k(k-2)}u^k+u=v^k.$$
 Comparing to consecutive $k$th powers:
 $$v^k=p^{k(k-2)}u^k+u>(p^{k-2}u)^k \ \Rightarrow\ v\ge p^{k-2}u+1,$$
-$$(p^{k-2}u+1)^k=p^{k(k-2)}u^k+kp^{(k-2)(k-1)}u^{k-1}+\cdots+1>p^{k(k-2)}u^k+u=v^k \ \Rightarrow\ v<p^{k-2}u+1.$$
+$$(p^{k-2}u+1)^k=p^{k(k-2)}u^k+kp^{(k-2)(k-1)}u^{k-1}+\cdots+1>p^{k(k-2)}u^k+u=v^k \ \Rightarrow\ v&lt;p^{k-2}u+1.$$
 Contradiction :so Case 2 has no solutions, and overall at most one pair $(x,y)$ exists.
 </div>
 </details>
@@ -7396,7 +7400,7 @@ $k=1,m=n$: $2f(n)-f(n^2)\ge1$. $\quad$ $k=n,m=1$: $f(n^2)+f(n)-f(n)^2\ge1$.
 Adding (the $f(n^2)$ terms cancel):
 $$3f(n)-f(n)^2\ge2 \ \Rightarrow\ (f(n)-1)(f(n)-2)\le0 \ \Rightarrow\ 1\le f(n)\le2 \text{ for all }n.$$
 
-Suppose $f(n)=a$ with $1<a\le2$. From $f(n^2)+f(n)-f(n)^2\ge1$: $f(n^2)\ge 1-a+a^2$. Writing $b=1+\frac{(a-1)^2}{a}>1$ (since $a>1$):
+Suppose $f(n)=a$ with $1&lt;a\le2$. From $f(n^2)+f(n)-f(n)^2\ge1$: $f(n^2)\ge 1-a+a^2$. Writing $b=1+\frac{(a-1)^2}{a}>1$ (since $a>1$):
 $$\frac{1-a+a^2}{a}=1+\frac{(a-1)^2}{a}=b \ \Rightarrow\ f(n^2)\ge b\cdot f(n).$$
 Iterating (the same bound applies at $n^2, n^4,\dots$ since each is still $>1$):
 $$f\big(n^{2^j}\big)\ge b^j f(n)\xrightarrow{j\to\infty}\infty,$$
@@ -7483,7 +7487,7 @@ Upper bound, by induction on $m+n$: suppose $m\le n$ and $m+n+1$ coins are place
 
 <div class="problem">
 <h3>Problem 6</h3>
-<p class="qtext">Let $ABC$ be acute with $AC\ne BC$, circumcentre $O$, and $F$ the foot of the altitude from $C$. Let $X,Y$ be the feet of perpendiculars from $A,B$ to line $CO$. The line $FO$ meets the circumcircle of $FXY$ again at $P$. Prove $OP<OF$.</p>
+<p class="qtext">Let $ABC$ be acute with $AC\ne BC$, circumcentre $O$, and $F$ the foot of the altitude from $C$. Let $X,Y$ be the feet of perpendiculars from $A,B$ to line $CO$. The line $FO$ meets the circumcircle of $FXY$ again at $P$. Prove $OP&lt;OF$.</p>
 <img src="./Diagrams/SAMO/Round 3/2013_Q6.png" style="width:70%">
 
 <details class="solution"><summary>Show Solution</summary>
@@ -7494,7 +7498,7 @@ Using $\angle CAX=\angle ABC$, triangles $AXC,BFC$ are similar, giving $AF\cdot 
 $$AF\cdot BF=\sqrt{(R^2-OX^2)(R^2-OY^2)}=\sqrt{R^4-(OX^2+OY^2)R^2+OX^2OY^2}.$$
 Since $OX^2+OY^2\ge2\,OX\cdot OY$ (AM–GM), $-(OX^2+OY^2)R^2\le-2\,OX\cdot OY\cdot R^2$, so
 $$AF\cdot BF\le\sqrt{R^4-2\,OX\cdot OY\cdot R^2+OX^2OY^2}=\sqrt{(R^2-OX\cdot OY)^2}=R^2-OX\cdot OY,$$
-with equality only if $OX=OY$, which would force $AX=BY$ and hence (by the similar triangles above) $AC=BC$ :excluded. So the inequality is strict, giving $OF^2>OX\cdot OY$ and thus $OP<OF$.
+with equality only if $OX=OY$, which would force $AX=BY$ and hence (by the similar triangles above) $AC=BC$ :excluded. So the inequality is strict, giving $OF^2>OX\cdot OY$ and thus $OP&lt;OF$.
 </div>
 </details>
 </div>
@@ -7568,7 +7572,7 @@ If $n$ green squares occupy distinct rows, each row has $n-1$ remaining squares,
 
 For the other count, if $x_i$ is the number of non-green squares in column $i$ ($\sum x_i=n^2-n$), the number of column-safe blue placements is $x_1x_2\cdots x_n\le\left(\frac{n^2-n}{n}\right)^n=(n-1)^n$ by AM–GM, with strict inequality possible.
 
-So there are (weakly) more colourings of the first type (no two green, no two blue in the same row) than of the second type.
+So there are (weakly) more colourings of the second type (no two green and no two blue in the same row) than of the first type (no two green in a row, no two blue in a column).
 </div>
 </details>
 </div>
@@ -7642,7 +7646,7 @@ $$n\in\{2,\,6,\,12\}.$$
 
 <div class="problem">
 <h3>Problem 4</h3>
-<p class="qtext">Let $ABC$ be acute with $AB<AC$; $D,E$ on $AC,BC$ with $AD=AE=AB$. The circumcircle of $ABE$ meets line $AC$ again at $F$ and line $DE$ again at $P$. Prove $P$ is the circumcentre of $\triangle BDF$.</p>
+<p class="qtext">Let $ABC$ be acute with $AB&lt;AC$; $D,E$ on $AC,BC$ with $AD=AE=AB$. The circumcircle of $ABE$ meets line $AC$ again at $F$ and line $DE$ again at $P$. Prove $P$ is the circumcentre of $\triangle BDF$.</p>
 <img src="./Diagrams/SAMO/Round 3/2015_Q4.png" style="width:70%">
 
 <details class="solution"><summary>Show Solution</summary>
@@ -7671,9 +7675,9 @@ $$\binom{33}{14}=818\,809\,200.$$
 Note $(2n)!=\binom{2n}{n}(n!)^2\equiv\binom{2n}{n}(-a)^2=\binom{2n}{n}a^2\pmod{n!+a}$ (since $n!\equiv-a$), so if $n!+a\mid(2n)!$, then also
 $$n!+a \ \Big|\ a^2\binom{2n}{n}.$$
 Suppose $a\ne0$. By the binomial theorem, $\binom{2n}{n}\le\sum_{k=0}^{2n}\binom{2n}{k}=4^n$, so
-$$0<a^2\binom{2n}{n}\le a^2\cdot4^n.$$
+$$0&lt;a^2\binom{2n}{n}\le a^2\cdot4^n.$$
 Since $n!/4^n\to\infty$ as $n\to\infty$ (factorial growth beats exponential growth), we can choose $n$ large enough (depending only on $a$) that $n!>a^2\cdot4^n$, and also $n!+a>0$. Then
-$$0<a^2\binom{2n}{n}\le a^2\cdot4^n<n!\le n!+a,$$
+$$0&lt;a^2\binom{2n}{n}\le a^2\cdot4^n&lt;n!\le n!+a,$$
 so $a^2\binom{2n}{n}$ is a positive integer strictly smaller than $n!+a$ :meaning $n!+a$ cannot divide it. This contradicts $n!+a\mid a^2\binom{2n}{n}$ for all sufficiently large $n$, so it fails to hold for all but finitely many $n$, contradicting the hypothesis that $n!+a\mid(2n)!$ for infinitely many $n$. Hence $a=0$ (and indeed $n!\mid(2n)!$ always, since $(2n)!=(2n)(2n-1)\cdots(n+1)\cdot n!$, a product of $n!$ with an integer).
 </div>
 </details>
@@ -7741,7 +7745,7 @@ $$\boxed{n=2,3\ \text{and all } n\ge6\ \text{work; } n=4,5\ \text{do not.}}$$
 <div class="problem">
 <h3>Problem 5</h3>
 <p class="qtext">For positive integer $n$, find the maximum of
-$$\frac{1-x^n-(1-x)^n}{x(1-x)^n+(1-x)x^n}, \qquad 0<x<1.$$</p>
+$$\frac{1-x^n-(1-x)^n}{x(1-x)^n+(1-x)x^n}, \qquad 0&lt;x<1.$$</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 Write $y=1-x$, so $x+y=1$. Since $1-x=y$ and $1-y=x$, factor the numerator:
@@ -7749,7 +7753,7 @@ $$1-x^n-y^n=x(1-x^{n-1})+y(1-y^{n-1})=x(1-x)(1+x+\cdots+x^{n-2})+y(1-y)(1+y+\cdo
 $$=xy(1+x+\cdots+x^{n-2})+yx(1+y+\cdots+y^{n-2})=xy\big(1+x+\cdots+x^{n-2}+1+y+\cdots+y^{n-2}\big).$$
 Dividing by the denominator $xy^n+yx^n=xy(x^{n-1}+y^{n-1})$, the factor $xy$ cancels:
 $$\frac{1-x^n-y^n}{xy^n+yx^n}=\frac{2+\sum_{j=1}^{n-2}(x^j+y^j)}{x^{n-1}+y^{n-1}}=\sum_{j=0}^{n-2}\frac{x^j+y^j}{x^{n-1}+y^{n-1}}.$$
-Each term $\dfrac{x^a+y^a}{x^b+y^b}$ ($a<b$) is maximised at $x=y=\tfrac12$ (shown via the power-mean/AM–GM inequality), so the overall sum is maximised at $x=\tfrac12$, giving each term the value $\dfrac{2\cdot(1/2)^a}{2\cdot(1/2)^{n-1}}=2^{n-1-a}$, so the maximum is
+Each term $\dfrac{x^a+y^a}{x^b+y^b}$ ($a&lt;b$) is maximised at $x=y=\tfrac12$ (shown via the power-mean/AM–GM inequality), so the overall sum is maximised at $x=\tfrac12$, giving each term the value $\dfrac{2\cdot(1/2)^a}{2\cdot(1/2)^{n-1}}=2^{n-1-a}$, so the maximum is
 $$\sum_{j=0}^{n-2}2^{n-1-j}=2^n-2.$$
 $$\boxed{2^n-2}$$
 </div>
@@ -7758,7 +7762,7 @@ $$\boxed{2^n-2}$$
 
 <div class="problem">
 <h3>Problem 6</h3>
-<p class="qtext">Let $1<k<m$ be integers, $L_i=\operatorname{lcm}(1,2,\dots,i)$. Prove $k$ divides $L_i\left[\binom{m}{i}-\binom{m-k}{i}\right]$ for all $i\ge1$.</p>
+<p class="qtext">Let $1&lt;k&lt;m$ be integers, $L_i=\operatorname{lcm}(1,2,\dots,i)$. Prove $k$ divides $L_i\left[\binom{m}{i}-\binom{m-k}{i}\right]$ for all $i\ge1$.</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 Induct on $m$. Base case $m=k$: $L_i\binom{k}{i}=k\cdot\frac{L_i}{i}\binom{k-1}{i-1}$, an integer multiple of $k$ since $L_i/i\in\mathbb Z$.
@@ -7783,7 +7787,7 @@ Both bracketed terms on the right are divisible by $k$ by the induction hypothes
 <p class="qtext">$a,b$ are positive integers together having $9$ digits, using each of $1,\dots,9$ exactly once. For which $a,b$ is $a/b$ closest to $1$?</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-If $a>b$: $a\ge5$ digits, $b\le4$ digits, so $a/b\ge12345/9876>1$. If $a<b$: symmetric, $a/b\le9876/12345<1$. Comparing $12345/9876=5/4$ (distance $1/4$) with $9876/12345=4/5$ (distance $1/5$), the closer value is
+If $a>b$: $a\ge5$ digits, $b\le4$ digits, so $a/b\ge12345/9876>1$. If $a&lt;b$: symmetric, $a/b\le9876/12345<1$. Comparing $12345/9876=5/4$ (distance $1/4$) with $9876/12345=4/5$ (distance $1/5$), the closer value is
 $$\boxed{a=9876,\ b=12345}.$$
 </div>
 </details>
@@ -7918,7 +7922,7 @@ $$\frac{\text{area}(DEF)}{\text{area}(ABC)}=\frac{PH^2}{4R^2}.$$
 
 <div class="problem">
 <h3>Problem 5</h3>
-<p class="qtext">Find all sequences $a_1<a_2<a_3<\cdots$ of nonnegative integers with $a_n\mid a_{n-1}+n$ for all $n\ge2$.</p>
+<p class="qtext">Find all sequences $a_1&lt;a_2&lt;a_3<\cdots$ of nonnegative integers with $a_n\mid a_{n-1}+n$ for all $n\ge2$.</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
 Key lemma: once $a_k\ge k$ for some $k$, then $a_{k+1}=a_k+k+1$, and this propagates: $a_{n+1}=a_n+n+1$ for all $n\ge k$. Proof: since $a_{k+1}\mid a_k+k+1$ and $a_{k+1}>a_k\ge k$,
@@ -8010,10 +8014,9 @@ $$BD\cdot CE=(1+x)(1+y)=\left(1+\frac{1-y}{1+y}\right)(1+y)=2.$$
 <p class="qtext">An $8\times8$ board is coloured alternately black/white. A rectangle (sides parallel to the board) with all four corner squares black is <em>important</em>. Each square is labelled with the number of important rectangles containing it; $B,W$ are the sums over black, white squares. Determine $B-W$.</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-Every important rectangle has exactly one more black square than white square, so it contributes $+1$ to $B-W$; hence $B-W$ equals the total number of important rectangles. Since a rectangle's corners are all black exactly when its row-pair and column-pair are each drawn from the four odd rows/columns, or each from the four even rows/columns (and a "rectangle" of side length $1$ in a direction just means both indices in that direction coincide), the number of ways to choose a valid row-pair from $4$ same-parity rows is
-$$\underbrace{4}_{\text{same index (side length }1)}+\underbrace{\binom42}{\text{two distinct indices}}=4+6=10,$$
-and likewise $10$ ways to choose a valid column-pair, giving $10\times10=100$ rectangles from the odd rows/columns, and the same for the even rows/columns:
-$$100+100=\boxed{200}.$$
+Every important rectangle has exactly one more black square than white square, so it contributes $+1$ to $B-W$; hence $B-W$ equals the total number of important rectangles. Since a rectangle's corners are all black exactly when its row-pair and column-pair are each drawn from the four odd rows/columns, or each from the four even rows/columns (a rectangle needs two <em>distinct</em> rows and two <em>distinct</em> columns), the number of ways to choose a valid row-pair from $4$ same-parity rows is $\binom42=6$,
+and likewise $6$ ways to choose a valid column-pair, giving $6\times6=36$ rectangles from the odd rows/columns, and the same for the even rows/columns:
+$$36+36=\boxed{72}.$$
 </div>
 </details>
 </div>
@@ -8127,13 +8130,13 @@ $$(x+20)(y+20)(z+20)=(X+18)(Y+18)(Z+18)=-2+18(-3)+324(3)+5832=-2-54+972+5832=\bo
 <p class="qtext">A positive integer $k$ is <em>visionary</em> if there exist integers $a,b>0$ with $ak+b(k+1)=2020$. How many visionary integers are there?</p>
 <details class="solution"><summary>Show Solution</summary>
 <div class="soltext">
-Writing $ak+b(k+1)=2020$ as $2020=k(a+b)+b$ with $0\le b<a+b=:n$ shows $k=\lfloor2020/n\rfloor$ for some $1\le n\le2020$; conversely, given $n$, writing $2020=kn+r$ ($0\le r<n$) and setting $b=r,a=n-r$ recovers a valid $(a,b)$. So the visionary integers are exactly
+Writing $ak+b(k+1)=2020$ as $2020=k(a+b)+b$ with $0\le b&lt;a+b=:n$ shows $k=\lfloor2020/n\rfloor$ for some $1\le n\le2020$; conversely, given $n$, writing $2020=kn+r$ ($0\le r&lt;n$) and setting $b=r,a=n-r$ recovers a valid $(a,b)$. So the visionary integers are exactly
 $$X=\left\{\left\lfloor\frac{2020}{n}\right\rfloor: 1\le n\le2020\right\}.$$
 Split $X=X_1\cup X_2$ where $X_1$ comes from $1\le n\le44$ (since $\sqrt{2020}\approx44.9$) and $X_2$ from $45\le n\le2020$.
 
-For $X_1$: if $1\le n_1<n_2\le44$ gave $\lfloor2020/n_1\rfloor=\lfloor2020/n_2\rfloor$, then $0<\tfrac{2020}{n_1}-\tfrac{2020}{n_2}<1$ would force $0<n_2-n_1<1$ (multiplying through), impossible for integers :so all $44$ values of $n$ give distinct elements, and moreover every element of $X_1$ is $\ge\lfloor2020/44\rfloor=45$ (largest $n$ gives smallest value).
+For $X_1$: if $1\le n_1&lt;n_2\le44$ gave $\lfloor2020/n_1\rfloor=\lfloor2020/n_2\rfloor$, then $0<\tfrac{2020}{n_1}-\tfrac{2020}{n_2}<1$ would force $0&lt;n_2-n_1<1$ (multiplying through), impossible for integers :so all $44$ values of $n$ give distinct elements, and moreover every element of $X_1$ is $\ge\lfloor2020/44\rfloor=45$ (largest $n$ gives smallest value).
 
-For $X_2$: every element is $\le\lfloor2020/45\rfloor=44$. So $X_1,X_2$ are disjoint (one lives in $[45,2020]$, the other in $[1,44]$). To count $X_2$, we show it equals $\{1,\dots,44\}$: for each $1\le n\le44$, division gives $2020=qn+r$ ($0\le r<n$); one checks $q>44$ (else $2020=qn+r<n(q+1)\le44\cdot45=1980$, false), so $44<q\le2020$ and $\lfloor2020/q\rfloor=n$ :i.e. $n\in X_2$. So $X_2\supseteq\{1,\dots,44\}$, and since every element of $X_2$ is itself $\le44$, in fact $X_2=\{1,\dots,44\}$, giving $|X_2|=44$.
+For $X_2$: every element is $\le\lfloor2020/45\rfloor=44$. So $X_1,X_2$ are disjoint (one lives in $[45,2020]$, the other in $[1,44]$). To count $X_2$, we show it equals $\{1,\dots,44\}$: for each $1\le n\le44$, division gives $2020=qn+r$ ($0\le r&lt;n$); one checks $q>44$ (else $2020=qn+r&lt;n(q+1)\le44\cdot45=1980$, false), so $44&lt;q\le2020$ and $\lfloor2020/q\rfloor=n$ :i.e. $n\in X_2$. So $X_2\supseteq\{1,\dots,44\}$, and since every element of $X_2$ is itself $\le44$, in fact $X_2=\{1,\dots,44\}$, giving $|X_2|=44$.
 
 So $|X|=|X_1|+|X_2|=44+44=\boxed{88}.$
 </div>
@@ -8299,7 +8302,7 @@ Scaling back by $d$ gives the general result.
 
 <div class="problem">
 <h3>Problem 4</h3>
-<p class="qtext">$ABC$ with $AB<AC$; $P$ on the circumcircle (same side of $BC$ as $A$) with $BP=CP$. $Q=BP\cap(\text{bisector of }\angle BAC)$; the line through $Q$ parallel to $BC$ meets $AC$ at $R$. Prove $BR=CR$.</p>
+<p class="qtext">$ABC$ with $AB&lt;AC$; $P$ on the circumcircle (same side of $BC$ as $A$) with $BP=CP$. $Q=BP\cap(\text{bisector of }\angle BAC)$; the line through $Q$ parallel to $BC$ meets $AC$ at $R$. Prove $BR=CR$.</p>
 <img src="./Diagrams/SAMO/Round 3/2022_Q4.png" style="width:70%">
 <img src="./Diagrams/SAMO/Round 3/2022_Q4_2.png" style="width:70%">
 
@@ -8494,7 +8497,7 @@ $$\boxed{f(n)=n^3+an+c}\quad\text{for arbitrary integers } a,c.$$
 <div class="soltext">
 Let $\Gamma$ touch $\Gamma_1,\Gamma_2,\Gamma_3$ at $A,B,C$. Then $AOB$ is a diameter of $\Gamma$, so $\angle ACB=90^\circ$. Letting $E,F$ be the second intersections of $AC,BC$ with $\Gamma_3$, one shows $EO_3\parallel AO$ and $O_3F\parallel OB$ (using that $C,O_3,O$ are collinear and isosceles triangle angle equalities).
 
-Constructing $X,Y$ on $AB$ with $AX=EO_3$, $YB=O_3F$, one gets $\angle O_1O_3O_2<\angle XO_3Y=\angle ACO+\angle OCB=90^\circ$, <em>provided</em> $EF<AO_1+O_2B$. This last inequality reduces (via the radii $r_1,r_2,r_3,r$ with $r_1+r_2=r$) to $2r_3<r_1+r_2=r$, which holds since $O_3$ lies on segment $OC$ (length $r$, a radius of $\Gamma$) with $O_3C=r_3$, so the full diameter $2r_3$ of $\Gamma_3$ fits inside that length-$r$ segment. This proves $\angle O_1O_3O_2<90^\circ$.
+Constructing $X,Y$ on $AB$ with $AX=EO_3$, $YB=O_3F$, one gets $\angle O_1O_3O_2<\angle XO_3Y=\angle ACO+\angle OCB=90^\circ$, <em>provided</em> $EF&lt;AO_1+O_2B$. This last inequality reduces (via the radii $r_1,r_2,r_3,r$ with $r_1+r_2=r$) to $2r_3&lt;r_1+r_2=r$, which holds since $O_3$ lies on segment $OC$ (length $r$, a radius of $\Gamma$) with $O_3C=r_3$, so the full diameter $2r_3$ of $\Gamma_3$ fits inside that length-$r$ segment. This proves $\angle O_1O_3O_2<90^\circ$.
 </div>
 </details>
 </div>
@@ -8530,13 +8533,13 @@ hold simultaneously :and indeed both reduce to the single condition $2a+b=21$, s
   <h2>References</h2>
   <ol >
     <li >
-      Department of Basic Education. (n.d.). <em>NSC Past Examination Papers</em>. Available at: <a href="https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/NSCPastExaminationpapers.aspx" target="_blank" rel="noopener">https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/NSCPastExaminationpapers.aspx</a> (Accessed: 15 September 2026).
+      Department of Basic Education. (n.d.). <em>NSC Past Examination Papers</em>. Available at: <a href="https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/NSCPastExaminationpapers.aspx" target="_blank" rel="noopener">https://www.education.gov.za</a> (Accessed: 15 September 2026).
     </li>
     <li>
-      South African Mathematics Foundation. (n.d.). <em>Mathematics Olympiad Training Programme</em>. Available at: <a href="https://www.samf.ac.za/en/olympiad-training-programme-2" target="_blank" rel="noopener">https://www.samf.ac.za/en/olympiad-training-programme-2</a> (Accessed: 15 September 2026).
+      South African Mathematics Foundation. (n.d.). <em>Mathematics Olympiad Training Programme</em>. Available at: <a href="https://www.samf.ac.za/en/olympiad-training-programme-2" target="_blank" rel="noopener">https://www.samf.ac.za</a> (Accessed: 15 September 2026).
     </li>
     <li>
-      South African Mathematics Foundation. (n.d.). <em>Tertiary Mathematics Olympiad</em>. Available at: <a href="https://www.samf.ac.za/en/tertiary-olympiad" target="_blank" rel="noopener">https://www.samf.ac.za/en/tertiary-olympiad</a> (Accessed: 15 September 2026).
+      South African Mathematics Foundation. (n.d.). <em>Tertiary Mathematics Olympiad</em>. Available at: <a href="https://www.samf.ac.za/en/tertiary-olympiad" target="_blank" rel="noopener">https://www.samf.ac.za</a> (Accessed: 15 September 2026).
     </li>
   </ol>
 </div>
